@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://qiita.com/drafts/3956dab2fd0d448cd02b/edit -->
+<html xmlns:og="http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>「Juliaにおける基本的な行列操作」を編集 - Qiita</title><meta content="width=device-width,initial-scale=1" name="viewport"><meta content="Qiitaは、プログラマのための技術情報共有サービスです。 プログラミングに関するTips、ノウハウ、メモを簡単に記録 &amp;amp; 公開することができます。" name="description"><meta content="#55c500" name="theme-color"><meta content="summary" name="twitter:card"><meta content="@Qiita" name="twitter:site"><meta content="「Juliaにおける基本的な行列操作」を編集 - Qiita" property="og:title"><meta content="article" property="og:type"><meta content="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit" property="og:url"><meta content="https://cdn.qiita.com/assets/qiita-fb-2887e7b4aad86fd8c25cea84846f2236.png" property="og:image"><meta content="Qiitaは、プログラマのための技術情報共有サービスです。 プログラミングに関するTips、ノウハウ、メモを簡単に記録 &amp;amp; 公開することができます。" property="og:description"><meta content="Qiita" property="og:site_name"><meta content="564524038" property="fb:admins"><link rel="canonical" href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit"><link rel="shortcut icon" type="image/x-icon" href="https://cdn.qiita.com/assets/favicons/public/production.ico"><link rel="apple-touch-icon" type="image/png" href="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-f9a6afad761ec2306e10db2736187c8b.png"><link href="https://qiita.com/opensearch.xml" rel="search" title="Qiita" type="application/opensearchdescription+xml"><link rel="stylesheet" media="all" href="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/public-866a57026390026649205c946e87d076.min.css"><meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="jJXluSZ600qoU2YWXI3G3Syl8HX+M5Wa2KBLWbIw4NZuQchijsM1QBX6KmopWf1qheKYfgIEdkxf0WYXZU0PHA=="><script src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/cb=gapi.loaded_0" async=""></script><script src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/all.js" async="" crossorigin="anonymous"></script><script async="" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/widgets.js" id="twitter-jssdk"></script><script async="" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/all(1).js" id="facebook-jssdk"></script><script async="" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/plusone.js" id="google-plusone-jssdk" gapi_processed="true"></script><script async="" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/btn.js" id="pocket-btn-js"></script><script>
+  window.gtmDataLayer = [
+    {
+      'analytics.dimension5': 'false',
+      'app.env': 'production',
+      'app.layoutVersion': 1,
+      'app.userId': 264254
+    },
+    { 'gtm.start': new Date().getTime(), event: 'gtm.js' }
+  ];
+</script>
+<script src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/gtm.js" async=""></script>
+<script async="" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/js"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-935296116');
+
+// Event snippet for qiita remarketing page
+gtag('event', 'conversion', {
+    'send_to': 'AW-935296116/jvRhCOaj5YYBEPT4_b0D',
+    'value': 1.0,
+    'currency': 'JPY',
+    'aw_remarketing_only': true
+});</script><script async="" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/js(1)"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-878053044');</script><style id="react-tooltip">.__react_component_tooltip{border-radius:3px;display:inline-block;font-size:13px;left:-999em;opacity:0;padding:8px 21px;position:fixed;pointer-events:none;transition:opacity 0.3s ease-out;top:-999em;visibility:hidden;z-index:999}.__react_component_tooltip:before,.__react_component_tooltip:after{content:"";width:0;height:0;position:absolute}.__react_component_tooltip.show{opacity:0.9;margin-top:0px;margin-left:0px;visibility:visible}.__react_component_tooltip.type-dark{color:#fff;background-color:#222}.__react_component_tooltip.type-dark.place-top:after{border-top-color:#222;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-dark.place-bottom:after{border-bottom-color:#222;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-dark.place-left:after{border-left-color:#222;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-dark.place-right:after{border-right-color:#222;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-dark.border{border:1px solid #fff}.__react_component_tooltip.type-dark.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-dark.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-dark.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-dark.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-success{color:#fff;background-color:#8DC572}.__react_component_tooltip.type-success.place-top:after{border-top-color:#8DC572;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-success.place-bottom:after{border-bottom-color:#8DC572;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-success.place-left:after{border-left-color:#8DC572;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-success.place-right:after{border-right-color:#8DC572;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-success.border{border:1px solid #fff}.__react_component_tooltip.type-success.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-success.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-success.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-success.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-warning{color:#fff;background-color:#F0AD4E}.__react_component_tooltip.type-warning.place-top:after{border-top-color:#F0AD4E;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-warning.place-bottom:after{border-bottom-color:#F0AD4E;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-warning.place-left:after{border-left-color:#F0AD4E;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-warning.place-right:after{border-right-color:#F0AD4E;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-warning.border{border:1px solid #fff}.__react_component_tooltip.type-warning.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-warning.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-warning.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-warning.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-error{color:#fff;background-color:#BE6464}.__react_component_tooltip.type-error.place-top:after{border-top-color:#BE6464;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-error.place-bottom:after{border-bottom-color:#BE6464;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-error.place-left:after{border-left-color:#BE6464;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-error.place-right:after{border-right-color:#BE6464;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-error.border{border:1px solid #fff}.__react_component_tooltip.type-error.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-error.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-error.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-error.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-info{color:#fff;background-color:#337AB7}.__react_component_tooltip.type-info.place-top:after{border-top-color:#337AB7;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-info.place-bottom:after{border-bottom-color:#337AB7;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-info.place-left:after{border-left-color:#337AB7;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-info.place-right:after{border-right-color:#337AB7;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-info.border{border:1px solid #fff}.__react_component_tooltip.type-info.border.place-top:before{border-top:8px solid #fff}.__react_component_tooltip.type-info.border.place-bottom:before{border-bottom:8px solid #fff}.__react_component_tooltip.type-info.border.place-left:before{border-left:8px solid #fff}.__react_component_tooltip.type-info.border.place-right:before{border-right:8px solid #fff}.__react_component_tooltip.type-light{color:#222;background-color:#fff}.__react_component_tooltip.type-light.place-top:after{border-top-color:#fff;border-top-style:solid;border-top-width:6px}.__react_component_tooltip.type-light.place-bottom:after{border-bottom-color:#fff;border-bottom-style:solid;border-bottom-width:6px}.__react_component_tooltip.type-light.place-left:after{border-left-color:#fff;border-left-style:solid;border-left-width:6px}.__react_component_tooltip.type-light.place-right:after{border-right-color:#fff;border-right-style:solid;border-right-width:6px}.__react_component_tooltip.type-light.border{border:1px solid #222}.__react_component_tooltip.type-light.border.place-top:before{border-top:8px solid #222}.__react_component_tooltip.type-light.border.place-bottom:before{border-bottom:8px solid #222}.__react_component_tooltip.type-light.border.place-left:before{border-left:8px solid #222}.__react_component_tooltip.type-light.border.place-right:before{border-right:8px solid #222}.__react_component_tooltip.place-top{margin-top:-10px}.__react_component_tooltip.place-top:before{border-left:10px solid transparent;border-right:10px solid transparent;bottom:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-top:after{border-left:8px solid transparent;border-right:8px solid transparent;bottom:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-bottom{margin-top:10px}.__react_component_tooltip.place-bottom:before{border-left:10px solid transparent;border-right:10px solid transparent;top:-8px;left:50%;margin-left:-10px}.__react_component_tooltip.place-bottom:after{border-left:8px solid transparent;border-right:8px solid transparent;top:-6px;left:50%;margin-left:-8px}.__react_component_tooltip.place-left{margin-left:-10px}.__react_component_tooltip.place-left:before{border-top:6px solid transparent;border-bottom:6px solid transparent;right:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-left:after{border-top:5px solid transparent;border-bottom:5px solid transparent;right:-6px;top:50%;margin-top:-4px}.__react_component_tooltip.place-right{margin-left:10px}.__react_component_tooltip.place-right:before{border-top:6px solid transparent;border-bottom:6px solid transparent;left:-8px;top:50%;margin-top:-5px}.__react_component_tooltip.place-right:after{border-top:5px solid transparent;border-bottom:5px solid transparent;left:-6px;top:50%;margin-top:-4px}.__react_component_tooltip .multi-line{display:block;padding:2px 0px;text-align:center}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#1d3c78;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head><body class=" with-js" id=""><noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-TBQWPN" style="display:none;visibility:hidden" width="0"></iframe></noscript><script>
+  document.body.className = document.body.className.replace('without-js', '') + ' with-js';
+  window.Qiita = {"asset_host":"cdn.qiita.com","TLD":"com","controller_path":"public/draft_items","controller_action":"public/draft_items#edit","controller":"draft_items","action":"edit","action_path":"public/draft_items#edit","env":"production","flash":{},"is_team_page":false,"request_parameters":{"controller":"public/draft_items","action":"edit","item_uuid":"3956dab2fd0d448cd02b"},"root_domain":"qiita.com","variant":null,"config":{"mixpanel":{"per_team":"c0a2116368b33b44b5029ebd2cc9b094","public":"17d24b448ca579c365d2d1057f3a1791","team":"b7c0342acba2dbc8742484d98788efb3"},"default_locale":"en","locale":"ja"},"team":null,"user":{"id":264254,"url_name":"haru1843","profile_image_url":"https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/264254/profile-images/1555752598","email":"haru1843inf@gmail.com","staff":false},"GIT_BRANCH":null,"DEBUG":false};
+
+  /* You are logged in */
+</script>
+<div class="st-HeaderContainer"><div id="GlobalHeaderContainer-react-component-c3f37984-8957-4f4f-8551-d102ff29a8c8"><div data-reactroot="" class="st-Header px-2 px-1@s is-fluid"><div class="st-Header_container"><div class="st-Header_start"><a href="https://qiita.com/" class="st-Header_logo mr-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 26"><title>Qiita</title><path d="M24.6 12.2C24.6 6.2 20 0 12.2 0 6.2 0 0 4.6 0 12.4c0 6 4.6 12.2 12.4 12.2 2.5 0 5-.8 7.1-2.3l3.6 3.6 1.6-1.6-3.4-3.4c2.1-2.3 3.3-5.3 3.3-8.7zm-12.4-10c5.7 0 10.2 4.4 10.2 10.1 0 4.9-3.8 10.1-10.1 10.1s-10.1-5.1-10.1-10c0-6.4 5.1-10.2 10-10.2zM30.5 7.1h2.1v17h-2.1zM31.5 4.8c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8 1.8.8 1.8 1.8-.8 1.8-1.8 1.8zM40 4.8c-1 0-1.8-.8-1.8-1.8S39 1.2 40 1.2s1.8.8 1.8 1.8S41 4.8 40 4.8zM39 7.1h2.1v17H39zM53.7 24.4c-3.9 0-6.2-3-6.2-6v-16h2.1v4.7H57v2.1h-7.4v9.3c0 1.9 1.5 3.9 4.1 3.9.7 0 1.4-.2 2-.6l.2-.1 1 1.8-.2.1c-.9.5-2 .8-3 .8zM67.6 24.5c-5.7 0-9.1-4.5-9.1-8.9 0-5.7 4.5-9.1 8.9-9.1 2.3 0 4.1.8 5.4 2.3V7.1h2.1v17h-2.1v-1.9c-1.2 1.5-3 2.3-5.2 2.3zm-.2-15.9c-3.4 0-6.8 2.6-6.8 7 0 3.4 2.6 6.8 7 6.8 2 0 4-.9 5.3-2.5v-8.8c-1.4-1.6-3.3-2.5-5.5-2.5z"></path></svg></a><div><div class="st-Header_realmSelector ml-1of2" tabindex="0"><span class="fa fa-caret-down"></span></div><div class="st-Header_dropdown st-RealmSelector"><div class="st-RealmSelector_realms"><a class="st-Header_dropdownItem st-RealmItem" href="https://qiita.com/"><div class="st-RealmItem_statusIcon"><span class="fa fa-fw fa-check"></span></div><div class="st-RealmItem_humanName">Qiita</div></a></div><hr><div class="st-RealmSelector_supplements"><div class="st-RealmSelector_label">ログイン中のチームがありません</div><a href="https://teams-center.qiita.com/find_team" class="st-Header_dropdownItem st-RealmSelectorSupplement"><div class="st-RealmSelectorSupplement_icon"><span class="fa fa-fw fa-sign-in"></span></div><div>Qiita:Team にログイン...</div></a></div></div></div><div class="u-relative ml-3 ml-1@s"><div class="st-Header_home py-2 mr-3" tabindex="0"><!-- react-text: 26 -->ホーム<!-- /react-text --><span class="fa fa-caret-down ml-1"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/" class="st-Header_dropdownItem"><span class="fa fa-fw fa-line-chart mr-1of2"></span><!-- react-text: 31 -->トレンド<!-- /react-text --></a><a href="https://qiita.com/timeline" class="st-Header_dropdownItem"><span class="fa fa-fw fa-list-ul mr-1of2"></span><!-- react-text: 34 -->タイムライン<!-- /react-text --></a><a href="https://qiita.com/tag-feed" class="st-Header_dropdownItem"><span class="fa fa-fw fa-tags mr-1of2"></span><!-- react-text: 37 -->タグフィード<!-- /react-text --></a><a href="https://qiita.com/milestones" class="st-Header_dropdownItem"><span class="fa fa-fw fa-flag-checkered mr-1of2"></span><!-- react-text: 40 -->マイルストーン<!-- /react-text --></a></div></div><div class="u-relative"><div class="st-Header_community py-2 mr-3" tabindex="0"><!-- react-text: 43 -->コミュニティ<!-- /react-text --><span class="fa fa-caret-down ml-1"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/users" class="st-Header_dropdownItem"><span class="fa fa-fw fa-users mr-1of2"></span><!-- react-text: 48 -->ユーザー一覧<!-- /react-text --></a><a href="https://qiita.com/organizations" class="st-Header_dropdownItem"><span class="fa fa-fw fa-building-o mr-1of2"></span><!-- react-text: 51 -->Organization一覧<!-- /react-text --></a><a href="https://qiita.com/advent-calendar" class="st-Header_dropdownItem"><span class="fa fa-fw fa-calendar mr-1of2"></span><!-- react-text: 54 -->アドベントカレンダー<!-- /react-text --></a><div class="st-Header_dropdownSeparator"></div><a href="https://qiitadon.com/" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-comments-o mr-1of2"></span><!-- react-text: 58 -->Qiitadon (β)<!-- /react-text --></a><a href="https://zine.qiita.com/?utm_source=qiita&amp;utm_medium=referral&amp;utm_content=header" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-newspaper-o mr-1of2"></span><!-- react-text: 61 -->Qiita:Zine<!-- /react-text --></a><div class="st-Header_dropdownSeparator"></div><a href="https://help.qiita.com/ja/articles/qiita-community-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span><!-- react-text: 65 -->コミュニティガイドライン<!-- /react-text --></a><a href="https://help.qiita.com/ja/articles/qiita-article-guideline" class="st-Header_dropdownItem" target="_blank"><span class="fa fa-fw fa-book mr-1of2"></span><!-- react-text: 68 -->良い記事を書くために<!-- /react-text --></a></div></div><form class="st-Header_search" action="https://qiita.com/search" method="get"><span class="fa fa-search"></span><input type="search" class="st-Header_searchInput pl-4" autocomplete="off" placeholder="キーワードを入力" name="q" required=""></form><div class="st-Header_searchButton"><span class="fa fa-search"></span></div></div><div class="st-Header_end"><a href="https://qiita.com/stock" class="st-Header_stock mr-2 py-2"><span class="fa fa-fw fa-folder-open mr-1of2"></span><span class="st-Header_stock-label">ストック一覧</span></a><div class="st-Header_notifications mr-2" tabindex="0"><!-- react-text: 79 -->0<!-- /react-text --><div class="st-Header_notiIframe"><div class="st-Header_notiHeader"><div><span class="fa fa-bell-o mgr-1"></span><!-- react-text: 84 -->お知らせ<!-- /react-text --></div><a href="https://qiita.com/settings/notifications">通知設定</a></div><div class="st-Header_notiFooter"><a href="https://qiita.com/notifications">通知一覧を見る</a></div></div></div><div class="u-relative"><div class="st-Header_loginUser" tabindex="0"><img src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/1555752598"><span class="fa fa-caret-down ml-1"></span></div><div class="st-Header_dropdown"><a href="https://qiita.com/haru1843" class="st-Header_dropdownItem">マイページ</a><div class="st-Header_dropdownSeparator"></div><a href="https://qiita.com/drafts" class="st-Header_dropdownItem">下書き一覧</a><a href="https://qiita.com/patches" class="st-Header_dropdownItem">編集リクエスト一覧</a><div class="st-Header_dropdownSeparator"></div><a href="https://qiita.com/settings" class="st-Header_dropdownItem">設定</a><a href="https://help.qiita.com/ja/categories/qiita/" class="st-Header_dropdownItem" target="_blank">ヘルプ</a><div class="st-Header_dropdownSeparator"></div><div class="st-Header_dropdownItem" tabindex="0">ログアウト</div></div></div></div><div class="st-Header_overlay"></div><form class="st-Header_searchModal" action="https://qiita.com/search" method="get"><input type="text" class="st-Header_searchModalInput pl-1" autocomplete="off" placeholder="キーワードを入力" name="q" required=""></form></div></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="GlobalHeaderContainer" data-dom-id="GlobalHeaderContainer-react-component-c3f37984-8957-4f4f-8551-d102ff29a8c8">{"user":{"profile_image_url":"https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/264254/profile-images/1555752598","team_only":false,"url_name":"haru1843"},"realms":[{"human_name":"Qiita","is_current_realm":true,"is_qiita":true,"is_qiita_team":false,"logged_in_user":{"profile_image_url":"https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/264254/profile-images/1555752598","url_name":"haru1843"},"team_id":null,"url":"https://qiita.com/"}],"teamFindUrl":"https://teams-center.qiita.com/find_team","unreadNotificationsCount":0,"locale":"ja","is_fluid":true,"is_staff":false}</script>
+      
+</div><div class="publicEditor"><script type="application/json" id="js-react-on-rails-context">{}</script>
+<div id="PublicDraftItemEditorContainer-react-component-6886b4c9-b277-4535-9b68-acceac80cebb"><div data-reactroot=""><form class="editor form"><div class="editor_content"><div class="editorTitle" data-placement="top"><input class="form-control" name="draft_item[title]" placeholder="タイトル" tabindex="1" value="Juliaにおける基本的な行列操作"><div class="editorLabel"><div class="editorLabel_status-unposted">未投稿</div></div></div><div class="editorTag" data-placement="bottom"><div class="textoverlay-wrapper" style="margin: 0px; padding: 0px; overflow: hidden; display: block; position: relative;"><div class="textoverlay" style="position: absolute; color: transparent; white-space: pre-wrap; overflow-wrap: break-word; overflow: hidden; margin: 0px; padding: 6px 12px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Helvetica Neue&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, メイリオ, meiryo, sans-serif; font-weight: 400; font-size: 14px; background-color: rgb(255, 255, 255); top: 1px; right: 1px; bottom: 1px; left: 1px;"><span style="background-color: #D9EAFE">Julia</span> <span style="background-color: #D9EAFE">行列</span> </div><input type="text" autocomplete="off" class="form-control" name="draft_item[tag_notation]" placeholder="プログラミング技術に関連するタグをスペース区切りで5つまで入力（例: Ruby Rails:4.2.0）" tabindex="2" value="Julia 行列 " style="background: transparent; position: relative; outline: 0px;"></div></div><div class="editorBody-onUpdate halfPreviewing"><div class="editorMarkdown"><div class="editorMarkdown_header"><span class="editorMarkdown_tabBar"><a class="editorMarkdown_tab active" data-name="markdown" tabindex="-1">本文</a><a class="editorMarkdown_guideline hidden-xs" href="https://help.qiita.com/ja/articles/qiita-article-guideline" target="_blank"><i class="fa fa-book"></i><!-- react-text: 17 -->&nbsp;<!-- /react-text --><!-- react-text: 18 -->良い記事を書くには<!-- /react-text --></a></span><div class="editorMarkdown_toolBar"><div class="editorMarkdown_imagePicker"><div class="editorMarkdown_imagePickerInner"><input type="file" tabindex="-1" value=""><i class="fa fa-picture-o" data-tip="true" data-for="tooltip-for-image-picker" currentitem="false"></i><div class="__react_component_tooltip place-top type-dark " data-id="tooltip"></div></div></div><div class="emojiPickerLauncher"><div class="emojiPicker"><span class="emojiPicker_label"><i class="fa fa-smile-o" data-tip="絵文字" data-for="emoji-picker-tooltip-button" currentitem="false"></i><div class="__react_component_tooltip place-top type-dark " data-id="tooltip"></div></span><div class="emojiPicker_container"></div></div></div><div class="editorMarkdown_help"><div class="markdownHelp_button"><i class="fa fa-question-circle" data-tip="Markdown の書き方" data-for="markdown-help-button" currentitem="false"><div class="__react_component_tooltip place-top type-dark " data-id="tooltip"></div></i><!-- react-empty: 35 --></div></div></div></div><div class="editorMarkdown_panel active"><div class="editorMarkdown_textareaWrapper" data-placement="top"><textarea class="editorMarkdown_textarea" name="draft_item[raw_body]" placeholder="プログラミング知識をMarkdown記法で書いて共有しよう" tabindex="3"># はじめに
+Juliaにおける基本的な操作を書き残します.
+間違い等ありましたら, ぜひご連絡ください.
+
+ちなみにJulia(ver1.1.0)における環境で動作チェックしています.
+
+それと行列操作に関する逆引き的なものを用意しようと思っているのでそちらもよろしくお願いします.
+(作成中...)
+
+# 行列の定義
+## 単純な書き方
+行の区切りは`改行`もしくは`;`で表現し, 列の区切りは` `(半角スペース)で表現する.
+つまり, 以下のようにすれば作成できる.
+
+```julia
+julia&gt; mat = [1 2 3; 4 5 6]
+2×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+
+julia&gt; mat = [
+       1 2 3
+       4 5 6
+       ]
+2×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+```
+
+## ジェネレーターを使う(pythonのリスト内包表記)
+pythonを使う人ならおなじみのリスト内包表記的な書き方でも行列は作成できる.
+(微妙に書き方と向きが違うので注意)
+
+```julia
+julia&gt; mat = [ x for x in 1:4]
+4-element Array{Int64,1}:
+ 1
+ 2
+ 3
+ 4
+
+julia&gt; mat = [ 10a + b for a in 0:2, b in 0:3]
+3×4 Array{Int64,2}:
+  0   1   2   3
+ 10  11  12  13
+ 20  21  22  23
+```
+
+### 後置ifを利用したジェネレーター
+(後置ifはpythonでの名称だから, juliaでもそういうかわからないけど)
+
+```julia
+julia&gt; mat = [ i for i in 0:10 if (i%2)==0 ]
+6-element Array{Int64,1}:
+  0
+  2
+  4
+  6
+  8
+ 10
+```
+
+また2次元行列を作成する時に後置ifを利用すると, ベクトルになって返ってくる.
+(
+```julia
+julia&gt; mat = [ 10a + b for a in 0:1, b in 0:9 if (b%2) == (a%2)]
+10-element Array{Int64,1}:
+  0
+ 11
+  2
+ 13
+  4
+ 15
+  6
+ 17
+  8
+ 19
+```
+
+# 関数を使った行列の生成
+## 零行列を作成する
+組み込みの関数である`zeros([T=Float64,] dims...)`を利用していきます.
+
+| 引数 | 概要 |
+| :-: | :-: | 
+| `T` | 型を指定します. 省略可. | 
+| `dims...` | 次元数を列挙します. |
+
+```bash
+julia&gt; zeros(ComplexF64, 2, 2)
+2×2 Array{Complex{Float64},2}:
+ 0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im
+
+julia&gt; zeros(Int8, 2, 2, 2)
+2×2×2 Array{Int8,3}:
+[:, :, 1] =
+ 0  0
+ 0  0
+
+[:, :, 2] =
+ 0  0
+ 0  0
+
+julia&gt; zeros(2, 3)
+2×3 Array{Float64,2}:
+ 0.0  0.0  0.0
+ 0.0  0.0  0.0
+```
+
+## すべての要素が1の行列
+組み込みの関数である`ones([T=Float64,] dims...)`を利用していきます.
+利用の仕方は上記の`zeros`と同じなので省略します.
+
+## 単位行列
+単位行列の生成方法はバージョンによって結構変わってきます.
+(`eye`だったり,`I`を利用したり...)
+ver1.0以降(自分の場合は`ver1.1.0`)においては`LinearAlgebra`にある`I`を利用して単位行列を作成します.
+
+構文としては`Matrix{T}(I, row, col}`です.
+ちなみに正則行列でなくても作成できます.
+
+```julia
+julia&gt; using LinearAlgebra
+
+julia&gt; Matrix{Int8}(I, 3, 3)
+3×3 Array{Int8,2}:
+ 1  0  0
+ 0  1  0
+ 0  0  1
+
+julia&gt; Matrix{ComplexF64}(I, 3, 3)
+3×3 Array{Complex{Float64},2}:
+ 1.0+0.0im  0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  1.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im  1.0+0.0im
+
+julia&gt; Matrix{Int8}(I, 4, 3)
+4×3 Array{Int8,2}:
+ 1  0  0
+ 0  1  0
+ 0  0  1
+ 0  0  0
+```
+
+
+## ランダムな値を持つ行列を生成
+組み込み関数である`rand([rng=GLOBAL_RNG], [S], [dims...])`を利用していきます.
+| 引数 | 概要 | 省略 | 注意 |
+| :-: | :-: | :-: | :-: |
+| `rng` | わからないです&lt;br&gt;(たぶんシード値?) | 可 | わかる方は教えてください |
+| `S` | 生成するデータの指定&lt;br&gt;(指定方法は後述) | 可 | tupleで指定できるのは`v1.1`以降から |
+| `dims` | 各次元数 | 可 |
+
+`S`の指定方法は結構柔軟で, 以下に示すような方法で指定できます.
+| 指定方法 | データの選ばれ方 |
+| :-: | :-: |
+| indexable collection&lt;br&gt;(`1:9`, `(1, 2, 3, 100)` など) | そのタプルに属する値のうち1つ |  |
+| AbstractDict, AbstractSet | 〃 |  |
+| string | 文字列を文字単位に分解したうちの1つ. |  |
+| type | `typemin(S)`〜`typemax(S)`のうちの1つ |  |
+
+以下にそれぞれの実行例を載せておきます.
+
+```julia
+julia&gt; rand((1, 2, 3, -99), 2, 9)
+2×9 Array{Int64,2}:
+ 2    3  1    2  -99    3  2    2    3
+ 2  -99  3  -99    2  -99  2  -99  -99
+```
+
+```julia
+julia&gt; rand(Dict("bird"=&gt;3, "mammal"=&gt;345, "reptiles"=&gt;32), 2, 4)
+2×4 Array{Pair{String,Int64},2}:
+   "mammal"=&gt;345  "mammal"=&gt;345  "reptiles"=&gt;32      "bird"=&gt;3 
+ "reptiles"=&gt;32     "bird"=&gt;3        "bird"=&gt;3   "reptiles"=&gt;32
+```
+
+```julia
+julia&gt; rand("hoge", 2, 9)
+2×9 Array{Char,2}:
+ 'e'  'o'  'h'  'g'  'o'  'o'  'o'  'e'  'e'
+ 'o'  'h'  'h'  'e'  'e'  'h'  'e'  'e'  'h'
+
+julia&gt; rand("aaaaaaaaaaag", 2, 9)
+2×9 Array{Char,2}:
+ 'a'  'a'  'a'  'a'  'a'  'a'  'g'  'a'  'a'
+ 'a'  'a'  'a'  'a'  'a'  'a'  'a'  'g'  'a'
+```
+
+```julia
+julia&gt; rand(Char, 2, 6)
+2×6 Array{Char,2}:
+ '\Ub8de6'  '𗀋'  '骊'        '\U63ebc'  '\Ue15e4'  '\U640aa'
+ '\U39ad9'  '㵑'  '\U4d6b0'  '뛐'        '\U6302d'  '\U8d876'
+
+julia&gt; rand(ComplexF64, 3, 3)
+3×3 Array{Complex{Float64},2}:
+ 0.833554+0.844678im  0.0205492+0.966243im  0.665147+0.809684im
+ 0.237675+0.252522im    0.30283+0.414608im  0.139303+0.571629im
+ 0.386357+0.949509im    0.56883+0.772397im  0.984182+0.255435im
+```
+
+## 標準正規分布に従う乱数を持つ行列を生成
+`randn([rng=GLOBAL_RNG], [T=Float64], [dims...])`を利用します.
+使い方は`rand`とほぼ同じなので, 省略します.
+
+また`randexp`も, もちろんあります.
+
+
+# 添字
+添字の選択方法に関しては以下の二通ります(たぶん).
+## 各要素を一様の数字で選択する
+こんな感じ. 
+@import "./src/index1.jl" {code_block=true as="julia" class=line-numbers cmd="/home/haru/julia/usr/bin/julia" output="text" modify_source=true}
+
+## mat[行, 列]形式で選択する
+こんな感じ.
+@import "./src/index2.jl" {code_block=true as="julia" class=line-numbers cmd="/home/haru/julia/usr/bin/julia" output="text" modify_source=true}
+
+# 基本演算
+行列演算と要素毎の演算のそれぞれについて触れていきます.
+
+## 要素毎の演算
+`.`で各関数を各要素に適用できます.
+
+```julia
+julia&gt; a = [1 2 3; 4 5 6; 7 8 9]
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; b = [-1 -2 -3; 4 5 6; -7 -8 -9]
+3×3 Array{Int64,2}:
+ -1  -2  -3
+  4   5   6
+ -7  -8  -9
+
+# 算術演算子
+julia&gt; a .* b
+3×3 Array{Int64,2}:
+  -1   -4   -9
+  16   25   36
+ -49  -64  -81
+
+julia&gt; a .*= b
+3×3 Array{Int64,2}:
+  -1   -4   -9
+  16   25   36
+ -49  -64  -81
+```
+
+算術演算子以外にも利用できます. また, 自作関数にも適用することができます.
+
+```julia
+# 関数
+julia&gt; a = [1 2 3; 4 5 6; 7 8 9]
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; sin.(a)
+3×3 Array{Float64,2}:
+  0.841471   0.909297   0.14112 
+ -0.756802  -0.958924  -0.279415
+  0.656987   0.989358   0.412118
+
+julia&gt; myfunc = function(x) 2x -5 end
+#5 (generic function with 1 method)
+
+julia&gt; myfunc.(a)
+3×3 Array{Int64,2}:
+ -3  -1   1
+  3   5   7
+  9  11  13
+```
+
+一応, `map`関数を利用してでも似たようなことが実現できます.
+
+```julia
+a = map(sin, a)
+a = map(myfunc, a)
+```
+
+## 和算, 減算
+演算子`+`, `-`を利用していきます.
+
+```julia
+julia&gt; a = [1 2 3; 4 5 6; 7 8 9]
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; b = [-1 -2 -3; 4 5 6; -7 -8 -9]
+3×3 Array{Int64,2}:
+ -1  -2  -3
+  4   5   6
+ -7  -8  -9
+
+julia&gt; a + b
+3×3 Array{Int64,2}:
+ 0   0   0
+ 8  10  12
+ 0   0   0
+
+julia&gt; a - b
+3×3 Array{Int64,2}:
+  2   4   6
+  0   0   0
+ 14  16  18
+```
+
+## 積
+行列の積は`*`, 要素毎の掛け算は`.*`となります.s
+
+```julia
+julia&gt; a * b
+3×3 Array{Int64,2}:
+ -14  -16  -18
+ -26  -31  -36
+ -38  -46  -54
+
+julia&gt; a .* b
+3×3 Array{Int64,2}:
+  -1   -4   -9
+  16   25   36
+ -49  -64  -81
+```
+
+## 割り算, 逆行列の掛け算
+要素毎の割り算は`./`を使います.
+
+```julia
+julia&gt; a ./ b
+3×3 Array{Float64,2}:
+ -1.0  -1.0  -1.0
+  1.0   1.0   1.0
+ -1.0  -1.0  -1.0
+```
+
+演算子`/`は少し特殊で, `a / b`は`a * inv(b)`を表します.
+
+```julia
+julia&gt; x = randn(Float64, 3, 3)
+3×3 Array{Float64,2}:
+  0.774262  -0.385865  -1.1918  
+  0.402656  -1.53214    1.95856 
+ -0.622096   0.619093  -0.787436
+
+julia&gt; y = randn(Float64, 3, 3)
+3×3 Array{Float64,2}:
+  0.330775  -0.95705   0.993989 
+ -1.37908   -0.312028  0.0130837
+  0.882019   0.93005   0.816249 
+```
+```julia
+julia&gt; x / y
+3×3 Array{Float64,2}:
+ -0.254909  -1.34409   -1.12813  
+  1.75524    0.293593   0.257316 
+ -0.763695   0.243228  -0.0386082
+
+julia&gt; x * inv(y)
+3×3 Array{Float64,2}:
+ -0.254909  -1.34409   -1.12813  
+  1.75524    0.293593   0.257316 
+ -0.763695   0.243228  -0.0386082
+```
+
+また`\`では, `a \ b`は`inv(a) * b`を表します.
+
+```julia
+julia&gt; x \ y
+3×3 Array{Float64,2}:
+ -0.712879  -1.7516    -1.79956
+ -0.165542  -0.484339  -2.15161
+ -0.687072  -0.178097  -1.30651
+
+julia&gt; inv(x) * y
+3×3 Array{Float64,2}:
+ -0.712879  -1.7516    -1.79956
+ -0.165542  -0.484339  -2.15161
+ -0.687072  -0.178097  -1.30651
+```
+
+## 逆行列
+`inv(x)`を利用します.
+
+## 転置行列
+`'`を利用して`x'`のように書きます.
+ちなみに複素数に`x'`を利用するとエルミート行列になってしまうため, `transpose()`を使いましょう.
+
+```julia
+julia&gt; mat = [1 2 3; 4 5 6; 7 8 9]
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; mat'
+3×3 LinearAlgebra.Adjoint{Int64,Array{Int64,2}}:
+ 1  4  7
+ 2  5  8
+ 3  6  9
+```
+
+```julia
+julia&gt; mat = rand(Complex{Int8}, 2, 2)
+2×2 Array{Complex{Int8},2}:
+ 13+19im   7+92im
+ 82-10im  91+53im
+
+# エルミート行列になっちゃう
+julia&gt; mat'
+2×2 LinearAlgebra.Adjoint{Complex{Int8},Array{Complex{Int8},2}}:
+ 13-19im  82+10im
+  7-92im  91-53im
+
+# 複素数の転置はこちらを使う
+julia&gt; transpose(mat)
+2×2 LinearAlgebra.Transpose{Complex{Int8},Array{Complex{Int8},2}}:
+ 13+19im  82-10im
+  7+92im  91+53im
+```
+
+## エルミート行列(共役転置行列, 自己随伴行列)
+前節で説明したように, 複素数に対して`'`を利用するとエルミート行列が得られます.
+
+```julia
+julia&gt; mat = rand(Complex{Int8}, 2, 2)
+2×2 Array{Complex{Int8},2}:
+ 13+19im   7+92im
+ 82-10im  91+53im
+
+# エルミート行列
+julia&gt; mat'
+2×2 LinearAlgebra.Adjoint{Complex{Int8},Array{Complex{Int8},2}}:
+ 13-19im  82+10im
+  7-92im  91-53im
+
+# 複素数の通常の転置はこちらを使う
+julia&gt; transpose(mat)
+2×2 LinearAlgebra.Transpose{Complex{Int8},Array{Complex{Int8},2}}:
+ 13+19im  82-10im
+  7+92im  91+53im
+```
+
+# 配列の複製
+他の言語でもそうですがふつーに`b = a`をしてbにaをコピーすると
+
+```julia
+julia&gt; a = [1 2 3; 4 5 6; 7 8 9]
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; b = a
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; b .= 0
+3×3 Array{Int64,2}:
+ 0  0  0
+ 0  0  0
+ 0  0  0
+
+julia&gt; a
+3×3 Array{Int64,2}:
+ 0  0  0
+ 0  0  0
+ 0  0  0
+```
+のように, 値だけでなく参照先まで同じになってしまう.(浅いコピー)
+
+そこで, 値だけを得たい場合は`copy()`を利用する.(深いコピー)
+
+```julia
+julia&gt; a = [1 2 3; 4 5 6; 7 8 9]
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; b = copy(a)
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+
+julia&gt; b .= 0
+3×3 Array{Int64,2}:
+ 0  0  0
+ 0  0  0
+ 0  0  0
+
+julia&gt; a
+3×3 Array{Int64,2}:
+ 1  2  3
+ 4  5  6
+ 7  8  9
+```</textarea></div></div></div><div class="editorPreview"><div class="editorPreview_header"><div class="editorPreview_toggleButtons"><i class="fa editorPreview_toggleIcon-fullPreview" data-name="full"></i><i class="fa editorPreview_toggleIcon-noPreview" data-name="no"></i></div><div class="editorPreview_title">プレビュー</div><label for="draft_item[slide]" class="editorPreview_slideMode"><input type="checkbox" id="draft_item[slide]" name="draft_item[slide]" value="on"><!-- react-text: 47 -->&nbsp;<!-- /react-text --><!-- react-text: 48 -->スライドモード<!-- /react-text --></label></div><div class="editorPreview_article" id="item-3956dab2fd0d448cd02b"><div class="it-MdContent">
+<h1>
+<span id="はじめに" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB"><i class="fa fa-link"></i></a>はじめに</h1>
+
+<p>Juliaにおける基本的な操作を書き残します.<br>
+間違い等ありましたら, ぜひご連絡ください.</p>
+
+<p>ちなみにJulia(ver1.1.0)における環境で動作チェックしています.</p>
+
+<p>それと行列操作に関する逆引き的なものを用意しようと思っているのでそちらもよろしくお願いします.<br>
+(作成中...)</p>
+
+<h1>
+<span id="行列の定義" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E8%A1%8C%E5%88%97%E3%81%AE%E5%AE%9A%E7%BE%A9"><i class="fa fa-link"></i></a>行列の定義</h1>
+
+<h2>
+<span id="単純な書き方" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%8D%98%E7%B4%94%E3%81%AA%E6%9B%B8%E3%81%8D%E6%96%B9"><i class="fa fa-link"></i></a>単純な書き方</h2>
+
+<p>行の区切りは<code>改行</code>もしくは<code>;</code>で表現し, 列の区切りは<code></code>(半角スペース)で表現する.<br>
+つまり, 以下のようにすれば作成できる.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">]</span>
+<span class="mi">2</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="x">[</span>
+       <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span>
+       <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span>
+       <span class="x">]</span>
+<span class="mi">2</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+</pre></div></div>
+
+<h2>
+<span id="ジェネレーターを使うpythonのリスト内包表記" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%92%E4%BD%BF%E3%81%86python%E3%81%AE%E3%83%AA%E3%82%B9%E3%83%88%E5%86%85%E5%8C%85%E8%A1%A8%E8%A8%98"><i class="fa fa-link"></i></a>ジェネレーターを使う(pythonのリスト内包表記)</h2>
+
+<p>pythonを使う人ならおなじみのリスト内包表記的な書き方でも行列は作成できる.<br>
+(微妙に書き方と向きが違うので注意)</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="x">[</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="mi">1</span><span class="x">:</span><span class="mi">4</span><span class="x">]</span>
+<span class="mi">4</span><span class="o">-</span><span class="n">element</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">1</span><span class="x">}:</span>
+ <span class="mi">1</span>
+ <span class="mi">2</span>
+ <span class="mi">3</span>
+ <span class="mi">4</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="x">[</span> <span class="mi">10</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="k">for</span> <span class="n">a</span> <span class="k">in</span> <span class="mi">0</span><span class="x">:</span><span class="mi">2</span><span class="x">,</span> <span class="n">b</span> <span class="k">in</span> <span class="mi">0</span><span class="x">:</span><span class="mi">3</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×4</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="mi">0</span>   <span class="mi">1</span>   <span class="mi">2</span>   <span class="mi">3</span>
+ <span class="mi">10</span>  <span class="mi">11</span>  <span class="mi">12</span>  <span class="mi">13</span>
+ <span class="mi">20</span>  <span class="mi">21</span>  <span class="mi">22</span>  <span class="mi">23</span>
+</pre></div></div>
+
+<h3>
+<span id="後置ifを利用したジェネレーター" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%BE%8C%E7%BD%AEif%E3%82%92%E5%88%A9%E7%94%A8%E3%81%97%E3%81%9F%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC"><i class="fa fa-link"></i></a>後置ifを利用したジェネレーター</h3>
+
+<p>(後置ifはpythonでの名称だから, juliaでもそういうかわからないけど)</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="x">[</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">0</span><span class="x">:</span><span class="mi">10</span> <span class="k">if</span> <span class="x">(</span><span class="n">i</span><span class="o">%</span><span class="mi">2</span><span class="x">)</span><span class="o">==</span><span class="mi">0</span> <span class="x">]</span>
+<span class="mi">6</span><span class="o">-</span><span class="n">element</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">1</span><span class="x">}:</span>
+  <span class="mi">0</span>
+  <span class="mi">2</span>
+  <span class="mi">4</span>
+  <span class="mi">6</span>
+  <span class="mi">8</span>
+ <span class="mi">10</span>
+</pre></div></div>
+
+<p>また<br>
+<code>julia<br>
+julia&gt; mat = [ 10a + b for a in 0:1, b in 0:9 if (b%2) == (a%2)]<br>
+10-element Array{Int64,1}:<br>
+  0<br>
+ 11<br>
+  2<br>
+ 13<br>
+  4<br>
+ 15<br>
+  6<br>
+ 17<br>
+  8<br>
+ 19<br>
+</code></p>
+
+<h1>
+<span id="関数を使った行列の生成" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E8%A1%8C%E5%88%97%E3%81%AE%E7%94%9F%E6%88%90"><i class="fa fa-link"></i></a>関数を使った行列の生成</h1>
+
+<h2>
+<span id="零行列を作成する" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E9%9B%B6%E8%A1%8C%E5%88%97%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B"><i class="fa fa-link"></i></a>零行列を作成する</h2>
+
+<p>組み込みの関数である<code>zeros([T=Float64,] dims...)</code>を利用していきます.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center">引数</th>
+<th style="text-align: center">概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center"><code>T</code></td>
+<td style="text-align: center">型を指定します. 省略可.</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>dims...</code></td>
+<td style="text-align: center">次元数を列挙します.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="code-frame" data-lang="bash"><div class="highlight"><pre>julia&gt; zeros<span class="o">(</span>ComplexF64, 2, 2<span class="o">)</span>
+2×2 Array<span class="o">{</span>Complex<span class="o">{</span>Float64<span class="o">}</span>,2<span class="o">}</span>:
+ 0.0+0.0im  0.0+0.0im
+ 0.0+0.0im  0.0+0.0im
+
+julia&gt; zeros<span class="o">(</span>Int8, 2, 2, 2<span class="o">)</span>
+2×2×2 Array<span class="o">{</span>Int8,3<span class="o">}</span>:
+<span class="o">[</span>:, :, 1] <span class="o">=</span>
+ 0  0
+ 0  0
+
+<span class="o">[</span>:, :, 2] <span class="o">=</span>
+ 0  0
+ 0  0
+
+julia&gt; zeros<span class="o">(</span>2, 3<span class="o">)</span>
+2×3 Array<span class="o">{</span>Float64,2<span class="o">}</span>:
+ 0.0  0.0  0.0
+ 0.0  0.0  0.0
+</pre></div></div>
+
+<h2>
+<span id="すべての要素が1の行列" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E8%A6%81%E7%B4%A0%E3%81%8C1%E3%81%AE%E8%A1%8C%E5%88%97"><i class="fa fa-link"></i></a>すべての要素が1の行列</h2>
+
+<p>組み込みの関数である<code>ones([T=Float64,] dims...)</code>を利用していきます.<br>
+利用の仕方は上記の<code>zeros</code>と同じなので省略します.</p>
+
+<h2>
+<span id="単位行列" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%8D%98%E4%BD%8D%E8%A1%8C%E5%88%97"><i class="fa fa-link"></i></a>単位行列</h2>
+
+<p>単位行列の生成方法はバージョンによって結構変わってきます.<br>
+(<code>eye</code>だったり,<code>I</code>を利用したり...)<br>
+ver1.0以降(自分の場合は<code>ver1.1.0</code>)においては<code>LinearAlgebra</code>にある<code>I</code>を利用して単位行列を作成します.</p>
+
+<p>構文としては<code>Matrix{T}(I, row, col}</code>です.<br>
+ちなみに正則行列でなくても作成できます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">using</span> <span class="n">LinearAlgebra</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">Matrix</span><span class="x">{</span><span class="kt">Int8</span><span class="x">}(</span><span class="n">I</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="mi">3</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int8</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">Matrix</span><span class="x">{</span><span class="n">ComplexF64</span><span class="x">}(</span><span class="n">I</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="mi">3</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Float64</span><span class="x">},</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mf">1.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>  <span class="mf">0.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>  <span class="mf">0.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>
+ <span class="mf">0.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>  <span class="mf">1.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>  <span class="mf">0.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>
+ <span class="mf">0.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>  <span class="mf">0.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>  <span class="mf">1.0</span><span class="o">+</span><span class="mf">0.0</span><span class="nb">im</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">Matrix</span><span class="x">{</span><span class="kt">Int8</span><span class="x">}(</span><span class="n">I</span><span class="x">,</span> <span class="mi">4</span><span class="x">,</span> <span class="mi">3</span><span class="x">)</span>
+<span class="mi">4</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int8</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">1</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">1</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></div></div>
+
+<h2>
+<span id="ランダムな値を持つ行列を生成" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%81%AA%E5%80%A4%E3%82%92%E6%8C%81%E3%81%A4%E8%A1%8C%E5%88%97%E3%82%92%E7%94%9F%E6%88%90"><i class="fa fa-link"></i></a>ランダムな値を持つ行列を生成</h2>
+
+<p>組み込み関数である<code>rand([rng=GLOBAL_RNG], [S], [dims...])</code>を利用していきます.<br>
+| 引数 | 概要 | 省略 | 注意 |<br>
+| :-: | :-: | :-: | :-: |<br>
+| <code>rng</code> | わからないです<br>(たぶんシード値?) | 可 | わかる方は教えてください |<br>
+| <code>S</code> | 生成するデータの指定<br>(指定方法は後述) | 可 | tupleで指定できるのは<code>v1.1</code>以降から |<br>
+| <code>dims</code> | 各次元数 | 可 |</p>
+
+<p><code>S</code>の指定方法は結構柔軟で, 以下に示すような方法で指定できます.<br>
+| 指定方法 | データの選ばれ方 |<br>
+| :-: | :-: |<br>
+| indexable collection<br>(<code>1:9</code>, <code>(1, 2, 3, 100)</code> など) | そのタプルに属する値のうち1つ |  |<br>
+| AbstractDict, AbstractSet | 〃 |  |<br>
+| string | 文字列を文字単位に分解したうちの1つ. |  |<br>
+| type | <code>typemin(S)</code>〜<code>typemax(S)</code>のうちの1つ |  |</p>
+
+<p>以下にそれぞれの実行例を載せておきます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">rand</span><span class="x">((</span><span class="mi">1</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="o">-</span><span class="mi">99</span><span class="x">),</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">9</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×9</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">2</span>    <span class="mi">3</span>  <span class="mi">1</span>    <span class="mi">2</span>  <span class="o">-</span><span class="mi">99</span>    <span class="mi">3</span>  <span class="mi">2</span>    <span class="mi">2</span>    <span class="mi">3</span>
+ <span class="mi">2</span>  <span class="o">-</span><span class="mi">99</span>  <span class="mi">3</span>  <span class="o">-</span><span class="mi">99</span>    <span class="mi">2</span>  <span class="o">-</span><span class="mi">99</span>  <span class="mi">2</span>  <span class="o">-</span><span class="mi">99</span>  <span class="o">-</span><span class="mi">99</span>
+</pre></div></div>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">rand</span><span class="x">(</span><span class="n">Dict</span><span class="x">(</span><span class="s">"bird"</span><span class="o">=&gt;</span><span class="mi">3</span><span class="x">,</span> <span class="s">"mammal"</span><span class="o">=&gt;</span><span class="mi">345</span><span class="x">,</span> <span class="s">"reptiles"</span><span class="o">=&gt;</span><span class="mi">32</span><span class="x">),</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">4</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×4</span> <span class="n">Array</span><span class="x">{</span><span class="n">Pair</span><span class="x">{</span><span class="kt">String</span><span class="x">,</span><span class="kt">Int64</span><span class="x">},</span><span class="mi">2</span><span class="x">}:</span>
+   <span class="s">"mammal"</span><span class="o">=&gt;</span><span class="mi">345</span>  <span class="s">"mammal"</span><span class="o">=&gt;</span><span class="mi">345</span>  <span class="s">"reptiles"</span><span class="o">=&gt;</span><span class="mi">32</span>      <span class="s">"bird"</span><span class="o">=&gt;</span><span class="mi">3</span> 
+ <span class="s">"reptiles"</span><span class="o">=&gt;</span><span class="mi">32</span>     <span class="s">"bird"</span><span class="o">=&gt;</span><span class="mi">3</span>        <span class="s">"bird"</span><span class="o">=&gt;</span><span class="mi">3</span>   <span class="s">"reptiles"</span><span class="o">=&gt;</span><span class="mi">32</span>
+</pre></div></div>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">rand</span><span class="x">(</span><span class="s">"hoge"</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">9</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×9</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Char</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="sc">'e'</span>  <span class="sc">'o'</span>  <span class="sc">'h'</span>  <span class="sc">'g'</span>  <span class="sc">'o'</span>  <span class="sc">'o'</span>  <span class="sc">'o'</span>  <span class="sc">'e'</span>  <span class="sc">'e'</span>
+ <span class="sc">'o'</span>  <span class="sc">'h'</span>  <span class="sc">'h'</span>  <span class="sc">'e'</span>  <span class="sc">'e'</span>  <span class="sc">'h'</span>  <span class="sc">'e'</span>  <span class="sc">'e'</span>  <span class="sc">'h'</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">rand</span><span class="x">(</span><span class="s">"aaaaaaaaaaag"</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">9</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×9</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Char</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'g'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>
+ <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'a'</span>  <span class="sc">'g'</span>  <span class="sc">'a'</span>
+</pre></div></div>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">rand</span><span class="x">(</span><span class="kt">Char</span><span class="x">,</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">6</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×6</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Char</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="sc">'\Ub8de6'</span>  <span class="sc">'𗀋'</span>  <span class="sc">'骊'</span>        <span class="sc">'\U63ebc'</span>  <span class="sc">'\Ue15e4'</span>  <span class="sc">'\U640aa'</span>
+ <span class="sc">'\U39ad9'</span>  <span class="sc">'㵑'</span>  <span class="sc">'\U4d6b0'</span>  <span class="sc">'뛐'</span>        <span class="sc">'\U6302d'</span>  <span class="sc">'\U8d876'</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">rand</span><span class="x">(</span><span class="n">ComplexF64</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="mi">3</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Float64</span><span class="x">},</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mf">0.833554</span><span class="o">+</span><span class="mf">0.844678</span><span class="nb">im</span>  <span class="mf">0.0205492</span><span class="o">+</span><span class="mf">0.966243</span><span class="nb">im</span>  <span class="mf">0.665147</span><span class="o">+</span><span class="mf">0.809684</span><span class="nb">im</span>
+ <span class="mf">0.237675</span><span class="o">+</span><span class="mf">0.252522</span><span class="nb">im</span>    <span class="mf">0.30283</span><span class="o">+</span><span class="mf">0.414608</span><span class="nb">im</span>  <span class="mf">0.139303</span><span class="o">+</span><span class="mf">0.571629</span><span class="nb">im</span>
+ <span class="mf">0.386357</span><span class="o">+</span><span class="mf">0.949509</span><span class="nb">im</span>    <span class="mf">0.56883</span><span class="o">+</span><span class="mf">0.772397</span><span class="nb">im</span>  <span class="mf">0.984182</span><span class="o">+</span><span class="mf">0.255435</span><span class="nb">im</span>
+</pre></div></div>
+
+<h2>
+<span id="標準正規分布に従う乱数を持つ行列を生成" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E6%A8%99%E6%BA%96%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83%E3%81%AB%E5%BE%93%E3%81%86%E4%B9%B1%E6%95%B0%E3%82%92%E6%8C%81%E3%81%A4%E8%A1%8C%E5%88%97%E3%82%92%E7%94%9F%E6%88%90"><i class="fa fa-link"></i></a>標準正規分布に従う乱数を持つ行列を生成</h2>
+
+<p><code>randn([rng=GLOBAL_RNG], [T=Float64], [dims...])</code>を利用します.<br>
+使い方は<code>rand</code>とほぼ同じなので, 省略します.</p>
+
+<p>また<code>randexp</code>も, もちろんあります.</p>
+
+<h1>
+<span id="添字" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E6%B7%BB%E5%AD%97"><i class="fa fa-link"></i></a>添字</h1>
+
+<p>添字の選択方法に関しては以下の二通ります(たぶん).</p>
+
+<h2>
+<span id="各要素を一様の数字で選択する" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%90%84%E8%A6%81%E7%B4%A0%E3%82%92%E4%B8%80%E6%A7%98%E3%81%AE%E6%95%B0%E5%AD%97%E3%81%A7%E9%81%B8%E6%8A%9E%E3%81%99%E3%82%8B"><i class="fa fa-link"></i></a>各要素を一様の数字で選択する</h2>
+
+<p>こんな感じ. <br>
+<a href="https://qiita.com/import" class="user-mention js-hovercard" title="import" data-hovercard-target-type="user" data-hovercard-target-name="import">@import</a> "./src/index1.jl" {code_block=true as="julia" class=line-numbers cmd="/home/haru/julia/usr/bin/julia" output="text" modify_source=true}</p>
+
+<h2>
+<span id="mat行-列形式で選択する" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#mat%E8%A1%8C-%E5%88%97%E5%BD%A2%E5%BC%8F%E3%81%A7%E9%81%B8%E6%8A%9E%E3%81%99%E3%82%8B"><i class="fa fa-link"></i></a>mat[行, 列]形式で選択する</h2>
+
+<p>こんな感じ.<br>
+<a href="https://qiita.com/import" class="user-mention js-hovercard" title="import" data-hovercard-target-type="user" data-hovercard-target-name="import">@import</a> "./src/index2.jl" {code_block=true as="julia" class=line-numbers cmd="/home/haru/julia/usr/bin/julia" output="text" modify_source=true}</p>
+
+<h1>
+<span id="基本演算" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%9F%BA%E6%9C%AC%E6%BC%94%E7%AE%97"><i class="fa fa-link"></i></a>基本演算</h1>
+
+<p>行列演算と要素毎の演算のそれぞれについて触れていきます.</p>
+
+<h2>
+<span id="要素毎の演算" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E8%A6%81%E7%B4%A0%E6%AF%8E%E3%81%AE%E6%BC%94%E7%AE%97"><i class="fa fa-link"></i></a>要素毎の演算</h2>
+
+<p><code>.</code>で各関数を各要素に適用できます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="x">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="o">-</span><span class="mi">7</span> <span class="o">-</span><span class="mi">8</span> <span class="o">-</span><span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mi">2</span>  <span class="o">-</span><span class="mi">3</span>
+  <span class="mi">4</span>   <span class="mi">5</span>   <span class="mi">6</span>
+ <span class="o">-</span><span class="mi">7</span>  <span class="o">-</span><span class="mi">8</span>  <span class="o">-</span><span class="mi">9</span>
+
+<span class="c"># 算術演算子</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">.*</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="o">-</span><span class="mi">1</span>   <span class="o">-</span><span class="mi">4</span>   <span class="o">-</span><span class="mi">9</span>
+  <span class="mi">16</span>   <span class="mi">25</span>   <span class="mi">36</span>
+ <span class="o">-</span><span class="mi">49</span>  <span class="o">-</span><span class="mi">64</span>  <span class="o">-</span><span class="mi">81</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">.*=</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="o">-</span><span class="mi">1</span>   <span class="o">-</span><span class="mi">4</span>   <span class="o">-</span><span class="mi">9</span>
+  <span class="mi">16</span>   <span class="mi">25</span>   <span class="mi">36</span>
+ <span class="o">-</span><span class="mi">49</span>  <span class="o">-</span><span class="mi">64</span>  <span class="o">-</span><span class="mi">81</span>
+</pre></div></div>
+
+<p>算術演算子以外にも利用できます. また, 自作関数にも適用することができます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="c"># 関数</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">sin</span><span class="o">.</span><span class="x">(</span><span class="n">a</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="mf">0.841471</span>   <span class="mf">0.909297</span>   <span class="mf">0.14112</span> 
+ <span class="o">-</span><span class="mf">0.756802</span>  <span class="o">-</span><span class="mf">0.958924</span>  <span class="o">-</span><span class="mf">0.279415</span>
+  <span class="mf">0.656987</span>   <span class="mf">0.989358</span>   <span class="mf">0.412118</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">myfunc</span> <span class="o">=</span> <span class="k">function</span><span class="x">(</span><span class="n">x</span><span class="x">)</span> <span class="mi">2</span><span class="n">x</span> <span class="o">-</span><span class="mi">5</span> <span class="k">end</span>
+<span class="c">#5 (generic function with 1 method)</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">myfunc</span><span class="o">.</span><span class="x">(</span><span class="n">a</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mi">3</span>  <span class="o">-</span><span class="mi">1</span>   <span class="mi">1</span>
+  <span class="mi">3</span>   <span class="mi">5</span>   <span class="mi">7</span>
+  <span class="mi">9</span>  <span class="mi">11</span>  <span class="mi">13</span>
+</pre></div></div>
+
+<p>一応, <code>map</code>関数を利用してでも似たようなことが実現できます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="n">map</span><span class="x">(</span><span class="n">sin</span><span class="x">,</span> <span class="n">a</span><span class="x">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">map</span><span class="x">(</span><span class="n">myfunc</span><span class="x">,</span> <span class="n">a</span><span class="x">)</span>
+</pre></div></div>
+
+<h2>
+<span id="和算-減算" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%92%8C%E7%AE%97-%E6%B8%9B%E7%AE%97"><i class="fa fa-link"></i></a>和算, 減算</h2>
+
+<p>演算子<code>+</code>, <code>-</code>を利用していきます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="x">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="o">-</span><span class="mi">7</span> <span class="o">-</span><span class="mi">8</span> <span class="o">-</span><span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mi">1</span>  <span class="o">-</span><span class="mi">2</span>  <span class="o">-</span><span class="mi">3</span>
+  <span class="mi">4</span>   <span class="mi">5</span>   <span class="mi">6</span>
+ <span class="o">-</span><span class="mi">7</span>  <span class="o">-</span><span class="mi">8</span>  <span class="o">-</span><span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
+ <span class="mi">8</span>  <span class="mi">10</span>  <span class="mi">12</span>
+ <span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="mi">2</span>   <span class="mi">4</span>   <span class="mi">6</span>
+  <span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">0</span>
+ <span class="mi">14</span>  <span class="mi">16</span>  <span class="mi">18</span>
+</pre></div></div>
+
+<h2>
+<span id="積" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E7%A9%8D"><i class="fa fa-link"></i></a>積</h2>
+
+<p>行列の積は<code>*</code>, 要素毎の掛け算は<code>.*</code>となります.s</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mi">14</span>  <span class="o">-</span><span class="mi">16</span>  <span class="o">-</span><span class="mi">18</span>
+ <span class="o">-</span><span class="mi">26</span>  <span class="o">-</span><span class="mi">31</span>  <span class="o">-</span><span class="mi">36</span>
+ <span class="o">-</span><span class="mi">38</span>  <span class="o">-</span><span class="mi">46</span>  <span class="o">-</span><span class="mi">54</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">.*</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="o">-</span><span class="mi">1</span>   <span class="o">-</span><span class="mi">4</span>   <span class="o">-</span><span class="mi">9</span>
+  <span class="mi">16</span>   <span class="mi">25</span>   <span class="mi">36</span>
+ <span class="o">-</span><span class="mi">49</span>  <span class="o">-</span><span class="mi">64</span>  <span class="o">-</span><span class="mi">81</span>
+</pre></div></div>
+
+<h2>
+<span id="割り算-逆行列の掛け算" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E5%89%B2%E3%82%8A%E7%AE%97-%E9%80%86%E8%A1%8C%E5%88%97%E3%81%AE%E6%8E%9B%E3%81%91%E7%AE%97"><i class="fa fa-link"></i></a>割り算, 逆行列の掛け算</h2>
+
+<p>要素毎の割り算は<code>./</code>を使います.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">./</span> <span class="n">b</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mf">1.0</span>  <span class="o">-</span><span class="mf">1.0</span>  <span class="o">-</span><span class="mf">1.0</span>
+  <span class="mf">1.0</span>   <span class="mf">1.0</span>   <span class="mf">1.0</span>
+ <span class="o">-</span><span class="mf">1.0</span>  <span class="o">-</span><span class="mf">1.0</span>  <span class="o">-</span><span class="mf">1.0</span>
+</pre></div></div>
+
+<p>演算子<code>/</code>は少し特殊で, <code>a / b</code>は<code>a * inv(b)</code>を表します.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="n">randn</span><span class="x">(</span><span class="kt">Float64</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="mi">3</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="mf">0.774262</span>  <span class="o">-</span><span class="mf">0.385865</span>  <span class="o">-</span><span class="mf">1.1918</span>  
+  <span class="mf">0.402656</span>  <span class="o">-</span><span class="mf">1.53214</span>    <span class="mf">1.95856</span> 
+ <span class="o">-</span><span class="mf">0.622096</span>   <span class="mf">0.619093</span>  <span class="o">-</span><span class="mf">0.787436</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">randn</span><span class="x">(</span><span class="kt">Float64</span><span class="x">,</span> <span class="mi">3</span><span class="x">,</span> <span class="mi">3</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+  <span class="mf">0.330775</span>  <span class="o">-</span><span class="mf">0.95705</span>   <span class="mf">0.993989</span> 
+ <span class="o">-</span><span class="mf">1.37908</span>   <span class="o">-</span><span class="mf">0.312028</span>  <span class="mf">0.0130837</span>
+  <span class="mf">0.882019</span>   <span class="mf">0.93005</span>   <span class="mf">0.816249</span> 
+</pre></div></div>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mf">0.254909</span>  <span class="o">-</span><span class="mf">1.34409</span>   <span class="o">-</span><span class="mf">1.12813</span>  
+  <span class="mf">1.75524</span>    <span class="mf">0.293593</span>   <span class="mf">0.257316</span> 
+ <span class="o">-</span><span class="mf">0.763695</span>   <span class="mf">0.243228</span>  <span class="o">-</span><span class="mf">0.0386082</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">*</span> <span class="n">inv</span><span class="x">(</span><span class="n">y</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mf">0.254909</span>  <span class="o">-</span><span class="mf">1.34409</span>   <span class="o">-</span><span class="mf">1.12813</span>  
+  <span class="mf">1.75524</span>    <span class="mf">0.293593</span>   <span class="mf">0.257316</span> 
+ <span class="o">-</span><span class="mf">0.763695</span>   <span class="mf">0.243228</span>  <span class="o">-</span><span class="mf">0.0386082</span>
+</pre></div></div>
+
+<p>また<code>\</code>では, <code>a \ b</code>は<code>inv(a) * b</code>を表します.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">x</span> <span class="o">\</span> <span class="n">y</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mf">0.712879</span>  <span class="o">-</span><span class="mf">1.7516</span>    <span class="o">-</span><span class="mf">1.79956</span>
+ <span class="o">-</span><span class="mf">0.165542</span>  <span class="o">-</span><span class="mf">0.484339</span>  <span class="o">-</span><span class="mf">2.15161</span>
+ <span class="o">-</span><span class="mf">0.687072</span>  <span class="o">-</span><span class="mf">0.178097</span>  <span class="o">-</span><span class="mf">1.30651</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">inv</span><span class="x">(</span><span class="n">x</span><span class="x">)</span> <span class="o">*</span> <span class="n">y</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Float64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="o">-</span><span class="mf">0.712879</span>  <span class="o">-</span><span class="mf">1.7516</span>    <span class="o">-</span><span class="mf">1.79956</span>
+ <span class="o">-</span><span class="mf">0.165542</span>  <span class="o">-</span><span class="mf">0.484339</span>  <span class="o">-</span><span class="mf">2.15161</span>
+ <span class="o">-</span><span class="mf">0.687072</span>  <span class="o">-</span><span class="mf">0.178097</span>  <span class="o">-</span><span class="mf">1.30651</span>
+</pre></div></div>
+
+<h2>
+<span id="逆行列" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E9%80%86%E8%A1%8C%E5%88%97"><i class="fa fa-link"></i></a>逆行列</h2>
+
+<p><code>inv(x)</code>を利用します.</p>
+
+<h2>
+<span id="転置行列" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E8%BB%A2%E7%BD%AE%E8%A1%8C%E5%88%97"><i class="fa fa-link"></i></a>転置行列</h2>
+
+<p><code>'</code>を利用して<code>x'</code>のように書きます.<br>
+ちなみに複素数に<code>x'</code>を利用するとエルミート行列になってしまうため, <code>transpose()</code>を使いましょう.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span><span class="err">'</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">LinearAlgebra</span><span class="o">.</span><span class="n">Adjoint</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}}:</span>
+ <span class="mi">1</span>  <span class="mi">4</span>  <span class="mi">7</span>
+ <span class="mi">2</span>  <span class="mi">5</span>  <span class="mi">8</span>
+ <span class="mi">3</span>  <span class="mi">6</span>  <span class="mi">9</span>
+</pre></div></div>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">rand</span><span class="x">(</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">2</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×2</span> <span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">13</span><span class="o">+</span><span class="mi">19</span><span class="nb">im</span>   <span class="mi">7</span><span class="o">+</span><span class="mi">92</span><span class="nb">im</span>
+ <span class="mi">82</span><span class="o">-</span><span class="mi">10</span><span class="nb">im</span>  <span class="mi">91</span><span class="o">+</span><span class="mi">53</span><span class="nb">im</span>
+
+<span class="c"># エルミート行列になっちゃう</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span><span class="err">'</span>
+<span class="mi">2</span><span class="n">×2</span> <span class="n">LinearAlgebra</span><span class="o">.</span><span class="n">Adjoint</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="mi">2</span><span class="x">}}:</span>
+ <span class="mi">13</span><span class="o">-</span><span class="mi">19</span><span class="nb">im</span>  <span class="mi">82</span><span class="o">+</span><span class="mi">10</span><span class="nb">im</span>
+  <span class="mi">7</span><span class="o">-</span><span class="mi">92</span><span class="nb">im</span>  <span class="mi">91</span><span class="o">-</span><span class="mi">53</span><span class="nb">im</span>
+
+<span class="c"># 複素数の転置はこちらを使う</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">transpose</span><span class="x">(</span><span class="n">mat</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×2</span> <span class="n">LinearAlgebra</span><span class="o">.</span><span class="n">Transpose</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="mi">2</span><span class="x">}}:</span>
+ <span class="mi">13</span><span class="o">+</span><span class="mi">19</span><span class="nb">im</span>  <span class="mi">82</span><span class="o">-</span><span class="mi">10</span><span class="nb">im</span>
+  <span class="mi">7</span><span class="o">+</span><span class="mi">92</span><span class="nb">im</span>  <span class="mi">91</span><span class="o">+</span><span class="mi">53</span><span class="nb">im</span>
+</pre></div></div>
+
+<h2>
+<span id="エルミート行列共役転置行列-自己随伴行列" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E8%A1%8C%E5%88%97%E5%85%B1%E5%BD%B9%E8%BB%A2%E7%BD%AE%E8%A1%8C%E5%88%97-%E8%87%AA%E5%B7%B1%E9%9A%8F%E4%BC%B4%E8%A1%8C%E5%88%97"><i class="fa fa-link"></i></a>エルミート行列(共役転置行列, 自己随伴行列)</h2>
+
+<p>前節で説明したように, 複素数に対して<code>'</code>を利用するとエルミート行列が得られます.</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span> <span class="o">=</span> <span class="n">rand</span><span class="x">(</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span> <span class="mi">2</span><span class="x">,</span> <span class="mi">2</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×2</span> <span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">13</span><span class="o">+</span><span class="mi">19</span><span class="nb">im</span>   <span class="mi">7</span><span class="o">+</span><span class="mi">92</span><span class="nb">im</span>
+ <span class="mi">82</span><span class="o">-</span><span class="mi">10</span><span class="nb">im</span>  <span class="mi">91</span><span class="o">+</span><span class="mi">53</span><span class="nb">im</span>
+
+<span class="c"># エルミート行列</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">mat</span><span class="err">'</span>
+<span class="mi">2</span><span class="n">×2</span> <span class="n">LinearAlgebra</span><span class="o">.</span><span class="n">Adjoint</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="mi">2</span><span class="x">}}:</span>
+ <span class="mi">13</span><span class="o">-</span><span class="mi">19</span><span class="nb">im</span>  <span class="mi">82</span><span class="o">+</span><span class="mi">10</span><span class="nb">im</span>
+  <span class="mi">7</span><span class="o">-</span><span class="mi">92</span><span class="nb">im</span>  <span class="mi">91</span><span class="o">-</span><span class="mi">53</span><span class="nb">im</span>
+
+<span class="c"># 複素数の通常の転置はこちらを使う</span>
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">transpose</span><span class="x">(</span><span class="n">mat</span><span class="x">)</span>
+<span class="mi">2</span><span class="n">×2</span> <span class="n">LinearAlgebra</span><span class="o">.</span><span class="n">Transpose</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="n">Array</span><span class="x">{</span><span class="n">Complex</span><span class="x">{</span><span class="kt">Int8</span><span class="x">},</span><span class="mi">2</span><span class="x">}}:</span>
+ <span class="mi">13</span><span class="o">+</span><span class="mi">19</span><span class="nb">im</span>  <span class="mi">82</span><span class="o">-</span><span class="mi">10</span><span class="nb">im</span>
+  <span class="mi">7</span><span class="o">+</span><span class="mi">92</span><span class="nb">im</span>  <span class="mi">91</span><span class="o">+</span><span class="mi">53</span><span class="nb">im</span>
+</pre></div></div>
+
+<h1>
+<span id="配列の複製" class="fragment"></span><a href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#%E9%85%8D%E5%88%97%E3%81%AE%E8%A4%87%E8%A3%BD"><i class="fa fa-link"></i></a>配列の複製</h1>
+
+<p>他の言語でもそうですがふつーに<code>b = a</code>をしてbにaをコピーすると</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">.=</span> <span class="mi">0</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+</pre></div></div>
+
+<p>のように, 値だけでなく参照先まで同じになってしまう.(浅いコピー)</p>
+
+<p>そこで, 値だけを得たい場合は<code>copy()</code>を利用する.(深いコピー)</p>
+
+<div class="code-frame" data-lang="julia"><div class="highlight"><pre><span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="x">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="x">;</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="x">;</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="x">]</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">copy</span><span class="x">(</span><span class="n">a</span><span class="x">)</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">b</span> <span class="o">.=</span> <span class="mi">0</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+ <span class="mi">0</span>  <span class="mi">0</span>  <span class="mi">0</span>
+
+<span class="n">julia</span><span class="o">&gt;</span> <span class="n">a</span>
+<span class="mi">3</span><span class="n">×3</span> <span class="n">Array</span><span class="x">{</span><span class="kt">Int64</span><span class="x">,</span><span class="mi">2</span><span class="x">}:</span>
+ <span class="mi">1</span>  <span class="mi">2</span>  <span class="mi">3</span>
+ <span class="mi">4</span>  <span class="mi">5</span>  <span class="mi">6</span>
+ <span class="mi">7</span>  <span class="mi">8</span>  <span class="mi">9</span>
+</pre></div></div>
+</div></div></div></div></div><div class="editorFooter"><div class="editorFooter_save editorSave"><div class="editorSave_submit"><div class="editorSubmit"><div class="btn-group editorSubmit_submitBtnGroup"><button class="btn btn-primary editorSubmit_submitBtn" tabindex="12" type="button"><span class="editorSubmit_submitBtnLabel active"><i class="fa fa-upload"></i><!-- react-text: 59 -->Qiita に投稿<!-- /react-text --></span></button><a class="btn btn-primary dropdown-toggle editorSubmit_dropdownToggle" tabindex="13"><i class="fa fa-caret-up"></i></a><ul class="list-unstyled editorSubmit_dropdownMenu "><li><a class="editorSubmit_dropdownItem " data-state="save" href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#" tabindex="14"><i class="fa fa-check"></i><i class="fa fa-save"></i><!-- react-text: 67 -->下書き保存<!-- /react-text --></a></li><li><a class="editorSubmit_dropdownItem " data-state="limited_post" href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#" tabindex="15"><i class="fa fa-check"></i><i class="fa fa-lock"></i><!-- react-text: 72 -->限定共有投稿<!-- /react-text --></a></li><li><a class="editorSubmit_dropdownItem active" data-state="post" href="https://qiita.com/drafts/3956dab2fd0d448cd02b/edit#" tabindex="16"><i class="fa fa-check"></i><i class="fa fa-upload"></i><!-- react-text: 77 -->Qiita に投稿<!-- /react-text --></a></li></ul></div></div></div></div><!-- react-text: 78 --><!-- /react-text --><div class="editorFooter_save editorSave"><div class="editorSave_autoSaveNotification"><i class="fa fa-check-circle"></i><span class="hidden-xs">自動保存しました</span></div></div></div><!-- react-empty: 83 --></form></div></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="PublicDraftItemEditorContainer" data-dom-id="PublicDraftItemEditorContainer-react-component-6886b4c9-b277-4535-9b68-acceac80cebb">{"comment":null,"draft_item":{"item_uuid":"3956dab2fd0d448cd02b","persisted":true,"raw_body":"# はじめに\nJuliaにおける基本的な操作を書き残します.\n間違い等ありましたら, ぜひご連絡ください.\n\nちなみにJulia(ver1.1.0)における環境で動作チェックしています.\n\nそれと行列操作に関する逆引き的なものを用意しようと思っているのでそちらもよろしくお願いします.\n(作成中...)\n\n# 行列の定義\n## 単純な書き方\n行の区切りは`改行`もしくは`;`で表現し, 列の区切りは` `(半角スペース)で表現する.\nつまり, 以下のようにすれば作成できる.\n\n```julia\njulia\u003e mat = [1 2 3; 4 5 6]\n2×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n\njulia\u003e mat = [\n       1 2 3\n       4 5 6\n       ]\n2×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n```\n\n## ジェネレーターを使う(pythonのリスト内包表記)\npythonを使う人ならおなじみのリスト内包表記的な書き方でも行列は作成できる.\n(微妙に書き方と向きが違うので注意)\n\n```julia\njulia\u003e mat = [ x for x in 1:4]\n4-element Array{Int64,1}:\n 1\n 2\n 3\n 4\n\njulia\u003e mat = [ 10a + b for a in 0:2, b in 0:3]\n3×4 Array{Int64,2}:\n  0   1   2   3\n 10  11  12  13\n 20  21  22  23\n```\n\n### 後置ifを利用したジェネレーター\n(後置ifはpythonでの名称だから, juliaでもそういうかわからないけど)\n(あと, 行列に対して使用すると, ただのベクトルが帰ってくるんじゃが…)\n\n```julia\njulia\u003e mat = [ i for i in 0:10 if (i%2)==0 ]\n6-element Array{Int64,1}:\n  0\n  2\n  4\n  6\n  8\n 10\n\njulia\u003e mat = [ 10a + b for a in 0:1, b in 0:9 if (b%2) == (a%2)]\n10-element Array{Int64,1}:\n  0\n 11\n  2\n 13\n  4\n 15\n  6\n 17\n  8\n 19\n```\n\n# 関数を使った行列の生成\n## 零行列を作成する\n組み込みの関数である`zeros([T=Float64,] dims...)`を利用していきます.\n\n| 引数 | 概要 |\n| :-: | :-: | \n| `T` | 型を指定します. 省略可. | \n| `dims...` | 次元数を列挙します. |\n\n```bash\njulia\u003e zeros(ComplexF64, 2, 2)\n2×2 Array{Complex{Float64},2}:\n 0.0+0.0im  0.0+0.0im\n 0.0+0.0im  0.0+0.0im\n\njulia\u003e zeros(Int8, 2, 2, 2)\n2×2×2 Array{Int8,3}:\n[:, :, 1] =\n 0  0\n 0  0\n\n[:, :, 2] =\n 0  0\n 0  0\n\njulia\u003e zeros(2, 3)\n2×3 Array{Float64,2}:\n 0.0  0.0  0.0\n 0.0  0.0  0.0\n```\n\n## すべての要素が1の行列\n組み込みの関数である`ones([T=Float64,] dims...)`を利用していきます.\n利用の仕方は上記の`zeros`と同じなので省略します.\n\n## 単位行列\n単位行列の生成方法はバージョンによって結構変わってきます.\n(`eye`だったり,`I`を利用したり...)\nver1.0以降(自分の場合は`ver1.1.0`)においては`LinearAlgebra`にある`I`を利用して単位行列を作成します.\n\n構文としては`Matrix{T}(I, row, col}`です.\nちなみに正則行列でなくても作成できます.\n\n```julia\njulia\u003e using LinearAlgebra\n\njulia\u003e Matrix{Int8}(I, 3, 3)\n3×3 Array{Int8,2}:\n 1  0  0\n 0  1  0\n 0  0  1\n\njulia\u003e Matrix{ComplexF64}(I, 3, 3)\n3×3 Array{Complex{Float64},2}:\n 1.0+0.0im  0.0+0.0im  0.0+0.0im\n 0.0+0.0im  1.0+0.0im  0.0+0.0im\n 0.0+0.0im  0.0+0.0im  1.0+0.0im\n\njulia\u003e Matrix{Int8}(I, 4, 3)\n4×3 Array{Int8,2}:\n 1  0  0\n 0  1  0\n 0  0  1\n 0  0  0\n```\n\n\n## ランダムな値を持つ行列を生成\n組み込み関数である`rand([rng=GLOBAL_RNG], [S], [dims...])`を利用していきます.\n| 引数 | 概要 | 省略 | 注意 |\n| :-: | :-: | :-: | :-: |\n| `rng` | わからないです\u003cbr\u003e(たぶんシード値?) | 可 | わかる方は教えてください |\n| `S` | 生成するデータの指定\u003cbr\u003e(指定方法は後述) | 可 | tupleで指定できるのは`v1.1`以降から |\n| `dims` | 各次元数 | 可 |\n\n`S`の指定方法は結構柔軟で, 以下に示すような方法で指定できます.\n| 指定方法 | データの選ばれ方 |\n| :-: | :-: |\n| indexable collection\u003cbr\u003e(`1:9`, `(1, 2, 3, 100)` など) | そのタプルに属する値のうち1つ |  |\n| AbstractDict, AbstractSet | 〃 |  |\n| string | 文字列を文字単位に分解したうちの1つ. |  |\n| type | `typemin(S)`〜`typemax(S)`のうちの1つ |  |\n\n以下にそれぞれの実行例を載せておきます.\n\n```julia\njulia\u003e rand((1, 2, 3, -99), 2, 9)\n2×9 Array{Int64,2}:\n 2    3  1    2  -99    3  2    2    3\n 2  -99  3  -99    2  -99  2  -99  -99\n```\n\n```julia\njulia\u003e rand(Dict(\"bird\"=\u003e3, \"mammal\"=\u003e345, \"reptiles\"=\u003e32), 2, 4)\n2×4 Array{Pair{String,Int64},2}:\n   \"mammal\"=\u003e345  \"mammal\"=\u003e345  \"reptiles\"=\u003e32      \"bird\"=\u003e3 \n \"reptiles\"=\u003e32     \"bird\"=\u003e3        \"bird\"=\u003e3   \"reptiles\"=\u003e32\n```\n\n```julia\njulia\u003e rand(\"hoge\", 2, 9)\n2×9 Array{Char,2}:\n 'e'  'o'  'h'  'g'  'o'  'o'  'o'  'e'  'e'\n 'o'  'h'  'h'  'e'  'e'  'h'  'e'  'e'  'h'\n\njulia\u003e rand(\"aaaaaaaaaaag\", 2, 9)\n2×9 Array{Char,2}:\n 'a'  'a'  'a'  'a'  'a'  'a'  'g'  'a'  'a'\n 'a'  'a'  'a'  'a'  'a'  'a'  'a'  'g'  'a'\n```\n\n```julia\njulia\u003e rand(Char, 2, 6)\n2×6 Array{Char,2}:\n '\\Ub8de6'  '𗀋'  '骊'        '\\U63ebc'  '\\Ue15e4'  '\\U640aa'\n '\\U39ad9'  '㵑'  '\\U4d6b0'  '뛐'        '\\U6302d'  '\\U8d876'\n\njulia\u003e rand(ComplexF64, 3, 3)\n3×3 Array{Complex{Float64},2}:\n 0.833554+0.844678im  0.0205492+0.966243im  0.665147+0.809684im\n 0.237675+0.252522im    0.30283+0.414608im  0.139303+0.571629im\n 0.386357+0.949509im    0.56883+0.772397im  0.984182+0.255435im\n```\n\n## 標準正規分布に従う乱数を持つ行列を生成\n`randn([rng=GLOBAL_RNG], [T=Float64], [dims...])`を利用します.\n使い方は`rand`とほぼ同じなので, 省略します.\n\nまた`randexp`も, もちろんあります.\n\n\n# 添字\n添字の選択方法に関しては以下の二通ります(たぶん).\n## 各要素を一様の数字で選択する\nこんな感じ. \n@import \"./src/index1.jl\" {code_block=true as=\"julia\" class=line-numbers cmd=\"/home/haru/julia/usr/bin/julia\" output=\"text\" modify_source=true}\n\n## mat[行, 列]形式で選択する\nこんな感じ.\n@import \"./src/index2.jl\" {code_block=true as=\"julia\" class=line-numbers cmd=\"/home/haru/julia/usr/bin/julia\" output=\"text\" modify_source=true}\n\n# 基本演算\n行列演算と要素毎の演算のそれぞれについて触れていきます.\n\n## 要素毎の演算\n`.`で各関数を各要素に適用できます.\n\n```julia\njulia\u003e a = [1 2 3; 4 5 6; 7 8 9]\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e b = [-1 -2 -3; 4 5 6; -7 -8 -9]\n3×3 Array{Int64,2}:\n -1  -2  -3\n  4   5   6\n -7  -8  -9\n\n# 算術演算子\njulia\u003e a .* b\n3×3 Array{Int64,2}:\n  -1   -4   -9\n  16   25   36\n -49  -64  -81\n\njulia\u003e a .*= b\n3×3 Array{Int64,2}:\n  -1   -4   -9\n  16   25   36\n -49  -64  -81\n```\n\n算術演算子以外にも利用できます. また, 自作関数にも適用することができます.\n\n```julia\n# 関数\njulia\u003e a = [1 2 3; 4 5 6; 7 8 9]\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e sin.(a)\n3×3 Array{Float64,2}:\n  0.841471   0.909297   0.14112 \n -0.756802  -0.958924  -0.279415\n  0.656987   0.989358   0.412118\n\njulia\u003e myfunc = function(x) 2x -5 end\n#5 (generic function with 1 method)\n\njulia\u003e myfunc.(a)\n3×3 Array{Int64,2}:\n -3  -1   1\n  3   5   7\n  9  11  13\n```\n\n一応, `map`関数を利用してでも似たようなことが実現できます.\n\n```julia\na = map(sin, a)\na = map(myfunc, a)\n```\n\n## 和算, 減算\n演算子`+`, `-`を利用していきます.\n\n```julia\njulia\u003e a = [1 2 3; 4 5 6; 7 8 9]\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e b = [-1 -2 -3; 4 5 6; -7 -8 -9]\n3×3 Array{Int64,2}:\n -1  -2  -3\n  4   5   6\n -7  -8  -9\n\njulia\u003e a + b\n3×3 Array{Int64,2}:\n 0   0   0\n 8  10  12\n 0   0   0\n\njulia\u003e a - b\n3×3 Array{Int64,2}:\n  2   4   6\n  0   0   0\n 14  16  18\n```\n\n## 積\n行列の積は`*`, 要素毎の掛け算は`.*`となります.s\n\n```julia\njulia\u003e a * b\n3×3 Array{Int64,2}:\n -14  -16  -18\n -26  -31  -36\n -38  -46  -54\n\njulia\u003e a .* b\n3×3 Array{Int64,2}:\n  -1   -4   -9\n  16   25   36\n -49  -64  -81\n```\n\n## 割り算, 逆行列の掛け算\n要素毎の割り算は`./`を使います.\n\n```julia\njulia\u003e a ./ b\n3×3 Array{Float64,2}:\n -1.0  -1.0  -1.0\n  1.0   1.0   1.0\n -1.0  -1.0  -1.0\n```\n\n演算子`/`は少し特殊で, `a / b`は`a * inv(b)`を表します.\n\n```julia\njulia\u003e x = randn(Float64, 3, 3)\n3×3 Array{Float64,2}:\n  0.774262  -0.385865  -1.1918  \n  0.402656  -1.53214    1.95856 \n -0.622096   0.619093  -0.787436\n\njulia\u003e y = randn(Float64, 3, 3)\n3×3 Array{Float64,2}:\n  0.330775  -0.95705   0.993989 \n -1.37908   -0.312028  0.0130837\n  0.882019   0.93005   0.816249 \n```\n```julia\njulia\u003e x / y\n3×3 Array{Float64,2}:\n -0.254909  -1.34409   -1.12813  \n  1.75524    0.293593   0.257316 \n -0.763695   0.243228  -0.0386082\n\njulia\u003e x * inv(y)\n3×3 Array{Float64,2}:\n -0.254909  -1.34409   -1.12813  \n  1.75524    0.293593   0.257316 \n -0.763695   0.243228  -0.0386082\n```\n\nまた`\\`では, `a \\ b`は`inv(a) * b`を表します.\n\n```julia\njulia\u003e x \\ y\n3×3 Array{Float64,2}:\n -0.712879  -1.7516    -1.79956\n -0.165542  -0.484339  -2.15161\n -0.687072  -0.178097  -1.30651\n\njulia\u003e inv(x) * y\n3×3 Array{Float64,2}:\n -0.712879  -1.7516    -1.79956\n -0.165542  -0.484339  -2.15161\n -0.687072  -0.178097  -1.30651\n```\n\n## 逆行列\n`inv(x)`を利用します.\n\n## 転置行列\n`'`を利用して`x'`のように書きます.\nちなみに複素数に`x'`を利用するとエルミート行列になってしまうため, `transpose()`を使いましょう.\n\n```julia\njulia\u003e mat = [1 2 3; 4 5 6; 7 8 9]\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e mat'\n3×3 LinearAlgebra.Adjoint{Int64,Array{Int64,2}}:\n 1  4  7\n 2  5  8\n 3  6  9\n```\n\n```julia\njulia\u003e mat = rand(Complex{Int8}, 2, 2)\n2×2 Array{Complex{Int8},2}:\n 13+19im   7+92im\n 82-10im  91+53im\n\n# エルミート行列になっちゃう\njulia\u003e mat'\n2×2 LinearAlgebra.Adjoint{Complex{Int8},Array{Complex{Int8},2}}:\n 13-19im  82+10im\n  7-92im  91-53im\n\n# 複素数の転置はこちらを使う\njulia\u003e transpose(mat)\n2×2 LinearAlgebra.Transpose{Complex{Int8},Array{Complex{Int8},2}}:\n 13+19im  82-10im\n  7+92im  91+53im\n```\n\n## エルミート行列(共役転置行列, 自己随伴行列)\n前節で説明したように, 複素数に対して`'`を利用するとエルミート行列が得られます.\n\n```julia\njulia\u003e mat = rand(Complex{Int8}, 2, 2)\n2×2 Array{Complex{Int8},2}:\n 13+19im   7+92im\n 82-10im  91+53im\n\n# エルミート行列\njulia\u003e mat'\n2×2 LinearAlgebra.Adjoint{Complex{Int8},Array{Complex{Int8},2}}:\n 13-19im  82+10im\n  7-92im  91-53im\n\n# 複素数の通常の転置はこちらを使う\njulia\u003e transpose(mat)\n2×2 LinearAlgebra.Transpose{Complex{Int8},Array{Complex{Int8},2}}:\n 13+19im  82-10im\n  7+92im  91+53im\n```\n\n# 配列の複製\n他の言語でもそうですがふつーに`b = a`をしてbにaをコピーすると\n\n```julia\njulia\u003e a = [1 2 3; 4 5 6; 7 8 9]\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e b = a\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e b .= 0\n3×3 Array{Int64,2}:\n 0  0  0\n 0  0  0\n 0  0  0\n\njulia\u003e a\n3×3 Array{Int64,2}:\n 0  0  0\n 0  0  0\n 0  0  0\n```\nのように, 値だけでなく参照先まで同じになってしまう.(浅いコピー)\n\nそこで, 値だけを得たい場合は`copy()`を利用する.(深いコピー)\n\n```julia\njulia\u003e a = [1 2 3; 4 5 6; 7 8 9]\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e b = copy(a)\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n\njulia\u003e b .= 0\n3×3 Array{Int64,2}:\n 0  0  0\n 0  0  0\n 0  0  0\n\njulia\u003e a\n3×3 Array{Int64,2}:\n 1  2  3\n 4  5  6\n 7  8  9\n```","secret":false,"slide":false,"tag_notation":"Julia 行列 ","title":"Juliaにおける基本的な行列操作","type":"creating","updated_at":"2019-05-08T15:26:41.000+09:00"},"item_path":null,"user":{"url_name":"haru1843","team":false,"twitter":true,"github":false,"twitter_oauth_url":null,"github_oauth_url":"https://oauth.qiita.com/auth/github?callback_action=login_or_signup\u0026realm=qiita"},"resume":false}</script>
+      
+</div><script>// if (window.mixpanel instanceof Element) {
+//   window.mixpanel = [];
+// }
+// (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+// for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);</script><script src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/public-dd6d3207dc35b4515a6666dd93053e3a.min.js"></script><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/d_vbiawPdxB.html" style="border: none;"></iframe></div><div></div></div></div><script>/* <![CDATA[ */
+var yahoo_retargeting_id = '6B63B2EQA6';
+var yahoo_retargeting_label = 'qiita';
+var yahoo_retargeting_page_type = '';
+var yahoo_retargeting_items = [{item_id: '', category_id: '', price: '', quantity: ''}];
+/* ]]> */</script><script language="javascript" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/s_retargeting.js" type="text/javascript"></script><script src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/oct.js" type="text/javascript"></script><script>twttr.conversion.trackPid('nzz0o', { tw_sale_amount: 0, tw_order_quantity: 0 });</script><noscript><img alt="" height="1" src="https://analytics.twitter.com/i/adsct?txn_id=nzz0o&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display:none;" width="1" /><img alt="" height="1" src="//t.co/i/adsct?txn_id=nzz0o&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display:none;" width="1" /></noscript><ul class="dropdown-menu textcomplete-dropdown" style="display: none; position: absolute; z-index: 10000;"></ul><div class="ReactModalPortal"><div data-reactroot=""></div></div><ul class="dropdown-menu textcomplete-dropdown" style="display: none; position: absolute; z-index: 10000; left: 83px; top: 524px;" data-strategy="lang"></ul><div class="ReactModalPortal"><div data-reactroot=""></div></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./「Juliaにおける基本的な行列操作」を編集 - Qiita_files/widget_iframe.2e9f365dae390394eb8d923cba8c5b11.html" title="Twitter settings iframe" style="display: none;"></iframe></body></html>

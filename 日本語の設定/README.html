@@ -1,0 +1,1828 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/haru/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.13/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}.markdown-preview code{border-radius:2px;color:#e96900;font-size:12.8px;font-size:.8rem;margin:0 2px;padding:3px 5px;white-space:pre-wrap}.markdown-preview code,.markdown-preview pre{background-color:#f8f8f8;font-family:Roboto Mono,Monaco,courier,monospace}.markdown-preview pre{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;line-height:24px;line-height:1.5rem;margin:1.2em 0;overflow:auto;padding:0 22.4px;padding:0 1.4rem;position:relative;word-wrap:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8e908c}.token.namespace{opacity:.7}.token.boolean,.token.number{color:#c76b29}.token.punctuation{color:#525252}.token.property{color:#c08b30}.token.tag{color:#2973b7}.token.string{color:#42b983;color:var(--theme-color, #42b983)}.token.selector{color:#6679cc}.token.attr-name{color:#2973b7}.language-css .token.string,.style .token.string,.token.entity,.token.url{color:#22a2c9}.token.attr-value,.token.control,.token.directive,.token.unit{color:#42b983;color:var(--theme-color, #42b983)}.token.keyword{color:#e96900}.token.atrule,.token.regex,.token.statement{color:#22a2c9}.token.placeholder,.token.variable{color:#3d8fd1}.token.deleted{text-decoration:line-through}.token.inserted{border-bottom:1px dotted #202746;text-decoration:none}.token.italic{font-style:italic}.token.bold,.token.important{font-weight:700}.token.important{color:#c94922}.token.entity{cursor:help}.markdown-preview pre>code,.markdown-preview pre[class*="language"]{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;background-color:#f8f8f8;border-radius:2px;color:#525252;display:block;font-family:Roboto Mono,Monaco,courier,monospace;font-size:12.8px;font-size:.8rem;line-height:2em;max-width:inherit;overflow:inherit;padding:.8em 1.4em;white-space:pre}.markdown-preview pre>code{padding-left:0;padding-right:0}.markdown-preview code:after,.markdown-preview code:before{letter-spacing:.8px;letter-spacing:.05rem}code .token{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;min-height:24px;min-height:1.5rem}pre:after{color:#ccc;content:attr(data-lang);font-size:9.6px;font-size:.6rem;font-weight:600;height:15px;line-height:15px;padding:5px 10px 0;position:absolute;right:0;text-align:right;top:0}pre[data-line]{position:relative;padding:1em 0 1em 3em !important}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}body:not(.ready){overflow:hidden}body:not(.ready) .app-nav,body:not(.ready)>nav,body:not(.ready) [data-cloak]{display:none}div#app{font-size:30px;font-weight:lighter;margin:40vh auto;text-align:center}div#app:empty:before{content:"Loading..."}.emoji{height:19.2px;height:1.2rem;vertical-align:middle}.progress{background-color:#42b983;background-color:var(--theme-color, #42b983);height:2px;left:0;position:fixed;right:0;top:0;transition:width .2s,opacity .4s;width:0;z-index:5}.search .search-keyword,.search a:hover{color:#42b983;color:var(--theme-color, #42b983)}.search .search-keyword{font-style:normal;font-weight:700}body,html{height:100%}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#34495e;font-family:Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:15px;letter-spacing:0;margin:0;overflow-x:hidden}img{max-width:100%}a[disabled]{cursor:not-allowed;opacity:.6}kbd{border:1px solid #ccc;border-radius:3px;display:inline-block;font-size:12px !important;line-height:12px;margin-bottom:3px;padding:3px 5px;vertical-align:middle}.task-list-item{list-style-type:none}li input[type=checkbox]{margin:0 .2em .25em -1.6em;vertical-align:middle}.app-nav{left:0;margin:25px 60px 0 0;position:absolute;right:0;text-align:right;z-index:2}.app-nav p{margin:0}.app-nav>a{margin:0 16px;margin:0 1rem;padding:5px 0}.app-nav li,.app-nav ul{display:inline-block;list-style:none;margin:0}.app-nav a{color:inherit;font-size:16px;text-decoration:none;transition:color .3s}.app-nav a.active,.app-nav a:hover{color:#42b983;color:var(--theme-color, #42b983)}.app-nav a.active{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983)}.app-nav li{display:inline-block;margin:0 16px;margin:0 1rem;padding:5px 0;position:relative}.app-nav li ul{background-color:#fff;border:1px solid #ddd;border-bottom-color:#ccc;border-radius:4px;box-sizing:border-box;display:none;max-height:calc(39vh);overflow-y:scroll;padding:10px 0;position:absolute;right:-15px;text-align:left;top:100%;white-space:nowrap}.app-nav li ul li{display:block;font-size:14px;line-height:16px;line-height:1rem;margin:0;margin:8px 14px;white-space:nowrap}.app-nav li ul a{display:block;font-size:inherit;margin:0;padding:0}.app-nav li ul a.active{border-bottom:0}.app-nav li:hover ul{display:block}.app-nav.no-badge{margin-right:25px}.github-corner{border-bottom:0;position:fixed;right:0;text-decoration:none;top:0;z-index:1}.github-corner svg{color:#fff;fill:#42b983;fill:var(--theme-color, #42b983);height:80px;width:80px}.github-corner:hover .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}main{display:block;position:relative;width:100vw;height:100%;z-index:0}.anchor{display:inline-block;text-decoration:none;transition:all .3s}.anchor span{color:#34495e}.anchor:hover{text-decoration:underline}.sidebar{border-right:1px solid rgba(0,0,0,0.07);overflow-y:auto;padding:40px 0 0;top:0;bottom:0;left:0;position:absolute;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out;width:300px;z-index:3}.sidebar>h1{margin:0 auto 16px;margin:0 auto 1rem;font-size:24px;font-size:1.5rem;font-weight:300;text-align:center}.sidebar>h1 a{color:inherit;text-decoration:none}.sidebar>h1 .app-nav{display:block;position:static}.sidebar .sidebar-nav{line-height:2em;padding-bottom:40px}.sidebar ul{margin:0;padding:0}.sidebar li>p{font-weight:700;margin:0}.sidebar ul,.sidebar ul li{list-style:none}.sidebar ul li a{border-bottom:none;display:block}.sidebar ul li ul{padding-left:20px}.sidebar::-webkit-scrollbar{width:4px}.sidebar::-webkit-scrollbar-thumb{background:transparent;border-radius:4px}.sidebar:hover::-webkit-scrollbar-thumb{background:rgba(135,135,135,0.4)}.sidebar:hover::-webkit-scrollbar-track{background:rgba(135,135,135,0.1)}.sidebar-toggle{background-color:transparent;background-color:rgba(255,255,255,0.8);border:0;outline:none;padding:10px;bottom:0;left:0;position:absolute;text-align:center;transition:opacity .3s;width:30px;width:284px;z-index:4}.sidebar-toggle .sidebar-toggle-button:hover{opacity:.4}.sidebar-toggle span{background-color:#42b983;background-color:var(--theme-color, #42b983);display:block;margin-bottom:4px;width:16px;height:2px}body.sticky .sidebar,body.sticky .sidebar-toggle{position:fixed}.content{padding-top:60px;top:0;right:0;bottom:0;left:300px;position:absolute;transition:left .25s ease}.markdown-preview>*{box-sizing:border-box;font-size:inherit}.markdown-preview>:first-child{margin-top:0 !important}.markdown-preview hr{border:none;border-bottom:1px solid #eee;margin:2em 0}.markdown-preview table{border-collapse:collapse;border-spacing:0;display:block;margin-bottom:16px;margin-bottom:1rem;overflow:auto;width:100%}.markdown-preview th{font-weight:700}.markdown-preview td,.markdown-preview th{border:1px solid #ddd;padding:6px 13px}.markdown-preview tr{border-top:1px solid #ccc}.markdown-preview p.tip,.markdown-preview tr:nth-child(2n){background-color:#f8f8f8}.markdown-preview p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-preview p.tip code{background-color:#efefef}.markdown-preview p.tip em{color:#34495e}.markdown-preview p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;width:20px;height:20px;text-align:center;top:14px}.markdown-preview p.warn{background:rgba(66,185,131,0.1);border-radius:2px;padding:16px;padding:1rem}body.close .sidebar{-webkit-transform:translateX(-300px);transform:translateX(-300px)}body.close .sidebar-toggle{width:auto}body.close .content{left:0}@media print{.app-nav,.github-corner,.sidebar,.sidebar-toggle{display:none}}@media screen and (max-width:768px){.github-corner,.sidebar,.sidebar-toggle{position:fixed}.app-nav{margin-top:16px}.app-nav li ul{top:30px}main{height:auto;overflow-x:hidden}.sidebar{left:-300px;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.content{left:0;max-width:100vw;position:static;padding-top:20px;transition:-webkit-transform .25s ease;transition:transform .25s ease;transition:transform .25s ease,-webkit-transform .25s ease}.app-nav,.github-corner{transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.sidebar-toggle{background-color:transparent;width:auto;padding:30px 30px 10px 10px}body.close .sidebar{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .sidebar-toggle{background-color:rgba(255,255,255,0.8);transition:background-color 1s;width:284px;padding:10px}body.close .content{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .app-nav,body.close .github-corner{display:none}.github-corner .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}.github-corner:hover .octo-arm{-webkit-animation:none;animation:none}}@-webkit-keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}@keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}section.cover{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-position:50%;background-repeat:no-repeat;background-size:cover;height:100vh;display:none}section.cover .cover-main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:-20px 16px 0;text-align:center;z-index:1}section.cover a{color:inherit}section.cover a,section.cover a:hover{text-decoration:none}section.cover p{line-height:24px;line-height:1.5rem;margin:1em 0}section.cover h1{color:inherit;font-size:40px;font-size:2.5rem;font-weight:300;margin:10px 0 40px;margin:.625rem 0 2.5rem;position:relative;text-align:center}section.cover h1 a{display:block}section.cover h1 small{bottom:-7px;bottom:-0.4375rem;font-size:16px;font-size:1rem;position:absolute}section.cover blockquote{font-size:24px;font-size:1.5rem;text-align:center}section.cover ul{line-height:1.8;list-style-type:none;margin:1em auto;max-width:500px;padding:0}section.cover .cover-main>p:last-child a{border-color:#42b983;border:1px solid var(--theme-color, #42b983);border-radius:2rem;box-sizing:border-box;color:#42b983;color:var(--theme-color, #42b983);display:inline-block;font-size:16.8px;font-size:1.05rem;letter-spacing:1.6px;letter-spacing:.1rem;margin-right:16px;margin-right:1rem;padding:.75em 32px;padding:.75em 2rem;text-decoration:none;transition:all .15s ease}section.cover .cover-main>p:last-child a:last-child{background-color:#42b983;background-color:var(--theme-color, #42b983);color:#fff;margin-right:0}section.cover .cover-main>p:last-child a:last-child:hover{color:inherit;opacity:.8}section.cover .cover-main>p:last-child a:hover{color:inherit}section.cover blockquote>p>a{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983);transition:color .3s}section.cover blockquote>p>a:hover{color:#42b983;color:var(--theme-color, #42b983)}section.cover.show{display:-webkit-box;display:-ms-flexbox;display:flex}section.cover.has-mask .mask{background-color:#fff;opacity:.8;position:absolute;width:100%;height:100%}.sidebar,body{background-color:#fff}.sidebar{color:#364149}.sidebar li{margin:6px 0 6px 15px}.sidebar ul li a{color:#505d6b;font-size:14px;font-weight:400;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap}.sidebar ul li a:hover{text-decoration:underline}.sidebar ul li ul{padding:0}.sidebar ul li.active>a{border-right:2px solid;color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.app-sub-sidebar li:before{content:"-";padding-right:4px;float:left}.markdown-preview h1,.markdown-preview h2,.markdown-preview h3,.markdown-preview h4,.markdown-preview strong{color:#2c3e50;font-weight:600}.markdown-preview a{color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.md-sidebar-toc a{color:#42b983;font-weight:600}.markdown-preview h1{font-size:32px;font-size:2rem;margin:0 0 16px;margin:0 0 1rem}.markdown-preview h2{font-size:28px;font-size:1.75rem;margin:45px 0 12.8px;margin:45px 0 .8rem}.markdown-preview h3{font-size:24px;font-size:1.5rem;margin:40px 0 9.6px;margin:40px 0 .6rem}.markdown-preview h4{font-size:20px;font-size:1.25rem}.markdown-preview h5,.markdown-preview h6{font-size:16px;font-size:1rem}.markdown-preview h6{color:#777}.markdown-preview figure,.markdown-preview p{margin:1.2em 0}.markdown-preview ol,.markdown-preview p,.markdown-preview ul{line-height:25.6px;line-height:1.6rem;word-spacing:.8px;word-spacing:.05rem}.markdown-preview ol,.markdown-preview ul{padding-left:24px;padding-left:1.5rem}.markdown-preview blockquote{border-left:4px solid #42b983;border-left:4px solid var(--theme-color, #42b983);color:#858585;margin:2em 0;padding-left:20px}.markdown-preview blockquote p{font-weight:600;margin-left:0}.markdown-preview iframe{margin:1em 0}.markdown-preview em{color:#7f8c8d}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview p {
+  line-height: 1.2rem;
+}
+.markdown-preview.markdown-preview body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h2:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h3::before,
+.markdown-preview.markdown-preview h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h4::before,
+.markdown-preview.markdown-preview h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+.markdown-preview.markdown-preview.phantomjs-pdf {
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf p {
+  line-height: 1.1rem;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h2::before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h2::after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3::before,
+.markdown-preview.markdown-preview.phantomjs-pdf h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h4::before,
+.markdown-preview.markdown-preview.phantomjs-pdf h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf pre[data-role="codeBlock"] {
+  font-size: 0.9em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf pre.language-text {
+  font-size: 0.9em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf code {
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">&#x306F;&#x3058;&#x3081;&#x306B;</h1>
+
+<p>matplotlib&#x3092;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x5229;&#x7528;&#x3057;, &#x8EF8;&#x30E9;&#x30D9;&#x30EB;&#x3084;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x633F;&#x5165;&#x6642;&#x306B;&#x65E5;&#x672C;&#x8A9E;&#x3092;&#x7528;&#x3044;&#x308B;&#x3068;, &#x6587;&#x5B57;&#x5316;&#x3051;&#x3057;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;.</p>
+<h1 class="mume-header" id="%E5%AF%BE%E5%87%A6">&#x5BFE;&#x51E6;</h1>
+
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x65E5;&#x672C;&#x8A9E;&#x5BFE;&#x5FDC;&#x306E;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x307E;&#x3059;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">font <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;family&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;IPAexGothic&quot;</span><span class="token punctuation">}</span>
+mpl<span class="token punctuation">.</span>rc<span class="token punctuation">(</span><span class="token string">&apos;font&apos;</span><span class="token punctuation">,</span> <span class="token operator">**</span>font<span class="token punctuation">)</span>
+</pre><p>&#x307E;&#x305F;, &#x3053;&#x308C;&#x3089;&#x306E;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x304C;&#x5165;&#x3063;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;, &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;.</p>
+<h1 class="mume-header" id="%E4%BE%8B">&#x4F8B;</h1>
+
+<p>7,8&#x884C;&#x76EE;&#x3067;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x306E;&#x8A2D;&#x5B9A;&#x304C;&#x306A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="945de773d0b66f2a8810b7466be8e523" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="py cmd=&quot;python3&quot; matplotlib=true class=&quot;line-numbers&quot; id=&quot;945de773d0b66f2a8810b7466be8e523&quot; code_chunk_offset=0" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> matplotlib <span class="token keyword">as</span> mpl
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    font <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;family&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;IPAexGothic&quot;</span><span class="token punctuation">}</span>
+    mpl<span class="token punctuation">.</span>rc<span class="token punctuation">(</span><span class="token string">&apos;font&apos;</span><span class="token punctuation">,</span> <span class="token operator">**</span>font<span class="token punctuation">)</span>
+
+    x_num <span class="token operator">=</span> <span class="token number">200</span>
+    x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> num<span class="token operator">=</span>x_num<span class="token punctuation">)</span>
+    y <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">0.1</span><span class="token operator">*</span>x<span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">2</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span>\
+         np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">150</span><span class="token punctuation">,</span> x_num<span class="token punctuation">)</span> <span class="token operator">+</span>\
+         np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> x_num<span class="token punctuation">)</span>
+
+    fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&apos;&#x5B9F;&#x9A13;&#x5024;&apos;</span><span class="token punctuation">)</span>
+
+    p <span class="token operator">=</span> np<span class="token punctuation">.</span>polyfit<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span>x<span class="token operator">*</span>x <span class="token operator">+</span> p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>x <span class="token operator">+</span> p<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&apos;&#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;&apos;</span><span class="token punctuation">)</span>
+
+    ax<span class="token punctuation">.</span>set_xticks<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>set_yticks<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    ax<span class="token punctuation">.</span>set_xlabel<span class="token punctuation">(</span><span class="token string">&apos;&#x6642;&#x9593;$t$ [$\\rm ms$]&apos;</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>set_ylabel<span class="token punctuation">(</span><span class="token string">&apos;&#x6E29;&#x5EA6;&#x5909;&#x5316; [$\\rm ^{\circ}C$]&apos;</span><span class="token punctuation">)</span>
+
+    ax<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><!--?xml version="1.0" encoding="utf-8" standalone="no"?--><svg height="345.6pt" version="1.1" viewBox="0 0 460.8 345.6" width="460.8pt" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 460.8 345.6 
+L 460.8 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.6 307.584 
+L 414.72 307.584 
+L 414.72 41.472 
+L 57.6 41.472 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <!-- 時間$t$ [$\rm ms$] -->
+     <defs>
+      <path d="M 36.375 73.875 
+L 36.375 8.796875 
+L 14.59375 8.796875 
+L 14.59375 0.875 
+L 8.109375 0.875 
+L 8.109375 73.875 
+z
+M 14.59375 67.671875 
+L 14.59375 45.015625 
+L 29.78125 45.015625 
+L 29.78125 67.671875 
+z
+M 14.59375 39.015625 
+L 14.59375 14.890625 
+L 29.78125 14.890625 
+L 29.78125 39.015625 
+z
+M 61.53125 68.3125 
+L 61.53125 83.015625 
+L 68.40625 83.015625 
+L 68.40625 68.3125 
+L 90.1875 68.3125 
+L 90.1875 62.203125 
+L 68.40625 62.203125 
+L 68.40625 49.90625 
+L 94.875 49.90625 
+L 94.875 43.796875 
+L 81.296875 43.796875 
+L 81.296875 31.984375 
+L 93.109375 31.984375 
+L 93.109375 25.78125 
+L 81.5 25.78125 
+L 81.5 0.484375 
+Q 81.5 -6.984375 73.296875 -6.984375 
+Q 68.65625 -6.984375 60.75 -6.109375 
+L 59.125 1.21875 
+Q 66.75 0 71.734375 0 
+Q 74.609375 0 74.609375 2.6875 
+L 74.609375 25.78125 
+L 40.328125 25.78125 
+L 40.328125 31.984375 
+L 74.421875 31.984375 
+L 74.421875 43.796875 
+L 39.65625 43.796875 
+L 39.65625 49.90625 
+L 61.53125 49.90625 
+L 61.53125 62.203125 
+L 42.4375 62.203125 
+L 42.4375 68.3125 
+z
+M 57.328125 6 
+Q 52.046875 14.84375 46.1875 20.703125 
+L 51.421875 24.609375 
+Q 58.109375 17.921875 62.890625 10.296875 
+z
+" id="IPAexGothic-26178"/>
+      <path d="M 69.53125 40.09375 
+L 69.53125 5.515625 
+L 37.109375 5.515625 
+L 37.109375 -0.390625 
+L 30.515625 -0.390625 
+L 30.515625 40.09375 
+z
+M 62.9375 34.375 
+L 37.109375 34.375 
+L 37.109375 25.828125 
+L 62.9375 25.828125 
+z
+M 62.9375 20.3125 
+L 37.109375 20.3125 
+L 37.109375 11.234375 
+L 62.9375 11.234375 
+z
+M 45.515625 78.421875 
+L 45.515625 47.796875 
+L 16.5 47.796875 
+L 16.5 -6.984375 
+L 9.515625 -6.984375 
+L 9.515625 78.421875 
+z
+M 16.5 72.796875 
+L 16.5 65.71875 
+L 39.015625 65.71875 
+L 39.015625 72.796875 
+z
+M 16.5 60.640625 
+L 16.5 53.328125 
+L 39.015625 53.328125 
+L 39.015625 60.640625 
+z
+M 90.4375 78.421875 
+L 90.4375 1.421875 
+Q 90.4375 -3.515625 88.140625 -5.171875 
+Q 86.328125 -6.390625 81.734375 -6.390625 
+Q 75.046875 -6.390625 70.015625 -5.71875 
+L 69.046875 1.515625 
+Q 75.828125 0.59375 80.125 0.59375 
+Q 83.453125 0.59375 83.453125 3.8125 
+L 83.453125 47.796875 
+L 53.71875 47.796875 
+L 53.71875 78.421875 
+z
+M 60.203125 72.796875 
+L 60.203125 65.71875 
+L 83.453125 65.71875 
+L 83.453125 72.796875 
+z
+M 60.203125 60.640625 
+L 60.203125 53.328125 
+L 83.453125 53.328125 
+L 83.453125 60.640625 
+z
+" id="IPAexGothic-38291"/>
+      <path d="M 42.28125 54.6875 
+L 40.921875 47.703125 
+L 23 47.703125 
+L 17.1875 18.015625 
+Q 16.890625 16.359375 16.75 15.234375 
+Q 16.609375 14.109375 16.609375 13.484375 
+Q 16.609375 10.359375 18.484375 8.9375 
+Q 20.359375 7.515625 24.515625 7.515625 
+L 33.59375 7.515625 
+L 32.078125 0 
+L 23.484375 0 
+Q 15.484375 0 11.546875 3.125 
+Q 7.625 6.25 7.625 12.59375 
+Q 7.625 13.71875 7.765625 15.0625 
+Q 7.90625 16.40625 8.203125 18.015625 
+L 14.015625 47.703125 
+L 6.390625 47.703125 
+L 7.8125 54.6875 
+L 15.28125 54.6875 
+L 18.3125 70.21875 
+L 27.296875 70.21875 
+L 24.3125 54.6875 
+z
+" id="DejaVuSans-Oblique-116"/>
+      <path id="IPAexGothic-32"/>
+      <path d="M 26.65625 -15.484375 
+L 9.078125 -15.484375 
+L 9.078125 74.21875 
+L 26.65625 74.21875 
+L 26.65625 69.34375 
+L 16.0625 69.34375 
+L 16.0625 -10.59375 
+L 26.65625 -10.59375 
+z
+" id="IPAexGothic-91"/>
+      <path d="M 52 44.1875 
+Q 55.375 50.25 60.0625 53.125 
+Q 64.75 56 71.09375 56 
+Q 79.640625 56 84.28125 50.015625 
+Q 88.921875 44.046875 88.921875 33.015625 
+L 88.921875 0 
+L 79.890625 0 
+L 79.890625 32.71875 
+Q 79.890625 40.578125 77.09375 44.375 
+Q 74.3125 48.1875 68.609375 48.1875 
+Q 61.625 48.1875 57.5625 43.546875 
+Q 53.515625 38.921875 53.515625 30.90625 
+L 53.515625 0 
+L 44.484375 0 
+L 44.484375 32.71875 
+Q 44.484375 40.625 41.703125 44.40625 
+Q 38.921875 48.1875 33.109375 48.1875 
+Q 26.21875 48.1875 22.15625 43.53125 
+Q 18.109375 38.875 18.109375 30.90625 
+L 18.109375 0 
+L 9.078125 0 
+L 9.078125 54.6875 
+L 18.109375 54.6875 
+L 18.109375 46.1875 
+Q 21.1875 51.21875 25.484375 53.609375 
+Q 29.78125 56 35.6875 56 
+Q 41.65625 56 45.828125 52.96875 
+Q 50 49.953125 52 44.1875 
+z
+" id="DejaVuSans-109"/>
+      <path d="M 44.28125 53.078125 
+L 44.28125 44.578125 
+Q 40.484375 46.53125 36.375 47.5 
+Q 32.28125 48.484375 27.875 48.484375 
+Q 21.1875 48.484375 17.84375 46.4375 
+Q 14.5 44.390625 14.5 40.28125 
+Q 14.5 37.15625 16.890625 35.375 
+Q 19.28125 33.59375 26.515625 31.984375 
+L 29.59375 31.296875 
+Q 39.15625 29.25 43.1875 25.515625 
+Q 47.21875 21.78125 47.21875 15.09375 
+Q 47.21875 7.46875 41.1875 3.015625 
+Q 35.15625 -1.421875 24.609375 -1.421875 
+Q 20.21875 -1.421875 15.453125 -0.5625 
+Q 10.6875 0.296875 5.421875 2 
+L 5.421875 11.28125 
+Q 10.40625 8.6875 15.234375 7.390625 
+Q 20.0625 6.109375 24.8125 6.109375 
+Q 31.15625 6.109375 34.5625 8.28125 
+Q 37.984375 10.453125 37.984375 14.40625 
+Q 37.984375 18.0625 35.515625 20.015625 
+Q 33.0625 21.96875 24.703125 23.78125 
+L 21.578125 24.515625 
+Q 13.234375 26.265625 9.515625 29.90625 
+Q 5.8125 33.546875 5.8125 39.890625 
+Q 5.8125 47.609375 11.28125 51.796875 
+Q 16.75 56 26.8125 56 
+Q 31.78125 56 36.171875 55.265625 
+Q 40.578125 54.546875 44.28125 53.078125 
+z
+" id="DejaVuSans-115"/>
+      <path d="M 20.65625 -15.484375 
+L 3.078125 -15.484375 
+L 3.078125 -10.59375 
+L 13.671875 -10.59375 
+L 13.671875 69.34375 
+L 3.078125 69.34375 
+L 3.078125 74.21875 
+L 20.65625 74.21875 
+z
+" id="IPAexGothic-93"/>
+     </defs>
+     <g transform="translate(212.36 319.684)scale(0.1 -0.1)">
+      <use transform="translate(0 0.984375)" href="#IPAexGothic-26178"/>
+      <use transform="translate(100 0.984375)" href="#IPAexGothic-38291"/>
+      <use transform="translate(200 0.984375)" href="#DejaVuSans-Oblique-116"/>
+      <use transform="translate(239.208984 0.984375)" href="#IPAexGothic-32"/>
+      <use transform="translate(266.210938 0.984375)" href="#IPAexGothic-91"/>
+      <use transform="translate(296.191406 0.984375)" href="#DejaVuSans-109"/>
+      <use transform="translate(393.603516 0.984375)" href="#DejaVuSans-115"/>
+      <use transform="translate(445.703125 0.984375)" href="#IPAexGothic-93"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="text_2">
+     <!-- 温度変化 [$\rm ^{\circ}C$] -->
+     <defs>
+      <path d="M 83.5 77.875 
+L 83.5 41.703125 
+L 37.203125 41.703125 
+L 37.203125 77.875 
+z
+M 44.09375 72.078125 
+L 44.09375 62.890625 
+L 76.703125 62.890625 
+L 76.703125 72.078125 
+z
+M 44.09375 57.171875 
+L 44.09375 47.515625 
+L 76.703125 47.515625 
+L 76.703125 57.171875 
+z
+M 87.9375 33.296875 
+L 87.9375 2.78125 
+L 95.21875 2.78125 
+L 95.21875 -3.515625 
+L 25.484375 -3.515625 
+L 25.484375 2.78125 
+L 33.40625 2.78125 
+L 33.40625 33.296875 
+z
+M 39.890625 27.296875 
+L 39.890625 2.78125 
+L 49.515625 2.78125 
+L 49.515625 27.296875 
+z
+M 81.453125 2.78125 
+L 81.453125 27.296875 
+L 71.4375 27.296875 
+L 71.4375 2.78125 
+z
+M 55.71875 27.296875 
+L 55.71875 2.78125 
+L 65.234375 2.78125 
+L 65.234375 27.296875 
+z
+M 25.203125 60.296875 
+Q 19.484375 67.140625 11.03125 73.6875 
+L 15.828125 79.109375 
+Q 23.34375 73.921875 30.21875 66.3125 
+z
+M 22.21875 37.3125 
+Q 15.234375 45.359375 7.421875 50.78125 
+L 12.203125 56.390625 
+Q 20.90625 50.390625 27.296875 43.109375 
+z
+M 5.515625 0.296875 
+Q 15.140625 12.59375 22.90625 29.984375 
+L 28.125 24.421875 
+Q 20.359375 6.59375 11.421875 -5.8125 
+z
+" id="IPAexGothic-28201"/>
+      <path d="M 54.9375 72.21875 
+L 90.53125 72.21875 
+L 90.53125 66.109375 
+L 19.96875 66.109375 
+L 19.96875 55.421875 
+L 36.375 55.421875 
+L 36.375 63.140625 
+L 43.109375 63.140625 
+L 43.109375 55.421875 
+L 64.015625 55.421875 
+L 64.015625 63.140625 
+L 70.703125 63.140625 
+L 70.703125 55.421875 
+L 91.015625 55.421875 
+L 91.015625 49.421875 
+L 70.703125 49.421875 
+L 70.703125 35.40625 
+L 36.375 35.40625 
+L 36.375 49.421875 
+L 19.96875 49.421875 
+L 19.96875 42.921875 
+Q 19.96875 22.40625 17.671875 12.109375 
+Q 15.71875 3.171875 9.46875 -6.890625 
+L 4.203125 -0.78125 
+Q 10.203125 8.453125 11.921875 21.578125 
+Q 12.890625 29.203125 12.890625 42.921875 
+L 12.890625 72.21875 
+L 47.40625 72.21875 
+L 47.40625 83.015625 
+L 54.9375 83.015625 
+z
+M 43.109375 49.421875 
+L 43.109375 40.921875 
+L 64.015625 40.921875 
+L 64.015625 49.421875 
+z
+M 56.390625 4.109375 
+Q 43.5 -3.609375 23 -7.71875 
+L 19.09375 -1.515625 
+Q 38.1875 0.984375 50.203125 7.671875 
+Q 39.75 14.203125 33.109375 23.78125 
+L 24.609375 23.78125 
+L 24.609375 29.6875 
+L 76.515625 29.6875 
+L 80.078125 26.5625 
+Q 72.3125 15.53125 62.40625 8.0625 
+Q 74.515625 3.125 92.578125 0.875 
+L 88.09375 -6.203125 
+Q 69.28125 -2.546875 56.390625 4.109375 
+z
+M 40.71875 23.78125 
+Q 46.625 16.3125 55.90625 11.1875 
+Q 65.046875 17.484375 69.09375 23.78125 
+z
+" id="IPAexGothic-24230"/>
+      <path d="M 33.546875 19.578125 
+Q 25.640625 12.84375 14.75 8.796875 
+L 10.5 14.0625 
+Q 30.28125 21.734375 39.9375 37.40625 
+L 46.4375 34.859375 
+Q 44.484375 31.78125 42.921875 29.6875 
+L 74.21875 29.6875 
+L 77.640625 26.5625 
+Q 69.09375 15.375 60.296875 8.796875 
+Q 72.65625 3.765625 95.21875 1.078125 
+L 91.015625 -5.71875 
+Q 66.796875 -1.953125 53.609375 4.5 
+Q 38.140625 -4.25 9.421875 -8.40625 
+L 5.328125 -2.09375 
+Q 32.859375 1.171875 46.828125 8.40625 
+Q 40.484375 12.359375 34.125 18.890625 
+z
+M 38.03125 23.875 
+L 37.84375 23.6875 
+Q 43.796875 17.28125 53.515625 12.15625 
+Q 60.75 16.84375 66.703125 23.875 
+z
+M 63.421875 64.796875 
+L 63.421875 41.40625 
+Q 63.421875 35.5 57.234375 35.5 
+Q 53.375 35.5 47.609375 36.078125 
+L 46.296875 42.578125 
+Q 50.640625 41.890625 53.609375 41.890625 
+Q 56.734375 41.890625 56.734375 44.875 
+L 56.734375 64.796875 
+L 44.09375 64.796875 
+Q 43.21875 51.421875 39.109375 44 
+Q 34.234375 35.296875 23.484375 29.203125 
+L 18.3125 33.6875 
+Q 29.34375 40.1875 33.5 47.90625 
+Q 36.859375 54 37.3125 64.796875 
+L 6.296875 64.796875 
+L 6.296875 71 
+L 45.90625 71 
+L 45.90625 82.71875 
+L 53.421875 82.71875 
+L 53.421875 71 
+L 93.75 71 
+L 93.75 64.796875 
+z
+M 85.84375 36.921875 
+Q 75.4375 49.21875 67.625 56 
+L 73 60.296875 
+Q 82.28125 52.640625 91.84375 41.5 
+z
+M 5.328125 39.5 
+Q 16.015625 47.21875 22.515625 58.984375 
+L 28.8125 56.203125 
+Q 21.96875 43.453125 11.03125 35.015625 
+z
+" id="IPAexGothic-22793"/>
+      <path d="M 28.609375 57.8125 
+L 28.609375 -5.328125 
+L 21.1875 -5.328125 
+L 21.1875 43.3125 
+Q 16.703125 35.546875 10.59375 27.6875 
+L 5.90625 33.40625 
+Q 20.609375 51.21875 29 80.71875 
+L 36.234375 78.328125 
+Q 32.8125 67.484375 28.609375 57.8125 
+z
+M 53.515625 45.40625 
+Q 70.75 52.34375 82.90625 62.015625 
+L 89.109375 56.5 
+Q 73.875 45.609375 53.515625 38.1875 
+L 53.515625 8.984375 
+Q 53.515625 5.515625 56 4.78125 
+Q 58.40625 4.109375 67.71875 4.109375 
+Q 79.25 4.109375 82.03125 5.421875 
+Q 84.125 6.296875 84.71875 9.28125 
+Q 85.546875 13.625 86.03125 23.390625 
+L 93.40625 20.796875 
+Q 92.671875 4.984375 90.234375 1.65625 
+Q 88.140625 -1.171875 83.296875 -2.203125 
+Q 78.765625 -3.21875 66.3125 -3.21875 
+Q 53.71875 -3.21875 49.703125 -1.21875 
+Q 45.796875 0.734375 45.796875 6 
+L 45.796875 79.890625 
+L 53.515625 79.890625 
+z
+" id="IPAexGothic-21270"/>
+      <path d="M 31.25 40.921875 
+Q 27.34375 40.921875 24.65625 38.203125 
+Q 21.96875 35.5 21.96875 31.59375 
+Q 21.96875 27.734375 24.65625 25.078125 
+Q 27.34375 22.421875 31.25 22.421875 
+Q 35.15625 22.421875 37.84375 25.078125 
+Q 40.53125 27.734375 40.53125 31.59375 
+Q 40.53125 35.453125 37.8125 38.1875 
+Q 35.109375 40.921875 31.25 40.921875 
+z
+M 31.25 47.21875 
+Q 34.375 47.21875 37.25 46.015625 
+Q 40.140625 44.828125 42.234375 42.578125 
+Q 44.484375 40.390625 45.609375 37.59375 
+Q 46.734375 34.8125 46.734375 31.59375 
+Q 46.734375 25.15625 42.21875 20.6875 
+Q 37.703125 16.21875 31.15625 16.21875 
+Q 24.5625 16.21875 20.15625 20.609375 
+Q 15.765625 25 15.765625 31.59375 
+Q 15.765625 38.140625 20.25 42.671875 
+Q 24.75 47.21875 31.25 47.21875 
+z
+" id="DejaVuSans-8728"/>
+      <path d="M 64.40625 67.28125 
+L 64.40625 56.890625 
+Q 59.421875 61.53125 53.78125 63.8125 
+Q 48.140625 66.109375 41.796875 66.109375 
+Q 29.296875 66.109375 22.65625 58.46875 
+Q 16.015625 50.828125 16.015625 36.375 
+Q 16.015625 21.96875 22.65625 14.328125 
+Q 29.296875 6.6875 41.796875 6.6875 
+Q 48.140625 6.6875 53.78125 8.984375 
+Q 59.421875 11.28125 64.40625 15.921875 
+L 64.40625 5.609375 
+Q 59.234375 2.09375 53.4375 0.328125 
+Q 47.65625 -1.421875 41.21875 -1.421875 
+Q 24.65625 -1.421875 15.125 8.703125 
+Q 5.609375 18.84375 5.609375 36.375 
+Q 5.609375 53.953125 15.125 64.078125 
+Q 24.65625 74.21875 41.21875 74.21875 
+Q 47.75 74.21875 53.53125 72.484375 
+Q 59.328125 70.75 64.40625 67.28125 
+z
+" id="DejaVuSans-67"/>
+     </defs>
+     <g transform="translate(51.7 204.778)rotate(-90)scale(0.1 -0.1)">
+      <use transform="translate(0 0.984375)" href="#IPAexGothic-28201"/>
+      <use transform="translate(100 0.984375)" href="#IPAexGothic-24230"/>
+      <use transform="translate(200 0.984375)" href="#IPAexGothic-22793"/>
+      <use transform="translate(300 0.984375)" href="#IPAexGothic-21270"/>
+      <use transform="translate(400 0.984375)" href="#IPAexGothic-32"/>
+      <use transform="translate(427.001953 0.984375)" href="#IPAexGothic-91"/>
+      <use transform="translate(457.939453 39.265625)scale(0.7)" href="#DejaVuSans-8728"/>
+      <use transform="translate(504.492188 0.984375)" href="#DejaVuSans-67"/>
+      <use transform="translate(574.316406 0.984375)" href="#IPAexGothic-93"/>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_1">
+    <path clip-path="url(#paa3a3f66c8)" d="M 73.832727 250.876368 
+L 75.464157 208.277634 
+L 77.095587 261.390595 
+L 78.727017 228.693339 
+L 80.358447 228.386215 
+L 81.989877 236.708576 
+L 83.621307 232.413152 
+L 85.252736 265.887131 
+L 86.884166 241.49854 
+L 88.515596 219.371231 
+L 90.147026 247.827488 
+L 91.778456 232.209507 
+L 93.409886 209.405815 
+L 95.041316 231.075463 
+L 96.672746 222.712266 
+L 98.304175 226.949949 
+L 99.935605 251.144865 
+L 101.567035 295.488 
+L 103.198465 224.593218 
+L 104.829895 210.921388 
+L 106.461325 231.275223 
+L 108.092755 202.625318 
+L 109.724185 209.913894 
+L 111.355614 260.75407 
+L 112.987044 258.128763 
+L 114.618474 262.448569 
+L 116.249904 259.320186 
+L 117.881334 226.58066 
+L 119.512764 239.012805 
+L 121.144194 199.123981 
+L 122.775624 240.789454 
+L 124.407053 223.876454 
+L 126.038483 229.905695 
+L 127.669913 212.154411 
+L 129.301343 240.744875 
+L 130.932773 242.223001 
+L 132.564203 246.983094 
+L 134.195633 236.702428 
+L 135.827063 239.951805 
+L 137.458492 237.898885 
+L 139.089922 246.918494 
+L 140.721352 212.326334 
+L 142.352782 201.727647 
+L 143.984212 214.113338 
+L 145.615642 222.144647 
+L 147.247072 237.515423 
+L 148.878502 221.315759 
+L 150.509931 256.063473 
+L 152.141361 210.816618 
+L 153.772791 241.197243 
+L 155.404221 222.656922 
+L 157.035651 225.99054 
+L 158.667081 193.6455 
+L 160.298511 241.245912 
+L 161.929941 240.703623 
+L 163.56137 223.669957 
+L 165.1928 267.879557 
+L 166.82423 210.721033 
+L 168.45566 203.802456 
+L 170.08709 246.594711 
+L 171.71852 244.54405 
+L 173.34995 254.800257 
+L 174.98138 230.209483 
+L 176.61281 198.293254 
+L 178.244239 207.484078 
+L 179.875669 199.869737 
+L 181.507099 220.840061 
+L 183.138529 228.149828 
+L 184.769959 216.370008 
+L 186.401389 233.389367 
+L 188.032819 245.324726 
+L 189.664249 235.496228 
+L 191.295678 219.16666 
+L 192.927108 192.789829 
+L 194.558538 238.00553 
+L 196.189968 230.228738 
+L 197.821398 216.713402 
+L 199.452828 197.543327 
+L 201.084258 264.40792 
+L 202.715688 222.771484 
+L 204.347117 188.689503 
+L 205.978547 218.117983 
+L 207.609977 216.946412 
+L 209.241407 211.806092 
+L 210.872837 230.592563 
+L 212.504267 226.777392 
+L 214.135697 217.314023 
+L 215.767127 205.712679 
+L 217.398556 218.166762 
+L 219.029986 201.231334 
+L 220.661416 174.329063 
+L 222.292846 179.941693 
+L 223.924276 235.937945 
+L 225.555706 205.609578 
+L 227.187136 211.289389 
+L 228.818566 187.280314 
+L 230.449995 196.709506 
+L 232.081425 205.450104 
+L 233.712855 229.001852 
+L 235.344285 180.193238 
+L 236.975715 200.308825 
+L 238.607145 179.796593 
+L 240.238575 203.351809 
+L 241.870005 193.322543 
+L 243.501434 181.177792 
+L 245.132864 191.55111 
+L 246.764294 169.205248 
+L 248.395724 191.360072 
+L 250.027154 188.029031 
+L 251.658584 203.868153 
+L 253.290014 190.512709 
+L 254.921444 187.067802 
+L 256.552873 172.366521 
+L 258.184303 195.705351 
+L 259.815733 179.032364 
+L 261.447163 132.986964 
+L 263.078593 186.853915 
+L 264.710023 162.568495 
+L 266.341453 175.523626 
+L 267.972883 195.457473 
+L 269.604312 155.659732 
+L 271.235742 171.325086 
+L 272.867172 137.821579 
+L 274.498602 195.92243 
+L 276.130032 183.477271 
+L 277.761462 221.145138 
+L 279.392892 176.672166 
+L 281.024322 168.99239 
+L 282.655751 160.53747 
+L 284.287181 109.7221 
+L 285.918611 171.116049 
+L 287.550041 198.23785 
+L 289.181471 182.001732 
+L 290.812901 148.785411 
+L 292.444331 163.030546 
+L 294.075761 159.824457 
+L 295.70719 165.446719 
+L 297.33862 131.461935 
+L 298.97005 165.716339 
+L 300.60148 120.372342 
+L 302.23291 150.435114 
+L 303.86434 129.362175 
+L 305.49577 151.640079 
+L 307.1272 132.069352 
+L 308.75863 170.00977 
+L 310.390059 181.981855 
+L 312.021489 154.071917 
+L 313.652919 137.269136 
+L 315.284349 155.022691 
+L 316.915779 114.007621 
+L 318.547209 111.34503 
+L 320.178639 137.573195 
+L 321.810069 160.332911 
+L 323.441498 114.576049 
+L 325.072928 178.040036 
+L 326.704358 155.596757 
+L 328.335788 137.490652 
+L 329.967218 111.282764 
+L 331.598648 150.103394 
+L 333.230078 180.556691 
+L 334.861508 122.050893 
+L 336.492937 124.912559 
+L 338.124367 153.78098 
+L 339.755797 146.950992 
+L 341.387227 84.361516 
+L 343.018657 137.886813 
+L 344.650087 105.941982 
+L 346.281517 172.805216 
+L 347.912947 123.748792 
+L 349.544376 130.903439 
+L 351.175806 105.386575 
+L 352.807236 128.736142 
+L 354.438666 126.636902 
+L 356.070096 146.640453 
+L 357.701526 78.597462 
+L 359.332956 117.637828 
+L 360.964386 97.513971 
+L 362.595815 82.676414 
+L 364.227245 135.05756 
+L 365.858675 107.645764 
+L 367.490105 83.912833 
+L 369.121535 97.135456 
+L 370.752965 109.3598 
+L 372.384395 94.929417 
+L 374.015825 91.13586 
+L 375.647254 108.357281 
+L 377.278684 93.726349 
+L 378.910114 85.476853 
+L 380.541544 142.646113 
+L 382.172974 96.325222 
+L 383.804404 80.757177 
+L 385.435834 72.909924 
+L 387.067264 91.026257 
+L 388.698693 73.747326 
+L 390.330123 64.642274 
+L 391.961553 60.465327 
+L 393.592983 80.38195 
+L 395.224413 78.22007 
+L 396.855843 53.568 
+L 398.487273 85.977205 
+L 398.487273 85.977205 
+" style="fill:none;stroke:#1f77b4;stroke-linecap:square;stroke-width:1.5;"/>
+   </g>
+   <g id="line2d_2">
+    <path clip-path="url(#paa3a3f66c8)" d="M 73.832727 237.614009 
+L 81.989877 237.643736 
+L 90.147026 237.4579 
+L 98.304175 237.0565 
+L 106.461325 236.439537 
+L 114.618474 235.607009 
+L 122.775624 234.558919 
+L 130.932773 233.295264 
+L 139.089922 231.816046 
+L 147.247072 230.121265 
+L 155.404221 228.21092 
+L 163.56137 226.085011 
+L 171.71852 223.743539 
+L 179.875669 221.186503 
+L 188.032819 218.413903 
+L 196.189968 215.42574 
+L 204.347117 212.222013 
+L 212.504267 208.802723 
+L 220.661416 205.167869 
+L 228.818566 201.317451 
+L 236.975715 197.25147 
+L 245.132864 192.969925 
+L 253.290014 188.472817 
+L 261.447163 183.760145 
+L 269.604312 178.831909 
+L 279.392892 172.633483 
+L 289.181471 166.124644 
+L 298.97005 159.305394 
+L 308.75863 152.175733 
+L 318.547209 144.73566 
+L 328.335788 136.985175 
+L 338.124367 128.924279 
+L 347.912947 120.552971 
+L 357.701526 111.871252 
+L 367.490105 102.879121 
+L 377.278684 93.576578 
+L 387.067264 83.963624 
+L 396.855843 74.040258 
+L 398.487273 72.356185 
+L 398.487273 72.356185 
+" style="fill:none;stroke:#ff7f0e;stroke-linecap:square;stroke-width:1.5;"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 57.6 307.584 
+L 57.6 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 414.72 307.584 
+L 414.72 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 57.6 307.584 
+L 414.72 307.584 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 57.6 41.472 
+L 414.72 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="legend_1">
+    <g id="patch_7">
+     <path d="M 64.6 78.25325 
+L 146.6 78.25325 
+Q 148.6 78.25325 148.6 76.25325 
+L 148.6 48.472 
+Q 148.6 46.472 146.6 46.472 
+L 64.6 46.472 
+Q 62.6 46.472 62.6 48.472 
+L 62.6 76.25325 
+Q 62.6 78.25325 64.6 78.25325 
+z
+" style="fill:#ffffff;opacity:0.8;stroke:#cccccc;stroke-linejoin:miter;"/>
+    </g>
+    <g id="line2d_3">
+     <path d="M 66.6 54.462625 
+L 86.6 54.462625 
+" style="fill:none;stroke:#1f77b4;stroke-linecap:square;stroke-width:1.5;"/>
+    </g>
+    <g id="line2d_4"/>
+    <g id="text_3">
+     <!-- 実験値 -->
+     <defs>
+      <path d="M 55.078125 19.921875 
+Q 67 5.46875 94.09375 1.421875 
+L 89.65625 -5.859375 
+Q 61.765625 -0.640625 50.296875 16.40625 
+Q 42.671875 -2.25 11.375 -7.375 
+L 7.28125 -0.6875 
+Q 37.84375 2.34375 44.875 19.921875 
+L 6 19.921875 
+L 6 25.921875 
+L 46.09375 25.921875 
+L 46.09375 33.5 
+L 15.09375 33.5 
+L 15.09375 39.203125 
+L 46.09375 39.203125 
+L 46.09375 46.390625 
+L 19.78125 46.390625 
+L 19.78125 52.203125 
+L 46.09375 52.203125 
+L 46.09375 62.3125 
+L 53.171875 62.3125 
+L 53.171875 52.203125 
+L 80.078125 52.203125 
+L 80.078125 46.390625 
+L 53.171875 46.390625 
+L 53.171875 39.203125 
+L 85.0625 39.203125 
+L 85.0625 33.5 
+L 53.171875 33.5 
+L 53.171875 25.921875 
+L 94 25.921875 
+L 94 19.921875 
+z
+M 53.328125 71 
+L 90.28125 71 
+L 90.28125 51.078125 
+L 82.953125 51.078125 
+L 82.953125 64.796875 
+L 16.9375 64.796875 
+L 16.9375 51.078125 
+L 9.625 51.078125 
+L 9.625 71 
+L 45.90625 71 
+L 45.90625 83.015625 
+L 53.328125 83.015625 
+z
+" id="IPAexGothic-23455"/>
+      <path d="M 70.015625 18.0625 
+Q 65.671875 0.875 47.65625 -7.625 
+L 43.5625 -1.765625 
+Q 61.46875 5.03125 64.9375 22.359375 
+L 54.828125 22.359375 
+L 54.828125 18.453125 
+L 48.640625 18.453125 
+L 48.640625 44.828125 
+L 66.015625 44.828125 
+L 66.015625 52.296875 
+L 56.546875 52.296875 
+L 56.546875 56.203125 
+Q 51.8125 51.078125 46.4375 47.125 
+L 42.140625 52.484375 
+Q 56.984375 62.84375 64.3125 81.890625 
+L 72.125 81.890625 
+Q 80.28125 65.375 96.296875 54.78125 
+L 92.1875 48.578125 
+Q 85.984375 53.421875 82.375 57.125 
+L 82.375 52.296875 
+L 72.125 52.296875 
+L 72.125 44.828125 
+L 89.890625 44.828125 
+L 89.890625 18.453125 
+L 83.796875 18.453125 
+L 83.796875 22.359375 
+L 74.125 22.359375 
+Q 79.984375 8.109375 96 0.78125 
+L 91.3125 -5.953125 
+Q 76.03125 2.4375 70.015625 18.0625 
+z
+M 66.015625 39.3125 
+L 54.828125 39.3125 
+L 54.828125 27.875 
+L 66.015625 27.875 
+z
+M 72.125 39.3125 
+L 72.125 27.875 
+L 83.796875 27.875 
+L 83.796875 39.3125 
+z
+M 81.390625 58.109375 
+Q 73.578125 66.21875 68.5 75.484375 
+Q 64.796875 66.3125 58.109375 58.109375 
+z
+M 43.703125 36.28125 
+Q 43.40625 5.8125 41.109375 -2 
+Q 39.453125 -7.078125 32.71875 -7.078125 
+Q 28.21875 -7.078125 23.6875 -6.59375 
+L 22.609375 0.203125 
+Q 26.90625 -0.59375 31.390625 -0.59375 
+Q 34.96875 -0.59375 35.59375 2.59375 
+Q 36.859375 10.296875 37.3125 29.15625 
+L 37.3125 30.671875 
+L 8.59375 30.671875 
+L 8.59375 78.8125 
+L 44.484375 78.8125 
+L 44.484375 73 
+L 30.609375 73 
+L 30.609375 64.59375 
+L 42 64.59375 
+L 42 59.078125 
+L 30.609375 59.078125 
+L 30.609375 50.6875 
+L 42 50.6875 
+L 42 45.171875 
+L 30.609375 45.171875 
+L 30.609375 36.28125 
+z
+M 14.796875 73 
+L 14.796875 64.59375 
+L 24.609375 64.59375 
+L 24.609375 73 
+z
+M 14.796875 59.078125 
+L 14.796875 50.6875 
+L 24.609375 50.6875 
+L 24.609375 59.078125 
+z
+M 14.796875 45.171875 
+L 14.796875 36.28125 
+L 24.609375 36.28125 
+L 24.609375 45.171875 
+z
+M 3.609375 2.296875 
+Q 6.59375 11.625 7.515625 24.8125 
+L 12.109375 23.78125 
+Q 11.671875 8.40625 8.59375 -0.984375 
+z
+M 15.234375 3.078125 
+Q 15.09375 16.109375 14.3125 23.875 
+L 18.40625 24.421875 
+Q 19.921875 16.109375 20.40625 4.78125 
+z
+M 24.03125 6.203125 
+Q 22.609375 18.84375 21.09375 24.515625 
+L 25.09375 25.484375 
+Q 27.203125 18.359375 28.71875 7.90625 
+z
+M 31.84375 9.28125 
+Q 30.765625 16.265625 27.9375 25.875 
+L 31.59375 27.09375 
+Q 34.234375 21.140625 36.328125 11.078125 
+z
+" id="IPAexGothic-39443"/>
+      <path d="M 65.1875 57.421875 
+L 85.203125 57.421875 
+L 85.203125 10.6875 
+L 47.171875 10.6875 
+L 47.171875 57.421875 
+L 58.59375 57.421875 
+Q 59.1875 60.6875 59.765625 64.890625 
+L 33.453125 64.890625 
+L 33.453125 71 
+L 60.6875 71 
+Q 61.28125 75.6875 61.96875 83.203125 
+L 69.28125 82.375 
+L 68.5625 77.390625 
+Q 67.671875 71.53125 67.671875 71 
+L 91.609375 71 
+L 91.609375 64.890625 
+L 66.703125 64.890625 
+Q 65.625 59.078125 65.1875 57.421875 
+z
+M 78.71875 51.8125 
+L 53.65625 51.8125 
+L 53.65625 43.796875 
+L 78.71875 43.796875 
+z
+M 53.65625 38.28125 
+L 53.65625 30.328125 
+L 78.71875 30.328125 
+L 78.71875 38.28125 
+z
+M 53.65625 24.8125 
+L 53.65625 16.3125 
+L 78.71875 16.3125 
+L 78.71875 24.8125 
+z
+M 23.578125 57.328125 
+L 23.578125 -6.984375 
+L 16.703125 -6.984375 
+L 16.703125 42.578125 
+Q 13.375 36.53125 8.296875 29.296875 
+L 4.5 35.40625 
+Q 18.171875 55.171875 24.078125 83.203125 
+L 30.859375 81.59375 
+Q 27.984375 68.40625 23.578125 57.328125 
+z
+M 38.875 3.8125 
+L 94.234375 3.8125 
+L 94.234375 -2.390625 
+L 38.875 -2.390625 
+L 38.875 -6.984375 
+L 32.171875 -6.984375 
+L 32.171875 50.203125 
+L 38.875 50.203125 
+z
+" id="IPAexGothic-20516"/>
+     </defs>
+     <g transform="translate(94.6 57.962625)scale(0.1 -0.1)">
+      <use href="#IPAexGothic-23455"/>
+      <use x="100" href="#IPAexGothic-39443"/>
+      <use x="200" href="#IPAexGothic-20516"/>
+     </g>
+    </g>
+    <g id="line2d_5">
+     <path d="M 66.6 68.85325 
+L 86.6 68.85325 
+" style="fill:none;stroke:#ff7f0e;stroke-linecap:square;stroke-width:1.5;"/>
+    </g>
+    <g id="line2d_6"/>
+    <g id="text_4">
+     <!-- 最小二乗法 -->
+     <defs>
+      <path d="M 79.78125 78.90625 
+L 79.78125 51.171875 
+L 20.0625 51.171875 
+L 20.0625 78.90625 
+z
+M 27.203125 73.390625 
+L 27.203125 67.671875 
+L 72.75 67.671875 
+L 72.75 73.390625 
+z
+M 27.203125 62.5 
+L 27.203125 56.59375 
+L 72.75 56.59375 
+L 72.75 62.5 
+z
+M 45.703125 39.5 
+L 45.703125 -7.03125 
+L 39.109375 -7.03125 
+L 39.109375 3.5625 
+Q 29.203125 1.46875 8.203125 -1.21875 
+L 6.390625 5.5625 
+Q 7.671875 5.671875 9.515625 5.8125 
+Q 11.328125 5.953125 11.8125 5.953125 
+L 15.53125 6.296875 
+L 15.53125 39.5 
+L 6 39.5 
+L 6 45.3125 
+L 94 45.3125 
+L 94 39.5 
+z
+M 39.109375 39.5 
+L 21.875 39.5 
+L 21.875 32.625 
+L 39.109375 32.625 
+z
+M 39.109375 27.546875 
+L 21.875 27.546875 
+L 21.875 20.453125 
+L 39.109375 20.453125 
+z
+M 39.109375 15.375 
+L 21.875 15.375 
+L 21.875 6.78125 
+L 27.484375 7.375 
+Q 33.734375 7.8125 39.109375 8.59375 
+z
+M 75.6875 9.1875 
+Q 83.59375 3.515625 94.484375 -0.140625 
+L 89.890625 -6.546875 
+Q 79.15625 -2 71.1875 4.5 
+Q 62.5 -3.765625 51.265625 -8.34375 
+L 46.96875 -2.546875 
+Q 58.34375 1.3125 66.609375 8.796875 
+Q 58.15625 17.828125 54.109375 28.171875 
+L 48.1875 28.171875 
+L 48.1875 33.890625 
+L 84.765625 33.890625 
+L 88.375 30.671875 
+Q 83.25 18.40625 76.265625 9.96875 
+z
+M 70.90625 13.28125 
+Q 76.3125 19.921875 79.984375 28.171875 
+L 60.5 28.171875 
+Q 64.265625 19.921875 70.90625 13.28125 
+z
+" id="IPAexGothic-26368"/>
+      <path d="M 46 78.21875 
+L 53.90625 78.21875 
+L 53.90625 5.609375 
+Q 53.90625 0.640625 51.90625 -1.515625 
+Q 49.703125 -3.71875 43.109375 -3.71875 
+Q 37.3125 -3.71875 30.171875 -3.078125 
+L 28.609375 4.890625 
+Q 35.0625 3.609375 42.09375 3.609375 
+Q 46 3.609375 46 7.421875 
+z
+M 85.203125 16.109375 
+Q 77 39.3125 65.1875 58.109375 
+L 71.875 61.1875 
+Q 84.375 41.40625 92.875 20.015625 
+z
+M 6.78125 19.671875 
+Q 19.34375 34.859375 24.265625 58.890625 
+L 31.890625 56.890625 
+Q 26.171875 30.28125 12.890625 14.015625 
+z
+" id="IPAexGothic-23567"/>
+      <path d="M 15.53125 67.671875 
+L 84.421875 67.671875 
+L 84.421875 59.96875 
+L 15.53125 59.96875 
+z
+M 8.015625 13.421875 
+L 91.890625 13.421875 
+L 91.890625 5.609375 
+L 8.015625 5.609375 
+z
+" id="IPAexGothic-20108"/>
+      <path d="M 58.6875 22.3125 
+Q 75.046875 8.984375 94.96875 2.828125 
+L 90.09375 -4.109375 
+Q 67.4375 5.375 53.171875 19.921875 
+L 53.171875 -6.984375 
+L 46.09375 -6.984375 
+L 46.09375 19.4375 
+Q 33.296875 3.421875 10.6875 -6 
+L 5.90625 0.09375 
+Q 26.375 6.84375 41.109375 22.3125 
+L 10.984375 22.3125 
+L 10.984375 28.21875 
+L 24.703125 28.21875 
+L 24.703125 39.3125 
+L 6 39.3125 
+L 6 45.3125 
+L 24.703125 45.3125 
+L 24.703125 56 
+L 10.984375 56 
+L 10.984375 61.8125 
+L 46.09375 61.8125 
+L 46.09375 70.3125 
+L 42 69.921875 
+Q 28.46875 68.890625 16.890625 68.5 
+L 13.8125 74.609375 
+Q 52.09375 76.265625 75 80.421875 
+L 80.90625 74.421875 
+Q 68.703125 72.46875 53.171875 70.90625 
+L 53.171875 61.8125 
+L 88.921875 61.8125 
+L 88.921875 56 
+L 75.203125 56 
+L 75.203125 45.3125 
+L 94 45.3125 
+L 94 39.3125 
+L 75.203125 39.3125 
+L 75.203125 28.21875 
+L 88.921875 28.21875 
+L 88.921875 22.3125 
+z
+M 68.3125 56 
+L 52.984375 56 
+L 52.984375 45.21875 
+L 68.3125 45.21875 
+z
+M 46.296875 56 
+L 31.59375 56 
+L 31.59375 45.21875 
+L 46.296875 45.21875 
+z
+M 68.3125 39.40625 
+L 52.984375 39.40625 
+L 52.984375 28.21875 
+L 68.3125 28.21875 
+z
+M 46.296875 39.40625 
+L 31.59375 39.40625 
+L 31.59375 28.21875 
+L 46.296875 28.21875 
+z
+" id="IPAexGothic-20055"/>
+      <path d="M 60.203125 33.984375 
+L 60.109375 33.5 
+Q 54.6875 17.71875 48.578125 6 
+L 48.09375 5.171875 
+Q 57.234375 5.8125 69.4375 7.28125 
+L 78.515625 8.40625 
+Q 73.78125 15.71875 67.828125 23.09375 
+L 73.734375 26.375 
+Q 83.9375 14.5 93.40625 -1.21875 
+L 87.109375 -6 
+Q 83.640625 0.25 81.9375 2.875 
+Q 60.9375 -0.875 31.296875 -3.421875 
+L 29.203125 4 
+Q 33.546875 4.15625 40.28125 4.59375 
+Q 48.828125 21.96875 52.59375 33.984375 
+L 28.71875 33.984375 
+L 28.71875 40.28125 
+L 56.6875 40.28125 
+L 56.6875 58.40625 
+L 34.375 58.40625 
+L 34.375 64.796875 
+L 56.6875 64.796875 
+L 56.6875 81.5 
+L 64.015625 81.5 
+L 64.015625 64.796875 
+L 88.328125 64.796875 
+L 88.328125 58.40625 
+L 64.015625 58.40625 
+L 64.015625 40.28125 
+L 94 40.28125 
+L 94 33.984375 
+z
+M 5.8125 0.09375 
+Q 15.328125 12.453125 23 29.890625 
+L 28.21875 24.21875 
+Q 20.21875 5.90625 11.71875 -6.296875 
+z
+M 22.015625 37.40625 
+Q 14.546875 45.75 7.328125 50.484375 
+L 12.109375 56.203125 
+Q 19.921875 50.921875 27.296875 43.40625 
+z
+M 25.203125 60.109375 
+Q 18.5625 67.78125 10.796875 73.484375 
+L 15.625 79 
+Q 23.484375 73.578125 30.21875 66.21875 
+z
+" id="IPAexGothic-27861"/>
+     </defs>
+     <g transform="translate(94.6 72.35325)scale(0.1 -0.1)">
+      <use href="#IPAexGothic-26368"/>
+      <use x="100" href="#IPAexGothic-23567"/>
+      <use x="200" href="#IPAexGothic-20108"/>
+      <use x="300" href="#IPAexGothic-20055"/>
+      <use x="400" href="#IPAexGothic-27861"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="paa3a3f66c8">
+   <rect height="266.112" width="357.12" x="57.6" y="41.472"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></div>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB">&#x306F;&#x3058;&#x3081;&#x306B;</a></li>
+<li><a href="#%E5%AF%BE%E5%87%A6">&#x5BFE;&#x51E6;</a></li>
+<li><a href="#%E4%BE%8B">&#x4F8B;</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
