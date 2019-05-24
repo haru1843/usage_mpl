@@ -1,0 +1,669 @@
+<!DOCTYPE html><html><head>
+      <title>numpy&#x3068;matplotlib&#x306E;&#x5C0E;&#x5165;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}.markdown-preview code{border-radius:2px;color:#e96900;font-size:12.8px;font-size:.8rem;margin:0 2px;padding:3px 5px;white-space:pre-wrap}.markdown-preview code,.markdown-preview pre{background-color:#f8f8f8;font-family:Roboto Mono,Monaco,courier,monospace}.markdown-preview pre{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;line-height:24px;line-height:1.5rem;margin:1.2em 0;overflow:auto;padding:0 22.4px;padding:0 1.4rem;position:relative;word-wrap:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8e908c}.token.namespace{opacity:.7}.token.boolean,.token.number{color:#c76b29}.token.punctuation{color:#525252}.token.property{color:#c08b30}.token.tag{color:#2973b7}.token.string{color:#42b983;color:var(--theme-color, #42b983)}.token.selector{color:#6679cc}.token.attr-name{color:#2973b7}.language-css .token.string,.style .token.string,.token.entity,.token.url{color:#22a2c9}.token.attr-value,.token.control,.token.directive,.token.unit{color:#42b983;color:var(--theme-color, #42b983)}.token.keyword{color:#e96900}.token.atrule,.token.regex,.token.statement{color:#22a2c9}.token.placeholder,.token.variable{color:#3d8fd1}.token.deleted{text-decoration:line-through}.token.inserted{border-bottom:1px dotted #202746;text-decoration:none}.token.italic{font-style:italic}.token.bold,.token.important{font-weight:700}.token.important{color:#c94922}.token.entity{cursor:help}.markdown-preview pre>code,.markdown-preview pre[class*="language"]{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;background-color:#f8f8f8;border-radius:2px;color:#525252;display:block;font-family:Roboto Mono,Monaco,courier,monospace;font-size:12.8px;font-size:.8rem;line-height:2em;max-width:inherit;overflow:inherit;padding:.8em 1.4em;white-space:pre}.markdown-preview pre>code{padding-left:0;padding-right:0}.markdown-preview code:after,.markdown-preview code:before{letter-spacing:.8px;letter-spacing:.05rem}code .token{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;min-height:24px;min-height:1.5rem}pre:after{color:#ccc;content:attr(data-lang);font-size:9.6px;font-size:.6rem;font-weight:600;height:15px;line-height:15px;padding:5px 10px 0;position:absolute;right:0;text-align:right;top:0}pre[data-line]{position:relative;padding:1em 0 1em 3em !important}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}body:not(.ready){overflow:hidden}body:not(.ready) .app-nav,body:not(.ready)>nav,body:not(.ready) [data-cloak]{display:none}div#app{font-size:30px;font-weight:lighter;margin:40vh auto;text-align:center}div#app:empty:before{content:"Loading..."}.emoji{height:19.2px;height:1.2rem;vertical-align:middle}.progress{background-color:#42b983;background-color:var(--theme-color, #42b983);height:2px;left:0;position:fixed;right:0;top:0;transition:width .2s,opacity .4s;width:0;z-index:5}.search .search-keyword,.search a:hover{color:#42b983;color:var(--theme-color, #42b983)}.search .search-keyword{font-style:normal;font-weight:700}body,html{height:100%}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#34495e;font-family:Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:15px;letter-spacing:0;margin:0;overflow-x:hidden}img{max-width:100%}a[disabled]{cursor:not-allowed;opacity:.6}kbd{border:1px solid #ccc;border-radius:3px;display:inline-block;font-size:12px !important;line-height:12px;margin-bottom:3px;padding:3px 5px;vertical-align:middle}.task-list-item{list-style-type:none}li input[type=checkbox]{margin:0 .2em .25em -1.6em;vertical-align:middle}.app-nav{left:0;margin:25px 60px 0 0;position:absolute;right:0;text-align:right;z-index:2}.app-nav p{margin:0}.app-nav>a{margin:0 16px;margin:0 1rem;padding:5px 0}.app-nav li,.app-nav ul{display:inline-block;list-style:none;margin:0}.app-nav a{color:inherit;font-size:16px;text-decoration:none;transition:color .3s}.app-nav a.active,.app-nav a:hover{color:#42b983;color:var(--theme-color, #42b983)}.app-nav a.active{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983)}.app-nav li{display:inline-block;margin:0 16px;margin:0 1rem;padding:5px 0;position:relative}.app-nav li ul{background-color:#fff;border:1px solid #ddd;border-bottom-color:#ccc;border-radius:4px;box-sizing:border-box;display:none;max-height:calc(39vh);overflow-y:scroll;padding:10px 0;position:absolute;right:-15px;text-align:left;top:100%;white-space:nowrap}.app-nav li ul li{display:block;font-size:14px;line-height:16px;line-height:1rem;margin:0;margin:8px 14px;white-space:nowrap}.app-nav li ul a{display:block;font-size:inherit;margin:0;padding:0}.app-nav li ul a.active{border-bottom:0}.app-nav li:hover ul{display:block}.app-nav.no-badge{margin-right:25px}.github-corner{border-bottom:0;position:fixed;right:0;text-decoration:none;top:0;z-index:1}.github-corner svg{color:#fff;fill:#42b983;fill:var(--theme-color, #42b983);height:80px;width:80px}.github-corner:hover .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}main{display:block;position:relative;width:100vw;height:100%;z-index:0}.anchor{display:inline-block;text-decoration:none;transition:all .3s}.anchor span{color:#34495e}.anchor:hover{text-decoration:underline}.sidebar{border-right:1px solid rgba(0,0,0,0.07);overflow-y:auto;padding:40px 0 0;top:0;bottom:0;left:0;position:absolute;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out;width:300px;z-index:3}.sidebar>h1{margin:0 auto 16px;margin:0 auto 1rem;font-size:24px;font-size:1.5rem;font-weight:300;text-align:center}.sidebar>h1 a{color:inherit;text-decoration:none}.sidebar>h1 .app-nav{display:block;position:static}.sidebar .sidebar-nav{line-height:2em;padding-bottom:40px}.sidebar ul{margin:0;padding:0}.sidebar li>p{font-weight:700;margin:0}.sidebar ul,.sidebar ul li{list-style:none}.sidebar ul li a{border-bottom:none;display:block}.sidebar ul li ul{padding-left:20px}.sidebar::-webkit-scrollbar{width:4px}.sidebar::-webkit-scrollbar-thumb{background:transparent;border-radius:4px}.sidebar:hover::-webkit-scrollbar-thumb{background:rgba(135,135,135,0.4)}.sidebar:hover::-webkit-scrollbar-track{background:rgba(135,135,135,0.1)}.sidebar-toggle{background-color:transparent;background-color:rgba(255,255,255,0.8);border:0;outline:none;padding:10px;bottom:0;left:0;position:absolute;text-align:center;transition:opacity .3s;width:30px;width:284px;z-index:4}.sidebar-toggle .sidebar-toggle-button:hover{opacity:.4}.sidebar-toggle span{background-color:#42b983;background-color:var(--theme-color, #42b983);display:block;margin-bottom:4px;width:16px;height:2px}body.sticky .sidebar,body.sticky .sidebar-toggle{position:fixed}.content{padding-top:60px;top:0;right:0;bottom:0;left:300px;position:absolute;transition:left .25s ease}.markdown-preview>*{box-sizing:border-box;font-size:inherit}.markdown-preview>:first-child{margin-top:0 !important}.markdown-preview hr{border:none;border-bottom:1px solid #eee;margin:2em 0}.markdown-preview table{border-collapse:collapse;border-spacing:0;display:block;margin-bottom:16px;margin-bottom:1rem;overflow:auto;width:100%}.markdown-preview th{font-weight:700}.markdown-preview td,.markdown-preview th{border:1px solid #ddd;padding:6px 13px}.markdown-preview tr{border-top:1px solid #ccc}.markdown-preview p.tip,.markdown-preview tr:nth-child(2n){background-color:#f8f8f8}.markdown-preview p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-preview p.tip code{background-color:#efefef}.markdown-preview p.tip em{color:#34495e}.markdown-preview p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;width:20px;height:20px;text-align:center;top:14px}.markdown-preview p.warn{background:rgba(66,185,131,0.1);border-radius:2px;padding:16px;padding:1rem}body.close .sidebar{-webkit-transform:translateX(-300px);transform:translateX(-300px)}body.close .sidebar-toggle{width:auto}body.close .content{left:0}@media print{.app-nav,.github-corner,.sidebar,.sidebar-toggle{display:none}}@media screen and (max-width:768px){.github-corner,.sidebar,.sidebar-toggle{position:fixed}.app-nav{margin-top:16px}.app-nav li ul{top:30px}main{height:auto;overflow-x:hidden}.sidebar{left:-300px;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.content{left:0;max-width:100vw;position:static;padding-top:20px;transition:-webkit-transform .25s ease;transition:transform .25s ease;transition:transform .25s ease,-webkit-transform .25s ease}.app-nav,.github-corner{transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.sidebar-toggle{background-color:transparent;width:auto;padding:30px 30px 10px 10px}body.close .sidebar{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .sidebar-toggle{background-color:rgba(255,255,255,0.8);transition:background-color 1s;width:284px;padding:10px}body.close .content{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .app-nav,body.close .github-corner{display:none}.github-corner .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}.github-corner:hover .octo-arm{-webkit-animation:none;animation:none}}@-webkit-keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}@keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}section.cover{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-position:50%;background-repeat:no-repeat;background-size:cover;height:100vh;display:none}section.cover .cover-main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:-20px 16px 0;text-align:center;z-index:1}section.cover a{color:inherit}section.cover a,section.cover a:hover{text-decoration:none}section.cover p{line-height:24px;line-height:1.5rem;margin:1em 0}section.cover h1{color:inherit;font-size:40px;font-size:2.5rem;font-weight:300;margin:10px 0 40px;margin:.625rem 0 2.5rem;position:relative;text-align:center}section.cover h1 a{display:block}section.cover h1 small{bottom:-7px;bottom:-0.4375rem;font-size:16px;font-size:1rem;position:absolute}section.cover blockquote{font-size:24px;font-size:1.5rem;text-align:center}section.cover ul{line-height:1.8;list-style-type:none;margin:1em auto;max-width:500px;padding:0}section.cover .cover-main>p:last-child a{border-color:#42b983;border:1px solid var(--theme-color, #42b983);border-radius:2rem;box-sizing:border-box;color:#42b983;color:var(--theme-color, #42b983);display:inline-block;font-size:16.8px;font-size:1.05rem;letter-spacing:1.6px;letter-spacing:.1rem;margin-right:16px;margin-right:1rem;padding:.75em 32px;padding:.75em 2rem;text-decoration:none;transition:all .15s ease}section.cover .cover-main>p:last-child a:last-child{background-color:#42b983;background-color:var(--theme-color, #42b983);color:#fff;margin-right:0}section.cover .cover-main>p:last-child a:last-child:hover{color:inherit;opacity:.8}section.cover .cover-main>p:last-child a:hover{color:inherit}section.cover blockquote>p>a{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983);transition:color .3s}section.cover blockquote>p>a:hover{color:#42b983;color:var(--theme-color, #42b983)}section.cover.show{display:-webkit-box;display:-ms-flexbox;display:flex}section.cover.has-mask .mask{background-color:#fff;opacity:.8;position:absolute;width:100%;height:100%}.sidebar,body{background-color:#fff}.sidebar{color:#364149}.sidebar li{margin:6px 0 6px 15px}.sidebar ul li a{color:#505d6b;font-size:14px;font-weight:400;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap}.sidebar ul li a:hover{text-decoration:underline}.sidebar ul li ul{padding:0}.sidebar ul li.active>a{border-right:2px solid;color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.app-sub-sidebar li:before{content:"-";padding-right:4px;float:left}.markdown-preview h1,.markdown-preview h2,.markdown-preview h3,.markdown-preview h4,.markdown-preview strong{color:#2c3e50;font-weight:600}.markdown-preview a{color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.md-sidebar-toc a{color:#42b983;font-weight:600}.markdown-preview h1{font-size:32px;font-size:2rem;margin:0 0 16px;margin:0 0 1rem}.markdown-preview h2{font-size:28px;font-size:1.75rem;margin:45px 0 12.8px;margin:45px 0 .8rem}.markdown-preview h3{font-size:24px;font-size:1.5rem;margin:40px 0 9.6px;margin:40px 0 .6rem}.markdown-preview h4{font-size:20px;font-size:1.25rem}.markdown-preview h5,.markdown-preview h6{font-size:16px;font-size:1rem}.markdown-preview h6{color:#777}.markdown-preview figure,.markdown-preview p{margin:1.2em 0}.markdown-preview ol,.markdown-preview p,.markdown-preview ul{line-height:25.6px;line-height:1.6rem;word-spacing:.8px;word-spacing:.05rem}.markdown-preview ol,.markdown-preview ul{padding-left:24px;padding-left:1.5rem}.markdown-preview blockquote{border-left:4px solid #42b983;border-left:4px solid var(--theme-color, #42b983);color:#858585;margin:2em 0;padding-left:20px}.markdown-preview blockquote p{font-weight:600;margin-left:0}.markdown-preview iframe{margin:1em 0}.markdown-preview em{color:#7f8c8d}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview p {
+  line-height: 1.2rem;
+}
+.markdown-preview.markdown-preview body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h2:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h3::before,
+.markdown-preview.markdown-preview h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h4::before,
+.markdown-preview.markdown-preview h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+.markdown-preview.markdown-preview.phantomjs-pdf {
+  font-size: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf p {
+  line-height: 1.1rem;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h2::before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h2::after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3::before,
+.markdown-preview.markdown-preview.phantomjs-pdf h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h4::before,
+.markdown-preview.markdown-preview.phantomjs-pdf h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf pre[data-role="codeBlock"] {
+  font-size: 0.9em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf pre.language-text {
+  font-size: 0.9em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf code {
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview.phantomjs-pdf .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="%E3%81%93%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AF%E4%BD%95">&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x4F55;?</h1>
+
+<p>Python&#x306E;numpy&#x3068;matplotlib&#x306E;&#x5C0E;&#x5165;&#x306E;&#x4ED5;&#x65B9;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x305F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3059;.<br>
+<code>pip</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;&#x304C;, <code>pip</code>&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308A;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x540C;&#x968E;&#x5C64;&#x306E;&#x4ED6;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x5927;&#x96D1;&#x628A;&#x306B;&#x307E;&#x3068;&#x3081;&#x305F;&#x306E;&#x3067;&#x305D;&#x3061;&#x3089;&#x3092;&#x3054;&#x89A7;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<h1 class="mume-header" id="numpy">numpy</h1>
+
+<h2 class="mume-header" id="numpy%E3%81%A8%E3%81%AF">numpy&#x3068;&#x306F;</h2>
+
+<p>python&#x306E;&#x7B97;&#x8853;&#x7CFB;&#x306E;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3067;&#x3059;.<br>
+&#x884C;&#x5217;&#x8A08;&#x7B97;&#x3068;&#x304B;, &#x8FD1;&#x4F3C;&#x5F0F;&#x3068;&#x304B;, &#x307E;&#x3041;&#x3044;&#x308D;&#x3044;&#x308D;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
+&#x3061;&#x306A;&#x307F;&#x306B;&#x8AAD;&#x307F;&#x65B9;&#x306F;&#x300C;&#x306A;&#x3080;&#x3071;&#x3044;&#x300D;&#x3067;&#x3059;.</p>
+<h2 class="mume-header" id="numpy%E3%81%AE%E5%B0%8E%E5%85%A5">numpy&#x306E;&#x5C0E;&#x5165;</h2>
+
+<p>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30D7;&#x30ED;&#x30F3;&#x30D7;&#x30C8;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;.<br>
+&#x4F55;&#x51E6;&#x306E;&#x968E;&#x5C64;&#x306B;&#x3044;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;&#x3067;&#x3059;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ pip install numpy
+</code></pre><p>&#x3044;&#x308D;&#x3044;&#x308D;&#x6587;&#x5B57;&#x304C;&#x51FA;&#x3066;&#x304D;&#x3066;&#x7D42;&#x4E86;&#x3057;&#x305F;&#x3089;, python&#x3067;&#x30A4;&#x30F3;&#x30DD;&#x30FC;&#x30C8;&#x3067;&#x304D;&#x308B;&#x304B;&#x8A66;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>C:\&gt;python   
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32                                                               
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.        
+&gt;&gt;&gt; import numpy as np                                                          
+&gt;&gt;&gt; np.pi
+3.141592653589793
+&gt;&gt;&gt; exit()    
+C:\&gt;
+</code></pre><h1 class="mume-header" id="matplotlib">matplotlib</h1>
+
+<h2 class="mume-header" id="matplotlib%E3%81%A8%E3%81%AF">matplotlib&#x3068;&#x306F;</h2>
+
+<p>python&#x3067;&#x30B0;&#x30E9;&#x30D5;&#x3092;&#x63CF;&#x753B;&#x3059;&#x308B;&#x3068;&#x3044;&#x3048;&#x3070;&#x3053;&#x306E;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;.<br>
+&#x7D50;&#x69CB;&#x3044;&#x308D;&#x3044;&#x308D;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
+MATLAB&#x3092;&#x30EA;&#x30B9;&#x30DA;&#x30AF;&#x30C8;&#x3057;&#x3066;&#x4F5C;&#x3063;&#x3066;&#x3044;&#x308B;&#x3089;&#x3057;&#x3044;&#x3067;&#x3059;. &#x540D;&#x524D;&#x3082;&#x4F3C;&#x3066;&#x308B;&#x3082;&#x3093;&#x306D;.<br>
+&#x8AAD;&#x307F;&#x65B9;&#x306F;&#x300C;&#x307E;&#x3063;&#x3068;&#x3077;&#x308D;&#x3063;&#x3068;&#x308A;&#x3076;&#x300D;&#x3067;&#x3059;.  &#x300C;mpl&#x300D;&#x3068;&#x7565;&#x3059;&#x3053;&#x3068;&#x3082;?</p>
+<h2 class="mume-header" id="matplotlib%E3%81%AE%E5%B0%8E%E5%85%A5">matplotlib&#x306E;&#x5C0E;&#x5165;</h2>
+
+<pre data-role="codeBlock" data-info class="language-"><code>$ pip install matplotlib
+</code></pre><p>&#x78BA;&#x8A8D;&#x65B9;&#x6CD5;&#x306F;<code>pip list</code>&#x3067;&#x3082;&#x5225;&#x306B;&#x3044;&#x3044;&#x3093;&#x3067;&#x3059;&#x304C;, GUI&#x304C;&#x304D;&#x3061;&#x3093;&#x3068;&#x6A5F;&#x80FD;&#x3059;&#x308B;&#x304B;&#x5FAE;&#x5999;&#x306A;&#x306E;&#x3067;, &#x4EE5;&#x4E0B;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x4EFB;&#x610F;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x30B3;&#x30D4;&#x30DA;&#x3057;&#x3066;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x3042;&#x308B;&#x3079;&#x304D;&#x66F2;&#x7DDA;</span>
+    x_lim <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+    x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">*</span>x_lim<span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+    y <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">4</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">3</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&quot;org&quot;</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&quot;C0&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x5B9F;&#x9A13;&#x5024;&#x306E;&#x63CF;&#x753B;</span>
+    y <span class="token operator">+=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&quot;exp&quot;</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.4</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&quot;C2&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;&#x306E;&#x63CF;&#x753B;</span>
+    p <span class="token operator">=</span> np<span class="token punctuation">.</span>polyfit<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    y <span class="token operator">=</span> p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>x <span class="token operator">+</span> p<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&quot;LSM&quot;</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&quot;C1&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x56F3;&#x306E;&#x8A2D;&#x5B9A;</span>
+    ax<span class="token punctuation">.</span>set_xticks<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>set_yticks<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span>x_lim<span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x56F3;&#x306E;&#x8868;&#x793A;</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9F;&#x884C;&#x3059;&#x308C;&#x3070;, &#x30B0;&#x30E9;&#x30D5;&#x304C;&#x63CF;&#x753B;&#x3055;&#x308C;&#x308B;&#x306F;&#x305A;&#x3067;&#x3059;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>$ python [&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;]
+</code></pre><p><img src="./img/plt.JPG" alt="&#x63CF;&#x753B;&#x7D50;&#x679C;"></p>
+<h1 class="mume-header" id="mpl%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E">mpl&#x306E;&#x65E5;&#x672C;&#x8A9E;</h1>
+
+<p>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x306E;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x304C;<code>DejaVu Sans</code>&#x3068;&#x3044;&#x3046;&#x65E5;&#x672C;&#x8A9E;&#x975E;&#x5BFE;&#x5FDC;&#x306E;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x306A;&#x306E;&#x3067;, &#x7D20;&#x76F4;&#x306B;&#x65E5;&#x672C;&#x8A9E;&#x3092;&#x51FA;&#x529B;&#x4F7F;&#x7528;&#x3068;&#x3059;&#x308B;&#x3068;, &#x6587;&#x5B57;&#x5316;&#x3051;&#x3057;&#x3066;&#x3057;&#x307E;&#x3044;&#x307E;&#x3059;.</p>
+<p>&#x305D;&#x306E;&#x305F;&#x3081;, &#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x81EA;&#x8EAB;&#x306E;PC&#x306B;&#x3042;&#x308B;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x306E;&#x4E00;&#x89A7;&#x3092;&#x51FA;&#x3057;, &#x6C17;&#x306B;&#x5165;&#x3063;&#x305F;&#x3082;&#x306E;&#x3092;&#x8A2D;&#x5B9A;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.<br>
+&#x3082;&#x3057;, &#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x306E;&#x96F0;&#x56F2;&#x6C17;&#x3092;&#x898B;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;, <code>&#x30B3;&#x30F3;&#x30C8;&#x30ED;&#x30FC;&#x30EB;&#x30D1;&#x30CD;&#x30EB; &#x2192; &#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x306E;&#x30AB;&#x30B9;&#x30BF;&#x30DE;&#x30A4;&#x30BA; &#x2192; &#x30D5;&#x30A9;&#x30F3;&#x30C8;</code>&#x3067;&#x4E00;&#x89A7;&#x3092;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">fonts <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span>fm<span class="token punctuation">.</span>FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>font<span class="token punctuation">)</span><span class="token punctuation">.</span>get_name<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> font <span class="token keyword">in</span> fm<span class="token punctuation">.</span>findSystemFonts<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+fonts <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>fonts<span class="token punctuation">)</span>
+<span class="token keyword">for</span> f <span class="token keyword">in</span> fonts<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+</pre><p>&#x6C17;&#x306B;&#x5165;&#x3063;&#x305F;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x3092;&#x898B;&#x3064;&#x3051;&#x6B21;&#x7B2C;, &#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x5404;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x5185;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x3081;&#x3070;, &#x65E5;&#x672C;&#x8A9E;&#x304C;&#x51FA;&#x529B;&#x3055;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">import</span> matplotlib <span class="token keyword">as</span> mpl
+
+font <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;family&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;&#x30D5;&#x30A9;&#x30F3;&#x30C8;&#x540D;(&#x82F1;&#x8A9E;)&quot;</span><span class="token punctuation">}</span>
+mpl<span class="token punctuation">.</span>rc<span class="token punctuation">(</span><span class="token string">&apos;font&apos;</span><span class="token punctuation">,</span> <span class="token operator">**</span>font<span class="token punctuation">)</span>
+</pre><p>&#x4F8B;</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> matplotlib <span class="token keyword">as</span> mpl
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    font <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;family&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;Yu Gothic&quot;</span><span class="token punctuation">}</span>
+    mpl<span class="token punctuation">.</span>rc<span class="token punctuation">(</span><span class="token string">&apos;font&apos;</span><span class="token punctuation">,</span> <span class="token operator">**</span>font<span class="token punctuation">)</span>
+
+    fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x3042;&#x308B;&#x3079;&#x304D;&#x66F2;&#x7DDA;</span>
+    x_lim <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+    x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">*</span>x_lim<span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+    y <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">4</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">3</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&quot;&#x672C;&#x6765;&quot;</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&quot;C0&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x5B9F;&#x9A13;&#x5024;&#x306E;&#x63CF;&#x753B;</span>
+    y <span class="token operator">+=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&quot;&#x5B9F;&#x9A13;&#x5024;&quot;</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.4</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&quot;C2&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;&#x306E;&#x63CF;&#x753B;</span>
+    p <span class="token operator">=</span> np<span class="token punctuation">.</span>polyfit<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    y <span class="token operator">=</span> p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>x <span class="token operator">+</span> p<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+    ax<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&quot;&#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;&quot;</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&quot;C1&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x56F3;&#x306E;&#x8A2D;&#x5B9A;</span>
+    ax<span class="token punctuation">.</span>set_xticks<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>set_yticks<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span>x_lim<span class="token punctuation">)</span>
+    ax<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># &#x56F3;&#x306E;&#x8868;&#x793A;</span>
+    plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><p><img src="./img/japanese.JPG" alt></p>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E3%81%93%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AF%E4%BD%95">&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x4F55;?</a></li>
+<li><a href="#numpy">numpy</a>
+<ul>
+<li><a href="#numpy%E3%81%A8%E3%81%AF">numpy&#x3068;&#x306F;</a></li>
+<li><a href="#numpy%E3%81%AE%E5%B0%8E%E5%85%A5">numpy&#x306E;&#x5C0E;&#x5165;</a></li>
+</ul>
+</li>
+<li><a href="#matplotlib">matplotlib</a>
+<ul>
+<li><a href="#matplotlib%E3%81%A8%E3%81%AF">matplotlib&#x3068;&#x306F;</a></li>
+<li><a href="#matplotlib%E3%81%AE%E5%B0%8E%E5%85%A5">matplotlib&#x306E;&#x5C0E;&#x5165;</a></li>
+</ul>
+</li>
+<li><a href="#mpl%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E">mpl&#x306E;&#x65E5;&#x672C;&#x8A9E;</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
