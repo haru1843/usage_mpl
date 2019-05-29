@@ -1,0 +1,5 @@
+n = 10
+stage_num = (n + 1) // 2
+
+for stage in range(stage_num, 0, -1):
+    print(" " * (stage-1) + "*" * (2*(stage_num - stage) + 1) )
