@@ -2,10 +2,10 @@ import random
 
 
 def deg(maze_mat, now_w, now_h):
-    if maze_mat[now_w][now_h] == "□":
+    if maze_mat[now_h][now_w] == "□":
         return
 
-    maze_mat[now_w][now_h] = "□"
+    maze_mat[now_h][now_w] = "□"
 
     direct_list = [[0, 1], [1, 0], [0, -1], [-1, 0]]
 
@@ -22,18 +22,17 @@ def deg(maze_mat, now_w, now_h):
             continue
 
         # 進行先2マスの制限
-        if maze_mat[now_w + 2*direct[0]][now_h + 2*direct[1]] == "□":
+        if maze_mat[now_h + 2*direct[1]][now_w + 2*direct[0]] == "□":
             continue
 
         # 制限をクリアした時の処理
-        maze_mat[now_w + direct[0]][now_h + direct[1]] = "□"
-
+        maze_mat[now_h + direct[1]][now_w + direct[0]] = "□"
         deg(maze_mat, now_w + 2*direct[0], now_h + 2*direct[1])
 
 
 def main():
-    width = 15
-    height = 15
+    width = 53
+    height = 29
     maze_mat = [["■" for i in range(0, width)] for j in range(0, height)]
 
     now_w = random.choice(list(range(1, width, 2)))
