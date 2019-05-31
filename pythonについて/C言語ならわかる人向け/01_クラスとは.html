@@ -138,11 +138,18 @@
   font-size: 1em;
 }
 .markdown-preview.markdown-preview pre[data-role="codeBlock"] {
-  font-size: 12pt;
+  font-size: 11pt;
   font-family: "HackGen";
+  background-color: #fbfbfb;
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .output-div :not([data-cmd="toc"]) {
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
 }
 .markdown-preview.markdown-preview .code-chunk * {
-  font-size: 12pt;
+  font-size: 11pt;
   font-family: "HackGen";
 }
 .markdown-preview.markdown-preview code {
@@ -318,12 +325,12 @@
 
 <span class="token comment">// &#x7DCF;&#x8D70;&#x884C;&#x8DDD;&#x96E2;&#x306E;&#x52A0;&#x7B97;</span>
 <span class="token keyword">void</span> <span class="token function">add_total_mileage</span><span class="token punctuation">(</span>Car <span class="token operator">*</span>car<span class="token punctuation">,</span> <span class="token keyword">double</span> mileage<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    car<span class="token operator">-&gt;</span>total_mileage <span class="token operator">+</span><span class="token operator">=</span> mileage<span class="token punctuation">;</span>
+    car<span class="token operator">-&gt;</span>total_mileage <span class="token operator">+=</span> mileage<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// &#x6B8B;&#x308A;&#x71C3;&#x6599;&#x306E;&#x52A0;&#x6E1B;</span>
 <span class="token keyword">void</span> <span class="token function">add_remain_fuel</span><span class="token punctuation">(</span>Car <span class="token operator">*</span>car<span class="token punctuation">,</span> <span class="token keyword">double</span> add_fuel<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    car<span class="token operator">-&gt;</span>remain_fuel <span class="token operator">+</span><span class="token operator">=</span> add_fuel<span class="token punctuation">;</span>
+    car<span class="token operator">-&gt;</span>remain_fuel <span class="token operator">+=</span> add_fuel<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token comment">// &#x8ECA;&#x304C;n&#x5206;&#x8D70;&#x3063;&#x305F;&#x6642;&#x306B;&#x4F34;&#x3046;&#x5909;&#x5316;</span>
@@ -506,22 +513,7 @@
 
     boo1<span class="token punctuation">.</span>drive<span class="token punctuation">(</span><span class="token number">32.7</span><span class="token punctuation">)</span>
     boo1<span class="token punctuation">.</span>print_state<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">--- [&#x3075;&#x3043;&#x3063;&#x3068;] &#x306E; &#x72B6;&#x614B; ---
-&#x6B8B;&#x308A;&#x306E;&#x71C3;&#x6599; : 100.000 [mL]
-&#x7DCF;&#x8D70;&#x884C;&#x8DDD;&#x96E2; :       0 [m]
-
---- [&#x3075;&#x3043;&#x3063;&#x3068;] &#x306E; &#x72B6;&#x614B; ---
-&#x6B8B;&#x308A;&#x306E;&#x71C3;&#x6599; :  92.500 [mL]
-&#x7DCF;&#x8D70;&#x884C;&#x8DDD;&#x96E2; :     600 [m]
-
---- [&#x3075;&#x3043;&#x3063;&#x3068;] &#x306E; &#x72B6;&#x614B; ---
-&#x6B8B;&#x308A;&#x306E;&#x71C3;&#x6599; :  88.450 [mL]
-&#x7DCF;&#x8D70;&#x884C;&#x8DDD;&#x96E2; :   924.0 [m]
-
---- [&#x3075;&#x3043;&#x3063;&#x3068;] &#x306E; &#x72B6;&#x614B; ---
-&#x6B8B;&#x308A;&#x306E;&#x71C3;&#x6599; :  76.188 [mL]
-&#x7DCF;&#x8D70;&#x884C;&#x8DDD;&#x96E2; :  1905.0 [m]
-</pre></div></div><h2 class="mume-header" id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AE%E7%94%9F%E6%88%90">&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;&#x751F;&#x6210;</h2>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%81%AE%E7%94%9F%E6%88%90">&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;&#x751F;&#x6210;</h2>
 
 <p>&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x30AF;&#x30E9;&#x30B9;&#x540D;&#x306B;<code>()</code>&#x3092;&#x3064;&#x3051;, <code>__init__</code>&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x5F15;&#x6570;&#x3092;&#x4E0E;&#x3048;&#x3066;&#x3042;&#x3052;&#x307E;&#x3059;.</p>
 <pre data-role="codeBlock" data-info="python" class="language-python">instance <span class="token operator">=</span> Class_name<span class="token punctuation">(</span>argv1<span class="token punctuation">,</span> argv2<span class="token punctuation">,</span> &#x2026;<span class="token punctuation">)</span>

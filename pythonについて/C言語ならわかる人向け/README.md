@@ -22,4 +22,29 @@
 
 もう一つのフォルダ「プログラミング自体初めての人」の方で取り上げているので, 環境ができていない人はそちらへ.
 
+# HTMLとPDF
+内容は同じです. PDFはページ分割の関係でスタイルが崩れてたり, 見づらかったりするかもしれません.
+
 # リンク
+
+各HTMLファイルを見るときは[こちら](http://htmlpreview.github.io/?)へ飛んでから, 各HTMLファイルのURLをコピペしてあげてください.
+
+一応下に各HTMLファイルのビューワーページへのリンクを貼っておきますが, リンクがきちんと繋がってない場合があるので, ご了承ください.
+
+| 番号 | ファイル名 | リンク |
+| :-: | :-: | :-: |
+| 00 | Pythonの特徴 | [こちら][0] |
+| 01 | クラスとは | [こちら][1] |
+| 02 | 変数と方と演算子 | [こちら][2] |
+| 03 | 便利なメソッドなど | [こちら][3] |
+| 04 | 構文 | [こちら][4] |
+
+[0]:http://htmlpreview.github.io/?
+[1]:http://htmlpreview.github.io/?https://github.com/haru1843/usage_mpl/blob/master/python%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/C%E8%A8%80%E8%AA%9E%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E4%BA%BA%E5%90%91%E3%81%91/01_%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%A8%E3%81%AF.html
+[2]:http://htmlpreview.github.io/?https://github.com/haru1843/usage_mpl/blob/master/python%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/C%E8%A8%80%E8%AA%9E%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E4%BA%BA%E5%90%91%E3%81%91/02_%E5%A4%89%E6%95%B0%E3%81%A8%E5%9E%8B%E3%81%A8%E6%BC%94%E7%AE%97%E5%AD%90.html
+[3]:http://htmlpreview.github.io/?https://github.com/haru1843/usage_mpl/blob/master/python%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/C%E8%A8%80%E8%AA%9E%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E4%BA%BA%E5%90%91%E3%81%91/03_%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AA%E3%81%A9.html
+[4]:http://htmlpreview.github.io/?https://github.com/haru1843/usage_mpl/blob/master/python%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/C%E8%A8%80%E8%AA%9E%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E4%BA%BA%E5%90%91%E3%81%91/04_%E6%A7%8B%E6%96%87.html
+<!-- [5]:http://htmlpreview.github.io/? -->
+<!-- [6]:http://htmlpreview.github.io/? -->
+<!-- [7]:http://htmlpreview.github.io/? -->
+<!-- [8]:http://htmlpreview.github.io/? -->
