@@ -1,0 +1,658 @@
+<!DOCTYPE html><html><head>
+      <title>05_&#x95A2;&#x6570;&#x3068;&#x30B9;&#x30B3;&#x30FC;&#x30D7;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}.markdown-preview code{border-radius:2px;color:#e96900;font-size:12.8px;font-size:.8rem;margin:0 2px;padding:3px 5px;white-space:pre-wrap}.markdown-preview code,.markdown-preview pre{background-color:#f8f8f8;font-family:Roboto Mono,Monaco,courier,monospace}.markdown-preview pre{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;line-height:24px;line-height:1.5rem;margin:1.2em 0;overflow:auto;padding:0 22.4px;padding:0 1.4rem;position:relative;word-wrap:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8e908c}.token.namespace{opacity:.7}.token.boolean,.token.number{color:#c76b29}.token.punctuation{color:#525252}.token.property{color:#c08b30}.token.tag{color:#2973b7}.token.string{color:#42b983;color:var(--theme-color, #42b983)}.token.selector{color:#6679cc}.token.attr-name{color:#2973b7}.language-css .token.string,.style .token.string,.token.entity,.token.url{color:#22a2c9}.token.attr-value,.token.control,.token.directive,.token.unit{color:#42b983;color:var(--theme-color, #42b983)}.token.keyword{color:#e96900}.token.atrule,.token.regex,.token.statement{color:#22a2c9}.token.placeholder,.token.variable{color:#3d8fd1}.token.deleted{text-decoration:line-through}.token.inserted{border-bottom:1px dotted #202746;text-decoration:none}.token.italic{font-style:italic}.token.bold,.token.important{font-weight:700}.token.important{color:#c94922}.token.entity{cursor:help}.markdown-preview pre>code,.markdown-preview pre[class*="language"]{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;background-color:#f8f8f8;border-radius:2px;color:#525252;display:block;font-family:Roboto Mono,Monaco,courier,monospace;font-size:12.8px;font-size:.8rem;line-height:2em;max-width:inherit;overflow:inherit;padding:.8em 1.4em;white-space:pre}.markdown-preview pre>code{padding-left:0;padding-right:0}.markdown-preview code:after,.markdown-preview code:before{letter-spacing:.8px;letter-spacing:.05rem}code .token{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;min-height:24px;min-height:1.5rem}pre:after{color:#ccc;content:attr(data-lang);font-size:9.6px;font-size:.6rem;font-weight:600;height:15px;line-height:15px;padding:5px 10px 0;position:absolute;right:0;text-align:right;top:0}pre[data-line]{position:relative;padding:1em 0 1em 3em !important}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}body:not(.ready){overflow:hidden}body:not(.ready) .app-nav,body:not(.ready)>nav,body:not(.ready) [data-cloak]{display:none}div#app{font-size:30px;font-weight:lighter;margin:40vh auto;text-align:center}div#app:empty:before{content:"Loading..."}.emoji{height:19.2px;height:1.2rem;vertical-align:middle}.progress{background-color:#42b983;background-color:var(--theme-color, #42b983);height:2px;left:0;position:fixed;right:0;top:0;transition:width .2s,opacity .4s;width:0;z-index:5}.search .search-keyword,.search a:hover{color:#42b983;color:var(--theme-color, #42b983)}.search .search-keyword{font-style:normal;font-weight:700}body,html{height:100%}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#34495e;font-family:Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:15px;letter-spacing:0;margin:0;overflow-x:hidden}img{max-width:100%}a[disabled]{cursor:not-allowed;opacity:.6}kbd{border:1px solid #ccc;border-radius:3px;display:inline-block;font-size:12px !important;line-height:12px;margin-bottom:3px;padding:3px 5px;vertical-align:middle}.task-list-item{list-style-type:none}li input[type=checkbox]{margin:0 .2em .25em -1.6em;vertical-align:middle}.app-nav{left:0;margin:25px 60px 0 0;position:absolute;right:0;text-align:right;z-index:2}.app-nav p{margin:0}.app-nav>a{margin:0 16px;margin:0 1rem;padding:5px 0}.app-nav li,.app-nav ul{display:inline-block;list-style:none;margin:0}.app-nav a{color:inherit;font-size:16px;text-decoration:none;transition:color .3s}.app-nav a.active,.app-nav a:hover{color:#42b983;color:var(--theme-color, #42b983)}.app-nav a.active{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983)}.app-nav li{display:inline-block;margin:0 16px;margin:0 1rem;padding:5px 0;position:relative}.app-nav li ul{background-color:#fff;border:1px solid #ddd;border-bottom-color:#ccc;border-radius:4px;box-sizing:border-box;display:none;max-height:calc(39vh);overflow-y:scroll;padding:10px 0;position:absolute;right:-15px;text-align:left;top:100%;white-space:nowrap}.app-nav li ul li{display:block;font-size:14px;line-height:16px;line-height:1rem;margin:0;margin:8px 14px;white-space:nowrap}.app-nav li ul a{display:block;font-size:inherit;margin:0;padding:0}.app-nav li ul a.active{border-bottom:0}.app-nav li:hover ul{display:block}.app-nav.no-badge{margin-right:25px}.github-corner{border-bottom:0;position:fixed;right:0;text-decoration:none;top:0;z-index:1}.github-corner svg{color:#fff;fill:#42b983;fill:var(--theme-color, #42b983);height:80px;width:80px}.github-corner:hover .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}main{display:block;position:relative;width:100vw;height:100%;z-index:0}.anchor{display:inline-block;text-decoration:none;transition:all .3s}.anchor span{color:#34495e}.anchor:hover{text-decoration:underline}.sidebar{border-right:1px solid rgba(0,0,0,0.07);overflow-y:auto;padding:40px 0 0;top:0;bottom:0;left:0;position:absolute;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out;width:300px;z-index:3}.sidebar>h1{margin:0 auto 16px;margin:0 auto 1rem;font-size:24px;font-size:1.5rem;font-weight:300;text-align:center}.sidebar>h1 a{color:inherit;text-decoration:none}.sidebar>h1 .app-nav{display:block;position:static}.sidebar .sidebar-nav{line-height:2em;padding-bottom:40px}.sidebar ul{margin:0;padding:0}.sidebar li>p{font-weight:700;margin:0}.sidebar ul,.sidebar ul li{list-style:none}.sidebar ul li a{border-bottom:none;display:block}.sidebar ul li ul{padding-left:20px}.sidebar::-webkit-scrollbar{width:4px}.sidebar::-webkit-scrollbar-thumb{background:transparent;border-radius:4px}.sidebar:hover::-webkit-scrollbar-thumb{background:rgba(135,135,135,0.4)}.sidebar:hover::-webkit-scrollbar-track{background:rgba(135,135,135,0.1)}.sidebar-toggle{background-color:transparent;background-color:rgba(255,255,255,0.8);border:0;outline:none;padding:10px;bottom:0;left:0;position:absolute;text-align:center;transition:opacity .3s;width:30px;width:284px;z-index:4}.sidebar-toggle .sidebar-toggle-button:hover{opacity:.4}.sidebar-toggle span{background-color:#42b983;background-color:var(--theme-color, #42b983);display:block;margin-bottom:4px;width:16px;height:2px}body.sticky .sidebar,body.sticky .sidebar-toggle{position:fixed}.content{padding-top:60px;top:0;right:0;bottom:0;left:300px;position:absolute;transition:left .25s ease}.markdown-preview>*{box-sizing:border-box;font-size:inherit}.markdown-preview>:first-child{margin-top:0 !important}.markdown-preview hr{border:none;border-bottom:1px solid #eee;margin:2em 0}.markdown-preview table{border-collapse:collapse;border-spacing:0;display:block;margin-bottom:16px;margin-bottom:1rem;overflow:auto;width:100%}.markdown-preview th{font-weight:700}.markdown-preview td,.markdown-preview th{border:1px solid #ddd;padding:6px 13px}.markdown-preview tr{border-top:1px solid #ccc}.markdown-preview p.tip,.markdown-preview tr:nth-child(2n){background-color:#f8f8f8}.markdown-preview p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-preview p.tip code{background-color:#efefef}.markdown-preview p.tip em{color:#34495e}.markdown-preview p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;width:20px;height:20px;text-align:center;top:14px}.markdown-preview p.warn{background:rgba(66,185,131,0.1);border-radius:2px;padding:16px;padding:1rem}body.close .sidebar{-webkit-transform:translateX(-300px);transform:translateX(-300px)}body.close .sidebar-toggle{width:auto}body.close .content{left:0}@media print{.app-nav,.github-corner,.sidebar,.sidebar-toggle{display:none}}@media screen and (max-width:768px){.github-corner,.sidebar,.sidebar-toggle{position:fixed}.app-nav{margin-top:16px}.app-nav li ul{top:30px}main{height:auto;overflow-x:hidden}.sidebar{left:-300px;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.content{left:0;max-width:100vw;position:static;padding-top:20px;transition:-webkit-transform .25s ease;transition:transform .25s ease;transition:transform .25s ease,-webkit-transform .25s ease}.app-nav,.github-corner{transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.sidebar-toggle{background-color:transparent;width:auto;padding:30px 30px 10px 10px}body.close .sidebar{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .sidebar-toggle{background-color:rgba(255,255,255,0.8);transition:background-color 1s;width:284px;padding:10px}body.close .content{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .app-nav,body.close .github-corner{display:none}.github-corner .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}.github-corner:hover .octo-arm{-webkit-animation:none;animation:none}}@-webkit-keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}@keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}section.cover{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-position:50%;background-repeat:no-repeat;background-size:cover;height:100vh;display:none}section.cover .cover-main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:-20px 16px 0;text-align:center;z-index:1}section.cover a{color:inherit}section.cover a,section.cover a:hover{text-decoration:none}section.cover p{line-height:24px;line-height:1.5rem;margin:1em 0}section.cover h1{color:inherit;font-size:40px;font-size:2.5rem;font-weight:300;margin:10px 0 40px;margin:.625rem 0 2.5rem;position:relative;text-align:center}section.cover h1 a{display:block}section.cover h1 small{bottom:-7px;bottom:-0.4375rem;font-size:16px;font-size:1rem;position:absolute}section.cover blockquote{font-size:24px;font-size:1.5rem;text-align:center}section.cover ul{line-height:1.8;list-style-type:none;margin:1em auto;max-width:500px;padding:0}section.cover .cover-main>p:last-child a{border-color:#42b983;border:1px solid var(--theme-color, #42b983);border-radius:2rem;box-sizing:border-box;color:#42b983;color:var(--theme-color, #42b983);display:inline-block;font-size:16.8px;font-size:1.05rem;letter-spacing:1.6px;letter-spacing:.1rem;margin-right:16px;margin-right:1rem;padding:.75em 32px;padding:.75em 2rem;text-decoration:none;transition:all .15s ease}section.cover .cover-main>p:last-child a:last-child{background-color:#42b983;background-color:var(--theme-color, #42b983);color:#fff;margin-right:0}section.cover .cover-main>p:last-child a:last-child:hover{color:inherit;opacity:.8}section.cover .cover-main>p:last-child a:hover{color:inherit}section.cover blockquote>p>a{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983);transition:color .3s}section.cover blockquote>p>a:hover{color:#42b983;color:var(--theme-color, #42b983)}section.cover.show{display:-webkit-box;display:-ms-flexbox;display:flex}section.cover.has-mask .mask{background-color:#fff;opacity:.8;position:absolute;width:100%;height:100%}.sidebar,body{background-color:#fff}.sidebar{color:#364149}.sidebar li{margin:6px 0 6px 15px}.sidebar ul li a{color:#505d6b;font-size:14px;font-weight:400;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap}.sidebar ul li a:hover{text-decoration:underline}.sidebar ul li ul{padding:0}.sidebar ul li.active>a{border-right:2px solid;color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.app-sub-sidebar li:before{content:"-";padding-right:4px;float:left}.markdown-preview h1,.markdown-preview h2,.markdown-preview h3,.markdown-preview h4,.markdown-preview strong{color:#2c3e50;font-weight:600}.markdown-preview a{color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.md-sidebar-toc a{color:#42b983;font-weight:600}.markdown-preview h1{font-size:32px;font-size:2rem;margin:0 0 16px;margin:0 0 1rem}.markdown-preview h2{font-size:28px;font-size:1.75rem;margin:45px 0 12.8px;margin:45px 0 .8rem}.markdown-preview h3{font-size:24px;font-size:1.5rem;margin:40px 0 9.6px;margin:40px 0 .6rem}.markdown-preview h4{font-size:20px;font-size:1.25rem}.markdown-preview h5,.markdown-preview h6{font-size:16px;font-size:1rem}.markdown-preview h6{color:#777}.markdown-preview figure,.markdown-preview p{margin:1.2em 0}.markdown-preview ol,.markdown-preview p,.markdown-preview ul{line-height:25.6px;line-height:1.6rem;word-spacing:.8px;word-spacing:.05rem}.markdown-preview ol,.markdown-preview ul{padding-left:24px;padding-left:1.5rem}.markdown-preview blockquote{border-left:4px solid #42b983;border-left:4px solid var(--theme-color, #42b983);color:#858585;margin:2em 0;padding-left:20px}.markdown-preview blockquote p{font-weight:600;margin-left:0}.markdown-preview iframe{margin:1em 0}.markdown-preview em{color:#7f8c8d}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: "Takao Pゴシック";
+  font-size: 1.1em;
+}
+.markdown-preview.markdown-preview p {
+  line-height: 1.2rem;
+}
+.markdown-preview.markdown-preview body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h2:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h3::before,
+.markdown-preview.markdown-preview h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h4::before,
+.markdown-preview.markdown-preview h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview pre[data-role="codeBlock"] {
+  font-size: 11pt;
+  font-family: "HackGen";
+  background-color: #fbfbfb;
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .output-div :not([data-cmd="toc"]) {
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .code-chunk * {
+  font-size: 11pt;
+  font-family: "HackGen";
+}
+.markdown-preview.markdown-preview code {
+  font-family: "HackGen";
+}
+.markdown-preview.markdown-preview .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header undefined" id="%E3%82%82%E3%81%8F%E3%81%98">&#x3082;&#x304F;&#x3058;</h1>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#%E9%96%A2%E6%95%B0">&#x95A2;&#x6570;</a>
+<ul>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E5%AE%9A%E7%BE%A9">&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;</a></li>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E5%88%A9%E7%94%A8">&#x95A2;&#x6570;&#x306E;&#x5229;&#x7528;</a></li>
+<li><a href="#%E5%86%8D%E5%B8%B0%E9%96%A2%E6%95%B0">&#x518D;&#x5E30;&#x95A2;&#x6570;</a></li>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E5%BC%95%E6%95%B0">&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;</a></li>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E6%88%BB%E3%82%8A%E5%80%A4">&#x95A2;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97%E3%81%AE%E8%A9%B1">&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x8A71;</a></li>
+<li><a href="#if-__name__-__main__-%E3%81%AE%E6%84%8F%E5%91%B3">if __name__ == &#x201C;__main__&#x201D; &#x306E;&#x610F;&#x5473;</a>
+<ul>
+<li><a href="#__name__%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B">__name__&#x3068;&#x306F;&#x306A;&#x306B;&#x304B;</a></li>
+<li><a href="#%E3%81%AA%E3%81%9C%E3%81%93%E3%82%8C%E3%82%92%E3%81%99%E3%82%8B%E3%81%AE%E3%81%8B">&#x306A;&#x305C;&#x3053;&#x308C;&#x3092;&#x3059;&#x308B;&#x306E;&#x304B;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%95%8F%E9%A1%8C">&#x554F;&#x984C;</a>
+<ul>
+<li><a href="#%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%9C%E3%82%8B">&#x6570;&#x5B66;&#x7684;&#x306A;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x308B;</a></li>
+<li><a href="#%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97-%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2">&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217; (&#x6DF1;&#x3055;&#x512A;&#x5148;&#x63A2;&#x7D22;)</a></li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="%E9%96%A2%E6%95%B0">&#x95A2;&#x6570;</h1>
+
+<h2 class="mume-header" id="%E9%96%A2%E6%95%B0%E3%81%AE%E5%AE%9A%E7%BE%A9">&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;</h2>
+
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">def</span> <span class="token function">func_name</span><span class="token punctuation">(</span>argv1<span class="token punctuation">,</span> argv2<span class="token punctuation">,</span> &#x2026;<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    &#x51E6;&#x7406;
+
+    <span class="token keyword">return</span> <span class="token comment"># &#x3082;&#x3057;&#x623B;&#x308A;&#x5024;&#x304C;&#x306A;&#x3051;&#x308C;&#x3070;&#x66F8;&#x304B;&#x306A;&#x304F;&#x3066;&#x3082;&#x826F;&#x3044;.</span>
+</pre><p>C&#x8A00;&#x8A9E;&#x3068;&#x5927;&#x304D;&#x304F;&#x9055;&#x3046;&#x3068;&#x3053;&#x308D;&#x306F;<em>&#x623B;&#x308A;&#x306E;&#x578B;&#x3092;&#x66F8;&#x304B;&#x306A;&#x304F;&#x3066;&#x826F;&#x3044;</em>&#x3053;&#x3068;&#x3068;, <em>&#x5F15;&#x6570;&#x306E;&#x578B;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x306A;&#x304F;&#x3066;&#x826F;&#x3044;</em> &#x3068;&#x3053;&#x308D;.</p>
+<h2 class="mume-header" id="%E9%96%A2%E6%95%B0%E3%81%AE%E5%88%A9%E7%94%A8">&#x95A2;&#x6570;&#x306E;&#x5229;&#x7528;</h2>
+
+<p>&#x5B9F;&#x969B;&#x306B;&#x95A2;&#x6570;&#x3092;&#x4F7F;&#x3046;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x4EE5;&#x4E0B;&#x306B;&#x66F8;&#x3044;&#x3066;&#x307F;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-1" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">return</span> <span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">4</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;func(10) :&quot;</span><span class="token punctuation">,</span> func<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;func(2.4) :&quot;</span><span class="token punctuation">,</span> func<span class="token punctuation">(</span><span class="token number">2.4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;func(-3.4) :&quot;</span><span class="token punctuation">,</span> func<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">3.4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>	
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">func(10) : 234
+func(2.4) : 22.72
+func(-3.4) : 16.919999999999998
+</pre></div></div><h2 class="mume-header" id="%E5%86%8D%E5%B8%B0%E9%96%A2%E6%95%B0">&#x518D;&#x5E30;&#x95A2;&#x6570;</h2>
+
+<p>&#x95A2;&#x6570;A&#x306E;&#x4E2D;&#x3067;&#x95A2;&#x6570;A&#x3092;&#x547C;&#x3076;&#x3088;&#x3046;&#x306A;, &#x81EA;&#x8EAB;&#x306E;&#x4E2D;&#x3067;&#x81EA;&#x8EAB;&#x3092;&#x547C;&#x3076;&#x69CB;&#x9020;&#x3092;&#x53D6;&#x308B;&#x95A2;&#x6570;&#x3092;<code>&#x518D;&#x5E30;&#x95A2;&#x6570;</code>&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;.<br>
+Python&#x3067;&#x3082;&#x3082;&#x3061;&#x308D;&#x3093;&#x518D;&#x5E30;&#x95A2;&#x6570;&#x306F;&#x5B9F;&#x88C5;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=2, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">decrement</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> x <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;, &quot;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+		decrement<span class="token punctuation">(</span>x <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+	<span class="token keyword">else</span><span class="token punctuation">:</span>
+		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	decrement<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+	decrement<span class="token punctuation">(</span><span class="token number">2.4</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+2.4, 1.4, 0.3999999999999999
+</pre></div></div><h2 class="mume-header" id="%E9%96%A2%E6%95%B0%E3%81%AE%E5%BC%95%E6%95%B0">&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;</h2>
+
+<h3 class="mume-header" id="%E4%BD%8D%E7%BD%AE%E5%BC%95%E6%95%B0%E3%81%A8%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89%E5%BC%95%E6%95%B0">&#x4F4D;&#x7F6E;&#x5F15;&#x6570;&#x3068;&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x5F15;&#x6570;</h3>
+
+<p>Python&#x3067;&#x306F;, &#x95A2;&#x6570;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x969B;&#x306B;, &#x3069;&#x306E;&#x4EEE;&#x5F15;&#x6570;&#x3078;&#x6E21;&#x3059;&#x304B;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-3" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=3, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token operator">*</span><span class="token number">1e3</span> <span class="token operator">+</span> b<span class="token operator">*</span><span class="token number">1e2</span> <span class="token operator">+</span> c<span class="token operator">*</span><span class="token number">10</span> <span class="token operator">+</span> d<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+	func<span class="token punctuation">(</span>a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> b<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+	func<span class="token punctuation">(</span>c<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> a<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> b<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+	func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1234.0
+1234.0
+2413.0
+1243.0
+</pre></div></div><p>&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;&#x6642;&#x306B;&#x6C7A;&#x3081;&#x305F;&#x4EEE;&#x5F15;&#x6570;&#x306E;&#x540D;&#x524D;&#x3092;<code>name</code>&#x3068;&#x3059;&#x308B;&#x3068;, <code>name=val</code>&#x306E;&#x3088;&#x3046;&#x306B;, &#x6E21;&#x3059;&#x5F15;&#x6570;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;, &#x3053;&#x308C;&#x3092;<em>&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x5F15;&#x6570;</em>&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;.<br>
+&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x5F15;&#x6570;&#x3092;&#x7528;&#x3044;&#x305A;&#x306B;, &#x6307;&#x5B9A;&#x3055;&#x308C;&#x305F;&#x9806;&#x306B;&#x6E21;&#x3059;&#x5F15;&#x6570;&#x3092;<em>&#x4F4D;&#x7F6E;&#x5F15;&#x6570;</em>&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;.</p>
+<p>&#x4F4D;&#x7F6E;&#x5F15;&#x6570;&#x3068;&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x5F15;&#x6570;&#x306F;<em>&#x6DF7;&#x5728;&#x3067;&#x304D;&#x307E;&#x3059;</em>&#x304C;, &#x5FC5;&#x305A;&#x4F4D;&#x7F6E;&#x5F15;&#x6570;&#x3092;&#x5168;&#x3066;&#x6307;&#x5B9A;&#x3057;&#x7D42;&#x3048;&#x3066;&#x304B;&#x3089;, &#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x5F15;&#x6570;&#x3092;&#x4F7F;&#x308F;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;.</p>
+<h3 class="mume-header" id="%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E5%BC%95%E6%95%B0">&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5F15;&#x6570;</h3>
+
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x898B;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<div class="code-chunk" data-id="code-chunk-id-4" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=4, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token string">&quot;fuga&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+	func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+	func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+	func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token number">99</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1 2 3 4
+1 2 3 fuga
+1 2 hoge fuga
+1 2 hoge 99
+</pre></div></div><p>&#x4E00;&#x90E8;, &#x5F15;&#x6570;&#x3092;&#x4E0E;&#x3048;&#x3066;&#x3044;&#x306A;&#x304F;&#x3066;&#x3082;&#x52D5;&#x4F5C;&#x3057;&#x3066;&#x3044;&#x308B;&#x90E8;&#x5206;&#x304C;&#x3042;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;.<br>
+&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;, &#x5F15;&#x6570;&#x3092;&#x53D7;&#x3051;&#x308B;&#x304C;, &#x3082;&#x3057;&#x5F15;&#x6570;&#x304C;&#x4E0E;&#x3048;&#x3089;&#x308C;&#x306A;&#x304F;&#x3066;&#x3082;, &#x4E88;&#x3081;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x304A;&#x3044;&#x305F;&#x5024;&#x3092;&#x5F15;&#x6570;&#x3068;&#x3057;&#x3066;&#x3046;&#x3051;&#x308B;&#x3088;&#x3046;&#x306A;&#x5F15;&#x6570;&#x3092;<em>&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5F15;&#x6570;</em>&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;.</p>
+<p>&#x3053;&#x308C;&#x306F;&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;&#x6642;&#x306B;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
+&#x5236;&#x7D04;&#x3068;&#x3057;&#x3066;&#x306F;, &#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5F15;&#x6570;&#x306F;, &#x305D;&#x3046;&#x3067;&#x306A;&#x3044;&#x5F15;&#x6570;&#x306E;&#x53F3;&#x5074;&#x306B;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x3089;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x70B9;&#x3067;&#x3059;.<br>
+&#x305D;&#x306E;&#x305F;&#x3081;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x5B9F;&#x88C5;&#x306F;&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x3067;&#x307E;&#x3059;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token operator">=</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> d<span class="token operator">=</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="%E5%8F%AF%E5%A4%89%E9%95%B7%E5%BC%95%E6%95%B0">&#x53EF;&#x5909;&#x9577;&#x5F15;&#x6570;</h3>
+
+<p>&#x4ECA;&#x56DE;&#x306F;&#x7701;&#x7565;.<br>
+&#x304B;&#x306A;&#x308A;&#x4FBF;&#x5229;&#x306A;&#x306E;&#x3067;&#x8208;&#x5473;&#x304C;&#x3042;&#x308C;&#x3070;&#x8ABF;&#x3079;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<h2 class="mume-header" id="%E9%96%A2%E6%95%B0%E3%81%AE%E6%88%BB%E3%82%8A%E5%80%A4">&#x95A2;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;</h2>
+
+<h3 class="mume-header" id="%E6%88%BB%E3%82%8A%E5%80%A4%E3%81%AE%E8%A8%AD%E5%AE%9A">&#x623B;&#x308A;&#x5024;&#x306E;&#x8A2D;&#x5B9A;</h3>
+
+<p>C&#x8A00;&#x8A9E;&#x306E;&#x3088;&#x3046;&#x306B;&#x623B;&#x308A;&#x5024;&#x306E;&#x578B;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x306F;&#x306A;&#x3044;.<br>
+&#x306A;&#x306E;&#x3067;, &#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x578B;&#x306E;&#x5024;&#x3092;&#x8FD4;&#x3057;&#x3066;&#x3082;&#x3044;&#x3044;&#x3057;, &#x306A;&#x3093;&#x306A;&#x3089;&#x4F55;&#x3082;&#x8FD4;&#x3055;&#x306A;&#x304F;&#x3066;&#x3082;&#x826F;&#x3044;.<br>
+&#x623B;&#x308A;&#x5024;&#x306F;<code>return</code>&#x3067;&#x8FD4;&#x305B;&#x308B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-5" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=5, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">return</span> a <span class="token operator">+</span> b <span class="token operator">+</span> c <span class="token operator">+</span> d
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	total <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">10
+</pre></div></div><h3 class="mume-header" id="%E8%A4%87%E6%95%B0%E3%81%AE%E6%88%BB%E3%82%8A%E5%80%A4%E3%82%92%E8%BF%94%E3%81%99%E3%81%AB%E3%81%AF">&#x8907;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;&#x3092;&#x8FD4;&#x3059;&#x306B;&#x306F;</h3>
+
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x623B;&#x308A;&#x5024;&#x3068;&#x3057;&#x3066;&#x30EA;&#x30B9;&#x30C8;&#x3084;&#x30BF;&#x30D7;&#x30EB;&#x3092;&#x8FD4;&#x3057;&#x3066;&#x3042;&#x3052;&#x308C;&#x3070;&#x3088;&#x3044;.<br>
+&#x53D7;&#x3051;&#x53D6;&#x308B;&#x969B;&#x306F;&#x30B7;&#x30FC;&#x30B1;&#x30F3;&#x30B9;&#x3092;&#x307E;&#x308B;&#x3054;&#x3068;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x3066;&#x3082;&#x3044;&#x3044;&#x3057;, &#x30A2;&#x30F3;&#x30D1;&#x30C3;&#x30AF;&#x3057;&#x3066;&#x8907;&#x6570;&#x306E;&#x5909;&#x6570;&#x3078;&#x5206;&#x5272;&#x3055;&#x305B;&#x3066;&#x3082;&#x826F;&#x3044;.</p>
+<div class="code-chunk" data-id="code-chunk-id-6" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=6, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">return</span> <span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">,</span> c<span class="token operator">+</span>d<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	a<span class="token punctuation">,</span> b <span class="token operator">=</span> func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">3 7
+</pre></div></div><h1 class="mume-header" id="%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97%E3%81%AE%E8%A9%B1">&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x8A71;</h1>
+
+<p>&#x3069;&#x306E;&#x8A00;&#x8A9E;&#x306B;&#x304A;&#x3044;&#x3066;&#x3082;, &#x5909;&#x6570;&#x306E;&#x6709;&#x52B9;&#x306A;&#x9818;&#x57DF;&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x304C;&#x3042;&#x308B;.<br>
+&#x3042;&#x308B;&#x95A2;&#x6570;&#x5185;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x5909;&#x6570;&#x306F;, &#x305D;&#x306E;&#x95A2;&#x6570;&#x3092;&#x51FA;&#x308B;&#x3068;&#x6709;&#x52B9;&#x3067;&#x306F;&#x306A;&#x304F;&#x6210;&#x3063;&#x3066;&#x3044;&#x305F;&#x308A;, for&#x3084;while&#x7B49;&#x306E;&#x4E2D;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x5909;&#x6570;&#x3082;&#x305D;&#x308C;&#x3089;&#x304B;&#x3089;&#x3067;&#x308B;&#x3068;&#x6709;&#x52B9;&#x3067;&#x306A;&#x304F;&#x306A;&#x308B;.</p>
+<p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x5909;&#x6570;&#x306E;&#x6709;&#x52B9;&#x306A;&#x7BC4;&#x56F2;&#x3068;&#x3044;&#x3046;&#x306E;&#x3092;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3068;&#x3044;&#x3046;.</p>
+<p>&#x4E00;&#x822C;&#x7684;&#x306B;, &#x5909;&#x6570;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;&#x5FC5;&#x8981;&#x6700;&#x5C0F;&#x9650;&#x3067;&#x3042;&#x308C;&#x3070;&#x3042;&#x308B;&#x307B;&#x3069;&#x3088;&#x3044;&#x3068;&#x3055;&#x308C;&#x308B;.</p>
+<h1 class="mume-header" id="if-__name__-__main__-%E3%81%AE%E6%84%8F%E5%91%B3">if __name__ == &#x201C;__main__&#x201D; &#x306E;&#x610F;&#x5473;</h1>
+
+<h2 class="mume-header" id="__name__%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B">__name__&#x3068;&#x306F;&#x306A;&#x306B;&#x304B;</h2>
+
+<h3 class="mume-header" id="%E7%89%B9%E6%AE%8A%E3%81%AA%E5%A4%89%E6%95%B0">&#x7279;&#x6B8A;&#x306A;&#x5909;&#x6570;</h3>
+
+<p><code>__name__</code>&#x306F;&#x7279;&#x6B8A;&#x306A;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x5909;&#x6570;&#x3067;, &#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x308B;&#x969B;&#x306B;, &#x81EA;&#x52D5;&#x7684;&#x306B;&#x5024;&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3059;.<br>
+(&#x3061;&#x306A;&#x307F;&#x306B;&#x3053;&#x308C;&#x4EE5;&#x5916;&#x306B;&#x3082;&#x7279;&#x6B8A;&#x306A;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x5909;&#x6570;&#x306F;&#x3044;&#x304F;&#x3064;&#x304B;&#x3042;&#x308A;&#x307E;&#x3059;.)</p>
+<h3 class="mume-header" id="%E6%A0%BC%E7%B4%8D%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%82%E3%81%AE">&#x683C;&#x7D0D;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;</h3>
+
+<p><code>__name__</code>&#x306B;&#x306F;, <em>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x304B;&#x3089;&#x76F4;&#x63A5;&#x547C;&#x3070;&#x308C;&#x305F;&#x304B;, &#x4ED6;&#x306E;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x547C;&#x3070;&#x308C;&#x305F;&#x304B;</em>&#x304C;&#x683C;&#x7D0D;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;.</p>
+<ul>
+<li>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x304B;&#x3089;&#x76F4;&#x63A5;&#x3088;&#x3070;&#x308C;&#x305F;&#x6642; -&gt; <code>__name__ == &quot;__main__&quot;</code></li>
+<li>&#x4ED6;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;import&#x3055;&#x308C;&#x305F;&#x6642; -&gt; <code>__name__ == &quot;&#x547C;&#x3073;&#x51FA;&#x3057;&#x5143;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x540D;&quot;</code></li>
+</ul>
+<h2 class="mume-header" id="%E3%81%AA%E3%81%9C%E3%81%93%E3%82%8C%E3%82%92%E3%81%99%E3%82%8B%E3%81%AE%E3%81%8B">&#x306A;&#x305C;&#x3053;&#x308C;&#x3092;&#x3059;&#x308B;&#x306E;&#x304B;</h2>
+
+<p>&#x7406;&#x7531;&#x306F;&#x5927;&#x307E;&#x304B;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x4E8C;&#x70B9;&#x306B;&#x96C6;&#x7D04;&#x3055;&#x308C;&#x307E;&#x3059;.</p>
+<ol>
+<li>&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304C;&#x6C5A;&#x308C;&#x308B;&#x305F;&#x3081;</li>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x3057;&#x3066;&#x5229;&#x7528;&#x3059;&#x308B;&#x3068;&#x304D;, &#x4E0D;&#x8981;&#x306A;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x308B;&#x306E;&#x3092;&#x9632;&#x3050;&#x305F;&#x3081;</li>
+</ol>
+<p>&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x306E;&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x304C;&#x6C5A;&#x308C;&#x308B;&#x3068;&#x3044;&#x3046;&#x70B9;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x5BFE;&#x5FDC;&#x3059;&#x308B;&#x305F;&#x3081;, &#x81EA;&#x5206;&#x306F;<code>if __name__ == &apos;__main__&apos;</code>&#x5185;&#x3067;<code>main()</code>&#x3092;&#x547C;&#x3073;, &#x305D;&#x306E;&#x4E2D;&#x3067;&#x4E3B;&#x306A;&#x51E6;&#x7406;&#x3092;&#x66F8;&#x304F;&#x3068;&#x3044;&#x3046;&#x30B9;&#x30C6;&#x30C3;&#x30D7;&#x3092;&#x8E0F;&#x3093;&#x3067;&#x3044;&#x307E;&#x3059;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	&#x4E3B;&#x306A;&#x51E6;&#x7406;
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</pre><h1 class="mume-header" id="%E5%95%8F%E9%A1%8C">&#x554F;&#x984C;</h1>
+
+<h2 class="mume-header" id="%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%9C%E3%82%8B">&#x6570;&#x5B66;&#x7684;&#x306A;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x308B;</h2>
+
+<h3 class="mume-header" id="%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE">&#x4F5C;&#x308B;&#x3082;&#x306E;</h3>
+
+<ul>
+<li>&#x95A2;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>&#x3B1;</mi><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x2212;</mo><mi>a</mi><mo stretchy="false">)</mo><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">f(x) = \alpha(x^2 - a) + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">&#x3B1;</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span>&#x3092;Python&#x4E0A;&#x3067;&#x5B9F;&#x73FE;&#x3059;&#x308B;</li>
+<li>&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;&#x306F;<code>x</code>,  <code>a</code>, <code>b</code>, <code>&#x3B1;</code>&#x306E;4&#x3064;
+<ul>
+<li>&#x3053;&#x3053;&#x3067;, <code>a</code>, <code>b</code>, <code>&#x3B1;</code>&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5F15;&#x6570;&#x3068;&#x3059;&#x308B;&#x3053;&#x3068;.</li>
+</ul>
+</li>
+<li>&#x95A2;&#x6570;&#x540D;&#x306F;&#x306A;&#x3093;&#x3067;&#x3082;OK</li>
+</ul>
+<h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+
+<div class="code-chunk" data-id="code-chunk-id-7" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=7, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> a<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> b<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">return</span> alpha<span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">-</span> a<span class="token punctuation">)</span> <span class="token operator">+</span> b
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">200
+100
+193
+</pre></div></div><h2 class="mume-header" id="%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97-%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2">&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217; (&#x6DF1;&#x3055;&#x512A;&#x5148;&#x63A2;&#x7D22;)</h2>
+
+<h3 class="mume-header" id="%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE-1">&#x4F5C;&#x308B;&#x3082;&#x306E;</h3>
+
+<ul>
+<li>&#x518D;&#x5E30;&#x95A2;&#x6570;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;n&#x756A;&#x76EE;&#x306E;&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x3092;&#x6C42;&#x3081;&#x308B;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x66F8;&#x304F;.</li>
+</ul>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;, &#x3053;&#x3053;&#x3067;&#x306F;&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x3092;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>5</mn><mo separator="true">,</mo><mn>8</mn><mo separator="true">,</mo><mn>13</mn><mo separator="true">,</mo><mo>&#x22EF;</mo></mrow><annotation encoding="application/x-tex">1, 1, 2, 3, 5, 8, 13, \cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">8</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">&#x22EF;</span></span></span></span>&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;.</p>
+<p>&#x518D;&#x5E30;&#x95A2;&#x6570;&#x306F;&#x5C11;&#x3057;&#x8003;&#x3048;&#x65B9;&#x304C;&#x96E3;&#x3057;&#x3044;&#x306E;&#x3067;, &#x591A;&#x3081;&#x306B;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;.<br>
+&#x308F;&#x304B;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;&#x3058;&#x3083;&#x3093;&#x3058;&#x3083;&#x3093;&#x898B;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%881">&#x30DD;&#x30A4;&#x30F3;&#x30C8;1</h3>
+
+<ul>
+<li>&#x554F;&#x984C;&#x3092;&#x7D30;&#x304B;&#x3044;&#x554F;&#x984C;&#x306B;&#x5206;&#x89E3;&#x3057;&#x3066;&#x8003;&#x3048;&#x308B;.</li>
+</ul>
+<h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%882">&#x30DD;&#x30A4;&#x30F3;&#x30C8;2</h3>
+
+<ul>
+<li>&#x518D;&#x5E30;&#x95A2;&#x6570;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x3068;&#x304D;&#x306F;, &#x518D;&#x5E30;&#x95A2;&#x6570;&#x304C;&#x5B8C;&#x6210;&#x3057;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;&#x3068;&#x3057;&#x3066;&#x8003;&#x3048;&#x308B;&#x3068;&#x826F;&#x3044;.</li>
+</ul>
+<h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%883">&#x30DD;&#x30A4;&#x30F3;&#x30C8;3</h3>
+
+<ul>
+<li>&#x518D;&#x5E30;&#x95A2;&#x6570;&#x306F;&#x5927;&#x62B5;&#x4EE5;&#x4E0B;&#x306E;&#x69CB;&#x6210;&#x3067;&#x6210;&#x308A;&#x7ACB;&#x3063;&#x3066;&#x3044;&#x308B;&#x3068;&#x8003;&#x3048;&#x308B;&#x3068;&#x3046;&#x307E;&#x304F;&#x3044;&#x304F;(&#x3068;&#x601D;&#x3044;&#x305F;&#x3044;).</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">def</span> <span class="token function">recursive_func</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">,</span> &#x2026;<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">if</span> &#x518D;&#x5E30;&#x306E;&#x672B;&#x7AEF;&#x306B;&#x6765;&#x305F;&#x3068;&#x5224;&#x65AD;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x6761;&#x4EF6;<span class="token punctuation">:</span>
+		&#x672B;&#x7AEF;&#x306B;&#x6765;&#x305F;&#x6642;&#x306E;&#x51E6;&#x7406;
+	
+	<span class="token keyword">return</span> &#x81EA;&#x8EAB;&#x306E;&#xFF11;&#x3064;&#x524D;&#x306E;&#x6BB5;&#x968E;&#x304B;&#x3089;&#x5F97;&#x308B;<span class="token punctuation">,</span> &#x81EA;&#x8EAB;&#x306E;&#x89E3;
+</pre><h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%884">&#x30DD;&#x30A4;&#x30F3;&#x30C8;4</h3>
+
+<p>&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x306E;&#x554F;&#x984C;&#x3092;&#x5206;&#x89E3;&#x3059;&#x308B;&#x3068;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;2&#x5206;&#x6728;&#x304C;&#x3067;&#x304D;&#x308B;.</p>
+<p>(&#x4EE5;&#x4E0B;&#x306F;n=5&#x306E;&#x6642;)</p>
+<pre data-role="codeBlock" data-info class="language-"><code>            fib(5)
+           &#x2199;    &#x2198; 
+      fib(3)       fib(4)
+      &#x2199;  &#x2198;       &#x2199;   &#x2198;
+  fib(1) fib(2)  fib(2) fib(3)
+         &#x2199;      &#x2199;     &#x2199;  &#x2198;
+      fib(1)  fib(1)  fib(1) fib(2)
+                             &#x2199;
+                          fib(1)
+</code></pre><p>&#x3064;&#x307E;&#x308A;, <code>fib(5)</code>&#x3067;&#x306F;<code>fib(3) + fib(4)</code>&#x3092;<code>return</code>&#x3059;&#x308C;&#x3070;&#x3088;&#x304F;, <code>fib(4)</code>&#x3067;&#x306F;<code>fib(3) + fib(2)</code>&#x3092;<code>return</code>&#x3059;&#x308C;&#x3070;&#x3088;&#x3044;.<br>
+&#x3053;&#x308C;&#x3089;&#x3088;&#x308A;, <code>fib(n)</code>&#x3067;&#x306F;<code>fib(n-1) + fib(n-2)</code>&#x3092;<code>return</code>&#x3059;&#x308C;&#x3070;&#x826F;&#x3044;&#x3053;&#x3068;&#x306B;&#x306A;&#x308B;.</p>
+<h4 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%885">&#x30DD;&#x30A4;&#x30F3;&#x30C8;5</h4>
+
+<p>2&#x5206;&#x6728;&#x3092;&#x898B;&#x308C;&#x3070;, &#x7D42;&#x4E86;&#x6761;&#x4EF6;(&#x672B;&#x7AEF;&#x6761;&#x4EF6;)&#x306F;<code>n=1</code>&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x304C;&#x6319;&#x3052;&#x308C;&#x3089;&#x308C;, &#x305D;&#x306E;&#x3068;&#x304D;, &#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x306E;1&#x756A;&#x76EE;&#x3092;&#x8FD4;&#x305B;&#x3070;&#x826F;&#x3044;&#x306E;&#x3067;, <code>1</code>&#x3092;&#x8FD4;&#x305B;&#x3070;&#x826F;&#x3044;.<br>
+&#x3057;&#x304B;&#x3057;, &#x3053;&#x308C;&#x3060;&#x3068;<code>fib(2)</code>&#x306E;&#x3068;&#x304D;&#x306B;<code>fib(2 - 1) + fib(2 - 2)</code>&#x3067;&#x30A8;&#x30E9;&#x30FC;&#x306B;&#x306A;&#x308A;&#x304B;&#x306D;&#x306A;&#x3044;&#x306E;&#x3067;, <code>n=2</code>&#x306E;&#x3068;&#x304D;&#x3082;&#x6761;&#x4EF6;&#x306B;&#x52A0;&#x3048;, &#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x306E;2&#x756A;&#x76EE;&#x3082;1&#x306A;&#x306E;&#x3067;, &#x3053;&#x3061;&#x3089;&#x3082;&#x540C;&#x69D8;&#x306B;<code>1</code>&#x3092;&#x8FD4;&#x305B;&#x3070;&#x826F;&#x3044;.</p>
+<h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-1">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+
+<p>&#x4EE5;&#x4E0B;&#x306B;&#x81EA;&#x5206;&#x306A;&#x308A;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-8" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=8, cmd=&quot;python3&quot; class=line-numbers run_on_save}" class="language-python line-numbers"><span class="token keyword">def</span> <span class="token function">fib</span><span class="token punctuation">(</span>try_num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">if</span> try_num <span class="token operator">&lt;=</span> <span class="token number">2</span><span class="token punctuation">:</span>
+		<span class="token keyword">return</span> <span class="token number">1</span>
+	<span class="token keyword">return</span> fib<span class="token punctuation">(</span>try_num<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> fib<span class="token punctuation">(</span>try_num<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">print</span><span class="token punctuation">(</span>fib<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+	main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">34
+21
+13
+8
+5
+3
+2
+1
+1
+</pre></div></div>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E9%96%A2%E6%95%B0">&#x95A2;&#x6570;</a>
+<ul>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E5%AE%9A%E7%BE%A9">&#x95A2;&#x6570;&#x306E;&#x5B9A;&#x7FA9;</a></li>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E5%88%A9%E7%94%A8">&#x95A2;&#x6570;&#x306E;&#x5229;&#x7528;</a></li>
+<li><a href="#%E5%86%8D%E5%B8%B0%E9%96%A2%E6%95%B0">&#x518D;&#x5E30;&#x95A2;&#x6570;</a></li>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E5%BC%95%E6%95%B0">&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;</a>
+<ul>
+<li><a href="#%E4%BD%8D%E7%BD%AE%E5%BC%95%E6%95%B0%E3%81%A8%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89%E5%BC%95%E6%95%B0">&#x4F4D;&#x7F6E;&#x5F15;&#x6570;&#x3068;&#x30AD;&#x30FC;&#x30EF;&#x30FC;&#x30C9;&#x5F15;&#x6570;</a></li>
+<li><a href="#%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88%E5%BC%95%E6%95%B0">&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x5F15;&#x6570;</a></li>
+<li><a href="#%E5%8F%AF%E5%A4%89%E9%95%B7%E5%BC%95%E6%95%B0">&#x53EF;&#x5909;&#x9577;&#x5F15;&#x6570;</a></li>
+</ul>
+</li>
+<li><a href="#%E9%96%A2%E6%95%B0%E3%81%AE%E6%88%BB%E3%82%8A%E5%80%A4">&#x95A2;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;</a>
+<ul>
+<li><a href="#%E6%88%BB%E3%82%8A%E5%80%A4%E3%81%AE%E8%A8%AD%E5%AE%9A">&#x623B;&#x308A;&#x5024;&#x306E;&#x8A2D;&#x5B9A;</a></li>
+<li><a href="#%E8%A4%87%E6%95%B0%E3%81%AE%E6%88%BB%E3%82%8A%E5%80%A4%E3%82%92%E8%BF%94%E3%81%99%E3%81%AB%E3%81%AF">&#x8907;&#x6570;&#x306E;&#x623B;&#x308A;&#x5024;&#x3092;&#x8FD4;&#x3059;&#x306B;&#x306F;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%97%E3%81%AE%E8%A9%B1">&#x30B9;&#x30B3;&#x30FC;&#x30D7;&#x306E;&#x8A71;</a></li>
+<li><a href="#if-__name__-__main__-%E3%81%AE%E6%84%8F%E5%91%B3">if __name__ == &#x201C;__main__&#x201D; &#x306E;&#x610F;&#x5473;</a>
+<ul>
+<li><a href="#__name__%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%AB%E3%81%8B">__name__&#x3068;&#x306F;&#x306A;&#x306B;&#x304B;</a>
+<ul>
+<li><a href="#%E7%89%B9%E6%AE%8A%E3%81%AA%E5%A4%89%E6%95%B0">&#x7279;&#x6B8A;&#x306A;&#x5909;&#x6570;</a></li>
+<li><a href="#%E6%A0%BC%E7%B4%8D%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%82%82%E3%81%AE">&#x683C;&#x7D0D;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x3082;&#x306E;</a></li>
+</ul>
+</li>
+<li><a href="#%E3%81%AA%E3%81%9C%E3%81%93%E3%82%8C%E3%82%92%E3%81%99%E3%82%8B%E3%81%AE%E3%81%8B">&#x306A;&#x305C;&#x3053;&#x308C;&#x3092;&#x3059;&#x308B;&#x306E;&#x304B;</a></li>
+</ul>
+</li>
+<li><a href="#%E5%95%8F%E9%A1%8C">&#x554F;&#x984C;</a>
+<ul>
+<li><a href="#%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%9C%E3%82%8B">&#x6570;&#x5B66;&#x7684;&#x306A;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x308B;</a>
+<ul>
+<li><a href="#%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE">&#x4F5C;&#x308B;&#x3082;&#x306E;</a></li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
+</ul>
+</li>
+<li><a href="#%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97-%E6%B7%B1%E3%81%95%E5%84%AA%E5%85%88%E6%8E%A2%E7%B4%A2">&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217; (&#x6DF1;&#x3055;&#x512A;&#x5148;&#x63A2;&#x7D22;)</a>
+<ul>
+<li><a href="#%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE-1">&#x4F5C;&#x308B;&#x3082;&#x306E;</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%881">&#x30DD;&#x30A4;&#x30F3;&#x30C8;1</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%882">&#x30DD;&#x30A4;&#x30F3;&#x30C8;2</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%883">&#x30DD;&#x30A4;&#x30F3;&#x30C8;3</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%884">&#x30DD;&#x30A4;&#x30F3;&#x30C8;4</a>
+<ul>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%885">&#x30DD;&#x30A4;&#x30F3;&#x30C8;5</a></li>
+</ul>
+</li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-1">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
