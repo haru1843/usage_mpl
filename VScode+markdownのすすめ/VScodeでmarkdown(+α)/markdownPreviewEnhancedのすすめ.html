@@ -1,0 +1,422 @@
+<!DOCTYPE html><html><head>
+      <title>markdownPreviewEnhanced&#x306E;&#x3059;&#x3059;&#x3081;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}.markdown-preview code{border-radius:2px;color:#e96900;font-size:12.8px;font-size:.8rem;margin:0 2px;padding:3px 5px;white-space:pre-wrap}.markdown-preview code,.markdown-preview pre{background-color:#f8f8f8;font-family:Roboto Mono,Monaco,courier,monospace}.markdown-preview pre{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;line-height:24px;line-height:1.5rem;margin:1.2em 0;overflow:auto;padding:0 22.4px;padding:0 1.4rem;position:relative;word-wrap:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8e908c}.token.namespace{opacity:.7}.token.boolean,.token.number{color:#c76b29}.token.punctuation{color:#525252}.token.property{color:#c08b30}.token.tag{color:#2973b7}.token.string{color:#42b983;color:var(--theme-color, #42b983)}.token.selector{color:#6679cc}.token.attr-name{color:#2973b7}.language-css .token.string,.style .token.string,.token.entity,.token.url{color:#22a2c9}.token.attr-value,.token.control,.token.directive,.token.unit{color:#42b983;color:var(--theme-color, #42b983)}.token.keyword{color:#e96900}.token.atrule,.token.regex,.token.statement{color:#22a2c9}.token.placeholder,.token.variable{color:#3d8fd1}.token.deleted{text-decoration:line-through}.token.inserted{border-bottom:1px dotted #202746;text-decoration:none}.token.italic{font-style:italic}.token.bold,.token.important{font-weight:700}.token.important{color:#c94922}.token.entity{cursor:help}.markdown-preview pre>code,.markdown-preview pre[class*="language"]{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;background-color:#f8f8f8;border-radius:2px;color:#525252;display:block;font-family:Roboto Mono,Monaco,courier,monospace;font-size:12.8px;font-size:.8rem;line-height:2em;max-width:inherit;overflow:inherit;padding:.8em 1.4em;white-space:pre}.markdown-preview pre>code{padding-left:0;padding-right:0}.markdown-preview code:after,.markdown-preview code:before{letter-spacing:.8px;letter-spacing:.05rem}code .token{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;min-height:24px;min-height:1.5rem}pre:after{color:#ccc;content:attr(data-lang);font-size:9.6px;font-size:.6rem;font-weight:600;height:15px;line-height:15px;padding:5px 10px 0;position:absolute;right:0;text-align:right;top:0}pre[data-line]{position:relative;padding:1em 0 1em 3em !important}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}body:not(.ready){overflow:hidden}body:not(.ready) .app-nav,body:not(.ready)>nav,body:not(.ready) [data-cloak]{display:none}div#app{font-size:30px;font-weight:lighter;margin:40vh auto;text-align:center}div#app:empty:before{content:"Loading..."}.emoji{height:19.2px;height:1.2rem;vertical-align:middle}.progress{background-color:#42b983;background-color:var(--theme-color, #42b983);height:2px;left:0;position:fixed;right:0;top:0;transition:width .2s,opacity .4s;width:0;z-index:5}.search .search-keyword,.search a:hover{color:#42b983;color:var(--theme-color, #42b983)}.search .search-keyword{font-style:normal;font-weight:700}body,html{height:100%}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#34495e;font-family:Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:15px;letter-spacing:0;margin:0;overflow-x:hidden}img{max-width:100%}a[disabled]{cursor:not-allowed;opacity:.6}kbd{border:1px solid #ccc;border-radius:3px;display:inline-block;font-size:12px !important;line-height:12px;margin-bottom:3px;padding:3px 5px;vertical-align:middle}.task-list-item{list-style-type:none}li input[type=checkbox]{margin:0 .2em .25em -1.6em;vertical-align:middle}.app-nav{left:0;margin:25px 60px 0 0;position:absolute;right:0;text-align:right;z-index:2}.app-nav p{margin:0}.app-nav>a{margin:0 16px;margin:0 1rem;padding:5px 0}.app-nav li,.app-nav ul{display:inline-block;list-style:none;margin:0}.app-nav a{color:inherit;font-size:16px;text-decoration:none;transition:color .3s}.app-nav a.active,.app-nav a:hover{color:#42b983;color:var(--theme-color, #42b983)}.app-nav a.active{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983)}.app-nav li{display:inline-block;margin:0 16px;margin:0 1rem;padding:5px 0;position:relative}.app-nav li ul{background-color:#fff;border:1px solid #ddd;border-bottom-color:#ccc;border-radius:4px;box-sizing:border-box;display:none;max-height:calc(39vh);overflow-y:scroll;padding:10px 0;position:absolute;right:-15px;text-align:left;top:100%;white-space:nowrap}.app-nav li ul li{display:block;font-size:14px;line-height:16px;line-height:1rem;margin:0;margin:8px 14px;white-space:nowrap}.app-nav li ul a{display:block;font-size:inherit;margin:0;padding:0}.app-nav li ul a.active{border-bottom:0}.app-nav li:hover ul{display:block}.app-nav.no-badge{margin-right:25px}.github-corner{border-bottom:0;position:fixed;right:0;text-decoration:none;top:0;z-index:1}.github-corner svg{color:#fff;fill:#42b983;fill:var(--theme-color, #42b983);height:80px;width:80px}.github-corner:hover .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}main{display:block;position:relative;width:100vw;height:100%;z-index:0}.anchor{display:inline-block;text-decoration:none;transition:all .3s}.anchor span{color:#34495e}.anchor:hover{text-decoration:underline}.sidebar{border-right:1px solid rgba(0,0,0,0.07);overflow-y:auto;padding:40px 0 0;top:0;bottom:0;left:0;position:absolute;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out;width:300px;z-index:3}.sidebar>h1{margin:0 auto 16px;margin:0 auto 1rem;font-size:24px;font-size:1.5rem;font-weight:300;text-align:center}.sidebar>h1 a{color:inherit;text-decoration:none}.sidebar>h1 .app-nav{display:block;position:static}.sidebar .sidebar-nav{line-height:2em;padding-bottom:40px}.sidebar ul{margin:0;padding:0}.sidebar li>p{font-weight:700;margin:0}.sidebar ul,.sidebar ul li{list-style:none}.sidebar ul li a{border-bottom:none;display:block}.sidebar ul li ul{padding-left:20px}.sidebar::-webkit-scrollbar{width:4px}.sidebar::-webkit-scrollbar-thumb{background:transparent;border-radius:4px}.sidebar:hover::-webkit-scrollbar-thumb{background:rgba(135,135,135,0.4)}.sidebar:hover::-webkit-scrollbar-track{background:rgba(135,135,135,0.1)}.sidebar-toggle{background-color:transparent;background-color:rgba(255,255,255,0.8);border:0;outline:none;padding:10px;bottom:0;left:0;position:absolute;text-align:center;transition:opacity .3s;width:30px;width:284px;z-index:4}.sidebar-toggle .sidebar-toggle-button:hover{opacity:.4}.sidebar-toggle span{background-color:#42b983;background-color:var(--theme-color, #42b983);display:block;margin-bottom:4px;width:16px;height:2px}body.sticky .sidebar,body.sticky .sidebar-toggle{position:fixed}.content{padding-top:60px;top:0;right:0;bottom:0;left:300px;position:absolute;transition:left .25s ease}.markdown-preview>*{box-sizing:border-box;font-size:inherit}.markdown-preview>:first-child{margin-top:0 !important}.markdown-preview hr{border:none;border-bottom:1px solid #eee;margin:2em 0}.markdown-preview table{border-collapse:collapse;border-spacing:0;display:block;margin-bottom:16px;margin-bottom:1rem;overflow:auto;width:100%}.markdown-preview th{font-weight:700}.markdown-preview td,.markdown-preview th{border:1px solid #ddd;padding:6px 13px}.markdown-preview tr{border-top:1px solid #ccc}.markdown-preview p.tip,.markdown-preview tr:nth-child(2n){background-color:#f8f8f8}.markdown-preview p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-preview p.tip code{background-color:#efefef}.markdown-preview p.tip em{color:#34495e}.markdown-preview p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;width:20px;height:20px;text-align:center;top:14px}.markdown-preview p.warn{background:rgba(66,185,131,0.1);border-radius:2px;padding:16px;padding:1rem}body.close .sidebar{-webkit-transform:translateX(-300px);transform:translateX(-300px)}body.close .sidebar-toggle{width:auto}body.close .content{left:0}@media print{.app-nav,.github-corner,.sidebar,.sidebar-toggle{display:none}}@media screen and (max-width:768px){.github-corner,.sidebar,.sidebar-toggle{position:fixed}.app-nav{margin-top:16px}.app-nav li ul{top:30px}main{height:auto;overflow-x:hidden}.sidebar{left:-300px;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.content{left:0;max-width:100vw;position:static;padding-top:20px;transition:-webkit-transform .25s ease;transition:transform .25s ease;transition:transform .25s ease,-webkit-transform .25s ease}.app-nav,.github-corner{transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.sidebar-toggle{background-color:transparent;width:auto;padding:30px 30px 10px 10px}body.close .sidebar{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .sidebar-toggle{background-color:rgba(255,255,255,0.8);transition:background-color 1s;width:284px;padding:10px}body.close .content{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .app-nav,body.close .github-corner{display:none}.github-corner .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}.github-corner:hover .octo-arm{-webkit-animation:none;animation:none}}@-webkit-keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}@keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}section.cover{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-position:50%;background-repeat:no-repeat;background-size:cover;height:100vh;display:none}section.cover .cover-main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:-20px 16px 0;text-align:center;z-index:1}section.cover a{color:inherit}section.cover a,section.cover a:hover{text-decoration:none}section.cover p{line-height:24px;line-height:1.5rem;margin:1em 0}section.cover h1{color:inherit;font-size:40px;font-size:2.5rem;font-weight:300;margin:10px 0 40px;margin:.625rem 0 2.5rem;position:relative;text-align:center}section.cover h1 a{display:block}section.cover h1 small{bottom:-7px;bottom:-0.4375rem;font-size:16px;font-size:1rem;position:absolute}section.cover blockquote{font-size:24px;font-size:1.5rem;text-align:center}section.cover ul{line-height:1.8;list-style-type:none;margin:1em auto;max-width:500px;padding:0}section.cover .cover-main>p:last-child a{border-color:#42b983;border:1px solid var(--theme-color, #42b983);border-radius:2rem;box-sizing:border-box;color:#42b983;color:var(--theme-color, #42b983);display:inline-block;font-size:16.8px;font-size:1.05rem;letter-spacing:1.6px;letter-spacing:.1rem;margin-right:16px;margin-right:1rem;padding:.75em 32px;padding:.75em 2rem;text-decoration:none;transition:all .15s ease}section.cover .cover-main>p:last-child a:last-child{background-color:#42b983;background-color:var(--theme-color, #42b983);color:#fff;margin-right:0}section.cover .cover-main>p:last-child a:last-child:hover{color:inherit;opacity:.8}section.cover .cover-main>p:last-child a:hover{color:inherit}section.cover blockquote>p>a{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983);transition:color .3s}section.cover blockquote>p>a:hover{color:#42b983;color:var(--theme-color, #42b983)}section.cover.show{display:-webkit-box;display:-ms-flexbox;display:flex}section.cover.has-mask .mask{background-color:#fff;opacity:.8;position:absolute;width:100%;height:100%}.sidebar,body{background-color:#fff}.sidebar{color:#364149}.sidebar li{margin:6px 0 6px 15px}.sidebar ul li a{color:#505d6b;font-size:14px;font-weight:400;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap}.sidebar ul li a:hover{text-decoration:underline}.sidebar ul li ul{padding:0}.sidebar ul li.active>a{border-right:2px solid;color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.app-sub-sidebar li:before{content:"-";padding-right:4px;float:left}.markdown-preview h1,.markdown-preview h2,.markdown-preview h3,.markdown-preview h4,.markdown-preview strong{color:#2c3e50;font-weight:600}.markdown-preview a{color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.md-sidebar-toc a{color:#42b983;font-weight:600}.markdown-preview h1{font-size:32px;font-size:2rem;margin:0 0 16px;margin:0 0 1rem}.markdown-preview h2{font-size:28px;font-size:1.75rem;margin:45px 0 12.8px;margin:45px 0 .8rem}.markdown-preview h3{font-size:24px;font-size:1.5rem;margin:40px 0 9.6px;margin:40px 0 .6rem}.markdown-preview h4{font-size:20px;font-size:1.25rem}.markdown-preview h5,.markdown-preview h6{font-size:16px;font-size:1rem}.markdown-preview h6{color:#777}.markdown-preview figure,.markdown-preview p{margin:1.2em 0}.markdown-preview ol,.markdown-preview p,.markdown-preview ul{line-height:25.6px;line-height:1.6rem;word-spacing:.8px;word-spacing:.05rem}.markdown-preview ol,.markdown-preview ul{padding-left:24px;padding-left:1.5rem}.markdown-preview blockquote{border-left:4px solid #42b983;border-left:4px solid var(--theme-color, #42b983);color:#858585;margin:2em 0;padding-left:20px}.markdown-preview blockquote p{font-weight:600;margin-left:0}.markdown-preview iframe{margin:1em 0}.markdown-preview em{color:#7f8c8d}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: "Takao Pゴシック";
+  font-size: 1.1em;
+}
+.markdown-preview.markdown-preview p {
+  line-height: 1.2rem;
+}
+.markdown-preview.markdown-preview body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h2:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h3::before,
+.markdown-preview.markdown-preview h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h4::before,
+.markdown-preview.markdown-preview h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview pre[data-role="codeBlock"] {
+  font-size: 11pt;
+  font-family: "HackGen";
+  background-color: #fbfbfb;
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .output-div :not([data-cmd="toc"]) {
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .code-chunk * {
+  font-size: 11pt;
+  font-family: "HackGen";
+}
+.markdown-preview.markdown-preview code {
+  font-family: "HackGen";
+}
+.markdown-preview.markdown-preview .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD-markdown-preview-enhanced">&#x62E1;&#x5F35;&#x6A5F;&#x80FD; : markdown preview enhanced</h1>
+
+<p>markdown preview enhanced &#x3060;&#x3068;&#x540D;&#x79F0;&#x304C;&#x9577;&#x3059;&#x304E;&#x308B;&#x306E;&#x3067;, &#x4EE5;&#x4E0B;&#x3067;&#x306F;mpe&#x3068;&#x3057;&#x307E;&#x3059;.</p>
+<h2 class="mume-header" id="mpe%E3%81%AE%E5%B0%8E%E5%85%A5">mpe&#x306E;&#x5C0E;&#x5165;</h2>
+
+<p>VScode&#x3092;&#x958B;&#x3044;&#x3066;&#x62E1;&#x5F35;&#x6A5F;&#x80FD;&#x3067;&#x3042;&#x308B;mpe&#x3092;&#x5165;&#x308C;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;.<br>
+VScode&#x3092;&#x958B;&#x3044;&#x305F;&#x3089;, &#x5DE6;&#x5074;&#x306E;5&#x3064;&#x304F;&#x3089;&#x3044;&#x30A2;&#x30A4;&#x30B3;&#x30F3;&#x304C;&#x3042;&#x308B;&#x3046;&#x3061;&#x306E;&#x4E00;&#x756A;&#x3057;&#x305F;&#x306E;&#x56DB;&#x89D2;&#x5F62;&#x307F;&#x305F;&#x3044;&#x306A;&#x3084;&#x3064;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;.<br>
+&#x305D;&#x3046;&#x3059;&#x308B;&#x3068;&#x62E1;&#x5F35;&#x6A5F;&#x80FD;&#x306E;&#x7BA1;&#x7406;&#x753B;&#x9762;&#x307F;&#x305F;&#x3044;&#x306A;&#x306E;&#x304C;&#x958B;&#x304F;&#x306E;&#x3067;, &#x4E00;&#x756A;&#x4E0A;&#x306E;&#x691C;&#x7D22;&#x7A93;&#x306B;<code>markdown preview enhanced</code>&#x3068;&#x6253;&#x3061;&#x8FBC;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;.<br>
+&#x304A;&#x305D;&#x3089;&#x304F;&#x4E00;&#x756A;&#x4E0A;&#x306B;&#x4E00;&#x756A;DL&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;<code>Yiyi Wang</code>&#x3055;&#x3093;&#x306E;&#x3084;&#x3064;&#x304C;&#x3067;&#x308B;&#x306E;&#x3067;, &#x305D;&#x308C;&#x3092;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3057;, &#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;.</p>
+<h2 class="mume-header" id="mpe%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8">mpe&#x3067;&#x3067;&#x304D;&#x308B;&#x3053;&#x3068;</h2>
+
+<p>&#x4F55;&#x304C;&#x3067;&#x304D;&#x308B;&#x304B;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/?id=markdown-preview-enhanced">&#x516C;&#x5F0F;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;</a>&#x3067;&#x7D50;&#x69CB;&#x8A73;&#x3057;&#x304F;&#x66F8;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;, &#x305D;&#x3061;&#x3089;&#x3092;&#x8AAD;&#x3080;&#x306E;&#x304C;&#x4E00;&#x756A;&#x3044;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;.</p>
+<p>&#x4E00;&#x5FDC;, &#x62E1;&#x5F35;&#x3068;&#x3057;&#x3066;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x3053;&#x3068;&#x3092;&#x7C21;&#x5358;&#x306B;&#x8AAC;&#x660E;&#x3057;&#x307E;&#x3059;.</p>
+<h3 class="mume-header" id="preview%E7%94%BB%E9%9D%A2%E3%82%92%E9%96%8B%E3%81%8F">Preview&#x753B;&#x9762;&#x3092;&#x958B;&#x304F;</h3>
+
+<p><code>Ctrl + K</code> &#x2192; <code>V</code>&#x3067;&#x73FE;&#x5728;&#x958B;&#x3044;&#x3066;&#x3044;&#x308B;md&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x30D7;&#x30EC;&#x30D3;&#x30E5;&#x30FC;&#x753B;&#x9762;&#x3092;&#x958B;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<h3 class="mume-header" id="%E5%90%84%E7%A8%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8B">&#x5404;&#x7A2E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</h3>
+
+<p>Preview&#x753B;&#x9762;&#x3092;&#x53F3;&#x30AF;&#x30EA;&#x30C3;&#x30AF;&#x3059;&#x308B;&#x3068;, &#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x306E;&#x65B9;&#x6CD5;&#x3068;, &#x3069;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5F62;&#x5F0F;&#x3078;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3059;&#x308B;&#x304B;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<h3 class="mume-header" id="latex%E3%81%AE%E6%95%B0%E5%BC%8F%E3%81%8C%E6%8C%BF%E5%85%A5%E3%81%A7%E3%81%8D%E3%82%8B">Latex&#x306E;&#x6570;&#x5F0F;&#x304C;&#x633F;&#x5165;&#x3067;&#x304D;&#x308B;</h3>
+
+<p><code>$ ~ $</code>&#x3067;&#x6587;&#x4E2D;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x307F;,<br>
+<code>$$ ~ $$</code>&#x304B;, <code>```math</code>&#x3067;&#x4E2D;&#x592E;&#x306B;&#x6570;&#x5F0F;&#x3092;&#x7D44;&#x307F;&#x8FBC;&#x307F;&#x307E;&#x3059;.</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>&#x3B1;</mi><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>&#x2212;</mo><mi>&#x3B2;</mi><mo stretchy="false">)</mo><mo>+</mo><mi>&#x3B3;</mi></mrow><annotation encoding="application/x-tex">f(x) = \alpha(x^2 - \beta) + \gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">&#x3B1;</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2212;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05278em;">&#x3B2;</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">&#x3B3;</span></span></span></span></p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown">$$
+\begin{array}{ccl}
+SNR &amp;=&amp; {\displaystyle {\sqrt{P}hs(t) \above{0.9pt}n(t)} }\\
+\\
+<span class="token code keyword">    &amp;=&amp; {\displaystyle {Ph^2s(t)^2\above{0.9pt}n(t)^2} }\\</span>
+\\
+<span class="token code keyword">    &amp;=&amp; {\displaystyle {P|h|^2\above{0.9pt}\sigma^2} }</span>
+\end{array}
+$$
+</pre><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable rowspacing="0.15999999999999992em" columnalign="center center left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>S</mi><mi>N</mi><mi>R</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>=</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mfrac linethickness="0.09000000000000001em"><mrow><msqrt><mi>P</mi></msqrt><mi>h</mi><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mfrac></mstyle></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>=</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mfrac linethickness="0.09000000000000001em"><mrow><mi>P</mi><msup><mi>h</mi><mn>2</mn></msup><mi>s</mi><mo stretchy="false">(</mo><mi>t</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mrow><mi>n</mi><mo stretchy="false">(</mo><mi>t</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow></mfrac></mstyle></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>=</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mfrac linethickness="0.09000000000000001em"><mrow><mi>P</mi><mi mathvariant="normal">&#x2223;</mi><mi>h</mi><msup><mi mathvariant="normal">&#x2223;</mi><mn>2</mn></msup></mrow><msup><mi>&#x3C3;</mi><mn>2</mn></msup></mfrac></mstyle></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{ccl}
+SNR &amp;=&amp; {\displaystyle {\sqrt{P}hs(t) \above{0.9pt}n(t)} }\\
+\\
+    &amp;=&amp; {\displaystyle {Ph^2s(t)^2\above{0.9pt}n(t)^2} }\\
+\\
+    &amp;=&amp; {\displaystyle {P|h|^2\above{0.9pt}\sigma^2} }
+\end{array}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:10.334989em;vertical-align:-4.917494499999999em;"></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.4174945em;"><span style="top:-7.4174945em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span></span></span><span style="top:-5.512494500000002em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"></span></span><span style="top:-3.5233865000000004em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"></span></span><span style="top:-1.6183865000000013em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"></span></span><span style="top:0.37072149999999804em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:4.917494499999998em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.4174945em;"><span style="top:-7.4174945em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mrel">=</span></span></span><span style="top:-3.5233865000000004em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mrel">=</span></span></span><span style="top:0.3707214999999989em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mrel">=</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:4.917494499999999em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.4174945em;"><span style="top:-7.4174945em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.741665em;"><span style="top:-2.185em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span></span></span><span style="top:-3.205em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.09000000000000001em;"></span></span><span style="top:-3.815em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span><span class="mord mathdefault">h</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose">)</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.065em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span style="top:-3.5233865000000004em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.629108em;"><span style="top:-2.185em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.205em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.09000000000000001em;"></span></span><span style="top:-3.815em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:1.065em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span><span style="top:0.3707214999999989em;"><span class="pstrut" style="height:3.7416650000000002em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.629108em;"><span style="top:-2.194892em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.205em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.09000000000000001em;"></span></span><span style="top:-3.815em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord">&#x2223;</span><span class="mord mathdefault">h</span><span class="mord"><span class="mord">&#x2223;</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.805108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:4.917494499999999em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span></span></span></span></span></p>
+<pre data-role="codeBlock" data-info="markdown" class="language-markdown"><span class="token code"><span class="token punctuation">```</span><span class="token code-language">math</span>
+<span class="token code-block">\begin{array}{ccl}
+\tilde{h}_{i1} &amp;=&amp; E\left[ {y_i^{(1)}(t) \above{0.9pt} s_{p1}(t)} \right] \\
+&amp;=&amp; h_{i1} + E\left[ {n^{(1)}(t) \above{0.9pt}s_{p1}(t)} \right] \\
+&amp;=&amp; h_{i1} + \sigma&apos;
+\end{array}</span>
+<span class="token punctuation">```</span></span>
+</pre><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable rowspacing="0.15999999999999992em" columnalign="center center left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mover accent="true"><mi>h</mi><mo>~</mo></mover><mrow><mi>i</mi><mn>1</mn></mrow></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>=</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>E</mi><mrow><mo fence="true">[</mo><mfrac linethickness="0.09000000000000001em"><mrow><msubsup><mi>y</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mi>s</mi><mrow><mi>p</mi><mn>1</mn></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mfrac><mo fence="true">]</mo></mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>=</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>h</mi><mrow><mi>i</mi><mn>1</mn></mrow></msub><mo>+</mo><mi>E</mi><mrow><mo fence="true">[</mo><mfrac linethickness="0.09000000000000001em"><mrow><msup><mi>n</mi><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><msub><mi>s</mi><mrow><mi>p</mi><mn>1</mn></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mfrac><mo fence="true">]</mo></mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>=</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>h</mi><mrow><mi>i</mi><mn>1</mn></mrow></msub><mo>+</mo><msup><mi>&#x3C3;</mi><mo mathvariant="normal">&#x2032;</mo></msup></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{ccl}
+\tilde{h}_{i1} &amp;=&amp; E\left[ {y_i^{(1)}(t) \above{0.9pt} s_{p1}(t)} \right] \\
+&amp;=&amp; h_{i1} + E\left[ {n^{(1)}(t) \above{0.9pt}s_{p1}(t)} \right] \\
+&amp;=&amp; h_{i1} + \sigma&apos;
+\end{array}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:5.486749999999999em;vertical-align:-2.4933749999999995em;"></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.993375em;"><span style="top:-4.993375em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9312999999999998em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">h</span></span></span><span style="top:-3.61344em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;">~</span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.8066450000000005em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"></span></span><span style="top:-1.3166250000000008em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:2.4933749999999995em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.993375em;"><span style="top:-4.993375em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mrel">=</span></span></span><span style="top:-2.8066450000000005em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mrel">=</span></span></span><span style="top:-1.3166250000000008em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mrel">=</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:2.4933749999999995em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.993375em;"><span style="top:-4.993375em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.35196em;"><span style="top:-2.5900000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428566em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.205em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.09000000000000001em;"></span></span><span style="top:-3.6106000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.0590857142857142em;"><span style="top:-2.2134285714285715em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">i</span></span></span><span style="top:-3.059085714285714em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.3222857142857143em;"><span></span></span></span></span></span></span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.6073199999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span></span></span><span style="top:-2.8066450000000005em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">[</span></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2367em;"><span style="top:-2.5900000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428566em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.205em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.09000000000000001em;"></span></span><span style="top:-3.56em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9667142857142857em;"><span style="top:-2.966714285714285em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight">1</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span><span class="mopen mtight">(</span><span class="mord mathdefault mtight">t</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.6073199999999999em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">]</span></span></span></span></span><span style="top:-1.3166250000000008em;"><span class="pstrut" style="height:3.45em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">h</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C3;</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">&#x2032;</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:2.4933749999999995em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span></span></span></span></span></p><h3 class="mume-header" id="%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%8C%BF%E5%85%A5">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x633F;&#x5165;</h3>
+
+<ul>
+<li>&#x5404;&#x7A2E;&#x30BD;&#x30FC;&#x30B9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;</li>
+<li>PDF&#x30D5;&#x30A1;&#x30A4;&#x30EB;</li>
+<li>image&#x30D5;&#x30A1;&#x30A4;&#x30EB;</li>
+</ul>
+<h3 class="mume-header" id="%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AE%E6%93%8D%E4%BD%9C%E3%81%AE%E5%BC%B7%E5%8C%96">&#x30B3;&#x30FC;&#x30C9;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x64CD;&#x4F5C;&#x306E;&#x5F37;&#x5316;</h3>
+
+<p>&#x8272;&#x3005;&#x306A;&#x9762;&#x3067;&#x30B3;&#x30FC;&#x30C9;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x8A18;&#x6CD5;&#x306E;&#x5F37;&#x5316;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;, &#x4EE5;&#x4E0B;&#x306E;&#x8981;&#x7D20;&#x304C;&#x7279;&#x306B;&#x5F37;&#x307F;&#x3060;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;.</p>
+<ul>
+<li>&#x30B3;&#x30FC;&#x30C9;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x5B9F;&#x884C;</li>
+<li>&#x5B9F;&#x884C;&#x7D50;&#x679C;&#x306E;&#x8868;&#x793A;</li>
+<li>&#x884C;&#x6570;&#x306E;&#x8868;&#x793A;</li>
+</ul>
+<h1 class="mume-header" id="%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%92%E3%81%84%E3%81%98%E3%82%8B">&#x30D7;&#x30EC;&#x30D3;&#x30E5;&#x30FC;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x3092;&#x3044;&#x3058;&#x308B;</h1>
+
+<p>&#x30D7;&#x30EC;&#x30D3;&#x30E5;&#x30FC;&#x306F;css&#x3067;&#x3044;&#x3058;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
+&#x3082;&#x3057;CSS&#x3092;&#x77E5;&#x3063;&#x3066;&#x3044;&#x308C;&#x3070;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x81EA;&#x5206;&#x306E;&#x597D;&#x304D;&#x306A;&#x3088;&#x3046;&#x306B;&#x8868;&#x793A;&#x3092;&#x3044;&#x3058;&#x308B;&#x3053;&#x3068;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3059;.</p>
+<p>mpe&#x3067;&#x306E;&#x8868;&#x793A;&#x306E;&#x8A2D;&#x5B9A;&#x3092;&#x3044;&#x3058;&#x308B;&#x306B;&#x306F;<code>Ctrl + shift + p</code>&#x3092;&#x62BC;&#x3057;&#x3066;, <code>Customize css</code>&#x3068;&#x5165;&#x529B;&#x3057;&#x3066;, <code>Enter</code>&#x3092;&#x62BC;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<p>less&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x958B;&#x304F;&#x306E;&#x3067;, CSS&#x3092;&#x66F8;&#x304D;&#x8FBC;&#x3093;&#x3067;&#x3044;&#x304D;&#x307E;&#x3059;.<br>
+&#x3082;&#x3057;&#x81EA;&#x5206;&#x306E;CSS&#x304C;&#x307B;&#x3057;&#x3051;&#x308C;&#x3070;&#x3042;&#x3052;&#x308B;&#x306E;&#x3067;, &#x305D;&#x306E;&#x5834;&#x5408;&#x306F;&#x8A00;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<h1 class="mume-header" id="pdf%E5%8C%96%E3%81%99%E3%82%8B">PDF&#x5316;&#x3059;&#x308B;</h1>
+
+<p>markdown preview enhanced&#x304C;PhantomJS&#x306E;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3092;&#x3064;&#x3044;&#x6700;&#x8FD1;&#x3084;&#x3081;&#x3066;&#x3057;&#x307E;&#x3063;&#x305F;&#x306E;&#x3067;, &#x6700;&#x8FD1;&#x306F;Puppeteer&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;PDf&#x5316;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;.</p>
+<p>Puppeteer&#x306F;Google Chrome&#x306E;&#x30A8;&#x30F3;&#x30B8;&#x30F3;&#x3055;&#x3048;&#x3042;&#x308C;&#x3070;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x306E;&#x3067;, &#x3082;&#x3057;&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x3067;IE&#x3084;edge&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x308B;&#x3072;&#x3068;&#x306F;Google Chrome&#x3092;&#x5165;&#x308C;&#x307E;&#x3057;&#x3087;&#x3046;.<br>
+(Linux&#x306E;&#x5834;&#x5408;&#x306F;Chromium&#x3067;&#x3082;OK)</p>
+<h2 class="mume-header" id="chrome%E3%81%AE%E5%AE%9F%E8%A1%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%83%91%E3%82%B9%E3%82%92%E9%80%9A%E3%81%99">Chrome&#x306E;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x30D1;&#x30B9;&#x3092;&#x901A;&#x3059;.</h2>
+
+<p><code>Ctrl + ,</code>&#x3067;&#x8A2D;&#x5B9A;&#x3092;&#x958B;&#x304D;, &#x691C;&#x7D22;&#x7A93;&#x306B;<code>chrome path</code>&#x3068;&#x5165;&#x529B;&#x3059;&#x308B;&#x3068;, mpe&#x306E;chrome path &#x306E;&#x8A2D;&#x5B9A;&#x304C;&#x51FA;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;.<br>
+&#x305D;&#x3053;&#x306B;Chrome&#x306E;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x306E;&#x30D1;&#x30B9;&#x3092;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;.<br>
+&#x304A;&#x305D;&#x3089;&#x304F;Windows&#x306A;&#x3089;&#x30D1;&#x30B9;&#x3092;&#x901A;&#x3059;&#x5FC5;&#x8981;&#x306F;&#x306A;&#x3044;&#x3068;&#x601D;&#x3046;&#x306E;&#x3067;, &#x3082;&#x3057;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x306E;&#x30D1;&#x30B9;&#x304C;&#x308F;&#x304B;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;, &#x4F55;&#x3082;&#x66F8;&#x304B;&#x306A;&#x3044;&#x307E;&#x307E;&#x30B9;&#x30EB;&#x30FC;&#x3057;&#x3066;&#x3082;&#x554F;&#x984C;&#x306F;&#x306A;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;.</p>
+<h1 class="mume-header" id="%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%81%AE%E3%81%99%E3%81%99%E3%82%81">&#x30B9;&#x30CB;&#x30DA;&#x30C3;&#x30C8;&#x306E;&#x3059;&#x3059;&#x3081;</h1>
+
+<p>VScode&#x3067;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x5B9A;&#x7FA9;&#x306E;&#x30B9;&#x30CB;&#x30DA;&#x30C3;&#x30C8;&#x304C;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;.<br>
+&#x307E;&#x305F;, &#x30B9;&#x30CB;&#x30DA;&#x30C3;&#x30C8;&#x306F;&#x5404;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x7A2E;&#x6BCE;&#x306B;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x308B;&#x305F;&#x3081;, &#x7AF6;&#x5408;&#x3082;&#x8D77;&#x3053;&#x308A;&#x306B;&#x304F;&#x304F;, &#x3068;&#x3066;&#x3082;&#x4FBF;&#x5229;&#x3067;&#x3059;.</p>
+<p>VScode&#x306E;&#x30B9;&#x30CB;&#x30DA;&#x30C3;&#x30C8;&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x306F;<a href="https://qiita.com/haru1843/items/914b1e57fb71c45d83b1">&#x3053;&#x3061;&#x3089;</a>&#x3078;&#x3069;&#x3046;&#x305E;.</p>
+<p>&#x307E;&#x305F;, &#x79C1;&#x306E;markdown&#x306E;&#x30B9;&#x30CB;&#x30DA;&#x30C3;&#x30C8;&#x3092;&#x898B;&#x305F;&#x3044;or&#x6B32;&#x3057;&#x3044;&#x5834;&#x5408;&#x306F;&#x8A00;&#x3063;&#x3066;&#x3044;&#x305F;&#x3060;&#x3051;&#x308C;&#x3070;&#x6E21;&#x3057;&#x307E;&#x3059;.</p>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD-markdown-preview-enhanced">&#x62E1;&#x5F35;&#x6A5F;&#x80FD; : markdown preview enhanced</a>
+<ul>
+<li><a href="#mpe%E3%81%AE%E5%B0%8E%E5%85%A5">mpe&#x306E;&#x5C0E;&#x5165;</a></li>
+<li><a href="#mpe%E3%81%A7%E3%81%A7%E3%81%8D%E3%82%8B%E3%81%93%E3%81%A8">mpe&#x3067;&#x3067;&#x304D;&#x308B;&#x3053;&#x3068;</a>
+<ul>
+<li><a href="#preview%E7%94%BB%E9%9D%A2%E3%82%92%E9%96%8B%E3%81%8F">Preview&#x753B;&#x9762;&#x3092;&#x958B;&#x304F;</a></li>
+<li><a href="#%E5%90%84%E7%A8%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8B">&#x5404;&#x7A2E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x30A8;&#x30AF;&#x30B9;&#x30DD;&#x30FC;&#x30C8;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</a></li>
+<li><a href="#latex%E3%81%AE%E6%95%B0%E5%BC%8F%E3%81%8C%E6%8C%BF%E5%85%A5%E3%81%A7%E3%81%8D%E3%82%8B">Latex&#x306E;&#x6570;&#x5F0F;&#x304C;&#x633F;&#x5165;&#x3067;&#x304D;&#x308B;</a></li>
+<li><a href="#%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E6%8C%BF%E5%85%A5">&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x633F;&#x5165;</a></li>
+<li><a href="#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AE%E6%93%8D%E4%BD%9C%E3%81%AE%E5%BC%B7%E5%8C%96">&#x30B3;&#x30FC;&#x30C9;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x64CD;&#x4F5C;&#x306E;&#x5F37;&#x5316;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E3%83%97%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%82%92%E3%81%84%E3%81%98%E3%82%8B">&#x30D7;&#x30EC;&#x30D3;&#x30E5;&#x30FC;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x3092;&#x3044;&#x3058;&#x308B;</a></li>
+<li><a href="#pdf%E5%8C%96%E3%81%99%E3%82%8B">PDF&#x5316;&#x3059;&#x308B;</a>
+<ul>
+<li><a href="#chrome%E3%81%AE%E5%AE%9F%E8%A1%8C%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%B8%E3%83%91%E3%82%B9%E3%82%92%E9%80%9A%E3%81%99">Chrome&#x306E;&#x5B9F;&#x884C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3078;&#x30D1;&#x30B9;&#x3092;&#x901A;&#x3059;.</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88%E3%81%AE%E3%81%99%E3%81%99%E3%82%81">&#x30B9;&#x30CB;&#x30DA;&#x30C3;&#x30C8;&#x306E;&#x3059;&#x3059;&#x3081;</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
