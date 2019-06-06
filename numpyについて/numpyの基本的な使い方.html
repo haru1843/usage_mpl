@@ -1,0 +1,2914 @@
+<!DOCTYPE html><html><head>
+      <title>numpy&#x306E;&#x57FA;&#x672C;&#x7684;&#x306A;&#x4F7F;&#x3044;&#x65B9;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////home/haru/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.4.0/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
+*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}.markdown-preview code{border-radius:2px;color:#e96900;font-size:12.8px;font-size:.8rem;margin:0 2px;padding:3px 5px;white-space:pre-wrap}.markdown-preview code,.markdown-preview pre{background-color:#f8f8f8;font-family:Roboto Mono,Monaco,courier,monospace}.markdown-preview pre{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;line-height:24px;line-height:1.5rem;margin:1.2em 0;overflow:auto;padding:0 22.4px;padding:0 1.4rem;position:relative;word-wrap:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#8e908c}.token.namespace{opacity:.7}.token.boolean,.token.number{color:#c76b29}.token.punctuation{color:#525252}.token.property{color:#c08b30}.token.tag{color:#2973b7}.token.string{color:#42b983;color:var(--theme-color, #42b983)}.token.selector{color:#6679cc}.token.attr-name{color:#2973b7}.language-css .token.string,.style .token.string,.token.entity,.token.url{color:#22a2c9}.token.attr-value,.token.control,.token.directive,.token.unit{color:#42b983;color:var(--theme-color, #42b983)}.token.keyword{color:#e96900}.token.atrule,.token.regex,.token.statement{color:#22a2c9}.token.placeholder,.token.variable{color:#3d8fd1}.token.deleted{text-decoration:line-through}.token.inserted{border-bottom:1px dotted #202746;text-decoration:none}.token.italic{font-style:italic}.token.bold,.token.important{font-weight:700}.token.important{color:#c94922}.token.entity{cursor:help}.markdown-preview pre>code,.markdown-preview pre[class*="language"]{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;background-color:#f8f8f8;border-radius:2px;color:#525252;display:block;font-family:Roboto Mono,Monaco,courier,monospace;font-size:12.8px;font-size:.8rem;line-height:2em;max-width:inherit;overflow:inherit;padding:.8em 1.4em;white-space:pre}.markdown-preview pre>code{padding-left:0;padding-right:0}.markdown-preview code:after,.markdown-preview code:before{letter-spacing:.8px;letter-spacing:.05rem}code .token{-moz-osx-font-smoothing:initial;-webkit-font-smoothing:initial;min-height:24px;min-height:1.5rem}pre:after{color:#ccc;content:attr(data-lang);font-size:9.6px;font-size:.6rem;font-weight:600;height:15px;line-height:15px;padding:5px 10px 0;position:absolute;right:0;text-align:right;top:0}pre[data-line]{position:relative;padding:1em 0 1em 3em !important}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:rgba(153,122,102,0.08);background:linear-gradient(to right, rgba(153,122,102,0.1) 70%, rgba(153,122,102,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:rgba(153,122,102,0.4);color:#f5f2f0;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px white}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}*{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-text-size-adjust:none;-webkit-touch-callout:none;box-sizing:border-box}body:not(.ready){overflow:hidden}body:not(.ready) .app-nav,body:not(.ready)>nav,body:not(.ready) [data-cloak]{display:none}div#app{font-size:30px;font-weight:lighter;margin:40vh auto;text-align:center}div#app:empty:before{content:"Loading..."}.emoji{height:19.2px;height:1.2rem;vertical-align:middle}.progress{background-color:#42b983;background-color:var(--theme-color, #42b983);height:2px;left:0;position:fixed;right:0;top:0;transition:width .2s,opacity .4s;width:0;z-index:5}.search .search-keyword,.search a:hover{color:#42b983;color:var(--theme-color, #42b983)}.search .search-keyword{font-style:normal;font-weight:700}body,html{height:100%}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;color:#34495e;font-family:Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:15px;letter-spacing:0;margin:0;overflow-x:hidden}img{max-width:100%}a[disabled]{cursor:not-allowed;opacity:.6}kbd{border:1px solid #ccc;border-radius:3px;display:inline-block;font-size:12px !important;line-height:12px;margin-bottom:3px;padding:3px 5px;vertical-align:middle}.task-list-item{list-style-type:none}li input[type=checkbox]{margin:0 .2em .25em -1.6em;vertical-align:middle}.app-nav{left:0;margin:25px 60px 0 0;position:absolute;right:0;text-align:right;z-index:2}.app-nav p{margin:0}.app-nav>a{margin:0 16px;margin:0 1rem;padding:5px 0}.app-nav li,.app-nav ul{display:inline-block;list-style:none;margin:0}.app-nav a{color:inherit;font-size:16px;text-decoration:none;transition:color .3s}.app-nav a.active,.app-nav a:hover{color:#42b983;color:var(--theme-color, #42b983)}.app-nav a.active{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983)}.app-nav li{display:inline-block;margin:0 16px;margin:0 1rem;padding:5px 0;position:relative}.app-nav li ul{background-color:#fff;border:1px solid #ddd;border-bottom-color:#ccc;border-radius:4px;box-sizing:border-box;display:none;max-height:calc(39vh);overflow-y:scroll;padding:10px 0;position:absolute;right:-15px;text-align:left;top:100%;white-space:nowrap}.app-nav li ul li{display:block;font-size:14px;line-height:16px;line-height:1rem;margin:0;margin:8px 14px;white-space:nowrap}.app-nav li ul a{display:block;font-size:inherit;margin:0;padding:0}.app-nav li ul a.active{border-bottom:0}.app-nav li:hover ul{display:block}.app-nav.no-badge{margin-right:25px}.github-corner{border-bottom:0;position:fixed;right:0;text-decoration:none;top:0;z-index:1}.github-corner svg{color:#fff;fill:#42b983;fill:var(--theme-color, #42b983);height:80px;width:80px}.github-corner:hover .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}main{display:block;position:relative;width:100vw;height:100%;z-index:0}.anchor{display:inline-block;text-decoration:none;transition:all .3s}.anchor span{color:#34495e}.anchor:hover{text-decoration:underline}.sidebar{border-right:1px solid rgba(0,0,0,0.07);overflow-y:auto;padding:40px 0 0;top:0;bottom:0;left:0;position:absolute;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out;width:300px;z-index:3}.sidebar>h1{margin:0 auto 16px;margin:0 auto 1rem;font-size:24px;font-size:1.5rem;font-weight:300;text-align:center}.sidebar>h1 a{color:inherit;text-decoration:none}.sidebar>h1 .app-nav{display:block;position:static}.sidebar .sidebar-nav{line-height:2em;padding-bottom:40px}.sidebar ul{margin:0;padding:0}.sidebar li>p{font-weight:700;margin:0}.sidebar ul,.sidebar ul li{list-style:none}.sidebar ul li a{border-bottom:none;display:block}.sidebar ul li ul{padding-left:20px}.sidebar::-webkit-scrollbar{width:4px}.sidebar::-webkit-scrollbar-thumb{background:transparent;border-radius:4px}.sidebar:hover::-webkit-scrollbar-thumb{background:rgba(135,135,135,0.4)}.sidebar:hover::-webkit-scrollbar-track{background:rgba(135,135,135,0.1)}.sidebar-toggle{background-color:transparent;background-color:rgba(255,255,255,0.8);border:0;outline:none;padding:10px;bottom:0;left:0;position:absolute;text-align:center;transition:opacity .3s;width:30px;width:284px;z-index:4}.sidebar-toggle .sidebar-toggle-button:hover{opacity:.4}.sidebar-toggle span{background-color:#42b983;background-color:var(--theme-color, #42b983);display:block;margin-bottom:4px;width:16px;height:2px}body.sticky .sidebar,body.sticky .sidebar-toggle{position:fixed}.content{padding-top:60px;top:0;right:0;bottom:0;left:300px;position:absolute;transition:left .25s ease}.markdown-preview>*{box-sizing:border-box;font-size:inherit}.markdown-preview>:first-child{margin-top:0 !important}.markdown-preview hr{border:none;border-bottom:1px solid #eee;margin:2em 0}.markdown-preview table{border-collapse:collapse;border-spacing:0;display:block;margin-bottom:16px;margin-bottom:1rem;overflow:auto;width:100%}.markdown-preview th{font-weight:700}.markdown-preview td,.markdown-preview th{border:1px solid #ddd;padding:6px 13px}.markdown-preview tr{border-top:1px solid #ccc}.markdown-preview p.tip,.markdown-preview tr:nth-child(2n){background-color:#f8f8f8}.markdown-preview p.tip{border-bottom-right-radius:2px;border-left:4px solid #f66;border-top-right-radius:2px;margin:2em 0;padding:12px 24px 12px 30px;position:relative}.markdown-preview p.tip code{background-color:#efefef}.markdown-preview p.tip em{color:#34495e}.markdown-preview p.tip:before{background-color:#f66;border-radius:100%;color:#fff;content:"!";font-family:Dosis,Source Sans Pro,Helvetica Neue,Arial,sans-serif;font-size:14px;font-weight:700;left:-12px;line-height:20px;position:absolute;width:20px;height:20px;text-align:center;top:14px}.markdown-preview p.warn{background:rgba(66,185,131,0.1);border-radius:2px;padding:16px;padding:1rem}body.close .sidebar{-webkit-transform:translateX(-300px);transform:translateX(-300px)}body.close .sidebar-toggle{width:auto}body.close .content{left:0}@media print{.app-nav,.github-corner,.sidebar,.sidebar-toggle{display:none}}@media screen and (max-width:768px){.github-corner,.sidebar,.sidebar-toggle{position:fixed}.app-nav{margin-top:16px}.app-nav li ul{top:30px}main{height:auto;overflow-x:hidden}.sidebar{left:-300px;transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.content{left:0;max-width:100vw;position:static;padding-top:20px;transition:-webkit-transform .25s ease;transition:transform .25s ease;transition:transform .25s ease,-webkit-transform .25s ease}.app-nav,.github-corner{transition:-webkit-transform .25s ease-out;transition:transform .25s ease-out;transition:transform .25s ease-out,-webkit-transform .25s ease-out}.sidebar-toggle{background-color:transparent;width:auto;padding:30px 30px 10px 10px}body.close .sidebar{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .sidebar-toggle{background-color:rgba(255,255,255,0.8);transition:background-color 1s;width:284px;padding:10px}body.close .content{-webkit-transform:translateX(300px);transform:translateX(300px)}body.close .app-nav,body.close .github-corner{display:none}.github-corner .octo-arm{-webkit-animation:a .56s ease-in-out;animation:a .56s ease-in-out}.github-corner:hover .octo-arm{-webkit-animation:none;animation:none}}@-webkit-keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}@keyframes a{0%,to{-webkit-transform:rotate(0);transform:rotate(0)}20%,60%{-webkit-transform:rotate(-25deg);transform:rotate(-25deg)}40%,80%{-webkit-transform:rotate(10deg);transform:rotate(10deg)}}section.cover{-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-position:50%;background-repeat:no-repeat;background-size:cover;height:100vh;display:none}section.cover .cover-main{-webkit-box-flex:1;-ms-flex:1;flex:1;margin:-20px 16px 0;text-align:center;z-index:1}section.cover a{color:inherit}section.cover a,section.cover a:hover{text-decoration:none}section.cover p{line-height:24px;line-height:1.5rem;margin:1em 0}section.cover h1{color:inherit;font-size:40px;font-size:2.5rem;font-weight:300;margin:10px 0 40px;margin:.625rem 0 2.5rem;position:relative;text-align:center}section.cover h1 a{display:block}section.cover h1 small{bottom:-7px;bottom:-0.4375rem;font-size:16px;font-size:1rem;position:absolute}section.cover blockquote{font-size:24px;font-size:1.5rem;text-align:center}section.cover ul{line-height:1.8;list-style-type:none;margin:1em auto;max-width:500px;padding:0}section.cover .cover-main>p:last-child a{border-color:#42b983;border:1px solid var(--theme-color, #42b983);border-radius:2rem;box-sizing:border-box;color:#42b983;color:var(--theme-color, #42b983);display:inline-block;font-size:16.8px;font-size:1.05rem;letter-spacing:1.6px;letter-spacing:.1rem;margin-right:16px;margin-right:1rem;padding:.75em 32px;padding:.75em 2rem;text-decoration:none;transition:all .15s ease}section.cover .cover-main>p:last-child a:last-child{background-color:#42b983;background-color:var(--theme-color, #42b983);color:#fff;margin-right:0}section.cover .cover-main>p:last-child a:last-child:hover{color:inherit;opacity:.8}section.cover .cover-main>p:last-child a:hover{color:inherit}section.cover blockquote>p>a{border-bottom:2px solid #42b983;border-bottom:2px solid var(--theme-color, #42b983);transition:color .3s}section.cover blockquote>p>a:hover{color:#42b983;color:var(--theme-color, #42b983)}section.cover.show{display:-webkit-box;display:-ms-flexbox;display:flex}section.cover.has-mask .mask{background-color:#fff;opacity:.8;position:absolute;width:100%;height:100%}.sidebar,body{background-color:#fff}.sidebar{color:#364149}.sidebar li{margin:6px 0 6px 15px}.sidebar ul li a{color:#505d6b;font-size:14px;font-weight:400;overflow:hidden;text-decoration:none;text-overflow:ellipsis;white-space:nowrap}.sidebar ul li a:hover{text-decoration:underline}.sidebar ul li ul{padding:0}.sidebar ul li.active>a{border-right:2px solid;color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.app-sub-sidebar li:before{content:"-";padding-right:4px;float:left}.markdown-preview h1,.markdown-preview h2,.markdown-preview h3,.markdown-preview h4,.markdown-preview strong{color:#2c3e50;font-weight:600}.markdown-preview a{color:#42b983;color:var(--theme-color, #42b983);font-weight:600}.md-sidebar-toc a{color:#42b983;font-weight:600}.markdown-preview h1{font-size:32px;font-size:2rem;margin:0 0 16px;margin:0 0 1rem}.markdown-preview h2{font-size:28px;font-size:1.75rem;margin:45px 0 12.8px;margin:45px 0 .8rem}.markdown-preview h3{font-size:24px;font-size:1.5rem;margin:40px 0 9.6px;margin:40px 0 .6rem}.markdown-preview h4{font-size:20px;font-size:1.25rem}.markdown-preview h5,.markdown-preview h6{font-size:16px;font-size:1rem}.markdown-preview h6{color:#777}.markdown-preview figure,.markdown-preview p{margin:1.2em 0}.markdown-preview ol,.markdown-preview p,.markdown-preview ul{line-height:25.6px;line-height:1.6rem;word-spacing:.8px;word-spacing:.05rem}.markdown-preview ol,.markdown-preview ul{padding-left:24px;padding-left:1.5rem}.markdown-preview blockquote{border-left:4px solid #42b983;border-left:4px solid var(--theme-color, #42b983);color:#858585;margin:2em 0;padding-left:20px}.markdown-preview blockquote p{font-weight:600;margin-left:0}.markdown-preview iframe{margin:1em 0}.markdown-preview em{color:#7f8c8d}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  font-family: "Takao Pゴシック";
+  font-size: 1.1em;
+}
+.markdown-preview.markdown-preview p {
+  line-height: 1.2rem;
+}
+.markdown-preview.markdown-preview body {
+  counter-reset: titleNum;
+}
+.markdown-preview.markdown-preview h1 {
+  counter-increment: titleNum;
+  counter-reset: subTitleNum;
+  padding: 0.4em 0.5em;
+  /*文字の上下 左右の余白*/
+  color: #494949;
+  /*文字色*/
+  background: #f4f4f4;
+  /*背景色*/
+  border-left: solid 5px #308ad3;
+  /*左線*/
+  border-bottom: solid 3px #d7d7d7;
+  /*下線*/
+  font-size: 2.2em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h1::before {
+  position: relative;
+  top: 0;
+  left: -0.25em;
+  content: counter(titleNum);
+  color: #156db6;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview h2 {
+  counter-increment: subTitleNum;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.9em;
+  margin-top: 0.8em;
+}
+.markdown-preview.markdown-preview h2:before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #3a8ccf;
+}
+.markdown-preview.markdown-preview h2:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #3a8ccf;
+}
+.markdown-preview.markdown-preview h3 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1.8em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h3::before,
+.markdown-preview.markdown-preview h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h3::before {
+  top: 0.2em;
+  left: 0.2em;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background: #5eacec;
+}
+.markdown-preview.markdown-preview h3::after {
+  top: 0.7em;
+  left: 0.7em;
+  width: 0.7em;
+  height: 0.7em;
+  background: #c2e3ff;
+}
+.markdown-preview.markdown-preview h4 {
+  position: relative;
+  padding: 0 0.5em 0.4em 1em;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+}
+.markdown-preview.markdown-preview h4::before,
+.markdown-preview.markdown-preview h4::after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+}
+.markdown-preview.markdown-preview h4::before {
+  top: 0.33em;
+  left: 0.2em;
+  z-index: 2;
+  width: 0.7em;
+  height: 0.7em;
+  background: #73baf5;
+}
+.markdown-preview.markdown-preview em {
+  color: #e09213;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview pre[data-role="codeBlock"] {
+  font-size: 11pt;
+  font-family: "HackGen";
+  background-color: #fbfbfb;
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .output-div :not([data-cmd="toc"]) {
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .code-chunk * {
+  font-size: 11pt;
+  font-family: "HackGen";
+}
+.markdown-preview.markdown-preview code {
+  font-family: "HackGen";
+}
+.markdown-preview.markdown-preview .space_block {
+  margin-top: 25px;
+}
+.markdown-preview.markdown-preview .red {
+  color: #f51b1b;
+}
+.markdown-preview.markdown-preview .gray {
+  color: #606464;
+}
+.markdown-preview.markdown-preview .uline {
+  border-bottom: solid 2px #f1331a;
+}
+.markdown-preview.markdown-preview .memo {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #73baf5;
+}
+.markdown-preview.markdown-preview .memo .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #73baf5;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .memo p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .warning {
+  position: relative;
+  margin: 3em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #ffcd60;
+}
+.markdown-preview.markdown-preview .warning .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -27px;
+  left: -3px;
+  padding: 0 9px;
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  background: #ffcd60;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .warning p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview .center {
+  text-align: center;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview .postit {
+  margin: 0;
+  /* デフォルトCSS打ち消し */
+  font-size: 1.2em;
+  /* 文字サイズ指定 */
+  position: relative;
+  /* 位置調整 */
+  font-weight: normal;
+  /* 文字の太さ調整 */
+  display: inline-block;
+  /* インラインブロックにする */
+  background-color: #feeaac;
+  /* 背景色指定 */
+  padding: 10px;
+  /* 余白指定 */
+  margin: 1em 0em;
+  border-radius: 2px;
+  /* 角丸指定 */
+}
+.markdown-preview.markdown-preview .postit:before {
+  content: '';
+  /* 空白の要素を作る */
+  background-color: #b3b3b3;
+  /* 背景色指定 */
+  display: block;
+  /* ブロック要素にする */
+  position: absolute;
+  /* 位置調整 */
+  left: 50%;
+  /* 位置調整 */
+  height: 60%;
+  /* 高さ指定 */
+  top: 26%;
+  /* 位置調整 */
+  z-index: -1;
+  /* 重なり調整 */
+  width: 46%;
+  /* 幅指定 */
+  box-shadow: 0 0 8px 8px #b3b3b3;
+  /* 影指定 */
+  transform: rotate(3deg);
+  /* 回転 */
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header undefined" id="%E3%81%93%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E6%9B%B8%E3%81%84%E3%81%A6%E3%81%82%E3%82%8B%E3%81%93%E3%81%A8">&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x66F8;&#x3044;&#x3066;&#x3042;&#x308B;&#x3053;&#x3068;</h1>
+
+<p>matplotlib&#x3092;&#x4F7F;&#x3046;&#x4E0A;&#x3067;, &#x6700;&#x4F4E;&#x9650;&#x899A;&#x3048;&#x3066;&#x304A;&#x3044;&#x305F;&#x65B9;&#x304C;&#x826F;&#x3044;numpy&#x306E;&#x8A18;&#x6CD5;&#x3092;&#x3053;&#x3053;&#x306B;&#x8A18;&#x3057;&#x307E;&#x3059;.</p>
+<p>&#x305D;&#x306E;&#x305F;&#x3081;, numpy&#x81EA;&#x4F53;&#x306E;&#x5B66;&#x7FD2;&#x3068;&#x3044;&#x3046;&#x611F;&#x3058;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;, numpy&#x81EA;&#x4F53;&#x3092;&#x5B66;&#x3073;&#x305F;&#x3044;&#x5834;&#x5408;&#x306B;&#x306F;&#x5411;&#x304D;&#x307E;&#x305B;&#x3093;.</p>
+<h1 class="mume-header undefined" id="%E3%82%82%E3%81%8F%E3%81%98">&#x3082;&#x304F;&#x3058;</h1>
+
+<div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#numpy%E3%81%A8%E3%81%AF">numpy&#x3068;&#x306F;</a></li>
+<li><a href="#3%E6%AC%A1%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">3&#x6B21;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x307F;&#x308B;</a>
+<ul>
+<li><a href="#arange">arange</a></li>
+<li><a href="#numpy%E9%85%8D%E5%88%97%E3%81%AE%E7%89%B9%E5%BE%B4">numpy&#x914D;&#x5217;&#x306E;&#x7279;&#x5FB4;</a></li>
+<li><a href="#linspace">linspace</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E6%BC%94%E7%AE%97-%E3%81%A8-%E9%96%A2%E6%95%B0">&#x6570;&#x5B66;&#x7684;&#x306A;&#x6F14;&#x7B97; &#x3068; &#x95A2;&#x6570;</a>
+<ul>
+<li><a href="#%E5%AE%9A%E6%95%B0">&#x5B9A;&#x6570;</a></li>
+<li><a href="#%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0">&#x4E09;&#x89D2;&#x95A2;&#x6570;</a></li>
+<li><a href="#%E5%BA%A6%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3">&#x5EA6;/&#x30E9;&#x30B8;&#x30A2;&#x30F3;</a></li>
+<li><a href="#%E5%AF%BE%E6%95%B0%E9%96%A2%E6%95%B0%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0">&#x5BFE;&#x6570;&#x95A2;&#x6570;/&#x6307;&#x6570;&#x95A2;&#x6570;</a></li>
+<li><a href="#%E7%B5%B6%E5%AF%BE%E5%80%A4">&#x7D76;&#x5BFE;&#x5024;</a></li>
+<li><a href="#%E5%B9%B3%E6%96%B9%E6%A0%B9-%E7%AB%8B%E6%96%B9%E6%A0%B9-%E7%B4%AF%E4%B9%97">&#x5E73;&#x65B9;&#x6839;, &#x7ACB;&#x65B9;&#x6839;, &#x7D2F;&#x4E57;</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%A8%88%E7%AE%97%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">&#x3088;&#x304F;&#x3042;&#x308B;&#x8A08;&#x7B97;&#x3068;&#x30E1;&#x30BD;&#x30C3;&#x30C9;</a>
+<ul>
+<li><a href="#%E7%B5%B1%E8%A8%88%E3%81%AE%E5%9F%BA%E6%9C%AC%E6%BC%94%E7%AE%97">&#x7D71;&#x8A08;&#x306E;&#x57FA;&#x672C;&#x6F14;&#x7B97;</a></li>
+<li><a href="#%E4%B9%B1%E6%95%B0">&#x4E71;&#x6570;</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%A4%E3%81%A0%E3%81%91%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3060;&#x3051;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%8B%E6%95%B0%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x500B;&#x6570;&#x3092;&#x8A08;&#x7B97;&#x3059;&#x308B;</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%91%E4%BC%BC%E8%A8%88%E7%AE%97">&#x8FD1;&#x4F3C;&#x8A08;&#x7B97;</a>
+<ul>
+<li><a href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95">&#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A1%8C%E5%88%97%E8%A8%88%E7%AE%97">&#x884C;&#x5217;&#x8A08;&#x7B97;</a></li>
+<li><a href="#%E9%9B%86%E5%90%88%E6%BC%94%E7%AE%97">&#x96C6;&#x5408;&#x6F14;&#x7B97;</a></li>
+</ul>
+<h1 class="mume-header" id="numpy%E3%81%A8%E3%81%AF">numpy&#x3068;&#x306F;</h1>
+
+<p>python&#x306B;&#x304A;&#x3051;&#x308B;&#x5404;&#x7A2E;&#x8A08;&#x7B97;&#x306E;&#x4EE3;&#x8868;&#x7684;&#x306A;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;.<br>
+&#x884C;&#x5217;&#x8A08;&#x7B97;&#x3084;&#x78BA;&#x7387;&#x7D71;&#x8A08;&#x306E;&#x8A08;&#x7B97;&#x306A;&#x3069;, &#x8272;&#x3005;&#x5165;&#x3063;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x5404;&#x5206;&#x91CE;&#x3067;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;.</p>
+<p>&#x307E;&#x305F;&#x5358;&#x7D14;&#x306B;numpy&#x914D;&#x5217;&#x306E;&#x64CD;&#x4F5C;&#x304C;&#x6709;&#x80FD;&#x306A;&#x306E;&#x3067;, &#x95A2;&#x4FC2;&#x306A;&#x3044;&#x5834;&#x6240;&#x3067;&#x3082;&#x4F7F;&#x308F;&#x308C;&#x305F;&#x308A;&#x3057;&#x307E;&#x3059;.</p>
+<p>numpy&#x306E;&#x5C0E;&#x5165;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;<a href="https://github.com/haru1843/usage_mpl/blob/master/python%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E8%87%AA%E4%BD%93%E5%88%9D%E3%82%81%E3%81%A6%E3%81%AE%E4%BA%BA/01_%E7%92%B0%E5%A2%83%E3%81%AE%E5%B0%8E%E5%85%A5/numpy%E3%81%A8matplotlib%E3%81%AE%E5%B0%8E%E5%85%A5.html">&#x3053;&#x3061;&#x3089;</a>&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x8AAC;&#x660E;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;, &#x307E;&#x3060;&#x5165;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x4EBA;&#x306F;&#x305D;&#x3061;&#x3089;&#x3078;&#x3069;&#x3046;&#x305E;.</p>
+<h1 class="mume-header" id="3%E6%AC%A1%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">3&#x6B21;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x307F;&#x308B;</h1>
+
+<div class="code-chunk" data-id="code-chunk-id-1" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=1, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> <span class="token number">3</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">4</span><span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">10</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[-2.000e+00 -1.080e+00  8.000e-02  1.480e+00  3.120e+00  5.000e+00
+  7.120e+00  9.480e+00  1.208e+01  1.492e+01  1.800e+01  2.132e+01
+  2.488e+01  2.868e+01  3.272e+01  3.700e+01  4.152e+01  4.628e+01
+  5.128e+01  5.652e+01  6.200e+01  6.772e+01  7.368e+01  7.988e+01
+  8.632e+01]
+</pre></div></div><h2 class="mume-header" id="arange">arange</h2>
+
+<p><code>np.arange(start, end, step)</code>&#x3067;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">t</mi><mo>&#x2264;</mo><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">a</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">t</mi><mo>+</mo><mi>n</mi><mo>&#x2217;</mo><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">p</mi><mo>&lt;</mo><mi mathvariant="normal">e</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">d</mi></mrow><annotation encoding="application/x-tex">\rm start \leq start + {\it n}*step &lt; end</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">s</span><span class="mord mathrm">t</span><span class="mord mathrm">a</span><span class="mord mathrm">r</span><span class="mord mathrm">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathrm">s</span><span class="mord mathrm">t</span><span class="mord mathrm">a</span><span class="mord mathrm">r</span><span class="mord mathrm">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord"><span class="mord mathit">n</span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2217;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathrm">s</span><span class="mord mathrm">t</span><span class="mord mathrm">e</span><span class="mord mathrm">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathrm">e</span><span class="mord mathrm">n</span><span class="mord mathrm">d</span></span></span></span></span>&#x3092;&#x6E80;&#x305F;&#x3059;&#x3088;&#x3046;&#x306A;&#x6570;&#x5024;&#x3092;&#x914D;&#x5217;&#x5316;&#x3057;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;. &#x307B;&#x307C;&#x30D3;&#x30EB;&#x30C8;&#x30A4;&#x30F3;&#x95A2;&#x6570;&#x306E;<code>range</code>&#x3068;&#x540C;&#x3058;&#x52D5;&#x4F5C;&#x3067;&#x3059;&#x304C;, &#x9055;&#x3046;&#x70B9;&#x3068;&#x3057;&#x3066;&#x306F;&#x4EE5;&#x4E0B;&#x306E;2&#x70B9;&#x3067;,</p>
+<ul>
+<li>&#x4F5C;&#x6210;&#x3055;&#x308C;&#x308B;&#x306E;&#x306F;&#x30EA;&#x30B9;&#x30C8;&#x3067;&#x306F;&#x306A;&#x304F;, <code>ndarray</code>&#x3068;&#x3044;&#x3046;, numpy&#x306E;&#x914D;&#x5217;&#x3067;&#x3042;&#x308B;.</li>
+<li>&#x5404;&#x5F15;&#x6570;&#x306B;&#x306F;&#x5C0F;&#x6570;&#x70B9;&#x3092;&#x5229;&#x7528;&#x3067;&#x304D;&#x308B;</li>
+</ul>
+<p>&#x3068;&#x3044;&#x3046;&#x90E8;&#x5206;&#x3067;&#x3042;&#x308B;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>&gt;&gt;&gt; a = np.arange(0, 10, 0.1)
+&gt;&gt;&gt; a.__class__.__name__
+&apos;ndarray&apos;
+</code></pre><h2 class="mume-header" id="numpy%E9%85%8D%E5%88%97%E3%81%AE%E7%89%B9%E5%BE%B4">numpy&#x914D;&#x5217;&#x306E;&#x7279;&#x5FB4;</h2>
+
+<p>&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x898B;&#x3066;&#x6C17;&#x3065;&#x3044;&#x305F;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x304C;, numpy&#x914D;&#x5217;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x56DB;&#x5247;&#x6F14;&#x7B97;&#x5B50;&#x3092;&#x7528;&#x3044;&#x308B;&#x3068;, &#x8981;&#x7D20;&#x6BCE;&#x306B;&#x305D;&#x306E;&#x6F14;&#x7B97;&#x304C;&#x306A;&#x3055;&#x308C;&#x307E;&#x3059;.<br>
+&#x307E;&#x305F;, 2&#x3064;&#x306E;numpy&#x914D;&#x5217;&#x9593;&#x306B;&#x56DB;&#x5247;&#x6F14;&#x7B97;&#x5B50;&#x3092;&#x7528;&#x3044;&#x308B;&#x3068;, &#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x540C;&#x3058;&#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x8981;&#x7D20;&#x3054;&#x3068;&#x306B;&#x6F14;&#x7B97;&#x304C;&#x306A;&#x3055;&#x308C;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-2" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=2, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+nda <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>nda<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">*</span> nda<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+nda1 <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;       nda1 :&quot;</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">&quot;{:4.3}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> nda1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+nda2 <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;       nda2 :&quot;</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">&quot;{:4.3}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> nda2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;nda1 + nda2 :&quot;</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">&quot;{:4.3}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> nda1<span class="token operator">+</span>nda2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;nda1 * nda2 :&quot;</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">&quot;{:4.3}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> nda1<span class="token operator">*</span>nda2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0.  0.2 0.4 0.6 0.8 1.  1.2 1.4 1.6 1.8 2.  2.2 2.4 2.6 2.8]
+[0.  0.6 1.2 1.8 2.4 3.  3.6 4.2 4.8 5.4 6.  6.6 7.2 7.8 8.4]
+
+       nda1 :  0.0  0.3  0.6  0.9  1.2  1.5  1.8  2.1  2.4  2.7
+       nda2 :  1.0  1.3  1.6  1.9  2.2  2.5  2.8  3.1  3.4  3.7
+nda1 + nda2 :  1.0  1.6  2.2  2.8  3.4  4.0  4.6  5.2  5.8  6.4
+nda1 * nda2 :  0.0 0.39 0.96 1.71 2.64 3.75 5.04 6.51 8.16 9.99
+</pre></div></div><p>numpy&#x306E;&#x95A2;&#x6570;&#x3067;&#x751F;&#x6210;&#x3055;&#x308C;&#x308B;&#x914D;&#x5217;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x6027;&#x8CEA;&#x3092;&#x6301;&#x3061;&#x307E;&#x3059;.<br>
+&#x307E;&#x305F;, &#x901A;&#x5E38;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x306A;&#x3069;&#x3092;numpy&#x914D;&#x5217;&#x3078;&#x5909;&#x63DB;&#x3059;&#x308B;&#x306B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;<code>np.array()</code>&#x3067;&#x5909;&#x63DB;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-3" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=3, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+
+a_inv <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># &#x30EA;&#x30B9;&#x30C8;a&#x306E;&#x9006;&#x9806;&#x3092;numpy&#x914D;&#x5217;&#x3078;</span>
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>a<span class="token punctuation">)</span>           <span class="token comment"># &#x30EA;&#x30B9;&#x30C8;a&#x3092;numpy&#x914D;&#x5217;&#x3078;</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a_inv<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a <span class="token operator">*</span> a_inv<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0 1 2 3 4 5 6 7]
+[7 6 5 4 3 2 1 0]
+[ 0  6 10 12 12 10  6  0]
+</pre></div></div><h2 class="mume-header" id="linspace">linspace</h2>
+
+<p><code>arange</code>&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x3042;&#x308B;&#x4E00;&#x5B9A;&#x306E;&#x7BC4;&#x56F2;&#x306E;&#x6570;&#x5217;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;, &#x3082;&#x3046;&#x4E00;&#x3064;&#x4FBF;&#x5229;&#x306A;&#x95A2;&#x6570;&#x3068;&#x3057;&#x3066;<code>linspace</code>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-4" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=4, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;len(a) :&quot;</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[ 0.          0.34482759  0.68965517  1.03448276  1.37931034  1.72413793
+  2.06896552  2.4137931   2.75862069  3.10344828  3.44827586  3.79310345
+  4.13793103  4.48275862  4.82758621  5.17241379  5.51724138  5.86206897
+  6.20689655  6.55172414  6.89655172  7.24137931  7.5862069   7.93103448
+  8.27586207  8.62068966  8.96551724  9.31034483  9.65517241 10.        ]
+len(a) : 30
+</pre></div></div><p><code>linspace</code>&#x306F;&#x300C;&#x4EFB;&#x610F;&#x306E;&#x7BC4;&#x56F2;&#x3067;&#x8981;&#x7D20;&#x3092;n&#x500B;&#x7528;&#x610F;&#x3059;&#x308B;&#x300D;&#x3068;&#x3044;&#x3046;&#x3088;&#x3046;&#x306A;&#x95A2;&#x6570;&#x3067;&#x3059;.<br>
+<code>linspace(start, end, num)</code>&#x306E;&#x3088;&#x3046;&#x306B;&#x6307;&#x5B9A;&#x3057;, <code>start</code>&#x304B;&#x3089;<code>end</code>&#x306E;&#x533A;&#x9593;&#x3092;<code>num</code>&#x3067;&#x533A;&#x5207;&#x3063;&#x3066;&#x6570;&#x5217;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;.<br>
+&#x3053;&#x3061;&#x3089;&#x306F;<code>arange</code>&#x3084;<code>range</code>&#x3068;&#x9055;&#x3063;&#x3066;, <code>end</code>&#x306E;&#x5024;&#x3092;&#x6570;&#x5217;&#x306E;&#x7BC4;&#x56F2;&#x306B;&#x542B;&#x307F;&#x307E;&#x3059;.</p>
+<h1 class="mume-header" id="%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E6%BC%94%E7%AE%97-%E3%81%A8-%E9%96%A2%E6%95%B0">&#x6570;&#x5B66;&#x7684;&#x306A;&#x6F14;&#x7B97; &#x3068; &#x95A2;&#x6570;</h1>
+
+<h2 class="mume-header" id="%E5%AE%9A%E6%95%B0">&#x5B9A;&#x6570;</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5B9A;&#x6570;</th>
+<th style="text-align:center">&#x610F;&#x5473;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>nan</code></td>
+<td style="text-align:center">&#x975E;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>inf</code></td>
+<td style="text-align:center">&#x6B63;&#x306E;&#x7121;&#x9650;&#x5927;<br>&#x8CA0;&#x306E;&#x7121;&#x9650;&#x5927;&#x306F;<code>-inf</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>e</code></td>
+<td style="text-align:center">&#x30CD;&#x30A4;&#x30D4;&#x30A2;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>pi</code></td>
+<td style="text-align:center">&#x5186;&#x5468;&#x7387;</td>
+</tr>
+</tbody>
+</table>
+<div class="code-chunk" data-id="code-chunk-id-5" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=5, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>nan<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>inf<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>e<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>pi<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">nan
+inf
+2.718281828459045
+3.141592653589793
+</pre></div></div><h2 class="mume-header" id="%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0">&#x4E09;&#x89D2;&#x95A2;&#x6570;</h2>
+
+<p>python&#x306E;&#x30D3;&#x30EB;&#x30C8;&#x30A4;&#x30F3;&#x306B;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;, &#x305D;&#x308C;&#x3068;&#x306F;&#x5225;&#x306B;, numpy&#x914D;&#x5217;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x305F;&#x4E09;&#x89D2;&#x95A2;&#x6570;&#x304C;numpy&#x3067;&#x306F;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;.<br>
+&#x307E;&#x305F;, &#x53CC;&#x66F2;&#x7DDA;&#x95A2;&#x6570;(hyperbolic)&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-6" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=6, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">*</span>np<span class="token punctuation">.</span>pi<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;----- &#x4E09;&#x89D2;&#x95A2;&#x6570; -----&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>tan<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;----- &#x53CC;&#x66F2;&#x7DDA;&#x95A2;&#x6570; -----&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>sinh<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>cosh<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>tanh<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">----- &#x4E09;&#x89D2;&#x95A2;&#x6570; -----
+[ 0.0000000e+00  1.0000000e+00  1.2246468e-16 -1.0000000e+00
+ -2.4492936e-16]
+
+[ 1.0000000e+00  6.1232340e-17 -1.0000000e+00 -1.8369702e-16
+  1.0000000e+00]
+
+[ 0.00000000e+00  1.63312394e+16 -1.22464680e-16  5.44374645e+15
+ -2.44929360e-16]
+
+----- &#x53CC;&#x66F2;&#x7DDA;&#x95A2;&#x6570; -----
+[  0.           2.3012989   11.54873936  55.6543976  267.74489404]
+
+[  1.           2.50917848  11.59195328  55.66338089 267.74676148]
+
+[0.         0.91715234 0.99627208 0.99983861 0.99999303]
+</pre></div></div><p>&#x305D;&#x3057;&#x3066;&#x305D;&#x308C;&#x3089;&#x306E;&#x9006;&#x95A2;&#x6570;(&#x9006;&#x4E09;&#x89D2;&#x95A2;&#x6570;, &#x9006;&#x53CC;&#x66F2;&#x7DDA;&#x95A2;&#x6570;)&#x3082;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-7" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=7, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0.001</span><span class="token punctuation">,</span> <span class="token number">0.999</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;----- &#x9006;&#x4E09;&#x89D2;&#x95A2;&#x6570; -----&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arcsin<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arccos<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arctan<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;----- &#x9006;&#x53CC;&#x66F2;&#x7DDA;&#x95A2;&#x6570; -----&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arcsinh<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arccosh<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+x <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0.001</span><span class="token punctuation">,</span> <span class="token number">0.999</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>arctanh<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">----- &#x9006;&#x4E09;&#x89D2;&#x95A2;&#x6570; -----
+[1.00000017e-03 2.53196687e-01 5.23598776e-01 8.47306474e-01
+ 1.52607124e+00]
+
+[1.56979633 1.31759964 1.04719755 0.72348985 0.04472509]
+
+[0.001      0.2454492  0.46364761 0.64318103 0.78489791]
+
+----- &#x9006;&#x53CC;&#x66F2;&#x7DDA;&#x95A2;&#x6570; -----
+[0.001      0.2479515  0.48121183 0.69274713 0.8806663 ]
+
+[0.         3.94120456 4.61502247 5.01391893 5.29829237]
+
+[1.00000033e-03 2.55946216e-01 5.49306144e-01 9.71813196e-01
+ 3.80020117e+00]
+</pre></div></div><h2 class="mume-header" id="%E5%BA%A6%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3">&#x5EA6;/&#x30E9;&#x30B8;&#x30A2;&#x30F3;</h2>
+
+<p>&#x5EA6;(degree)&#x3092;&#x30E9;&#x30B8;&#x30A2;&#x30F3;(radian)&#x306B;&#x5909;&#x63DB;&#x3059;&#x308B;&#x306B;&#x306F;, &#x3075;&#x3064;&#x30FC;&#x306B;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>&#x3C0;</mi><mo>&#x2217;</mo><mrow><mi mathvariant="normal">d</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">r</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">e</mi></mrow><mi mathvariant="normal">/</mi><mn>180</mn></mrow><annotation encoding="application/x-tex">\pi * {\rm degree}/180</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.46528em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">&#x3C0;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">&#x2217;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord"><span class="mord mathrm">d</span><span class="mord mathrm">e</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">r</span><span class="mord mathrm">e</span><span class="mord mathrm">e</span></span></span><span class="mord">/</span><span class="mord">1</span><span class="mord">8</span><span class="mord">0</span></span></span></span>&#x3067;&#x3082;&#x826F;&#x3044;&#x304C;, <code>deg2rad</code>(degree to radian)&#x3067;&#x5909;&#x63DB;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x308B;.<br>
+&#x540C;&#x69D8;&#x306B;<code>rad2deg</code>&#x3067;&#x30E9;&#x30B8;&#x30A2;&#x30F3;&#x304B;&#x3089;&#x5EA6;&#x306B;&#x5909;&#x63DB;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x308B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-8" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=8, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+degree <span class="token operator">=</span> <span class="token number">180</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>rad2deg<span class="token punctuation">(</span><span class="token punctuation">[</span>np<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>pi<span class="token punctuation">,</span> <span class="token number">3</span><span class="token operator">*</span>np<span class="token punctuation">.</span>pi<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token operator">*</span>np<span class="token punctuation">.</span>pi<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>deg2rad<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">270</span><span class="token punctuation">,</span> <span class="token number">360</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[ 45.  90. 180. 270. 360.]
+[0.78539816 1.57079633 3.14159265 4.71238898 6.28318531]
+</pre></div></div><h2 class="mume-header" id="%E5%AF%BE%E6%95%B0%E9%96%A2%E6%95%B0%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0">&#x5BFE;&#x6570;&#x95A2;&#x6570;/&#x6307;&#x6570;&#x95A2;&#x6570;</h2>
+
+<p>&#x3088;&#x304F;&#x4F7F;&#x3046;&#x306E;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x95A2;&#x6570;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x95A2;&#x6570;</th>
+<th style="text-align:center">&#x6570;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">numpy.exp(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>e</mi><mi>x</mi></msup></mrow><annotation encoding="application/x-tex">e^x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">x</span></span></span></span></span></span></span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.log(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mi mathvariant="normal">e</mi></msub><mi mathvariant="normal">x</mi></mrow><annotation encoding="application/x-tex">\rm log_e x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord"><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.01389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathrm mtight">e</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">x</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.log10(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mn>10</mn></msub><mi mathvariant="normal">x</mi></mrow><annotation encoding="application/x-tex">\rm log_{10} x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord"><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">1</span><span class="mord mathrm mtight">0</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">x</span></span></span></span></span></td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.log2(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><msub><mi mathvariant="normal">g</mi><mn>2</mn></msub><mi mathvariant="normal">x</mi></mrow><annotation encoding="application/x-tex">\rm log_{2} x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord"><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.01389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathrm mtight">2</span></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathrm">x</span></span></span></span></span></td>
+</tr>
+</tbody>
+</table>
+<p>&#x4ED6;&#x306B;&#x3082;&#x3042;&#x308B;&#x3051;&#x3069;, &#x4E0A;&#x8A18;&#x306E;&#x3067;&#x4EE3;&#x7528;&#x3067;&#x304D;&#x308B;.</p>
+<h2 class="mume-header" id="%E7%B5%B6%E5%AF%BE%E5%80%A4">&#x7D76;&#x5BFE;&#x5024;</h2>
+
+<div class="code-chunk" data-id="code-chunk-id-9" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=9, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1.2</span> <span class="token operator">+</span> <span class="token number">1.5j</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1.2
+1.9209372712298547
+</pre></div></div><h2 class="mume-header" id="%E5%B9%B3%E6%96%B9%E6%A0%B9-%E7%AB%8B%E6%96%B9%E6%A0%B9-%E7%B4%AF%E4%B9%97">&#x5E73;&#x65B9;&#x6839;, &#x7ACB;&#x65B9;&#x6839;, &#x7D2F;&#x4E57;</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x95A2;&#x6570;</th>
+<th style="text-align:center">&#x6570;&#x5F0F;</th>
+<th style="text-align:center">&#x5099;&#x8003;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">numpy.sqrt(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>x</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">x</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.cbrt(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mroot><mi>x</mi><mn>3</mn></mroot></mrow><annotation encoding="application/x-tex">\sqrt[3]{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6585560000000001em;"><span style="top:-2.836336em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">x</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"/></svg></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.power(x, n)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">x^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span></td>
+<td style="text-align:center">n&#x306F;&#x6B63;&#x306E;&#x6574;&#x6570;&#x306E;&#x307F;</td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.float_power(x, n)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">x^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span></td>
+<td style="text-align:center">n&#x306B;&#x7279;&#x306B;&#x5236;&#x7D04;&#x306F;&#x306A;&#x3044;</td>
+</tr>
+<tr>
+<td style="text-align:center">numpy.square(x)</td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<div class="code-chunk" data-id="code-chunk-id-10" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=10, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>cbrt<span class="token punctuation">(</span><span class="token number">27</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>power<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>float_power<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2.8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>float_power<span class="token punctuation">(</span><span class="token number">27</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>float_power<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>square<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">3.0
+3.0000000000000004
+81
+21.674022167526225
+3.0
+0.25
+25
+</pre></div></div><h1 class="mume-header" id="%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%A8%88%E7%AE%97%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">&#x3088;&#x304F;&#x3042;&#x308B;&#x8A08;&#x7B97;&#x3068;&#x30E1;&#x30BD;&#x30C3;&#x30C9;</h1>
+
+<h2 class="mume-header" id="%E7%B5%B1%E8%A8%88%E3%81%AE%E5%9F%BA%E6%9C%AC%E6%BC%94%E7%AE%97">&#x7D71;&#x8A08;&#x306E;&#x57FA;&#x672C;&#x6F14;&#x7B97;</h2>
+
+<h3 class="mume-header" id="%E5%90%88%E8%A8%88%E5%80%A4-sum">&#x5408;&#x8A08;&#x5024; sum</h3>
+
+<p><code>np.sum([axis])</code>&#x3067;&#x914D;&#x5217;&#x306E;&#x5408;&#x8A08;&#x5024;&#x3092;&#x51FA;&#x305B;&#x307E;&#x3059;.<br>
+<code>axis</code>&#x306F;&#x8DB3;&#x3057;&#x5408;&#x308F;&#x305B;&#x308B;&#x65B9;&#x5411;&#x3092;&#x9078;&#x629E;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-11" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=11, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[[0.4622198  0.3401028  0.73065285]
+ [0.84468934 0.6862876  0.14278041]
+ [0.09028132 0.43581512 0.95516415]
+ [0.44634717 0.34401854 0.95232582]
+ [0.79200835 0.15015752 0.19585235]]
+
+7.568703122695737
+
+[2.63554598 1.95638157 2.97677557]
+
+[1.53297545 1.67375734 1.48126058 1.74269153 1.13801822]
+</pre></div></div><p>&#x500B;&#x4EBA;&#x7684;&#x306B;&#x306F;<code>axis</code>&#x3067;&#x9078;&#x629E;&#x3057;&#x305F;&#x6B21;&#x5143;&#x304C;&#x6D88;&#x3048;&#x308B;&#x3068;&#x3044;&#x3046;&#x30A4;&#x30E1;&#x30FC;&#x30B8;&#x3067;&#x5229;&#x7528;&#x3059;&#x308B;&#x3068;&#x826F;&#x3044;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-12" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=12, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token comment"># 0&#x6B21;&#x5143;&#x76EE;(5)&#x304C;&#x6D88;&#x3048;&#x3066;, 3&#x304C;&#x6B8B;&#x308B;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token comment"># 1&#x6B21;&#x5143;&#x76EE;(3)&#x304C;&#x6D88;&#x3048;&#x3066;, 5&#x304C;&#x6B8B;&#x308B;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">(5, 3)
+(3,)
+(5,)
+</pre></div></div><h3 class="mume-header" id="%E5%B9%B3%E5%9D%87-meanaverage">&#x5E73;&#x5747; mean/average</h3>
+
+<p>&#x5E73;&#x5747;&#x5024;&#x306F;<code>numpy.mean</code>&#x304B;<code>numpy.average</code>&#x3067;&#x7B97;&#x51FA;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<p>&#x4E00;&#x5FDC;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x9055;&#x3044;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;, &#x57FA;&#x672C;&#x7684;&#x306A;&#x5185;&#x5BB9;&#x3067;&#x3042;&#x308C;&#x3070;&#x3069;&#x3061;&#x3089;&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x3082;&#x554F;&#x984C;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"><code>average</code></th>
+<th style="text-align:center"><code>mean</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#x91CD;&#x307F;&#x4ED8;&#x3051;&#x5E73;&#x5747;</td>
+<td style="text-align:center">&#x25CB;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">&#x51FA;&#x529B;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x6307;&#x5B9A;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x25CB;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x8EF8;&#x65B9;&#x5411;&#x306E;&#x8A2D;&#x5B9A;</td>
+<td style="text-align:center">&#x25CB;</td>
+<td style="text-align:center">&#x25CB;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x8EF8;&#x306E;&#x6570;&#x3092;&#x6E1B;&#x3089;&#x3055;&#x305A;, &#x5E73;&#x5747;&#x3092;&#x8FD4;&#x3059;</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x25CB;</td>
+</tr>
+</tbody>
+</table>
+<div class="code-chunk" data-id="code-chunk-id-13" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=13, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[[0.45091099 0.18001606 0.3900366 ]
+ [0.83990467 0.47964641 0.67709742]
+ [0.54491645 0.81040279 0.41642741]
+ [0.47062359 0.11542225 0.80716511]
+ [0.15058924 0.56233913 0.19793028]]
+
+0.4728952265086379
+
+[0.49138899 0.42956533 0.49773136]
+
+[0.34032122 0.6655495  0.59058222 0.46440365 0.30361955]
+</pre></div></div><h3 class="mume-header" id="%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E5%88%86%E6%95%A3-stdvar">&#x6A19;&#x6E96;&#x504F;&#x5DEE;/&#x5206;&#x6563; std/var</h3>
+
+<p>&#x6A19;&#x6E96;&#x504F;&#x5DEE;&#x306F;<code>numpy.std</code>, &#x5206;&#x6563;&#x306F;<code>numpy.var</code>&#x3067;&#x51FA;&#x305B;&#x307E;&#x3059;.<br>
+(&#x3053;&#x3061;&#x3089;&#x3082;&#x5F15;&#x6570;&#x306B;<code>axis</code>&#x306F;&#x9069;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;.)</p>
+<div class="code-chunk" data-id="code-chunk-id-14" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=14, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6A19;&#x6E96;&#x504F;&#x5DEE; :&quot;</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>std<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;    &#x5206;&#x6563; :&quot;</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>var<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[[ 0.77059293  0.09902635  0.90290823 -0.83951804  0.03285752]
+ [ 1.68001511 -1.49223718  1.99553728  0.33465186  0.12522216]
+ [ 1.27798675  1.19349475  0.17303062 -0.12690493 -0.98418894]
+ [-0.4720158  -0.67276905  1.98084937  0.34296398  0.71518323]
+ [-1.84075682 -2.93703786  1.10939222  0.04624709  2.38713917]]
+
+&#x6A19;&#x6E96;&#x504F;&#x5DEE; : 1.235863542331196
+    &#x5206;&#x6563; : 1.5273586952634124
+</pre></div></div><h3 class="mume-header" id="%E6%9C%80%E5%A4%A7%E5%80%A4%E6%9C%80%E5%B0%8F%E5%80%A4">&#x6700;&#x5927;&#x5024;/&#x6700;&#x5C0F;&#x5024;</h3>
+
+<p><code>np.max()</code>, <code>np.min()</code>&#x3067;&#x6700;&#x5927;/&#x6700;&#x5C0F;&#x3092;&#x5F97;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
+(&#x3053;&#x3061;&#x3089;&#x3082;&#x5F15;&#x6570;&#x306B;<code>axis</code>&#x306F;&#x9069;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;.)</p>
+<div class="code-chunk" data-id="code-chunk-id-15" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=15, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[[0.37517127 0.96636065 0.8303595  0.54188792 0.96923381]
+ [0.16953784 0.26731471 0.74056683 0.62110721 0.67047221]
+ [0.77645902 0.44695558 0.00479382 0.46665403 0.29661802]
+ [0.16904287 0.52586476 0.55020427 0.9886876  0.55024634]
+ [0.83449715 0.17762453 0.05091176 0.19117975 0.59351961]]
+
+0.9886875968489722
+[0.83449715 0.96636065 0.8303595  0.9886876  0.96923381]
+[0.96923381 0.74056683 0.77645902 0.9886876  0.83449715]
+0.004793824520597734
+[0.16904287 0.17762453 0.00479382 0.19117975 0.29661802]
+[0.37517127 0.16953784 0.00479382 0.16904287 0.05091176]
+</pre></div></div><h3 class="mume-header" id="%E4%B8%AD%E5%A4%AE%E5%80%A4-median">&#x4E2D;&#x592E;&#x5024; median</h3>
+
+<p><code>numpy.median()</code>&#x3067;&#x4E2D;&#x592E;&#x5024;&#x3092;&#x51FA;&#x305B;&#x307E;&#x3059;.<br>
+(&#x3053;&#x3061;&#x3089;&#x3082;&#x5F15;&#x6570;&#x306B;<code>axis</code>&#x306F;&#x9069;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;.)</p>
+<div class="code-chunk" data-id="code-chunk-id-16" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=16, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>median<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>median<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>np<span class="token punctuation">.</span>median<span class="token punctuation">(</span>a<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[[0.2310778  0.78091688 0.77925597 0.08552702 0.39366099]
+ [0.11398802 0.49275245 0.42488219 0.18033883 0.51436906]
+ [0.36258997 0.86212284 0.79886841 0.57660038 0.11964078]
+ [0.62017496 0.37242106 0.27797001 0.51895972 0.37050466]
+ [0.82499739 0.7480544  0.87489801 0.89537708 0.68959412]]
+
+0.5143690615927786
+[0.36258997 0.7480544  0.77925597 0.51895972 0.39366099]
+[0.39366099 0.42488219 0.57660038 0.37242106 0.82499739]
+</pre></div></div><h2 class="mume-header" id="%E4%B9%B1%E6%95%B0">&#x4E71;&#x6570;</h2>
+
+<p>&#x516C;&#x5F0F;&#x306F;<a href="https://docs.scipy.org/doc/numpy/reference/routines.random.html">&#x3053;&#x3061;&#x3089;</a></p>
+<p>&#x4E71;&#x6570;&#x7CFB;&#x306E;&#x95A2;&#x6570;&#x306F;&#x57FA;&#x672C;&#x7684;&#x306B;<code>random</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x3042;&#x308A;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-17" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=17, cmd=&quot;python3&quot; class=line-numbers matplotlib}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>hist<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">100000</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ax <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>set_xlim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+ax<span class="token punctuation">.</span>hist<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">50000</span><span class="token punctuation">)</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><svg height="345.6pt" version="1.1" viewBox="0 0 460.8 345.6" width="460.8pt" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 460.8 345.6 
+L 460.8 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.6 307.584 
+L 414.72 307.584 
+L 414.72 41.472 
+L 57.6 41.472 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p701d009b53)" d="M 73.832727 307.584 
+L 90.065455 307.584 
+L 90.065455 64.484432 
+L 73.832727 64.484432 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p701d009b53)" d="M 90.065455 307.584 
+L 106.298182 307.584 
+L 106.298182 60.60677 
+L 90.065455 60.60677 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p701d009b53)" d="M 106.298182 307.584 
+L 122.530909 307.584 
+L 122.530909 54.144 
+L 106.298182 54.144 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p701d009b53)" d="M 122.530909 307.584 
+L 138.763636 307.584 
+L 138.763636 57.623953 
+L 122.530909 57.623953 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p701d009b53)" d="M 138.763636 307.584 
+L 154.996364 307.584 
+L 154.996364 61.650756 
+L 138.763636 61.650756 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#p701d009b53)" d="M 154.996364 307.584 
+L 171.229091 307.584 
+L 171.229091 65.379277 
+L 154.996364 65.379277 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_9">
+    <path clip-path="url(#p701d009b53)" d="M 171.229091 307.584 
+L 187.461818 307.584 
+L 187.461818 61.601042 
+L 171.229091 61.601042 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_10">
+    <path clip-path="url(#p701d009b53)" d="M 187.461818 307.584 
+L 203.694545 307.584 
+L 203.694545 59.363929 
+L 187.461818 59.363929 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_11">
+    <path clip-path="url(#p701d009b53)" d="M 203.694545 307.584 
+L 219.927273 307.584 
+L 219.927273 62.495887 
+L 203.694545 62.495887 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_12">
+    <path clip-path="url(#p701d009b53)" d="M 219.927273 307.584 
+L 236.16 307.584 
+L 236.16 56.182258 
+L 219.927273 56.182258 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_13">
+    <path clip-path="url(#p701d009b53)" d="M 236.16 307.584 
+L 252.392727 307.584 
+L 252.392727 57.524526 
+L 236.16 57.524526 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_14">
+    <path clip-path="url(#p701d009b53)" d="M 252.392727 307.584 
+L 268.625455 307.584 
+L 268.625455 54.193714 
+L 252.392727 54.193714 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_15">
+    <path clip-path="url(#p701d009b53)" d="M 268.625455 307.584 
+L 284.858182 307.584 
+L 284.858182 62.297033 
+L 268.625455 62.297033 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_16">
+    <path clip-path="url(#p701d009b53)" d="M 284.858182 307.584 
+L 301.090909 307.584 
+L 301.090909 57.623953 
+L 284.858182 57.623953 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_17">
+    <path clip-path="url(#p701d009b53)" d="M 301.090909 307.584 
+L 317.323636 307.584 
+L 317.323636 55.784549 
+L 301.090909 55.784549 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_18">
+    <path clip-path="url(#p701d009b53)" d="M 317.323636 307.584 
+L 333.556364 307.584 
+L 333.556364 58.071375 
+L 317.323636 58.071375 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_19">
+    <path clip-path="url(#p701d009b53)" d="M 333.556364 307.584 
+L 349.789091 307.584 
+L 349.789091 59.264502 
+L 333.556364 59.264502 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_20">
+    <path clip-path="url(#p701d009b53)" d="M 349.789091 307.584 
+L 366.021818 307.584 
+L 366.021818 56.430826 
+L 349.789091 56.430826 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_21">
+    <path clip-path="url(#p701d009b53)" d="M 366.021818 307.584 
+L 382.254545 307.584 
+L 382.254545 60.557056 
+L 366.021818 60.557056 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_22">
+    <path clip-path="url(#p701d009b53)" d="M 382.254545 307.584 
+L 398.487273 307.584 
+L 398.487273 55.038845 
+L 382.254545 55.038845 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="mc51dba6f91" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="73.82817" href="#mc51dba6f91" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0.0 -->
+      <defs>
+       <path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"/>
+       <path d="M 10.6875 12.40625 
+L 21 12.40625 
+L 21 0 
+L 10.6875 0 
+z
+" id="DejaVuSans-46"/>
+      </defs>
+      <g transform="translate(65.876607 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+       <use x="63.623047" href="#DejaVuSans-46"/>
+       <use x="95.410156" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="138.76151" href="#mc51dba6f91" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 0.2 -->
+      <defs>
+       <path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"/>
+      </defs>
+      <g transform="translate(130.809948 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+       <use x="63.623047" href="#DejaVuSans-46"/>
+       <use x="95.410156" href="#DejaVuSans-50"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="203.694851" href="#mc51dba6f91" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 0.4 -->
+      <defs>
+       <path d="M 37.796875 64.3125 
+L 12.890625 25.390625 
+L 37.796875 25.390625 
+z
+M 35.203125 72.90625 
+L 47.609375 72.90625 
+L 47.609375 25.390625 
+L 58.015625 25.390625 
+L 58.015625 17.1875 
+L 47.609375 17.1875 
+L 47.609375 0 
+L 37.796875 0 
+L 37.796875 17.1875 
+L 4.890625 17.1875 
+L 4.890625 26.703125 
+z
+" id="DejaVuSans-52"/>
+      </defs>
+      <g transform="translate(195.743289 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+       <use x="63.623047" href="#DejaVuSans-46"/>
+       <use x="95.410156" href="#DejaVuSans-52"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="268.628192" href="#mc51dba6f91" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 0.6 -->
+      <defs>
+       <path d="M 33.015625 40.375 
+Q 26.375 40.375 22.484375 35.828125 
+Q 18.609375 31.296875 18.609375 23.390625 
+Q 18.609375 15.53125 22.484375 10.953125 
+Q 26.375 6.390625 33.015625 6.390625 
+Q 39.65625 6.390625 43.53125 10.953125 
+Q 47.40625 15.53125 47.40625 23.390625 
+Q 47.40625 31.296875 43.53125 35.828125 
+Q 39.65625 40.375 33.015625 40.375 
+z
+M 52.59375 71.296875 
+L 52.59375 62.3125 
+Q 48.875 64.0625 45.09375 64.984375 
+Q 41.3125 65.921875 37.59375 65.921875 
+Q 27.828125 65.921875 22.671875 59.328125 
+Q 17.53125 52.734375 16.796875 39.40625 
+Q 19.671875 43.65625 24.015625 45.921875 
+Q 28.375 48.1875 33.59375 48.1875 
+Q 44.578125 48.1875 50.953125 41.515625 
+Q 57.328125 34.859375 57.328125 23.390625 
+Q 57.328125 12.15625 50.6875 5.359375 
+Q 44.046875 -1.421875 33.015625 -1.421875 
+Q 20.359375 -1.421875 13.671875 8.265625 
+Q 6.984375 17.96875 6.984375 36.375 
+Q 6.984375 53.65625 15.1875 63.9375 
+Q 23.390625 74.21875 37.203125 74.21875 
+Q 40.921875 74.21875 44.703125 73.484375 
+Q 48.484375 72.75 52.59375 71.296875 
+z
+" id="DejaVuSans-54"/>
+      </defs>
+      <g transform="translate(260.67663 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+       <use x="63.623047" href="#DejaVuSans-46"/>
+       <use x="95.410156" href="#DejaVuSans-54"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="333.561533" href="#mc51dba6f91" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 0.8 -->
+      <defs>
+       <path d="M 31.78125 34.625 
+Q 24.75 34.625 20.71875 30.859375 
+Q 16.703125 27.09375 16.703125 20.515625 
+Q 16.703125 13.921875 20.71875 10.15625 
+Q 24.75 6.390625 31.78125 6.390625 
+Q 38.8125 6.390625 42.859375 10.171875 
+Q 46.921875 13.96875 46.921875 20.515625 
+Q 46.921875 27.09375 42.890625 30.859375 
+Q 38.875 34.625 31.78125 34.625 
+z
+M 21.921875 38.8125 
+Q 15.578125 40.375 12.03125 44.71875 
+Q 8.5 49.078125 8.5 55.328125 
+Q 8.5 64.0625 14.71875 69.140625 
+Q 20.953125 74.21875 31.78125 74.21875 
+Q 42.671875 74.21875 48.875 69.140625 
+Q 55.078125 64.0625 55.078125 55.328125 
+Q 55.078125 49.078125 51.53125 44.71875 
+Q 48 40.375 41.703125 38.8125 
+Q 48.828125 37.15625 52.796875 32.3125 
+Q 56.78125 27.484375 56.78125 20.515625 
+Q 56.78125 9.90625 50.3125 4.234375 
+Q 43.84375 -1.421875 31.78125 -1.421875 
+Q 19.734375 -1.421875 13.25 4.234375 
+Q 6.78125 9.90625 6.78125 20.515625 
+Q 6.78125 27.484375 10.78125 32.3125 
+Q 14.796875 37.15625 21.921875 38.8125 
+z
+M 18.3125 54.390625 
+Q 18.3125 48.734375 21.84375 45.5625 
+Q 25.390625 42.390625 31.78125 42.390625 
+Q 38.140625 42.390625 41.71875 45.5625 
+Q 45.3125 48.734375 45.3125 54.390625 
+Q 45.3125 60.0625 41.71875 63.234375 
+Q 38.140625 66.40625 31.78125 66.40625 
+Q 25.390625 66.40625 21.84375 63.234375 
+Q 18.3125 60.0625 18.3125 54.390625 
+z
+" id="DejaVuSans-56"/>
+      </defs>
+      <g transform="translate(325.60997 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+       <use x="63.623047" href="#DejaVuSans-46"/>
+       <use x="95.410156" href="#DejaVuSans-56"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="398.494874" href="#mc51dba6f91" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 1.0 -->
+      <defs>
+       <path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"/>
+      </defs>
+      <g transform="translate(390.543311 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+       <use x="63.623047" href="#DejaVuSans-46"/>
+       <use x="95.410156" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="mbc8e63e7f8" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mbc8e63e7f8" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 0 -->
+      <g transform="translate(44.2375 311.383219)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mbc8e63e7f8" y="257.870387"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 1000 -->
+      <g transform="translate(25.15 261.669606)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mbc8e63e7f8" y="208.156774"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 2000 -->
+      <g transform="translate(25.15 211.955992)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-50"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mbc8e63e7f8" y="158.44316"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 3000 -->
+      <defs>
+       <path d="M 40.578125 39.3125 
+Q 47.65625 37.796875 51.625 33 
+Q 55.609375 28.21875 55.609375 21.1875 
+Q 55.609375 10.40625 48.1875 4.484375 
+Q 40.765625 -1.421875 27.09375 -1.421875 
+Q 22.515625 -1.421875 17.65625 -0.515625 
+Q 12.796875 0.390625 7.625 2.203125 
+L 7.625 11.71875 
+Q 11.71875 9.328125 16.59375 8.109375 
+Q 21.484375 6.890625 26.8125 6.890625 
+Q 36.078125 6.890625 40.9375 10.546875 
+Q 45.796875 14.203125 45.796875 21.1875 
+Q 45.796875 27.640625 41.28125 31.265625 
+Q 36.765625 34.90625 28.71875 34.90625 
+L 20.21875 34.90625 
+L 20.21875 43.015625 
+L 29.109375 43.015625 
+Q 36.375 43.015625 40.234375 45.921875 
+Q 44.09375 48.828125 44.09375 54.296875 
+Q 44.09375 59.90625 40.109375 62.90625 
+Q 36.140625 65.921875 28.71875 65.921875 
+Q 24.65625 65.921875 20.015625 65.03125 
+Q 15.375 64.15625 9.8125 62.3125 
+L 9.8125 71.09375 
+Q 15.4375 72.65625 20.34375 73.4375 
+Q 25.25 74.21875 29.59375 74.21875 
+Q 40.828125 74.21875 47.359375 69.109375 
+Q 53.90625 64.015625 53.90625 55.328125 
+Q 53.90625 49.265625 50.4375 45.09375 
+Q 46.96875 40.921875 40.578125 39.3125 
+z
+" id="DejaVuSans-51"/>
+      </defs>
+      <g transform="translate(25.15 162.242379)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-51"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mbc8e63e7f8" y="108.729547"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 4000 -->
+      <g transform="translate(25.15 112.528766)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-52"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_12">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mbc8e63e7f8" y="59.015934"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- 5000 -->
+      <defs>
+       <path d="M 10.796875 72.90625 
+L 49.515625 72.90625 
+L 49.515625 64.59375 
+L 19.828125 64.59375 
+L 19.828125 46.734375 
+Q 21.96875 47.46875 24.109375 47.828125 
+Q 26.265625 48.1875 28.421875 48.1875 
+Q 40.625 48.1875 47.75 41.5 
+Q 54.890625 34.8125 54.890625 23.390625 
+Q 54.890625 11.625 47.5625 5.09375 
+Q 40.234375 -1.421875 26.90625 -1.421875 
+Q 22.3125 -1.421875 17.546875 -0.640625 
+Q 12.796875 0.140625 7.71875 1.703125 
+L 7.71875 11.625 
+Q 12.109375 9.234375 16.796875 8.0625 
+Q 21.484375 6.890625 26.703125 6.890625 
+Q 35.15625 6.890625 40.078125 11.328125 
+Q 45.015625 15.765625 45.015625 23.390625 
+Q 45.015625 31 40.078125 35.4375 
+Q 35.15625 39.890625 26.703125 39.890625 
+Q 22.75 39.890625 18.8125 39.015625 
+Q 14.890625 38.140625 10.796875 36.28125 
+z
+" id="DejaVuSans-53"/>
+      </defs>
+      <g transform="translate(25.15 62.815153)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-53"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_23">
+    <path d="M 57.6 307.584 
+L 57.6 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 414.72 307.584 
+L 414.72 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 57.6 307.584 
+L 414.72 307.584 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 57.6 41.472 
+L 414.72 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p701d009b53">
+   <rect height="266.112" width="357.12" x="57.6" y="41.472"/>
+  </clipPath>
+ </defs>
+</svg>
+<!--?xml version="1.0" encoding="utf-8" standalone="no"?-->
+
+<svg height="345.6pt" version="1.1" viewBox="0 0 460.8 345.6" width="460.8pt" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 460.8 345.6 
+L 460.8 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 57.6 307.584 
+L 414.72 307.584 
+L 414.72 41.472 
+L 57.6 41.472 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p3fb05e7343)" d="M 29.89151 307.584 
+L 33.978034 307.584 
+L 33.978034 307.448904 
+L 29.89151 307.448904 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p3fb05e7343)" d="M 33.978034 307.584 
+L 38.064558 307.584 
+L 38.064558 307.584 
+L 33.978034 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#p3fb05e7343)" d="M 38.064558 307.584 
+L 42.151083 307.584 
+L 42.151083 307.584 
+L 38.064558 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#p3fb05e7343)" d="M 42.151083 307.584 
+L 46.237607 307.584 
+L 46.237607 307.584 
+L 42.151083 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#p3fb05e7343)" d="M 46.237607 307.584 
+L 50.324131 307.584 
+L 50.324131 307.584 
+L 46.237607 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#p3fb05e7343)" d="M 50.324131 307.584 
+L 54.410655 307.584 
+L 54.410655 307.584 
+L 50.324131 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_9">
+    <path clip-path="url(#p3fb05e7343)" d="M 54.410655 307.584 
+L 58.49718 307.584 
+L 58.49718 307.313808 
+L 54.410655 307.313808 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_10">
+    <path clip-path="url(#p3fb05e7343)" d="M 58.49718 307.584 
+L 62.583704 307.584 
+L 62.583704 307.043616 
+L 58.49718 307.043616 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_11">
+    <path clip-path="url(#p3fb05e7343)" d="M 62.583704 307.584 
+L 66.670228 307.584 
+L 66.670228 306.90852 
+L 62.583704 306.90852 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_12">
+    <path clip-path="url(#p3fb05e7343)" d="M 66.670228 307.584 
+L 70.756752 307.584 
+L 70.756752 307.584 
+L 66.670228 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_13">
+    <path clip-path="url(#p3fb05e7343)" d="M 70.756752 307.584 
+L 74.843277 307.584 
+L 74.843277 307.178712 
+L 70.756752 307.178712 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_14">
+    <path clip-path="url(#p3fb05e7343)" d="M 74.843277 307.584 
+L 78.929801 307.584 
+L 78.929801 307.313808 
+L 74.843277 307.313808 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_15">
+    <path clip-path="url(#p3fb05e7343)" d="M 78.929801 307.584 
+L 83.016325 307.584 
+L 83.016325 306.638328 
+L 78.929801 306.638328 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_16">
+    <path clip-path="url(#p3fb05e7343)" d="M 83.016325 307.584 
+L 87.102849 307.584 
+L 87.102849 307.178712 
+L 83.016325 307.178712 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_17">
+    <path clip-path="url(#p3fb05e7343)" d="M 87.102849 307.584 
+L 91.189373 307.584 
+L 91.189373 306.638328 
+L 87.102849 306.638328 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_18">
+    <path clip-path="url(#p3fb05e7343)" d="M 91.189373 307.584 
+L 95.275898 307.584 
+L 95.275898 306.368136 
+L 91.189373 306.368136 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_19">
+    <path clip-path="url(#p3fb05e7343)" d="M 95.275898 307.584 
+L 99.362422 307.584 
+L 99.362422 305.692657 
+L 95.275898 305.692657 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_20">
+    <path clip-path="url(#p3fb05e7343)" d="M 99.362422 307.584 
+L 103.448946 307.584 
+L 103.448946 305.422465 
+L 99.362422 305.422465 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_21">
+    <path clip-path="url(#p3fb05e7343)" d="M 103.448946 307.584 
+L 107.53547 307.584 
+L 107.53547 302.990738 
+L 103.448946 302.990738 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_22">
+    <path clip-path="url(#p3fb05e7343)" d="M 107.53547 307.584 
+L 111.621995 307.584 
+L 111.621995 303.801313 
+L 107.53547 303.801313 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_23">
+    <path clip-path="url(#p3fb05e7343)" d="M 111.621995 307.584 
+L 115.708519 307.584 
+L 115.708519 302.180162 
+L 111.621995 302.180162 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_24">
+    <path clip-path="url(#p3fb05e7343)" d="M 115.708519 307.584 
+L 119.795043 307.584 
+L 119.795043 298.397475 
+L 115.708519 298.397475 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_25">
+    <path clip-path="url(#p3fb05e7343)" d="M 119.795043 307.584 
+L 123.881567 307.584 
+L 123.881567 299.748435 
+L 119.795043 299.748435 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_26">
+    <path clip-path="url(#p3fb05e7343)" d="M 123.881567 307.584 
+L 127.968092 307.584 
+L 127.968092 296.641228 
+L 123.881567 296.641228 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_27">
+    <path clip-path="url(#p3fb05e7343)" d="M 127.968092 307.584 
+L 132.054616 307.584 
+L 132.054616 293.398925 
+L 127.968092 293.398925 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_28">
+    <path clip-path="url(#p3fb05e7343)" d="M 132.054616 307.584 
+L 136.14114 307.584 
+L 136.14114 288.265279 
+L 132.054616 288.265279 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_29">
+    <path clip-path="url(#p3fb05e7343)" d="M 136.14114 307.584 
+L 140.227664 307.584 
+L 140.227664 285.158072 
+L 136.14114 285.158072 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_30">
+    <path clip-path="url(#p3fb05e7343)" d="M 140.227664 307.584 
+L 144.314189 307.584 
+L 144.314189 282.861441 
+L 140.227664 282.861441 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_31">
+    <path clip-path="url(#p3fb05e7343)" d="M 144.314189 307.584 
+L 148.400713 307.584 
+L 148.400713 271.513382 
+L 144.314189 271.513382 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_32">
+    <path clip-path="url(#p3fb05e7343)" d="M 148.400713 307.584 
+L 152.487237 307.584 
+L 152.487237 269.757134 
+L 148.400713 269.757134 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_33">
+    <path clip-path="url(#p3fb05e7343)" d="M 152.487237 307.584 
+L 156.573761 307.584 
+L 156.573761 262.326857 
+L 152.487237 262.326857 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_34">
+    <path clip-path="url(#p3fb05e7343)" d="M 156.573761 307.584 
+L 160.660286 307.584 
+L 160.660286 253.950908 
+L 156.573761 253.950908 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_35">
+    <path clip-path="url(#p3fb05e7343)" d="M 160.660286 307.584 
+L 164.74681 307.584 
+L 164.74681 243.143232 
+L 160.660286 243.143232 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_36">
+    <path clip-path="url(#p3fb05e7343)" d="M 164.74681 307.584 
+L 168.833334 307.584 
+L 168.833334 237.199011 
+L 164.74681 237.199011 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_37">
+    <path clip-path="url(#p3fb05e7343)" d="M 168.833334 307.584 
+L 172.919858 307.584 
+L 172.919858 219.366345 
+L 168.833334 219.366345 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_38">
+    <path clip-path="url(#p3fb05e7343)" d="M 172.919858 307.584 
+L 177.006383 307.584 
+L 177.006383 213.151932 
+L 172.919858 213.151932 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_39">
+    <path clip-path="url(#p3fb05e7343)" d="M 177.006383 307.584 
+L 181.092907 307.584 
+L 181.092907 201.668776 
+L 177.006383 201.668776 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_40">
+    <path clip-path="url(#p3fb05e7343)" d="M 181.092907 307.584 
+L 185.179431 307.584 
+L 185.179431 180.864 
+L 181.092907 180.864 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_41">
+    <path clip-path="url(#p3fb05e7343)" d="M 185.179431 307.584 
+L 189.265955 307.584 
+L 189.265955 169.921228 
+L 185.179431 169.921228 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_42">
+    <path clip-path="url(#p3fb05e7343)" d="M 189.265955 307.584 
+L 193.35248 307.584 
+L 193.35248 158.438072 
+L 189.265955 158.438072 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_43">
+    <path clip-path="url(#p3fb05e7343)" d="M 193.35248 307.584 
+L 197.439004 307.584 
+L 197.439004 148.440972 
+L 193.35248 148.440972 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_44">
+    <path clip-path="url(#p3fb05e7343)" d="M 197.439004 307.584 
+L 201.525528 307.584 
+L 201.525528 132.49965 
+L 197.439004 132.49965 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_45">
+    <path clip-path="url(#p3fb05e7343)" d="M 201.525528 307.584 
+L 205.612052 307.584 
+L 205.612052 117.639096 
+L 201.525528 117.639096 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_46">
+    <path clip-path="url(#p3fb05e7343)" d="M 205.612052 307.584 
+L 209.698576 307.584 
+L 209.698576 102.643446 
+L 205.612052 102.643446 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_47">
+    <path clip-path="url(#p3fb05e7343)" d="M 209.698576 307.584 
+L 213.785101 307.584 
+L 213.785101 96.15884 
+L 209.698576 96.15884 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_48">
+    <path clip-path="url(#p3fb05e7343)" d="M 213.785101 307.584 
+L 217.871625 307.584 
+L 217.871625 87.647795 
+L 213.785101 87.647795 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_49">
+    <path clip-path="url(#p3fb05e7343)" d="M 217.871625 307.584 
+L 221.958149 307.584 
+L 221.958149 79.001655 
+L 217.871625 79.001655 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_50">
+    <path clip-path="url(#p3fb05e7343)" d="M 221.958149 307.584 
+L 226.044673 307.584 
+L 226.044673 74.543488 
+L 221.958149 74.543488 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_51">
+    <path clip-path="url(#p3fb05e7343)" d="M 226.044673 307.584 
+L 230.131198 307.584 
+L 230.131198 65.897348 
+L 226.044673 65.897348 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_52">
+    <path clip-path="url(#p3fb05e7343)" d="M 230.131198 307.584 
+L 234.217722 307.584 
+L 234.217722 54.144 
+L 230.131198 54.144 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_53">
+    <path clip-path="url(#p3fb05e7343)" d="M 234.217722 307.584 
+L 238.304246 307.584 
+L 238.304246 62.519949 
+L 234.217722 62.519949 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_54">
+    <path clip-path="url(#p3fb05e7343)" d="M 238.304246 307.584 
+L 242.39077 307.584 
+L 242.39077 54.279096 
+L 238.304246 54.279096 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_55">
+    <path clip-path="url(#p3fb05e7343)" d="M 242.39077 307.584 
+L 246.477295 307.584 
+L 246.477295 70.355514 
+L 242.39077 70.355514 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_56">
+    <path clip-path="url(#p3fb05e7343)" d="M 246.477295 307.584 
+L 250.563819 307.584 
+L 250.563819 69.81513 
+L 246.477295 69.81513 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_57">
+    <path clip-path="url(#p3fb05e7343)" d="M 250.563819 307.584 
+L 254.650343 307.584 
+L 254.650343 81.16319 
+L 250.563819 81.16319 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_58">
+    <path clip-path="url(#p3fb05e7343)" d="M 254.650343 307.584 
+L 258.736867 307.584 
+L 258.736867 81.16319 
+L 254.650343 81.16319 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_59">
+    <path clip-path="url(#p3fb05e7343)" d="M 258.736867 307.584 
+L 262.823392 307.584 
+L 262.823392 95.213168 
+L 258.736867 95.213168 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_60">
+    <path clip-path="url(#p3fb05e7343)" d="M 262.823392 307.584 
+L 266.909916 307.584 
+L 266.909916 111.15449 
+L 262.823392 111.15449 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_61">
+    <path clip-path="url(#p3fb05e7343)" d="M 266.909916 307.584 
+L 270.99644 307.584 
+L 270.99644 119.260247 
+L 266.909916 119.260247 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_62">
+    <path clip-path="url(#p3fb05e7343)" d="M 270.99644 307.584 
+L 275.082964 307.584 
+L 275.082964 127.906388 
+L 270.99644 127.906388 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_63">
+    <path clip-path="url(#p3fb05e7343)" d="M 275.082964 307.584 
+L 279.169489 307.584 
+L 279.169489 155.465962 
+L 275.082964 155.465962 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_64">
+    <path clip-path="url(#p3fb05e7343)" d="M 279.169489 307.584 
+L 283.256013 307.584 
+L 283.256013 163.571719 
+L 279.169489 163.571719 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_65">
+    <path clip-path="url(#p3fb05e7343)" d="M 283.256013 307.584 
+L 287.342537 307.584 
+L 287.342537 167.489501 
+L 283.256013 167.489501 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_66">
+    <path clip-path="url(#p3fb05e7343)" d="M 287.342537 307.584 
+L 291.429061 307.584 
+L 291.429061 185.18707 
+L 287.342537 185.18707 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_67">
+    <path clip-path="url(#p3fb05e7343)" d="M 291.429061 307.584 
+L 295.515586 307.584 
+L 295.515586 201.668776 
+L 291.429061 201.668776 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_68">
+    <path clip-path="url(#p3fb05e7343)" d="M 295.515586 307.584 
+L 299.60211 307.584 
+L 299.60211 206.937518 
+L 295.515586 206.937518 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_69">
+    <path clip-path="url(#p3fb05e7343)" d="M 299.60211 307.584 
+L 303.688634 307.584 
+L 303.688634 216.124043 
+L 299.60211 216.124043 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_70">
+    <path clip-path="url(#p3fb05e7343)" d="M 303.688634 307.584 
+L 307.775158 307.584 
+L 307.775158 237.334107 
+L 303.688634 237.334107 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_71">
+    <path clip-path="url(#p3fb05e7343)" d="M 307.775158 307.584 
+L 311.861683 307.584 
+L 311.861683 245.439864 
+L 307.775158 245.439864 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_72">
+    <path clip-path="url(#p3fb05e7343)" d="M 311.861683 307.584 
+L 315.948207 307.584 
+L 315.948207 250.438414 
+L 311.861683 250.438414 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_73">
+    <path clip-path="url(#p3fb05e7343)" d="M 315.948207 307.584 
+L 320.034731 307.584 
+L 320.034731 262.867241 
+L 315.948207 262.867241 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_74">
+    <path clip-path="url(#p3fb05e7343)" d="M 320.034731 307.584 
+L 324.121255 307.584 
+L 324.121255 269.757134 
+L 320.034731 269.757134 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_75">
+    <path clip-path="url(#p3fb05e7343)" d="M 324.121255 307.584 
+L 328.20778 307.584 
+L 328.20778 276.376836 
+L 324.121255 276.376836 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_76">
+    <path clip-path="url(#p3fb05e7343)" d="M 328.20778 307.584 
+L 332.294304 307.584 
+L 332.294304 280.429714 
+L 328.20778 280.429714 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_77">
+    <path clip-path="url(#p3fb05e7343)" d="M 332.294304 307.584 
+L 336.380828 307.584 
+L 336.380828 285.293168 
+L 332.294304 285.293168 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_78">
+    <path clip-path="url(#p3fb05e7343)" d="M 336.380828 307.584 
+L 340.467352 307.584 
+L 340.467352 289.075855 
+L 336.380828 289.075855 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_79">
+    <path clip-path="url(#p3fb05e7343)" d="M 340.467352 307.584 
+L 344.553876 307.584 
+L 344.553876 294.479693 
+L 340.467352 294.479693 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_80">
+    <path clip-path="url(#p3fb05e7343)" d="M 344.553876 307.584 
+L 348.640401 307.584 
+L 348.640401 296.371036 
+L 344.553876 296.371036 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_81">
+    <path clip-path="url(#p3fb05e7343)" d="M 348.640401 307.584 
+L 352.726925 307.584 
+L 352.726925 299.343147 
+L 348.640401 299.343147 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_82">
+    <path clip-path="url(#p3fb05e7343)" d="M 352.726925 307.584 
+L 356.813449 307.584 
+L 356.813449 298.667667 
+L 352.726925 298.667667 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_83">
+    <path clip-path="url(#p3fb05e7343)" d="M 356.813449 307.584 
+L 360.899973 307.584 
+L 360.899973 302.720546 
+L 356.813449 302.720546 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_84">
+    <path clip-path="url(#p3fb05e7343)" d="M 360.899973 307.584 
+L 364.986498 307.584 
+L 364.986498 302.58545 
+L 360.899973 302.58545 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_85">
+    <path clip-path="url(#p3fb05e7343)" d="M 364.986498 307.584 
+L 369.073022 307.584 
+L 369.073022 304.746985 
+L 364.986498 304.746985 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_86">
+    <path clip-path="url(#p3fb05e7343)" d="M 369.073022 307.584 
+L 373.159546 307.584 
+L 373.159546 303.666217 
+L 369.073022 303.666217 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_87">
+    <path clip-path="url(#p3fb05e7343)" d="M 373.159546 307.584 
+L 377.24607 307.584 
+L 377.24607 305.557561 
+L 373.159546 305.557561 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_88">
+    <path clip-path="url(#p3fb05e7343)" d="M 377.24607 307.584 
+L 381.332595 307.584 
+L 381.332595 307.043616 
+L 377.24607 307.043616 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_89">
+    <path clip-path="url(#p3fb05e7343)" d="M 381.332595 307.584 
+L 385.419119 307.584 
+L 385.419119 306.503232 
+L 381.332595 306.503232 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_90">
+    <path clip-path="url(#p3fb05e7343)" d="M 385.419119 307.584 
+L 389.505643 307.584 
+L 389.505643 306.90852 
+L 385.419119 306.90852 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_91">
+    <path clip-path="url(#p3fb05e7343)" d="M 389.505643 307.584 
+L 393.592167 307.584 
+L 393.592167 307.178712 
+L 389.505643 307.178712 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_92">
+    <path clip-path="url(#p3fb05e7343)" d="M 393.592167 307.584 
+L 397.678692 307.584 
+L 397.678692 307.043616 
+L 393.592167 307.043616 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_93">
+    <path clip-path="url(#p3fb05e7343)" d="M 397.678692 307.584 
+L 401.765216 307.584 
+L 401.765216 306.773424 
+L 397.678692 306.773424 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_94">
+    <path clip-path="url(#p3fb05e7343)" d="M 401.765216 307.584 
+L 405.85174 307.584 
+L 405.85174 307.313808 
+L 401.765216 307.313808 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_95">
+    <path clip-path="url(#p3fb05e7343)" d="M 405.85174 307.584 
+L 409.938264 307.584 
+L 409.938264 307.584 
+L 405.85174 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_96">
+    <path clip-path="url(#p3fb05e7343)" d="M 409.938264 307.584 
+L 414.024789 307.584 
+L 414.024789 307.584 
+L 409.938264 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_97">
+    <path clip-path="url(#p3fb05e7343)" d="M 414.024789 307.584 
+L 418.111313 307.584 
+L 418.111313 307.584 
+L 414.024789 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_98">
+    <path clip-path="url(#p3fb05e7343)" d="M 418.111313 307.584 
+L 422.197837 307.584 
+L 422.197837 307.584 
+L 418.111313 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_99">
+    <path clip-path="url(#p3fb05e7343)" d="M 422.197837 307.584 
+L 426.284361 307.584 
+L 426.284361 307.584 
+L 422.197837 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_100">
+    <path clip-path="url(#p3fb05e7343)" d="M 426.284361 307.584 
+L 430.370886 307.584 
+L 430.370886 307.584 
+L 426.284361 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_101">
+    <path clip-path="url(#p3fb05e7343)" d="M 430.370886 307.584 
+L 434.45741 307.584 
+L 434.45741 307.584 
+L 430.370886 307.584 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="patch_102">
+    <path clip-path="url(#p3fb05e7343)" d="M 434.45741 307.584 
+L 438.543934 307.584 
+L 438.543934 307.313808 
+L 434.45741 307.313808 
+z
+" style="fill:#1f77b4;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="mf83e389713" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- −4 -->
+      <defs>
+       <path d="M 10.59375 35.5 
+L 73.1875 35.5 
+L 73.1875 27.203125 
+L 10.59375 27.203125 
+z
+" id="DejaVuSans-8722"/>
+       <path d="M 37.796875 64.3125 
+L 12.890625 25.390625 
+L 37.796875 25.390625 
+z
+M 35.203125 72.90625 
+L 47.609375 72.90625 
+L 47.609375 25.390625 
+L 58.015625 25.390625 
+L 58.015625 17.1875 
+L 47.609375 17.1875 
+L 47.609375 0 
+L 37.796875 0 
+L 37.796875 17.1875 
+L 4.890625 17.1875 
+L 4.890625 26.703125 
+z
+" id="DejaVuSans-52"/>
+      </defs>
+      <g transform="translate(50.228906 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-8722"/>
+       <use x="83.789062" href="#DejaVuSans-52"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="102.24" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- −3 -->
+      <defs>
+       <path d="M 40.578125 39.3125 
+Q 47.65625 37.796875 51.625 33 
+Q 55.609375 28.21875 55.609375 21.1875 
+Q 55.609375 10.40625 48.1875 4.484375 
+Q 40.765625 -1.421875 27.09375 -1.421875 
+Q 22.515625 -1.421875 17.65625 -0.515625 
+Q 12.796875 0.390625 7.625 2.203125 
+L 7.625 11.71875 
+Q 11.71875 9.328125 16.59375 8.109375 
+Q 21.484375 6.890625 26.8125 6.890625 
+Q 36.078125 6.890625 40.9375 10.546875 
+Q 45.796875 14.203125 45.796875 21.1875 
+Q 45.796875 27.640625 41.28125 31.265625 
+Q 36.765625 34.90625 28.71875 34.90625 
+L 20.21875 34.90625 
+L 20.21875 43.015625 
+L 29.109375 43.015625 
+Q 36.375 43.015625 40.234375 45.921875 
+Q 44.09375 48.828125 44.09375 54.296875 
+Q 44.09375 59.90625 40.109375 62.90625 
+Q 36.140625 65.921875 28.71875 65.921875 
+Q 24.65625 65.921875 20.015625 65.03125 
+Q 15.375 64.15625 9.8125 62.3125 
+L 9.8125 71.09375 
+Q 15.4375 72.65625 20.34375 73.4375 
+Q 25.25 74.21875 29.59375 74.21875 
+Q 40.828125 74.21875 47.359375 69.109375 
+Q 53.90625 64.015625 53.90625 55.328125 
+Q 53.90625 49.265625 50.4375 45.09375 
+Q 46.96875 40.921875 40.578125 39.3125 
+z
+" id="DejaVuSans-51"/>
+      </defs>
+      <g transform="translate(94.868906 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-8722"/>
+       <use x="83.789062" href="#DejaVuSans-51"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="146.88" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- −2 -->
+      <defs>
+       <path d="M 19.1875 8.296875 
+L 53.609375 8.296875 
+L 53.609375 0 
+L 7.328125 0 
+L 7.328125 8.296875 
+Q 12.9375 14.109375 22.625 23.890625 
+Q 32.328125 33.6875 34.8125 36.53125 
+Q 39.546875 41.84375 41.421875 45.53125 
+Q 43.3125 49.21875 43.3125 52.78125 
+Q 43.3125 58.59375 39.234375 62.25 
+Q 35.15625 65.921875 28.609375 65.921875 
+Q 23.96875 65.921875 18.8125 64.3125 
+Q 13.671875 62.703125 7.8125 59.421875 
+L 7.8125 69.390625 
+Q 13.765625 71.78125 18.9375 73 
+Q 24.125 74.21875 28.421875 74.21875 
+Q 39.75 74.21875 46.484375 68.546875 
+Q 53.21875 62.890625 53.21875 53.421875 
+Q 53.21875 48.921875 51.53125 44.890625 
+Q 49.859375 40.875 45.40625 35.40625 
+Q 44.1875 33.984375 37.640625 27.21875 
+Q 31.109375 20.453125 19.1875 8.296875 
+z
+" id="DejaVuSans-50"/>
+      </defs>
+      <g transform="translate(139.508906 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-8722"/>
+       <use x="83.789062" href="#DejaVuSans-50"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="191.52" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- −1 -->
+      <defs>
+       <path d="M 12.40625 8.296875 
+L 28.515625 8.296875 
+L 28.515625 63.921875 
+L 10.984375 60.40625 
+L 10.984375 69.390625 
+L 28.421875 72.90625 
+L 38.28125 72.90625 
+L 38.28125 8.296875 
+L 54.390625 8.296875 
+L 54.390625 0 
+L 12.40625 0 
+z
+" id="DejaVuSans-49"/>
+      </defs>
+      <g transform="translate(184.148906 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-8722"/>
+       <use x="83.789062" href="#DejaVuSans-49"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="236.16" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 0 -->
+      <defs>
+       <path d="M 31.78125 66.40625 
+Q 24.171875 66.40625 20.328125 58.90625 
+Q 16.5 51.421875 16.5 36.375 
+Q 16.5 21.390625 20.328125 13.890625 
+Q 24.171875 6.390625 31.78125 6.390625 
+Q 39.453125 6.390625 43.28125 13.890625 
+Q 47.125 21.390625 47.125 36.375 
+Q 47.125 51.421875 43.28125 58.90625 
+Q 39.453125 66.40625 31.78125 66.40625 
+z
+M 31.78125 74.21875 
+Q 44.046875 74.21875 50.515625 64.515625 
+Q 56.984375 54.828125 56.984375 36.375 
+Q 56.984375 17.96875 50.515625 8.265625 
+Q 44.046875 -1.421875 31.78125 -1.421875 
+Q 19.53125 -1.421875 13.0625 8.265625 
+Q 6.59375 17.96875 6.59375 36.375 
+Q 6.59375 54.828125 13.0625 64.515625 
+Q 19.53125 74.21875 31.78125 74.21875 
+z
+" id="DejaVuSans-48"/>
+      </defs>
+      <g transform="translate(232.97875 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="280.8" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 1 -->
+      <g transform="translate(277.61875 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="325.44" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 2 -->
+      <g transform="translate(322.25875 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-50"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="370.08" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 3 -->
+      <g transform="translate(366.89875 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-51"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="414.72" href="#mf83e389713" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 4 -->
+      <g transform="translate(411.53875 322.182437)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-52"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_10">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="ma27618de5e" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="307.584"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 0 -->
+      <g transform="translate(44.2375 311.383219)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="273.810013"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 250 -->
+      <defs>
+       <path d="M 10.796875 72.90625 
+L 49.515625 72.90625 
+L 49.515625 64.59375 
+L 19.828125 64.59375 
+L 19.828125 46.734375 
+Q 21.96875 47.46875 24.109375 47.828125 
+Q 26.265625 48.1875 28.421875 48.1875 
+Q 40.625 48.1875 47.75 41.5 
+Q 54.890625 34.8125 54.890625 23.390625 
+Q 54.890625 11.625 47.5625 5.09375 
+Q 40.234375 -1.421875 26.90625 -1.421875 
+Q 22.3125 -1.421875 17.546875 -0.640625 
+Q 12.796875 0.140625 7.71875 1.703125 
+L 7.71875 11.625 
+Q 12.109375 9.234375 16.796875 8.0625 
+Q 21.484375 6.890625 26.703125 6.890625 
+Q 35.15625 6.890625 40.078125 11.328125 
+Q 45.015625 15.765625 45.015625 23.390625 
+Q 45.015625 31 40.078125 35.4375 
+Q 35.15625 39.890625 26.703125 39.890625 
+Q 22.75 39.890625 18.8125 39.015625 
+Q 14.890625 38.140625 10.796875 36.28125 
+z
+" id="DejaVuSans-53"/>
+      </defs>
+      <g transform="translate(31.5125 277.609232)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-50"/>
+       <use x="63.623047" href="#DejaVuSans-53"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_12">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="240.036026"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- 500 -->
+      <g transform="translate(31.5125 243.835244)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-53"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="206.262038"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- 750 -->
+      <defs>
+       <path d="M 8.203125 72.90625 
+L 55.078125 72.90625 
+L 55.078125 68.703125 
+L 28.609375 0 
+L 18.3125 0 
+L 43.21875 64.59375 
+L 8.203125 64.59375 
+z
+" id="DejaVuSans-55"/>
+      </defs>
+      <g transform="translate(31.5125 210.061257)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-55"/>
+       <use x="63.623047" href="#DejaVuSans-53"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="172.488051"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- 1000 -->
+      <g transform="translate(25.15 176.28727)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+       <use x="63.623047" href="#DejaVuSans-48"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_15">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="138.714064"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- 1250 -->
+      <g transform="translate(25.15 142.513283)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+       <use x="63.623047" href="#DejaVuSans-50"/>
+       <use x="127.246094" href="#DejaVuSans-53"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_16">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="104.940077"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <!-- 1500 -->
+      <g transform="translate(25.15 108.739296)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+       <use x="63.623047" href="#DejaVuSans-53"/>
+       <use x="127.246094" href="#DejaVuSans-48"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_17">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="57.6" href="#ma27618de5e" y="71.16609"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- 1750 -->
+      <g transform="translate(25.15 74.965308)scale(0.1 -0.1)">
+       <use href="#DejaVuSans-49"/>
+       <use x="63.623047" href="#DejaVuSans-55"/>
+       <use x="127.246094" href="#DejaVuSans-53"/>
+       <use x="190.869141" href="#DejaVuSans-48"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_103">
+    <path d="M 57.6 307.584 
+L 57.6 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_104">
+    <path d="M 414.72 307.584 
+L 414.72 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_105">
+    <path d="M 57.6 307.584 
+L 414.72 307.584 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_106">
+    <path d="M 57.6 41.472 
+L 414.72 41.472 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3fb05e7343">
+   <rect height="266.112" width="357.12" x="57.6" y="41.472"/>
+  </clipPath>
+ </defs>
+</svg>
+</div></div><p>&#x4EE5;&#x4E0B;&#x306B;&#x81EA;&#x5206;&#x304C;&#x5229;&#x7528;&#x3059;&#x308B;&#x306A;&#x301C;&#x3068;&#x601D;&#x3063;&#x305F;&#x3084;&#x3064;&#x3092;&#x8F09;&#x305B;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;.<br>
+&#x5229;&#x7528;&#x3059;&#x308B;&#x6642;&#x306B;&#x306A;&#x3063;&#x305F;&#x81EA;&#x7136;&#x3068;&#x899A;&#x3048;&#x308B;&#x306E;&#x3067;, &#x305D;&#x3093;&#x306A;&#x306E;&#x304C;&#x3042;&#x308B;&#x3093;&#x3060;&#x306A;&#x304F;&#x3089;&#x3044;&#x306E;&#x8A8D;&#x8B58;&#x3067;OK&#x3067;&#x3059;.</p>
+<h3 class="mume-header" id="%E8%87%AA%E5%88%86%E3%81%8C%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%84%E3%81%A4">(&#x81EA;&#x5206;&#x304C;)&#x3088;&#x304F;&#x4F7F;&#x3046;&#x3084;&#x3064;</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x95A2;&#x6570;</th>
+<th style="text-align:center">&#x5927;&#x307E;&#x304B;&#x306A;&#x5185;&#x5BB9;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>numpy.random.rand(d0, d1, ..., dn)</code></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">[</mo><mn>0.0</mn><mo separator="true">,</mo><mn>1.0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">[0.0, 1.0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mord">.</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">0</span><span class="mclose">)</span></span></span></span>&#x306E;&#x7BC4;&#x56F2;&#x306E;&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x306A;&#x5C0F;&#x6570;&#x3092;&#x8FD4;&#x3059;.<br> &#x5F15;&#x6570;&#x3067;&#x623B;&#x3063;&#x3066;&#x304F;&#x308B;&#x914D;&#x5217;&#x306E;&#x6B21;&#x5143;&#x6570;&#x3092;&#x6C7A;&#x3081;&#x3089;&#x308C;&#x308B;.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>numpy.random.randn(d0, d1, ..., dn)</code></td>
+<td style="text-align:center">&#x6A19;&#x6E96;&#x6B63;&#x898F;&#x5206;&#x5E03;&#x306B;&#x5F93;&#x3046;&#x4E71;&#x6570;&#x3092;&#x8FD4;&#x3059;.<br> &#x5F15;&#x6570;&#x3067;&#x623B;&#x3063;&#x3066;&#x304F;&#x308B;&#x914D;&#x5217;&#x306E;&#x6B21;&#x5143;&#x6570;&#x3092;&#x6C7A;&#x3081;&#x3089;&#x308C;&#x308B;.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>numpy.random.randint(low, [, high, size])</code></td>
+<td style="text-align:center"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">l</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">w</mi><mo>&#x2264;</mo><mi mathvariant="normal">N</mi><mo>&lt;</mo><mi mathvariant="normal">h</mi><mi mathvariant="normal">i</mi><mi mathvariant="normal">g</mi><mi mathvariant="normal">h</mi></mrow><annotation encoding="application/x-tex">\rm low \leq N &lt; high</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">l</span><span class="mord mathrm">o</span><span class="mord mathrm" style="margin-right:0.01389em;">w</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathrm">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathrm">h</span><span class="mord mathrm">i</span><span class="mord mathrm" style="margin-right:0.01389em;">g</span><span class="mord mathrm">h</span></span></span></span></span>&#x3068;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A;&#x6574;&#x6570;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>&#x3092;&#x5F97;&#x308B;.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>numpy.random.normal([loc, scale, size])</code></td>
+<td style="text-align:center">&#x6B63;&#x898F;&#x5206;&#x5E03;&#x3092;&#x5F97;&#x308B;. <code>loc</code>&#x3067;&#x5E73;&#x5747;&#x5024;&#x3092;, <code>scale</code>&#x3067;&#x5206;&#x6563;&#x3092;&#x6C7A;&#x3081;&#x3089;&#x308C;&#x308B;.</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4ED6;&#x306B;&#x3082;&#x6307;&#x6570;&#x5206;&#x5E03;&#x3068;&#x304B;&#x5BFE;&#x6570;&#x5206;&#x5E03;&#x3068;&#x304B;&#x30EC;&#x30A4;&#x30EA;&#x30FC;&#x5206;&#x5E03;&#x3068;&#x304B;&#x3042;&#x308B;&#x3051;&#x3069;, &#x305D;&#x3093;&#x306A;&#x306B;&#x4F7F;&#x3063;&#x305F;&#x3053;&#x3068;&#x306A;&#x3044;&#x306E;&#x3067;, &#x4F7F;&#x3046;&#x3068;&#x304D;&#x306F;&#x8ABF;&#x3079;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.</p>
+<h2 class="mume-header" id="%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%A4%E3%81%A0%E3%81%91%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3060;&#x3051;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;</h2>
+
+<h3 class="mume-header" id="numpy%E9%85%8D%E5%88%97%E3%81%A8%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90">numpy&#x914D;&#x5217;&#x3068;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5B50;</h3>
+
+<p>&#x5148;&#x307B;&#x3069;&#x78BA;&#x8A8D;&#x3057;&#x305F;&#x3088;&#x3046;&#x306B;, numpy&#x914D;&#x5217;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x4EE3;&#x6570;&#x6F14;&#x7B97;&#x3092;&#x7528;&#x3044;&#x308B;&#x3068;&#x5404;&#x8981;&#x7D20;&#x306B;&#x4F5C;&#x7528;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x7279;&#x6B8A;&#x306A;&#x52D5;&#x4F5C;&#x3092;&#x3057;&#x307E;&#x3057;&#x305F;.</p>
+<p>&#x3067;&#x306F;numpy&#x914D;&#x5217;&#x306B;&#x5BFE;&#x3057;&#x3066;, &#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x3092;&#x7528;&#x3044;&#x308B;&#x3068;&#x3069;&#x3046;&#x306A;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-18" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=18, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+dna <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dna<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>dna <span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0.5791474  0.54015998 0.97550677 0.2225199  0.75786523 0.9664897
+ 0.73661528 0.0888638  0.43670222 0.99304413]
+[ True  True  True False  True  True  True False False  True]
+</pre></div></div><p>&#x5404;&#x8981;&#x7D20;&#x306B;&#x6BD4;&#x8F03;&#x3092;&#x3057;, &#x305D;&#x306E;&#x7D50;&#x679C;(&#x30D6;&#x30FC;&#x30EB;&#x5024;)&#x304C;numpy&#x914D;&#x5217;&#x3067;&#x8FD4;&#x3063;&#x3066;&#x304D;&#x307E;&#x3059;.</p>
+<h3 class="mume-header" id="bool%E3%81%A7%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%99%E8%A6%81%E7%B4%A0%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B">bool&#x3067;&#x53D6;&#x308A;&#x51FA;&#x3059;&#x8981;&#x7D20;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;</h3>
+
+<p>numpy&#x914D;&#x5217;&#x3067;&#x306F;, &#x901A;&#x5E38;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3068;&#x540C;&#x3058;&#x3088;&#x3046;&#x306B;<code>[]</code>&#x3067;, &#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x308A;, &#x30B9;&#x30E9;&#x30A4;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
+&#x3057;&#x304B;&#x3057;, &#x305D;&#x308C;&#x4EE5;&#x5916;&#x306B;&#x3082;, boot&#x5024;&#x3067;&#x3069;&#x306E;&#x8981;&#x7D20;&#x3092;&#x3068;&#x308B;&#x304B;&#x3092;&#x9078;&#x629E;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<p>&#x5BFE;&#x8C61;&#x306E;&#x914D;&#x5217;<code>A</code>&#x3068;&#x540C;&#x3058;&#x5927;&#x304D;&#x3055;&#x306E;&#x914D;&#x5217;&#x3092;&#x7528;&#x610F;&#x3057;, &#x53D6;&#x308A;&#x305F;&#x3044;&#x4F4D;&#x7F6E;&#x306E;&#x8981;&#x7D20;&#x3092;<code>True</code>, &#x305D;&#x3046;&#x3067;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;<code>False</code>&#x3092;&#x3044;&#x308C;, &#x914D;&#x5217;<code>bool_index</code>&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;.<br>
+&#x305D;&#x306E;&#x5F8C;, <code>A[bool_index]</code>&#x306E;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3068;, <code>True</code>&#x306B;&#x3057;&#x305F;&#x4F4D;&#x7F6E;&#x306E;&#x8981;&#x7D20;&#x306E;&#x307F;, &#x53D6;&#x308A;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-19" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=19, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+dna <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>dna<span class="token punctuation">)</span>
+
+bool_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token boolean">False</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token builtin">len</span><span class="token punctuation">(</span>dna<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>bool_list<span class="token punctuation">)</span>
+
+bool_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+bool_list<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>bool_list<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>dna<span class="token punctuation">[</span>bool_list<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0 1 2 3 4 5 6 7]
+[False, False, False, False, False, False, False, False]
+[False, False, True, False, False, True, False, False]
+[2 5]
+</pre></div></div><h3 class="mume-header" id="%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%A0%E3%81%91%E3%82%92%E3%81%A8%E3%82%8A%E3%81%A0%E3%81%99">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x3060;&#x3051;&#x3092;&#x3068;&#x308A;&#x3060;&#x3059;</h3>
+
+<p>&#x5148;&#x307B;&#x3069;&#x306E;&#x300C;numpy&#x914D;&#x5217;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x300D;&#x3068;&#x300C;bool&#x3067;&#x53D6;&#x308A;&#x51FA;&#x3059;&#x8981;&#x7D20;&#x3092;&#x6307;&#x5B9A;&#x300D;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x3068;, &#x300C;&#x3042;&#x308B;&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x3060;&#x3051;&#x3092;&#x53D6;&#x308A;&#x51FA;&#x3059;&#x300D;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<p>&#x914D;&#x5217;<code>A</code>&#x306B;&#x5BFE;&#x3057;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x3092;&#x884C;&#x3063;&#x305F;&#x7D50;&#x679C;<code>result</code>&#x3092;<code>A</code>&#x306E;&#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;&#x306B;&#x6307;&#x5B9A;&#x3059;&#x308C;&#x3070;&#x3088;&#x304F;, <code>A[result]</code>&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;.<br>
+&#x4F8B;&#x3048;&#x3070;&#x914D;&#x5217;<code>A</code>&#x306E;&#x8981;&#x7D20;&#x306E;&#x5185;, 5&#x4EE5;&#x4E0A;&#x306E;&#x6570;&#x5024;&#x3092;&#x53D6;&#x3063;&#x3066;&#x304D;&#x305F;&#x3044;&#x5834;&#x5408;, <code>A[A &gt; 5]</code>&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-20" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=20, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+rand_list <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rand_list<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>rand_list <span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>rand_list<span class="token punctuation">[</span>rand_list <span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0.0064442  0.74234263 0.26256413 0.21274208 0.10299753 0.92678646
+ 0.5728994  0.10571603 0.95957253 0.9163718 ]
+[False  True False False False  True  True False  True  True]
+[0.74234263 0.92678646 0.5728994  0.95957253 0.9163718 ]
+</pre></div></div><h3 class="mume-header" id="%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%A4%E3%81%A0%E3%81%91%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B-1">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3060;&#x3051;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;</h3>
+
+<p>&#x5148;&#x307B;&#x3069;&#x300C;&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x3092;&#x53D6;&#x308A;&#x51FA;&#x3059;&#x300D;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x305F;&#x306E;&#x3067;, &#x305D;&#x3053;&#x306B;&#x5024;&#x3092;&#x4EE3;&#x5165;&#x3059;&#x308C;&#x3070;, &#x300C;&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3060;&#x3051;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;&#x300D;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-21" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=21, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+rand_list <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rand_list<span class="token punctuation">)</span>
+
+rand_list<span class="token punctuation">[</span>rand_list <span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>rand_list<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0.59943266 0.74590934 0.63473334 0.02874483 0.30970753 0.56830026
+ 0.60230838 0.68418086 0.840012   0.87331546]
+[0.         0.         0.         0.02874483 0.30970753 0.
+ 0.         0.         0.         0.        ]
+</pre></div></div><h2 class="mume-header" id="%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%8B%E6%95%B0%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x500B;&#x6570;&#x3092;&#x8A08;&#x7B97;&#x3059;&#x308B;</h2>
+
+<p>&#x7D50;&#x8AD6;&#x304B;&#x3089;&#x8A00;&#x3048;&#x3070;, &#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x3067;<code>True, False</code>&#x306B;&#x3057;, <code>sum</code>&#x3067;&#x8DB3;&#x3057;&#x5408;&#x308F;&#x305B;&#x307E;&#x3059;.<br>
+Python&#x3067;&#x306F;<code>True</code>&#x306F;1, <code>False</code>&#x306F;0&#x3068;&#x6271;&#x308F;&#x308C;&#x308B;&#x306E;&#x3067;, &#x5B9F;&#x8CEA;&#x7684;&#x306B;<code>True</code>&#x306E;&#x6570;&#x3092;&#x6570;&#x3048;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;.</p>
+<div class="code-chunk" data-id="code-chunk-id-22" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=22, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+nda <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>nda<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;0.5&#x4EE5;&#x4E0A;&#x306E;&#x8981;&#x7D20; :&quot;</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>nda <span class="token operator">&gt;</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;&#x500B;&quot;</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">[0.82008859 0.09739651 0.71518156 0.9531582  0.96271931 0.03541305
+ 0.75024982 0.51460481 0.7561426  0.53652998]
+0.5&#x4EE5;&#x4E0A;&#x306E;&#x8981;&#x7D20; : 8 &#x500B;
+</pre></div></div><h1 class="mume-header" id="%E8%BF%91%E4%BC%BC%E8%A8%88%E7%AE%97">&#x8FD1;&#x4F3C;&#x8A08;&#x7B97;</h1>
+
+<h2 class="mume-header" id="%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95">&#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;</h2>
+
+<p>asas</p>
+<h1 class="mume-header" id="%E8%A1%8C%E5%88%97%E8%A8%88%E7%AE%97">&#x884C;&#x5217;&#x8A08;&#x7B97;</h1>
+
+<div class="warning">
+<div class="box-title">&#x305D;&#x306E;&#x3046;&#x3061;&#x66F8;&#x304F;</div>
+</div>
+<h1 class="mume-header" id="%E9%9B%86%E5%90%88%E6%BC%94%E7%AE%97">&#x96C6;&#x5408;&#x6F14;&#x7B97;</h1>
+
+<div class="warning">
+<div class="box-title">&#x591A;&#x5206;&#x66F8;&#x304B;&#x306A;&#x3044;</div>
+</div>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#numpy%E3%81%A8%E3%81%AF">numpy&#x3068;&#x306F;</a></li>
+<li><a href="#3%E6%AC%A1%E9%96%A2%E6%95%B0%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B">3&#x6B21;&#x95A2;&#x6570;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x307F;&#x308B;</a>
+<ul>
+<li><a href="#arange">arange</a></li>
+<li><a href="#numpy%E9%85%8D%E5%88%97%E3%81%AE%E7%89%B9%E5%BE%B4">numpy&#x914D;&#x5217;&#x306E;&#x7279;&#x5FB4;</a></li>
+<li><a href="#linspace">linspace</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E7%9A%84%E3%81%AA%E6%BC%94%E7%AE%97-%E3%81%A8-%E9%96%A2%E6%95%B0">&#x6570;&#x5B66;&#x7684;&#x306A;&#x6F14;&#x7B97; &#x3068; &#x95A2;&#x6570;</a>
+<ul>
+<li><a href="#%E5%AE%9A%E6%95%B0">&#x5B9A;&#x6570;</a></li>
+<li><a href="#%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0">&#x4E09;&#x89D2;&#x95A2;&#x6570;</a></li>
+<li><a href="#%E5%BA%A6%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3">&#x5EA6;/&#x30E9;&#x30B8;&#x30A2;&#x30F3;</a></li>
+<li><a href="#%E5%AF%BE%E6%95%B0%E9%96%A2%E6%95%B0%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0">&#x5BFE;&#x6570;&#x95A2;&#x6570;/&#x6307;&#x6570;&#x95A2;&#x6570;</a></li>
+<li><a href="#%E7%B5%B6%E5%AF%BE%E5%80%A4">&#x7D76;&#x5BFE;&#x5024;</a></li>
+<li><a href="#%E5%B9%B3%E6%96%B9%E6%A0%B9-%E7%AB%8B%E6%96%B9%E6%A0%B9-%E7%B4%AF%E4%B9%97">&#x5E73;&#x65B9;&#x6839;, &#x7ACB;&#x65B9;&#x6839;, &#x7D2F;&#x4E57;</a></li>
+</ul>
+</li>
+<li><a href="#%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E8%A8%88%E7%AE%97%E3%81%A8%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89">&#x3088;&#x304F;&#x3042;&#x308B;&#x8A08;&#x7B97;&#x3068;&#x30E1;&#x30BD;&#x30C3;&#x30C9;</a>
+<ul>
+<li><a href="#%E7%B5%B1%E8%A8%88%E3%81%AE%E5%9F%BA%E6%9C%AC%E6%BC%94%E7%AE%97">&#x7D71;&#x8A08;&#x306E;&#x57FA;&#x672C;&#x6F14;&#x7B97;</a>
+<ul>
+<li><a href="#%E5%90%88%E8%A8%88%E5%80%A4-sum">&#x5408;&#x8A08;&#x5024; sum</a></li>
+<li><a href="#%E5%B9%B3%E5%9D%87-meanaverage">&#x5E73;&#x5747; mean/average</a></li>
+<li><a href="#%E6%A8%99%E6%BA%96%E5%81%8F%E5%B7%AE%E5%88%86%E6%95%A3-stdvar">&#x6A19;&#x6E96;&#x504F;&#x5DEE;/&#x5206;&#x6563; std/var</a></li>
+<li><a href="#%E6%9C%80%E5%A4%A7%E5%80%A4%E6%9C%80%E5%B0%8F%E5%80%A4">&#x6700;&#x5927;&#x5024;/&#x6700;&#x5C0F;&#x5024;</a></li>
+<li><a href="#%E4%B8%AD%E5%A4%AE%E5%80%A4-median">&#x4E2D;&#x592E;&#x5024; median</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B9%B1%E6%95%B0">&#x4E71;&#x6570;</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%88%86%E3%81%8C%E3%82%88%E3%81%8F%E4%BD%BF%E3%81%86%E3%82%84%E3%81%A4">(&#x81EA;&#x5206;&#x304C;)&#x3088;&#x304F;&#x4F7F;&#x3046;&#x3084;&#x3064;</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%A4%E3%81%A0%E3%81%91%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3060;&#x3051;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;</a>
+<ul>
+<li><a href="#numpy%E9%85%8D%E5%88%97%E3%81%A8%E6%AF%94%E8%BC%83%E6%BC%94%E7%AE%97%E5%AD%90">numpy&#x914D;&#x5217;&#x3068;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5B50;</a></li>
+<li><a href="#bool%E3%81%A7%E5%8F%96%E3%82%8A%E5%87%BA%E3%81%99%E8%A6%81%E7%B4%A0%E3%82%92%E6%8C%87%E5%AE%9A%E3%81%99%E3%82%8B">bool&#x3067;&#x53D6;&#x308A;&#x51FA;&#x3059;&#x8981;&#x7D20;&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%A0%E3%81%91%E3%82%92%E3%81%A8%E3%82%8A%E3%81%A0%E3%81%99">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x3060;&#x3051;&#x3092;&#x3068;&#x308A;&#x3060;&#x3059;</a></li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%A4%E3%81%A0%E3%81%91%E3%82%92%E5%A4%89%E6%9B%B4%E3%81%99%E3%82%8B-1">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x5024;&#x3060;&#x3051;&#x3092;&#x5909;&#x66F4;&#x3059;&#x308B;</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9D%A1%E4%BB%B6%E3%82%92%E6%BA%80%E3%81%9F%E3%81%99%E8%A6%81%E7%B4%A0%E3%81%AE%E5%80%8B%E6%95%B0%E3%82%92%E8%A8%88%E7%AE%97%E3%81%99%E3%82%8B">&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x3059;&#x8981;&#x7D20;&#x306E;&#x500B;&#x6570;&#x3092;&#x8A08;&#x7B97;&#x3059;&#x308B;</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%91%E4%BC%BC%E8%A8%88%E7%AE%97">&#x8FD1;&#x4F3C;&#x8A08;&#x7B97;</a>
+<ul>
+<li><a href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%97%E6%B3%95">&#x6700;&#x5C0F;&#x4E8C;&#x4E57;&#x6CD5;</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A1%8C%E5%88%97%E8%A8%88%E7%AE%97">&#x884C;&#x5217;&#x8A08;&#x7B97;</a></li>
+<li><a href="#%E9%9B%86%E5%90%88%E6%BC%94%E7%AE%97">&#x96C6;&#x5408;&#x6F14;&#x7B97;</a></li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
