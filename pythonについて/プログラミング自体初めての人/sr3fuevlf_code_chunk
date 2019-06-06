@@ -1,7 +1,0 @@
-import random
-
-bool_list = random.choices([0, 1], k=8)
-
-print(bool_list)
-while len(bool_list) > 1:
-	pass
