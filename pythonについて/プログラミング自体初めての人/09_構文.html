@@ -303,10 +303,22 @@
 <li><a href="#%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B-1">&#x4F7F;&#x3063;&#x3066;&#x307F;&#x308B;</a></li>
 <li><a href="#for%E3%81%AE%E3%83%8D%E3%82%B9%E3%83%88">for&#x306E;&#x30CD;&#x30B9;&#x30C8;</a></li>
 <li><a href="#%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C1-1">&#x7DF4;&#x7FD2;&#x554F;&#x984C;1</a></li>
+<li><a href="#%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C2">&#x7DF4;&#x7FD2;&#x554F;&#x984C;2</a></li>
 </ul>
 </li>
-<li><a href="#breakcontinue">break/continue</a></li>
-<li><a href="#%E6%A7%8B%E6%96%87%E5%85%A8%E4%BD%93%E3%81%AE%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C">&#x69CB;&#x6587;&#x5168;&#x4F53;&#x306E;&#x6F14;&#x7FD2;&#x554F;&#x984C;</a></li>
+<li><a href="#breakcontinue">break/continue</a>
+<ul>
+<li><a href="#break">break</a></li>
+<li><a href="#continue">continue</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A7%8B%E6%96%87%E5%85%A8%E4%BD%93%E3%81%AE%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C">&#x69CB;&#x6587;&#x5168;&#x4F53;&#x306E;&#x6F14;&#x7FD2;&#x554F;&#x984C;</a>
+<ul>
+<li><a href="#%E3%81%A8%E3%81%AE%E9%80%86%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89">&#x25CB;&#x3068;&#xD7;&#x306E;&#x9006;&#x30D4;&#x30E9;&#x30DF;&#x30C3;&#x30C9;</a></li>
+<li><a href="#%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97">&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;</a></li>
+<li><a href="#%E6%95%B0%E5%AD%97%E5%BD%93%E3%81%A6%E3%82%B2%E3%83%BC%E3%83%A0">&#x6570;&#x5B57;&#x5F53;&#x3066;&#x30B2;&#x30FC;&#x30E0;</a></li>
+</ul>
+</li>
 </ul>
 <h1 class="mume-header" id="python%E3%81%AE%E6%A7%8B%E6%96%87%E3%81%AE%E6%A6%82%E8%A6%81">python&#x306E;&#x69CB;&#x6587;&#x306E;&#x6982;&#x8981;</h1>
 
@@ -330,7 +342,9 @@
 
 <span class="token keyword">if</span> <span class="token keyword">not</span> a <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5909;&#x6570;a&#x306F;5&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x2026;&quot;</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="if%E6%96%87%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">if&#x6587;&#x306E;&#x4F7F;&#x3044;&#x65B9;</h2>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">&#x5909;&#x6570;a&#x306F;10&#x3067;&#x3059;!
+&#x5909;&#x6570;b&#x306F;5&#x3067;&#x3059;!
+</pre></div></div><h2 class="mume-header" id="if%E6%96%87%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">if&#x6587;&#x306E;&#x4F7F;&#x3044;&#x65B9;</h2>
 
 <p><code>if</code>&#x306F;&#x3059;&#x3050;&#x5F8C;&#x308D;&#x306B;<code>True</code>&#x304C;&#x6765;&#x3066;&#x3044;&#x308C;&#x3070;&#x4EE5;&#x964D;&#x306E;&#x51E6;&#x7406;&#x3092;&#x884C;&#x3044;, <code>False</code>&#x3067;&#x3042;&#x308C;&#x3070;&#x4F55;&#x4E8B;&#x3082;&#x306A;&#x304B;&#x3063;&#x305F;&#x3088;&#x3046;&#x306B;&#x4EE5;&#x964D;&#x306E;&#x51E6;&#x7406;&#x3092;&#x3059;&#x3063;&#x98DB;&#x3070;&#x3057;&#x307E;&#x3059;.</p>
 <pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">True</span>&#x304B;<span class="token boolean">False</span> <span class="token operator">=</span> &#x6761;&#x4EF6;<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -345,7 +359,9 @@
 
 <span class="token keyword">if</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5225;&#x306E;if&#x306E;&#x4E2D;&quot;</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="if-%E3%81%A8-else">if &#x3068; else</h2>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">if&#x306E;&#x5916;
+&#x5225;&#x306E;if&#x306E;&#x4E2D;
+</pre></div></div><h2 class="mume-header" id="if-%E3%81%A8-else">if &#x3068; else</h2>
 
 <p><code>if</code>&#x306E;&#x6761;&#x4EF6;&#x3092;&#x6E80;&#x305F;&#x305B;&#x306A;&#x304B;&#x3063;&#x305F;&#x3068;&#x304D;, &#x305D;&#x306E;&#x53D7;&#x3051;&#x76BF;&#x3068;&#x306A;&#x308B;&#x306E;&#x304C;<code>else</code>&#x3067;&#x3059;.<br>
 <code>else</code>&#x306F;<code>if</code>&#x306E;&#x30D6;&#x30ED;&#x30C3;&#x30AF;&#x306E;&#x3059;&#x3050;&#x5F8C;&#x308D;&#x306B;&#x66F8;&#x304F;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;.</p>
@@ -362,7 +378,9 @@ a <span class="token operator">=</span> <span class="token number">99</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;if&#x3078;&quot;</span><span class="token punctuation">)</span>
 <span class="token keyword">else</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;else&#x3078;&quot;</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="if-%E3%81%A8-elif-%E3%81%A8-else">if &#x3068; elif &#x3068; else</h2>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">if&#x3078;
+else&#x3078;
+</pre></div></div><h2 class="mume-header" id="if-%E3%81%A8-elif-%E3%81%A8-else">if &#x3068; elif &#x3068; else</h2>
 
 <p><code>if</code>&#x306E;&#x6761;&#x4EF6;&#x304B;&#x3089;&#x6F0F;&#x308C;&#x305F;&#x3082;&#x306E;&#x306B;&#x5BFE;&#x3057;, &#x66F4;&#x306B;&#x6761;&#x4EF6;&#x3092;&#x4ED8;&#x4E0E;&#x3057;&#x3066;, &#x3088;&#x308A;&#x7D30;&#x304B;&#x304F;&#x5206;&#x5C90;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;.<br>
 &#x305D;&#x308C;&#x304C;<code>elif</code>&#x3067;&#x3059;. (<code>else if</code>)</p>
@@ -376,7 +394,8 @@ a <span class="token operator">=</span> <span class="token number">99</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;1&#x4EE5;&#x4E0A;, 2&#x672A;&#x6E80;&#x3067;&#x3059;&quot;</span><span class="token punctuation">)</span>
 <span class="token keyword">else</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;1&#x672A;&#x6E80;&#x3067;&#x3059;&quot;</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p><code>if</code>&#xFF11;&#x3064;&#x306B;&#x5BFE;&#x3057;<code>elif</code>&#x306F;&#x3044;&#x304F;&#x3064;&#x6765;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;(&#x3082;&#x3061;&#x308D;&#x3093;&#x306A;&#x304F;&#x3066;&#x3082;OK).<br>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1&#x4EE5;&#x4E0A;, 2&#x672A;&#x6E80;&#x3067;&#x3059;
+</pre></div></div><p><code>if</code>&#xFF11;&#x3064;&#x306B;&#x5BFE;&#x3057;<code>elif</code>&#x306F;&#x3044;&#x304F;&#x3064;&#x6765;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;(&#x3082;&#x3061;&#x308D;&#x3093;&#x306A;&#x304F;&#x3066;&#x3082;OK).<br>
 <code>else</code>&#x3082;&#x3042;&#x3063;&#x3066;&#x3082;&#x7121;&#x304F;&#x3066;&#x3082;&#x5927;&#x4E08;&#x592B;.</p>
 <h2 class="mume-header" id="if%E3%81%AE%E3%83%8D%E3%82%B9%E3%83%88">if&#x306E;&#x30CD;&#x30B9;&#x30C8;</h2>
 
@@ -385,12 +404,14 @@ a <span class="token operator">=</span> <span class="token number">99</span>
 <span class="token keyword">if</span> a <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">:</span>
 	<span class="token keyword">if</span> a <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
 		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x5358;&#x7D14;&#x306A;&#x5834;&#x5408;&#x3067;&#x3042;&#x308C;&#x3070;, &#x898B;&#x3084;&#x3059;&#x3055;&#x3092;&#x8003;&#x616E;&#x3057;&#x3066;, &#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3044;&#x305F;&#x307B;&#x3046;&#x304C;&#x826F;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;.</p>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">hoge
+</pre></div></div><p>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x5358;&#x7D14;&#x306A;&#x5834;&#x5408;&#x3067;&#x3042;&#x308C;&#x3070;, &#x898B;&#x3084;&#x3059;&#x3055;&#x3092;&#x8003;&#x616E;&#x3057;&#x3066;, &#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3044;&#x305F;&#x307B;&#x3046;&#x304C;&#x826F;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;.</p>
 <div class="code-chunk" data-id="code-chunk-id-6" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=6, cmd=&quot;python3&quot; }" class="language-python">a <span class="token operator">=</span> <span class="token number">3</span>
 
 <span class="token keyword">if</span> <span class="token number">2</span> <span class="token operator">&lt;=</span> a <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">)</span>
-</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C1">&#x7DF4;&#x7FD2;&#x554F;&#x984C;1</h2>
+</pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">hoge
+</pre></div></div><h2 class="mume-header" id="%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C1">&#x7DF4;&#x7FD2;&#x554F;&#x984C;1</h2>
 
 <h3 class="mume-header" id="%E5%86%85%E5%AE%B9">&#x5185;&#x5BB9;</h3>
 
@@ -411,7 +432,8 @@ a <span class="token operator">=</span> <span class="token number">99</span>
 
 hoge <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>hoge<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">75
+</pre></div></div><h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
 
 <div class="code-chunk" data-id="code-chunk-id-8" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=8, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> random
 
@@ -425,7 +447,8 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x3044;&#x3044;&#x611F;&#x3058;&quot;</span><span class="token punctuation">)</span>
 <span class="token keyword">else</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5C0F;&#x3055;&#x3044;&quot;</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h1 class="mume-header" id="while%E6%96%87">while&#x6587;</h1>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x306B;&#x5F97;&#x305F;&#x6570;&#x5024;&apos;73&apos;&#x306F;&#x3068;&#x3063;&#x3066;&#x3082;&#x5927;&#x304D;&#x3044;
+</pre></div></div><h1 class="mume-header" id="while%E6%96%87">while&#x6587;</h1>
 
 <h2 class="mume-header" id="%E6%A6%82%E8%A6%81">&#x6982;&#x8981;</h2>
 
@@ -450,7 +473,12 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
 <span class="token keyword">while</span> a <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
 	a <span class="token operator">+=</span> <span class="token number">1</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h1 class="mume-header" id="for%E6%96%87">for&#x6587;</h1>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">0
+1
+2
+3
+4
+</pre></div></div><h1 class="mume-header" id="for%E6%96%87">for&#x6587;</h1>
 
 <h2 class="mume-header" id="%E6%A6%82%E8%A6%81-1">&#x6982;&#x8981;</h2>
 
@@ -468,20 +496,54 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
 
 <div class="code-chunk" data-id="code-chunk-id-10" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=10, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> val <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-11" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=11, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers">str_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;fuga&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;piyo&quot;</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">0
+1
+2
+3
+4
+</pre></div></div><div class="code-chunk" data-id="code-chunk-id-11" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=11, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers">str_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;fuga&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;piyo&quot;</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> val <span class="token keyword">in</span> str_list<span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><div class="code-chunk" data-id="code-chunk-id-12" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=12, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers">val_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">+</span><span class="token number">2j</span><span class="token punctuation">,</span> <span class="token number">0.8</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;py&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;thon&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">hoge
+fuga
+piyo
+</pre></div></div><div class="code-chunk" data-id="code-chunk-id-12" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=12, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers">val_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">+</span><span class="token number">2j</span><span class="token punctuation">,</span> <span class="token number">0.8</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&quot;py&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;thon&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 <span class="token keyword">for</span> val <span class="token keyword">in</span> val_list<span class="token punctuation">:</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="for%E3%81%AE%E3%83%8D%E3%82%B9%E3%83%88">for&#x306E;&#x30CD;&#x30B9;&#x30C8;</h2>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">hoge
+21
+(1+2j)
+0.8
+False
+[&apos;py&apos;, &apos;thon&apos;]
+</pre></div></div><h2 class="mume-header" id="for%E3%81%AE%E3%83%8D%E3%82%B9%E3%83%88">for&#x306E;&#x30CD;&#x30B9;&#x30C8;</h2>
 
 <p>&#x3082;&#x3061;&#x308D;&#x3093;<code>for</code>&#x3067;&#x3082;&#x30CD;&#x30B9;&#x30C8;&#x3067;&#x304D;&#x308B;.</p>
 <div class="code-chunk" data-id="code-chunk-id-13" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=13, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 	<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
 		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;i : {}, j : {}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">)</span>
 	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;-&quot;</span> <span class="token operator">*</span> <span class="token number">14</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h2 class="mume-header" id="%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C1-1">&#x7DF4;&#x7FD2;&#x554F;&#x984C;1</h2>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">i : 0, j : 0
+i : 0, j : 1
+i : 0, j : 2
+--------------
+i : 1, j : 0
+i : 1, j : 1
+i : 1, j : 2
+--------------
+i : 2, j : 0
+i : 2, j : 1
+i : 2, j : 2
+--------------
+i : 3, j : 0
+i : 3, j : 1
+i : 3, j : 2
+--------------
+i : 4, j : 0
+i : 4, j : 1
+i : 4, j : 2
+--------------
+</pre></div></div><h2 class="mume-header" id="%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C1-1">&#x7DF4;&#x7FD2;&#x554F;&#x984C;1</h2>
 
 <h3 class="mume-header" id="%E5%86%85%E5%AE%B9-1">&#x5185;&#x5BB9;</h3>
 
@@ -490,6 +552,10 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
 </ul>
 <h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88">&#x30DD;&#x30A4;&#x30F3;&#x30C8;</h3>
 
+<ul>
+<li><code>print</code>&#x3067;&#x884C;&#x672B;&#x306B;&#x6539;&#x884C;&#x3092;&#x52A0;&#x3048;&#x306A;&#x3044;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x306B;&#x306F;&#x5F15;&#x6570;&#x306B;<code>end=&quot;&quot;</code>&#x3092;&#x542B;&#x3081;&#x308C;&#x3070;&#x826F;&#x3044;.</li>
+<li>&#x3082;&#x3057;&#x6587;&#x5B57;&#x5E45;&#x3092;&#x63C3;&#x3048;&#x305F;&#x3044;&#x5834;&#x5408;, <code>format</code>&#x306A;&#x3069;&#x3067;&#x6574;&#x3048;&#x308B;&#x3068;&#x826F;&#x3044;.</li>
+</ul>
 <h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-1">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
 
 <p>&#x901A;&#x5E38;&#x306E;&#x4F8B;</p>
@@ -519,7 +585,7 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
  8 16 24 32 40 48 56 64 72
  9 18 27 36 45 54 63 72 81
 </pre></div></div><p>&#x4F55;&#x304C;&#x306A;&#x3093;&#x3067;&#x3082;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x884C;&#x6570;&#x3092;&#x77ED;&#x304F;&#x3057;&#x305F;&#x3044;&#x6642;&#x306E;&#x4F8B;</p>
-<div class="code-chunk" data-id="code-chunk-id-16" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=16, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&quot;{:2}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">*</span>j<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<div class="code-chunk" data-id="code-chunk-id-16" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=16, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token punctuation">[</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">[</span><span class="token string">&quot;{:2}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">*</span>j<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text"> 1  2  3  4  5  6  7  8  9
  2  4  6  8 10 12 14 16 18
  3  6  9 12 15 18 21 24 27
@@ -529,21 +595,344 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
  7 14 21 28 35 42 49 56 63
  8 16 24 32 40 48 56 64 72
  9 18 27 36 45 54 63 72 81
+</pre></div></div><h2 class="mume-header" id="%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C2">&#x7DF4;&#x7FD2;&#x554F;&#x984C;2</h2>
+
+<h3 class="mume-header" id="%E5%86%85%E5%AE%B9-2">&#x5185;&#x5BB9;</h3>
+
+<ul>
+<li>XOR&#x306E;&#x30D4;&#x30E9;&#x30DF;&#x30C3;&#x30C9;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;</li>
+<li>XOR&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x7279;&#x6027;&#x3092;&#x6301;&#x3064;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">a</th>
+<th style="text-align:center">b</th>
+<th style="text-align:center">a xor b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x6700;&#x4E0A;&#x6BB5;&#x306B;0, 1&#x3092;&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x306B;8&#x500B;&#x7528;&#x610F;&#x3059;&#x308B;.</li>
+<li>&#x305D;&#x306E;&#x4E0B;&#x6BB5;&#x306B;&#x306F;&#x305D;&#x308C;&#x305E;&#x308C;&#x3092;XOR&#x3057;&#x305F;&#x7D50;&#x679C;&#x3092;&#x51FA;&#x529B;&#x3059;&#x308B;.</li>
+<li>&#x307E;&#x305F;&#x305D;&#x306E;&#x4E0B;&#x306B;&#x306F;&#x2026; &#x3068;&#x3044;&#x3046;&#x611F;&#x3058;&#x3067;&#x6700;&#x5F8C;&#x306E;1&#x3064;&#x306B;&#x306A;&#x308B;&#x307E;&#x3067;&#x884C;&#x3046;.</li>
+</ul>
+<p>&#x51FA;&#x529B;&#x4F8B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x901A;&#x308A;.</p>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;, Python&#x3067;<code>xor</code>&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x8A08;&#x7B97;&#x3067;&#x304D;&#x308B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-17" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=17, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">^</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token operator">^</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">^</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">^</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">0
+1
+1
+0
+</pre></div></div><h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-2">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+
+<div class="code-chunk" data-id="code-chunk-id-18" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=18, cmd=&quot;python3&quot;  class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> random
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 0,1&#x306E;&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x306E;&#x6570;&#x5024;&#x3092;&#x6301;&#x3064;, &#x9577;&#x3055;8&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3092;&#x4F5C;&#x6210;</span>
+    bit_list <span class="token operator">=</span> random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>bit_list<span class="token punctuation">)</span>
+    
+    <span class="token keyword">for</span> try_num <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>bit_list<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># &#x7A7A;&#x767D;&#x306E;&#x8868;&#x793A;</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot; &quot;</span> <span class="token operator">*</span> <span class="token punctuation">(</span>try_num<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># xor&#x6F14;&#x7B97;&#x306E;&#x7D50;&#x679C;&#x3092;&#x4FDD;&#x5B58;&#x3059;&#x308B;&#x30EA;&#x30B9;&#x30C8;&#x3092;&#x4F5C;&#x6210;</span>
+        next_bit_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>bit_list<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># &#x30EA;&#x30B9;&#x30C8;&#x3078;&#x6F14;&#x7B97;&#x7D50;&#x679C;&#x3092;&#x4EE3;&#x5165;</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>next_bit_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            next_bit_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> bit_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">^</span> bit_list<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span>
+        
+        <span class="token comment"># &#x30EA;&#x30B9;&#x30C8;&#x3092;&#x66F4;&#x65B0;</span>
+        bit_list <span class="token operator">=</span> next_bit_list
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>bit_list<span class="token punctuation">)</span>
+        
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&apos;__main__&apos;</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">1 0 1 1 0 0 0 0
+ 1 1 0 1 0 0 0
+  0 1 1 1 0 0
+   1 0 0 1 0
+    1 0 1 1
+     1 1 0
+      0 1
+       1
+</pre></div></div><p>&#x30EA;&#x30B9;&#x30C8;&#x5185;&#x5305;&#x8868;&#x8A18;&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3092;&#x4F7F;&#x3046;&#x3068;&#x304B;&#x306A;&#x308A;&#x7C21;&#x6F54;&#x306B;&#x66F8;&#x3051;&#x308B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-19" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=19, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> random
+
+bool_list <span class="token operator">=</span> random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>bool_list<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>bool_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># &#x30EA;&#x30B9;&#x30C8;&#x5185;&#x8868;&#x8868;&#x8A18;&#x3067;&#x4E00;&#x6C17;&#x306B;xor&#x6F14;&#x7B97;&#x3092;&#x3057;, &#x4F5C;&#x6210;&#x3057;&#x305F;&#x30EA;&#x30B9;&#x30C8;&#x3067;&#x5143;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3092;&#x4E0A;&#x66F8;&#x304D;</span>
+    bool_list <span class="token operator">=</span> <span class="token punctuation">[</span>bool_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">^</span> bool_list<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>bool_list<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot; &quot;</span> <span class="token operator">*</span> i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>bool_list<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">0 1 1 0 0 1 0 0
+ 1 0 1 0 1 1 0
+  1 1 1 1 0 1
+   0 0 0 1 1
+    0 0 1 0
+     0 1 1
+      1 0
+       1
 </pre></div></div><h1 class="mume-header" id="breakcontinue">break/continue</h1>
 
+<h2 class="mume-header" id="break">break</h2>
+
+<p><code>break</code>&#x306F;&#x30EB;&#x30FC;&#x30D7;&#x4E2D;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x3080;&#x3053;&#x3068;&#x3067;, &#x305D;&#x306E;&#x30EB;&#x30FC;&#x30D7;&#x306B;&#x304A;&#x3051;&#x308B;&#x51E6;&#x7406;&#x3092;&#x4E2D;&#x65AD;&#x3057;, &#x30EB;&#x30FC;&#x30D7;&#x304B;&#x3089;&#x629C;&#x3051;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;.</p>
+<p>&#x4F8B;&#x3048;&#x3070;<code>i=1, 2, &#x2026;, n-1, n</code>&#x306E;&#x3088;&#x3046;&#x306B;, <code>n</code>&#x56DE;&#x884C;&#x308F;&#x308C;&#x308B;&#x30EB;&#x30FC;&#x30D7;&#x304C;&#x3042;&#x3063;&#x305F;&#x3068;&#x3059;&#x308B;.<br>
+<code>i=3</code>&#x306E;&#x51E6;&#x7406;&#x306E;&#x969B;&#x306B;<code>break</code>&#x304C;&#x3042;&#x308B;&#x3068;&#x304D;, <code>i=3</code>&#x306B;&#x304A;&#x3051;&#x308B;&#x4EE5;&#x964D;&#x306E;&#x51E6;&#x7406;&#x3092;&#x30B9;&#x30EB;&#x30FC;&#x3057;, <code>i=4</code>&#x4EE5;&#x964D;&#x306E;&#x30EB;&#x30FC;&#x30D7;&#x306F;&#x5B9F;&#x884C;&#x3082;&#x3055;&#x308C;&#x305A;, &#x30EB;&#x30FC;&#x30D7;&#x3092;&#x629C;&#x3051;&#x51FA;&#x3059;&#x3053;&#x3068;&#x306B;&#x306A;&#x308B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-20" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=20, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;break&#x524D; :&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        <span class="token keyword">break</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;break&#x5F8C; :&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x5916;&quot;</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">break&#x524D; : 0
+break&#x5F8C; : 0
+break&#x524D; : 1
+break&#x5F8C; : 1
+break&#x524D; : 2
+break&#x5F8C; : 2
+break&#x524D; : 3
+&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x5916;
+</pre></div></div><h2 class="mume-header" id="continue">continue</h2>
+
+<p><code>continue</code>&#x306F;&#x30EB;&#x30FC;&#x30D7;&#x4E2D;&#x306B;&#x57CB;&#x3081;&#x8FBC;&#x3080;&#x3053;&#x3068;&#x3067;, &#x305D;&#x306E;&#x30EB;&#x30FC;&#x30D7;&#x306B;&#x304A;&#x3051;&#x308B;&#x51E6;&#x7406;&#x3092;&#x4E2D;&#x65AD;&#x3057;, &#x6B21;&#x306E;&#x30EB;&#x30FC;&#x30D7;&#x3078;&#x79FB;&#x308B;.</p>
+<p>&#x4F8B;&#x3048;&#x3070;<code>i=1, 2, &#x2026;, n-1, n</code>&#x306E;&#x3088;&#x3046;&#x306B;, <code>n</code>&#x56DE;&#x884C;&#x308F;&#x308C;&#x308B;&#x30EB;&#x30FC;&#x30D7;&#x304C;&#x3042;&#x3063;&#x305F;&#x3068;&#x3059;&#x308B;.<br>
+<code>i=3</code>&#x306E;&#x51E6;&#x7406;&#x306E;&#x969B;&#x306B;<code>continue</code>&#x304C;&#x3042;&#x308B;&#x3068;&#x304D;, <code>i=3</code>&#x306B;&#x304A;&#x3051;&#x308B;&#x4EE5;&#x964D;&#x306E;&#x51E6;&#x7406;&#x3092;&#x30B9;&#x30EB;&#x30FC;&#x3057;, <code>i=4</code>&#x304B;&#x3089;&#x306E;&#x30EB;&#x30FC;&#x30D7;&#x3092;&#x884C;&#x3044;&#x59CB;&#x3081;&#x308B;.</p>
+<div class="code-chunk" data-id="code-chunk-id-21" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=21, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;break&#x524D; :&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        <span class="token keyword">continue</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;break&#x5F8C; :&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x5916;&quot;</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">break&#x524D; : 0
+break&#x5F8C; : 0
+break&#x524D; : 1
+break&#x5F8C; : 1
+break&#x524D; : 2
+break&#x5F8C; : 2
+break&#x524D; : 3
+break&#x524D; : 4
+break&#x5F8C; : 4
+break&#x524D; : 5
+break&#x5F8C; : 5
+&#x30EB;&#x30FC;&#x30D7;&#x306E;&#x5916;
+</pre></div></div><p><code>3</code>&#x306E;&#x3068;&#x304D;&#x3060;&#x3051;, continue&#x524D;&#x3057;&#x304B;&#x8868;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;.</p>
 <h1 class="mume-header" id="%E6%A7%8B%E6%96%87%E5%85%A8%E4%BD%93%E3%81%AE%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C">&#x69CB;&#x6587;&#x5168;&#x4F53;&#x306E;&#x6F14;&#x7FD2;&#x554F;&#x984C;</h1>
 
-<p>&#x901A;&#x5E38;&#x306E;&#x4F8B;</p>
-<div class="code-chunk" data-id="code-chunk-id-17" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=17, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-		<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;{:3}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">*</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x7C21;&#x6F54;&#x306B;&#x66F8;&#x304F;&#x4F8B;</p>
-<div class="code-chunk" data-id="code-chunk-id-18" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=18, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">[</span><span class="token string">&quot;{:2}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">*</span>j<span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><p>&#x4F55;&#x304C;&#x306A;&#x3093;&#x3067;&#x3082;&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x884C;&#x6570;&#x3092;&#x77ED;&#x304F;&#x3057;&#x305F;&#x3044;&#x6642;&#x306E;&#x4F8B;</p>
-<div class="code-chunk" data-id="code-chunk-id-19" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=19, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&quot;{:2}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">*</span>j<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div>
+<h2 class="mume-header" id="%E3%81%A8%E3%81%AE%E9%80%86%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89">&#x25CB;&#x3068;&#xD7;&#x306E;&#x9006;&#x30D4;&#x30E9;&#x30DF;&#x30C3;&#x30C9;</h2>
+
+<h3 class="mume-header" id="%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE">&#x4F5C;&#x308B;&#x3082;&#x306E;</h3>
+
+<ul>
+<li>&#x6700;&#x4E0A;&#x6BB5;&#x306B;&#x25CB;&#x304B;&#xD7;&#x3092;8&#x500B;&#x30D0;&#x30E9;&#x30D0;&#x30E9;&#x306B;&#x8868;&#x793A;&#x3059;&#x308B;.</li>
+<li>&#x4EE5;&#x4E0B;&#x306E;&#x8868;&#x306B;&#x5F93;&#x3044;, &#x6B21;&#x306E;&#x6BB5;&#x306B;&#x25CB;&#x304B;&#xD7;&#x306E;&#x5217;&#x3092;&#x7F6E;&#x304F;.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5DE6;</th>
+<th style="text-align:center">&#x53F3;</th>
+<th style="text-align:center">&#x6B21;&#x306E;&#x6BB5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25CB;</td>
+<td style="text-align:center">&#x25CB;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x25CB;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25CB;</td>
+</tr>
+<tr>
+<td style="text-align:center">&#x25CB;</td>
+<td style="text-align:center">&#x25CB;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#x3053;&#x308C;&#x3089;&#x3092;&#x6587;&#x5B57;&#x304C;&#x306A;&#x304F;&#x306A;&#x308B;&#x307E;&#x3067;&#x7E70;&#x308A;&#x8FD4;&#x3059;.</li>
+</ul>
+<p>&#x51FA;&#x529B;&#x4F8B;&#x3068;&#x3057;&#x3066;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x901A;&#x308A;.</p>
+<pre data-role="codeBlock" data-info class="language-"><code>&#xD7;  &#xD7;  &#x25CB;  &#xD7;  &#x25CB;  &#x25CB;  &#x25CB;  &#x25CB;
+  &#xD7;  &#x25CB;  &#x25CB;  &#x25CB;  &#xD7;  &#xD7;  &#xD7;
+    &#x25CB;  &#xD7;  &#xD7;  &#x25CB;  &#xD7;  &#xD7;
+      &#x25CB;  &#xD7;  &#x25CB;  &#x25CB;  &#xD7;
+        &#x25CB;  &#x25CB;  &#xD7;  &#x25CB;
+          &#xD7;  &#x25CB;  &#x25CB;
+            &#x25CB;  &#xD7;
+              &#x25CB;
+</code></pre><h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88-1">&#x30DD;&#x30A4;&#x30F3;&#x30C8;</h3>
+
+<p>xor&#x306E;&#x6642;&#x306E;&#x5B9F;&#x88C5;&#x3092;&#x771F;&#x4F3C;&#x3066;&#x4F5C;&#x308B;.</p>
+<h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-3">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+
+<div class="code-chunk" data-id="code-chunk-id-22" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=22, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> random
+
+mb_list <span class="token operator">=</span> random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;&#x25CB;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&#xD7;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>mb_list<span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;  &quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>mb_list<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;  &quot;</span> <span class="token operator">*</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+    next_mb_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;hoge&quot;</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>mb_list<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>next_mb_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token keyword">if</span> mb_list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> mb_list<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            next_mb_list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;&#xD7;&quot;</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            next_mb_list<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;&#x25CB;&quot;</span>
+    
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span>next_mb_list<span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;  &quot;</span><span class="token punctuation">)</span>
+    mb_list <span class="token operator">=</span> next_mb_list
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">&#x25CB;  &#x25CB;  &#x25CB;  &#xD7;  &#xD7;  &#x25CB;  &#xD7;  &#xD7;
+  &#xD7;  &#xD7;  &#x25CB;  &#xD7;  &#x25CB;  &#x25CB;  &#xD7;
+    &#xD7;  &#x25CB;  &#x25CB;  &#x25CB;  &#xD7;  &#x25CB;
+      &#x25CB;  &#xD7;  &#xD7;  &#x25CB;  &#x25CB;
+        &#x25CB;  &#xD7;  &#x25CB;  &#xD7;
+          &#x25CB;  &#x25CB;  &#x25CB;
+            &#xD7;  &#xD7;
+              &#xD7;
+</pre></div></div><p>&#x5404;&#x6587;&#x5B57;&#x7A2E;&#x3092;&#x6587;&#x5B57;&#x30B3;&#x30FC;&#x30C9;&#x306B;&#x7F6E;&#x304D;&#x63DB;&#x3048;, xor&#x306E;&#x3068;&#x304D;&#x3068;&#x540C;&#x69D8;&#x306E;&#x8A08;&#x7B97;&#x3092;&#x9069;&#x7528;&#x3059;&#x308B;&#x3068;, &#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;<code>if</code>&#x3092;&#x5229;&#x7528;&#x305B;&#x305A;&#x306B;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;. &#x3057;&#x304B;&#x3082;&#x304B;&#x306A;&#x308A;&#x67D4;&#x8EDF;.</p>
+<div class="code-chunk" data-id="code-chunk-id-23" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=23, cmd=&quot;python3&quot; class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> random
+
+true_chr <span class="token operator">=</span> <span class="token string">&quot;&#x25CB;&quot;</span>
+false_chr <span class="token operator">=</span> <span class="token string">&quot;&#xD7;&quot;</span>
+
+bool_list <span class="token operator">=</span> random<span class="token punctuation">.</span>choices<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>false_chr<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>true_chr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>false_chr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span>bool_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;  &quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>bool_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    bool_list <span class="token operator">=</span> <span class="token punctuation">[</span>bool_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">^</span> bool_list<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>bool_list<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;  &quot;</span> <span class="token operator">*</span> i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token builtin">chr</span><span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>false_chr<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token builtin">ord</span><span class="token punctuation">(</span>true_chr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span>false_chr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span>bool_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;  &quot;</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">&#x25CB;  &#x25CB;  &#xD7;  &#x25CB;  &#xD7;  &#x25CB;  &#x25CB;  &#x25CB;
+  &#xD7;  &#x25CB;  &#x25CB;  &#x25CB;  &#x25CB;  &#xD7;  &#xD7;
+    &#x25CB;  &#xD7;  &#xD7;  &#xD7;  &#x25CB;  &#xD7;
+      &#x25CB;  &#xD7;  &#xD7;  &#x25CB;  &#x25CB;
+        &#x25CB;  &#xD7;  &#x25CB;  &#xD7;
+          &#x25CB;  &#x25CB;  &#x25CB;
+            &#xD7;  &#xD7;
+              &#xD7;
+</pre></div></div><h2 class="mume-header" id="%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97">&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;</h2>
+
+<h3 class="mume-header" id="%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE-1">&#x4F5C;&#x308B;&#x3082;&#x306E;</h3>
+
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo separator="true">,</mo><mn>3</mn><mo separator="true">,</mo><mn>5</mn><mo separator="true">,</mo><mo>&#x22EF;</mo></mrow><annotation encoding="application/x-tex">1, 1, 2, 3, 5, \cdots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">&#x22EF;</span></span></span></span>&#x3068;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A;&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x3092;10&#x756A;&#x76EE;&#x307E;&#x3067;&#x51FA;&#x529B;&#x3059;&#x308B;.</li>
+</ul>
+<p>(&#x3061;&#x306A;&#x307F;&#x306B;&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;&#x306F;&#x518D;&#x5E30;&#x95A2;&#x6570;&#x3067;&#x4F5C;&#x6210;&#x3059;&#x308B;&#x306E;&#x304C;&#x4E00;&#x822C;&#x7684;&#x3067;&#x3059;&#x304C;, &#x4ECA;&#x56DE;&#x306F;for/if&#x3067;&#x4F5C;&#x6210;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.)</p>
+<p>&#x4EE5;&#x4E0B;&#x306B;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3092;&#x8F09;&#x305B;&#x3066;&#x3044;&#x304F;&#x306E;&#x3067;, &#x4F5C;&#x6210;&#x306B;&#x8A70;&#x307E;&#x3063;&#x305F;&#x3089;1&#x3064;&#x305A;&#x3064;&#x898B;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;.<br>
+&#x307E;&#x305F;&#x6700;&#x5F8C;&#x306B;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;&#x3068;&#x51FA;&#x529B;&#x4F8B;&#x3092;&#x8F09;&#x305B;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;.</p>
+<h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%881">&#x30DD;&#x30A4;&#x30F3;&#x30C8;1</h3>
+
+<div class="code-chunk" data-id="code-chunk-id-24" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=24, cmd=&quot;python3&quot;  class=line-numbers}" class="language-python line-numbers"></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-4">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+
+<div class="code-chunk" data-id="code-chunk-id-25" data-cmd="python3"><div class="input-div"><pre data-role="codeBlock" data-info="python {code_chunk_offset=25, cmd=&quot;python3&quot;  class=line-numbers}" class="language-python line-numbers">val1 <span class="token operator">=</span> <span class="token number">0</span>
+val2 <span class="token operator">=</span> <span class="token number">0</span>
+N <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;try_num :&quot;</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">[</span><span class="token string">&quot;{:3d}, &quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;-&quot;</span> <span class="token operator">*</span> <span class="token punctuation">(</span>N <span class="token operator">*</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;fib_num :&quot;</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> val1 <span class="token operator">+</span> val2 <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        val2 <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;{:3d}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>val1 <span class="token operator">+</span> val2<span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;, &quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;{:3d}&quot;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>val1 <span class="token operator">+</span> val2<span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&quot;, &quot;</span><span class="token punctuation">)</span>
+        val1<span class="token punctuation">,</span> val2 <span class="token operator">=</span> val2<span class="token punctuation">,</span> val1<span class="token operator">+</span>val2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre><div class="btn-group"><div class="run-btn btn"><span>&#x25B6;&#xFE0E;</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"><pre class="language-text">try_num :  1,   2,   3,   4,   5,   6,   7,   8,   9,  10, 
+------------------------------------------------------------
+fib_num :  1,   1,   2,   3,   5,   8,  13,  21,  34,  55, </pre></div></div><h2 class="mume-header" id="%E6%95%B0%E5%AD%97%E5%BD%93%E3%81%A6%E3%82%B2%E3%83%BC%E3%83%A0">&#x6570;&#x5B57;&#x5F53;&#x3066;&#x30B2;&#x30FC;&#x30E0;</h2>
+
+<h3 class="mume-header" id="%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE-2">&#x4F5C;&#x308B;&#x3082;&#x306E;</h3>
+
+<ol>
+<li>&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4E2D;&#x3067;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>&#x2264;</mo><mi>N</mi><mo>&#x2264;</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">1 \leq N \leq 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.78041em;vertical-align:-0.13597em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.13597em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&#x2264;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span>&#x3068;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>&#x3092;&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x306B;&#x5F97;&#x308B;</li>
+<li>&#x305D;&#x306E;&#x5F8C;, &#x6574;&#x6570;&#x5024;&#x306E;&#x5165;&#x529B;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi></mrow><annotation encoding="application/x-tex">\rm input</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8623000000000001em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">i</span><span class="mord mathrm">n</span><span class="mord mathrm">p</span><span class="mord mathrm">u</span><span class="mord mathrm">t</span></span></span></span></span>&#x3092;&#x53D7;&#x3051;&#x4ED8;&#x3051;, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi></mrow><annotation encoding="application/x-tex">N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>&#x3068;&#x6BD4;&#x8F03;&#x3059;&#x308B;.
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mo>=</mo><mi mathvariant="normal">N</mi></mrow><annotation encoding="application/x-tex">\rm input = N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">i</span><span class="mord mathrm">n</span><span class="mord mathrm">p</span><span class="mord mathrm">u</span><span class="mord mathrm">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathrm">N</span></span></span></span></span> : &#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x7D42;&#x4E86;&#x3059;&#x308B;.</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">u</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">&#x2260;</mi><mi mathvariant="normal">N</mi></mrow><annotation encoding="application/x-tex">\rm input \neq N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathrm">i</span><span class="mord mathrm">n</span><span class="mord mathrm">p</span><span class="mord mathrm">u</span><span class="mord mathrm">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel">&#xE020;</span></span><span class="fix"></span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathrm">N</span></span></span></span></span> : &#x5165;&#x529B;&#x5024;&#x304C;N&#x3088;&#x308A;&#x5927;&#x304D;&#x3044;&#x304B;&#x5C0F;&#x3055;&#x3044;&#x304B;&#x3092;&#x51FA;&#x529B;&#x3059;&#x308B;.</li>
+</ul>
+</li>
+<li>2&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x3059;.</li>
+</ol>
+<p>&#x30E9;&#x30F3;&#x30C0;&#x30E0;&#x306B;&#x5024;&#x3092;&#x5F97;&#x308B;&#x306B;&#x306F;<code>random</code>&#x3092;import&#x3068;&#x3057;&#x3066;, <code>random.choice</code>&#x3092;&#x4F7F;&#x3046;&#x3068;&#x826F;&#x3044;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python"><span class="token keyword">import</span> random
+N <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><p>&#x307E;&#x305F;&#x5165;&#x529B;&#x306F;<code>input(&quot;&#x8868;&#x793A;&#x3059;&#x308B;&#x6587;&#x5B57;&#x5217;&quot;)</code>&#x3067;&#x5F97;&#x3089;&#x308C;&#x308B;&#x304C;, &#x5F97;&#x3089;&#x308C;&#x308B;&#x5024;&#x306F;&#x6587;&#x5B57;&#x5217;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;<code>int()</code>&#x3067;&#x6574;&#x6570;&#x5024;&#x306B;&#x5909;&#x63DB;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python">n <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;&gt;&#x6574;&#x6570;&#x5024;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&quot;</span><span class="token punctuation">)</span>
+n <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+</pre><p>&#x3061;&#x306A;&#x307F;&#x306B;<code>int()</code>&#x3067;&#x306F;&#x5BFE;&#x8C61;&#x304C;&#x6574;&#x6570;&#x5024;&#x306B;&#x5909;&#x63DB;&#x3067;&#x304D;&#x306A;&#x3044;&#x3088;&#x3046;&#x306A;&#x5185;&#x5BB9;&#x3060;&#x3068;&#x30A8;&#x30E9;&#x30FC;&#x304C;&#x51FA;&#x308B;&#x306E;&#x3067;&#x6CE8;&#x610F;(&#x6570;&#x5024;&#x4EE5;&#x5916;&#x304C;&#x5165;&#x529B;&#x3055;&#x308C;&#x305F;&#x3068;&#x304D;&#x306A;&#x3069;)</p>
+<h3 class="mume-header" id="%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%881-1">&#x30DD;&#x30A4;&#x30F3;&#x30C8;1</h3>
+
+<ul>
+<li>break&#x3067;while&#x304B;&#x3089;&#x629C;&#x3051;&#x51FA;&#x3059;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;</li>
+</ul>
+<h3 class="mume-header" id="%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-5">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</h3>
+
+<pre data-role="codeBlock" data-info="python {class=line-numbers}" class="language-python line-numbers"><span class="token keyword">import</span> random
+
+N <span class="token operator">=</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;&gt; 1&#x4EE5;&#x4E0A;, 100&#x4EE5;&#x4E0B;&#x306E;&#x6574;&#x6570;&#x5024;&#x3092;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044; : &quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token builtin">int</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">==</span> N<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&gt; &#x6B63;&#x89E3;&#x3067;&#x3059;&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    <span class="token keyword">elif</span> <span class="token builtin">int</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token operator">&gt;</span> N<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&gt; &#x5024;&#x304C;&#x5927;&#x304D;&#x3044;&#x3067;&#x3059;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&gt; &#x5024;&#x304C;&#x5C0F;&#x3055;&#x3044;&#x3067;&#x3059;&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre>
       </div>
       <div class="md-sidebar-toc"><ul>
 <li><a href="#python%E3%81%AE%E6%A7%8B%E6%96%87%E3%81%AE%E6%A6%82%E8%A6%81">python&#x306E;&#x69CB;&#x6587;&#x306E;&#x6982;&#x8981;</a></li>
@@ -580,10 +969,45 @@ hoge <span class="token operator">=</span> random<span class="token punctuation"
 <li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-1">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
 </ul>
 </li>
+<li><a href="#%E7%B7%B4%E7%BF%92%E5%95%8F%E9%A1%8C2">&#x7DF4;&#x7FD2;&#x554F;&#x984C;2</a>
+<ul>
+<li><a href="#%E5%86%85%E5%AE%B9-2">&#x5185;&#x5BB9;</a></li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-2">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
 </ul>
 </li>
-<li><a href="#breakcontinue">break/continue</a></li>
-<li><a href="#%E6%A7%8B%E6%96%87%E5%85%A8%E4%BD%93%E3%81%AE%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C">&#x69CB;&#x6587;&#x5168;&#x4F53;&#x306E;&#x6F14;&#x7FD2;&#x554F;&#x984C;</a></li>
+</ul>
+</li>
+<li><a href="#breakcontinue">break/continue</a>
+<ul>
+<li><a href="#break">break</a></li>
+<li><a href="#continue">continue</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A7%8B%E6%96%87%E5%85%A8%E4%BD%93%E3%81%AE%E6%BC%94%E7%BF%92%E5%95%8F%E9%A1%8C">&#x69CB;&#x6587;&#x5168;&#x4F53;&#x306E;&#x6F14;&#x7FD2;&#x554F;&#x984C;</a>
+<ul>
+<li><a href="#%E3%81%A8%E3%81%AE%E9%80%86%E3%83%94%E3%83%A9%E3%83%9F%E3%83%83%E3%83%89">&#x25CB;&#x3068;&#xD7;&#x306E;&#x9006;&#x30D4;&#x30E9;&#x30DF;&#x30C3;&#x30C9;</a>
+<ul>
+<li><a href="#%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE">&#x4F5C;&#x308B;&#x3082;&#x306E;</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88-1">&#x30DD;&#x30A4;&#x30F3;&#x30C8;</a></li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-3">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
+</ul>
+</li>
+<li><a href="#%E3%83%95%E3%82%A3%E3%83%9C%E3%83%8A%E3%83%83%E3%83%81%E6%95%B0%E5%88%97">&#x30D5;&#x30A3;&#x30DC;&#x30CA;&#x30C3;&#x30C1;&#x6570;&#x5217;</a>
+<ul>
+<li><a href="#%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE-1">&#x4F5C;&#x308B;&#x3082;&#x306E;</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%881">&#x30DD;&#x30A4;&#x30F3;&#x30C8;1</a></li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-4">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E5%AD%97%E5%BD%93%E3%81%A6%E3%82%B2%E3%83%BC%E3%83%A0">&#x6570;&#x5B57;&#x5F53;&#x3066;&#x30B2;&#x30FC;&#x30E0;</a>
+<ul>
+<li><a href="#%E4%BD%9C%E3%82%8B%E3%82%82%E3%81%AE-2">&#x4F5C;&#x308B;&#x3082;&#x306E;</a></li>
+<li><a href="#%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%881-1">&#x30DD;&#x30A4;&#x30F3;&#x30C8;1</a></li>
+<li><a href="#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E4%BE%8B-5">&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x4F8B;</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
       <a id="sidebar-toc-btn">&#x2261;</a>
