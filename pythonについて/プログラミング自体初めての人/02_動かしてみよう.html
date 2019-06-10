@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css">
+      <link rel="stylesheet" href="file:////home/haru/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.4.1/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -138,11 +138,18 @@
   font-size: 1em;
 }
 .markdown-preview.markdown-preview pre[data-role="codeBlock"] {
-  font-size: 12pt;
+  font-size: 11pt;
   font-family: "HackGen";
+  background-color: #fbfbfb;
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
+}
+.markdown-preview.markdown-preview .output-div :not([data-cmd="toc"]) {
+  border: 2px dashed #8bc6dd;
+  border-radius: 8px;
 }
 .markdown-preview.markdown-preview .code-chunk * {
-  font-size: 12pt;
+  font-size: 11pt;
   font-family: "HackGen";
 }
 .markdown-preview.markdown-preview code {
@@ -372,6 +379,7 @@ VSCode&#x5DE6;&#x4E0A;&#x306E;<code>&#x30D5;&#x30A1;&#x30A4;&#x30EB;</code>&#x30
 (<code>$</code>&#x306F;&#x5165;&#x529B;&#x3057;&#x306A;&#x304F;&#x3066;&#x3044;&#x3044;&#x3067;&#x3059;)</p>
 <p>&#x305D;&#x3046;&#x3059;&#x308B;&#x3068;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x4E00;&#x884C;&#x305A;&#x3064;&#x5165;&#x529B;&#x3067;&#x304D;&#x308B;&#x30E2;&#x30FC;&#x30C9;&#x3078;&#x79FB;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;.<br>
 &#x7C21;&#x5358;&#x306A;&#x30B3;&#x30FC;&#x30C9;&#x306F;&#x3053;&#x3053;&#x3067;&#x8A66;&#x3059;&#x306E;&#x3082;&#x624B;&#x3067;&#x3059;.</p>
+<p>&#x3061;&#x306A;&#x307F;&#x306B;&#x5BFE;&#x8A71;&#x30E2;&#x30FC;&#x30C9;&#x3092;&#x629C;&#x3051;&#x308B;&#x5834;&#x5408;&#x306F;<code>exit()</code>&#x3067;&#x629C;&#x3051;&#x51FA;&#x305B;&#x307E;&#x3059;.</p>
 <pre data-role="codeBlock" data-info class="language-"><code>C:\&gt;python
 Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05)
 [MSC v.1916 64 bit (AMD64)] on win32
